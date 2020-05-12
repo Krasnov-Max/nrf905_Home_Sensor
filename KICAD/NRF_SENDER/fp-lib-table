@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri /home/maxx/Project/kicad_lib/kicad-lib/footprints)(options "")(descr ""))
+  (lib (name mod)(type KiCad)(uri /home/maxx/Project/bme_nrf/mod)(options "")(descr ""))
+  (lib (name push_button)(type KiCad)(uri /home/maxx/kicad_lib/modules/push_button.pretty)(options "")(descr ""))
+)

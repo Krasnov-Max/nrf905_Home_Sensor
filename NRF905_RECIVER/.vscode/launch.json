@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "configurations": [
+    {
+        "name": "openocd",
+        "request": "launch",
+        "type": "cortex-debug",
+        "cwd": "${workspaceRoot}",
+        "servertype": "stutil",
+    //    "serverArgs": ["--serial", "333f69063447313236531057"],
+        "interface": "swd",
+        "v1": false,
+        "runToMain": true,
+        "executable": "build/NRF905_RECIVER.elf",
+        "svdFile": "/home/maxx/svd/STM32F4/STM32F401.svd",
+        "configFiles": [
+            "/usr/local/share/openocd/scripts/target/stm32f4.cfg" 
+        ]
+        
+    }
+]
+}

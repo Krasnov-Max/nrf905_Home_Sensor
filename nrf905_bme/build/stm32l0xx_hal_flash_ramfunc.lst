@@ -1,0 +1,1198 @@
+ARM GAS  /tmp/ccyUAuoP.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_hal_flash_ramfunc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.RamFunc,"ax",%progbits
+  16              		.align	1
+  17              		.syntax unified
+  18              		.code	16
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	FLASHRAM_SetErrorCode:
+  23              	.LFB38:
+  24              		.file 1 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/
+   1:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+   2:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   ******************************************************************************
+   3:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @file    stm32l0xx_hal_flash_ramfunc.c
+   4:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @author  MCD Application Team
+   5:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief   FLASH RAMFUNC driver.
+   6:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *          This file provides a Flash firmware functions which should be 
+   7:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *          executed from internal SRAM
+   8:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *
+   9:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *  @verbatim
+  10:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  11:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     *** ARM Compiler ***
+  12:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     --------------------
+  13:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using the toolchain options. 
+  14:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          Functions that are be executed in RAM should reside in a separate
+  15:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          source module. Using the 'Options for File' dialog you can simply change
+  16:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          the 'Code / Const' area of a module to a memory space in physical RAM.
+  17:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          Available memory areas are declared in the 'Target' tab of the 
+  18:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          Options for Target' dialog.
+  19:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  20:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     *** ICCARM Compiler ***
+  21:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     -----------------------
+  22:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain keyword "__ramfunc".
+  23:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  24:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
+  25:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     --------------------
+  26:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain attribute
+  27:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****          "__attribute__((section(".RamFunc")))".
+  28:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  29:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @endverbatim
+  30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   ******************************************************************************
+  31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @attention
+  32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *
+  33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics. 
+  34:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * All rights reserved.</center></h2>
+ARM GAS  /tmp/ccyUAuoP.s 			page 2
+
+
+  35:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *
+  36:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  37:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * the "License"; You may not use this file except in compliance with the 
+  38:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * License. You may obtain a copy of the License at:
+  39:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  40:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *
+  41:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   ******************************************************************************
+  42:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  43:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  44:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Includes ------------------------------------------------------------------*/
+  45:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** #include "stm32l0xx_hal.h"
+  46:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  47:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @addtogroup STM32L0xx_HAL_Driver
+  48:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+  49:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  50:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  51:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** #ifdef HAL_FLASH_MODULE_ENABLED
+  52:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  53:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @addtogroup FLASH
+  54:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+  55:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  56:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @addtogroup FLASH_Private_Variables
+  57:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  * @{
+  58:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  */
+  59:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** extern FLASH_ProcessTypeDef pFlash;
+  60:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+  61:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+  62:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  63:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  64:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+  65:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+  66:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  67:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+  68:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC FLASH_RAMFUNC
+  69:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief FLASH functions executed from RAM
+  70:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+  71:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */ 
+  72:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  73:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  74:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private typedef -----------------------------------------------------------*/
+  75:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private define ------------------------------------------------------------*/
+  76:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private macro -------------------------------------------------------------*/
+  77:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private variables ---------------------------------------------------------*/
+  78:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private function prototypes -----------------------------------------------*/
+  79:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Private_Functions FLASH RAM Private Functions
+  80:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  * @{
+  81:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  */
+  82:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  83:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** static __RAM_FUNC HAL_StatusTypeDef FLASHRAM_WaitForLastOperation(uint32_t Timeout);
+  84:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** static __RAM_FUNC HAL_StatusTypeDef FLASHRAM_SetErrorCode(void);
+  85:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  86:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+  87:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+  88:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+  89:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+  90:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private functions ---------------------------------------------------------*/
+  91:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  
+ARM GAS  /tmp/ccyUAuoP.s 			page 3
+
+
+  92:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions FLASH RAM Exported Functions
+  93:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  *
+  94:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @verbatim  
+  95:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  ===============================================================================
+  96:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****                       ##### ramfunc functions #####
+  97:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  ===============================================================================  
+  98:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     [..]
+  99:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     This subsection provides a set of functions that should be executed from RAM 
+ 100:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     transfers.
+ 101:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 102:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @endverbatim
+ 103:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+ 104:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */ 
+ 105:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 106:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions_Group1 Peripheral features functions 
+ 107:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+ 108:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */  
+ 109:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 110:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 111:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Enable  the power down mode during RUN mode.
+ 112:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note  This function can be used only when the user code is running from Internal SRAM.
+ 113:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 114:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 115:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_EnableRunPowerDown(void)
+ 116:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+ 117:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Enable the Power Down in Run mode*/
+ 118:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   __HAL_FLASH_POWER_DOWN_ENABLE();
+ 119:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 120:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 121:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 122:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 123:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 124:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Disable the power down mode during RUN mode.
+ 125:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note  This function can be used only when the user code is running from Internal SRAM.
+ 126:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 127:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 128:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_DisableRunPowerDown(void)
+ 129:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+ 130:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Disable the Power Down in Run mode*/
+ 131:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   __HAL_FLASH_POWER_DOWN_DISABLE();
+ 132:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 133:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;  
+ 134:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 135:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 136:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 137:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+ 138:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 139:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 140:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions_Group2 Programming and erasing operation functions 
+ 141:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  *
+ 142:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @verbatim  
+ 143:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @endverbatim
+ 144:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+ 145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 146:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 147:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** #if defined(FLASH_PECR_PARALLBANK)
+ 148:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ARM GAS  /tmp/ccyUAuoP.s 			page 4
+
+
+ 149:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Erases a specified 2 pages in program memory in parallel.
+ 150:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   This function can be used only for STM32L07xxx/STM32L08xxx  devices.
+ 151:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         To correctly run this function, the @ref HAL_FLASH_Unlock() function
+ 152:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         must be called before.
+ 153:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         Call the @ref HAL_FLASH_Lock() to disable the flash memory access 
+ 154:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *        (recommended to protect the FLASH memory against possible unwanted operation).
+ 155:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Page_Address1: The page address in program memory to be erased in 
+ 156:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         the first Bank (BANK1). This parameter should be between FLASH_BASE
+ 157:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         and FLASH_BANK1_END.
+ 158:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Page_Address2: The page address in program memory to be erased in 
+ 159:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         the second Bank (BANK2). This parameter should be between FLASH_BANK2_BASE
+ 160:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         and FLASH_BANK2_END.
+ 161:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   A Page is erased in the Program memory only if the address to load 
+ 162:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         is the start address of a page (multiple of @ref FLASH_PAGE_SIZE bytes).
+ 163:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 164:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 165:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_EraseParallelPage(uint32_t Page_Address1, uint32_t Page_Ad
+ 166:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+ 167:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 168:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 169:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Wait for last operation to be completed */
+ 170:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 171:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 172:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(status == HAL_OK)
+ 173:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 174:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Proceed to erase the page */
+ 175:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PARALLBANK);
+ 176:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_ERASE);
+ 177:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 178:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Write 00000000h to the first word of the first program page to erase */
+ 180:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     *(__IO uint32_t *)Page_Address1 = 0x00000000U;
+ 181:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Write 00000000h to the first word of the second program page to erase */    
+ 182:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     *(__IO uint32_t *)Page_Address2 = 0x00000000U;
+ 183:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  
+ 184:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Wait for last operation to be completed */
+ 185:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 186:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 187:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* If the erase operation is completed, disable the ERASE, PROG and PARALLBANK bits */
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 189:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_ERASE);
+ 190:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_PARALLBANK);
+ 191:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }     
+ 192:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Return the Erase Status */
+ 193:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return status;
+ 194:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 195:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 197:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Program 2 half pages in program memory in parallel (half page size is 16 Words).
+ 198:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   This function can be used only for STM32L07xxx/STM32L08xxx  devices.
+ 199:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Address1: specifies the first address to be written in the first bank 
+ 200:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *        (BANK1). This parameter should be between FLASH_BASE and (FLASH_BANK1_END - FLASH_PAGE_S
+ 201:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  pBuffer1: pointer to the buffer  containing the data to be  written 
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         to the first half page in the first bank.
+ 203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Address2: specifies the second address to be written in the second bank
+ 204:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *        (BANK2). This parameter should be between FLASH_BANK2_BASE and (FLASH_BANK2_END - FLASH_
+ 205:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  pBuffer2: pointer to the buffer containing the data to be  written 
+ARM GAS  /tmp/ccyUAuoP.s 			page 5
+
+
+ 206:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         to the second half page in the second bank.
+ 207:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   To correctly run this function, the @ref HAL_FLASH_Unlock() function
+ 208:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         must be called before.
+ 209:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         Call the @ref HAL_FLASH_Lock() to disable the flash memory access  
+ 210:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         (recommended to protect the FLASH memory against possible unwanted operation).
+ 211:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   Half page write is possible only from SRAM.
+ 212:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   A half page is written to the program memory only if the first 
+ 213:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         address to load is the start address of a half page (multiple of 64 
+ 214:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         bytes) and the 15 remaining words to load are in the same half page.
+ 215:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   During the Program memory half page write all read operations are 
+ 216:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         forbidden (this includes DMA read operations and debugger read 
+ 217:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         operations such as breakpoints, periodic updates, etc.).
+ 218:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   If a PGAERR is set during a Program memory half page write, the 
+ 219:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         complete write operation is aborted. Software should then reset the 
+ 220:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         FPRG and PROG/DATA bits and restart the write operation from the 
+ 221:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         beginning.
+ 222:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 223:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 224:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_ProgramParallelHalfPage(uint32_t Address1, uint32_t* pBuff
+ 225:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+ 226:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   uint32_t count = 0U; 
+ 227:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 228:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 229:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Wait for last operation to be completed */
+ 230:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 231:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 232:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(status == HAL_OK)
+ 233:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 234:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Proceed to program the new half page */
+ 235:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PARALLBANK);
+ 236:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_FPRG);
+ 237:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 238:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 239:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Wait for last operation to be completed */
+ 240:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 241:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     if(status == HAL_OK)
+ 242:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     {
+ 243:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Disable all IRQs */
+ 244:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __disable_irq();
+ 245:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 246:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Write the first half page directly with 16 different words */
+ 247:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       while(count < 16U)
+ 248:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       {
+ 249:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         /* Address1 doesn't need to be increased */ 
+ 250:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         *(__IO uint32_t*) Address1 = *pBuffer1;
+ 251:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         pBuffer1++;
+ 252:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         count ++;  
+ 253:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       }
+ 254:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 255:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Write the second half page directly with 16 different words */
+ 256:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       count = 0U;
+ 257:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       while(count < 16U)
+ 258:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       {
+ 259:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         /* Address2 doesn't need to be increased */ 
+ 260:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         *(__IO uint32_t*) Address2 = *pBuffer2;
+ 261:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         pBuffer2++;
+ 262:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         count ++;  
+ARM GAS  /tmp/ccyUAuoP.s 			page 6
+
+
+ 263:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       }
+ 264:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 265:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Enable IRQs */
+ 266:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __enable_irq();
+ 267:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 268:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Wait for last operation to be completed */
+ 269:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 270:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 271:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 272:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* if the write operation is completed, disable the PROG, FPRG and PARALLBANK bits */
+ 273:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 274:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_FPRG);
+ 275:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_PARALLBANK);
+ 276:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 277:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 278:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Return the Write Status */
+ 279:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return status;
+ 280:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 281:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** #endif /* FLASH_PECR_PARALLBANK */
+ 282:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 283:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 284:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Program a half page in program memory.
+ 285:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Address specifies the address to be written.
+ 286:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  pBuffer pointer to the buffer  containing the data to be  written to 
+ 287:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         the half page.
+ 288:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   To correctly run this function, the @ref HAL_FLASH_Unlock() function
+ 289:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         must be called before.
+ 290:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         Call the @ref HAL_FLASH_Lock() to disable the flash memory access  
+ 291:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         (recommended to protect the FLASH memory against possible unwanted operation)
+ 292:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   Half page write is possible only from SRAM.
+ 293:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   A half page is written to the program memory only if the first 
+ 294:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         address to load is the start address of a half page (multiple of 64 
+ 295:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         bytes) and the 15 remaining words to load are in the same half page.
+ 296:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   During the Program memory half page write all read operations are 
+ 297:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         forbidden (this includes DMA read operations and debugger read 
+ 298:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         operations such as breakpoints, periodic updates, etc.).
+ 299:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @note   If a PGAERR is set during a Program memory half page write, the 
+ 300:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         complete write operation is aborted. Software should then reset the 
+ 301:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         FPRG and PROG/DATA bits and restart the write operation from the 
+ 302:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         beginning.
+ 303:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 304:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_HalfPageProgram(uint32_t Address, uint32_t* pBuffer)
+ 306:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+ 307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   uint32_t count = 0U; 
+ 308:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 309:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 310:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Wait for last operation to be completed */
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 312:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 313:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(status == HAL_OK)
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 315:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Proceed to program the new half page */
+ 316:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_FPRG);
+ 317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 318:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     
+ 319:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Disable all IRQs */
+ARM GAS  /tmp/ccyUAuoP.s 			page 7
+
+
+ 320:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     __disable_irq();
+ 321:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 322:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Write one half page directly with 16 different words */
+ 323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     while(count < 16U)
+ 324:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     {
+ 325:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       /* Address doesn't need to be increased */ 
+ 326:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       *(__IO uint32_t*) Address = *pBuffer;
+ 327:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       pBuffer++;
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       count ++;  
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 331:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Enable IRQs */
+ 332:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     __enable_irq();
+ 333:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 334:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Wait for last operation to be completed */
+ 335:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     status = FLASHRAM_WaitForLastOperation(FLASH_TIMEOUT_VALUE);
+ 336:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  
+ 337:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* If the write operation is completed, disable the PROG and FPRG bits */
+ 338:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 339:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_FPRG);
+ 340:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 341:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 342:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Return the Write Status */
+ 343:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return status;
+ 344:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 345:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 346:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 347:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+ 348:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 349:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 350:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @defgroup FLASH_RAMFUNC_Exported_Functions_Group3 Peripheral errors functions 
+ 351:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  *  @brief    Peripheral errors functions 
+ 352:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  *
+ 353:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @verbatim   
+ 354:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  ===============================================================================
+ 355:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****                       ##### Peripheral errors functions #####
+ 356:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  ===============================================================================  
+ 357:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     [..]
+ 358:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     This subsection permit to get in run-time errors of  the FLASH peripheral.
+ 359:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 360:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** @endverbatim
+ 361:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+ 362:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 363:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 364:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 365:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Get the specific FLASH errors flag.
+ 366:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Error pointer is the error value. It can be a mixed of:
+ 367:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_RD      FLASH Read Protection error flag (PCROP)
+ 368:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_SIZE    FLASH Programming Parallelism error flag  
+ 369:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_PGA     FLASH Programming Alignment error flag
+ 370:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_WRP     FLASH Write protected error flag
+ 371:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_OPTV    FLASH Option valid error flag 
+ 372:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_FWWERR  FLASH Write or Erase operation aborted
+ 373:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_NOTZERO FLASH Write operation is done in a not-erased regi
+ 374:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL Status
+ 375:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 376:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_GetError(uint32_t * Error)
+ARM GAS  /tmp/ccyUAuoP.s 			page 8
+
+
+ 377:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** { 
+ 378:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *Error = pFlash.ErrorCode;
+ 379:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;  
+ 380:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 381:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 382:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 383:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+ 384:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 385:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 386:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 387:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @}
+ 388:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 389:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 390:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /** @addtogroup FLASH_RAMFUNC_Private_Functions
+ 391:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @{
+ 392:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */ 
+ 393:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 394:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 395:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Set the specific FLASH error flag.
+ 396:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL Status
+ 397:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 398:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** static __RAM_FUNC HAL_StatusTypeDef FLASHRAM_SetErrorCode(void)
+ 399:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** {
+  25              		.loc 1 399 0
+  26              		.cfi_startproc
+  27              		@ args = 0, pretend = 0, frame = 0
+  28              		@ frame_needed = 0, uses_anonymous_args = 0
+  29              		@ link register save eliminated.
+  30              	.LVL0:
+ 400:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   uint32_t flags = 0;
+ 401:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 402:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_WRPERR))
+  31              		.loc 1 402 0
+  32 0000 2B4B     		ldr	r3, .L10
+  33 0002 9B69     		ldr	r3, [r3, #24]
+  34 0004 DB05     		lsls	r3, r3, #23
+  35 0006 50D5     		bpl	.L9
+ 403:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 404:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_WRP;
+  36              		.loc 1 404 0
+  37 0008 2A4A     		ldr	r2, .L10+4
+  38 000a 5369     		ldr	r3, [r2, #20]
+  39 000c 0221     		movs	r1, #2
+  40 000e 0B43     		orrs	r3, r1
+  41 0010 5361     		str	r3, [r2, #20]
+  42              	.LVL1:
+ 405:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_WRPERR;
+  43              		.loc 1 405 0
+  44 0012 8023     		movs	r3, #128
+  45 0014 5B00     		lsls	r3, r3, #1
+  46              	.LVL2:
+  47              	.L2:
+ 406:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 407:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_PGAERR))
+  48              		.loc 1 407 0
+  49 0016 264A     		ldr	r2, .L10
+  50 0018 9269     		ldr	r2, [r2, #24]
+ARM GAS  /tmp/ccyUAuoP.s 			page 9
+
+
+  51 001a 9205     		lsls	r2, r2, #22
+  52 001c 07D5     		bpl	.L3
+ 408:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 409:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_PGA;
+  53              		.loc 1 409 0
+  54 001e 2549     		ldr	r1, .L10+4
+  55 0020 4A69     		ldr	r2, [r1, #20]
+  56 0022 0120     		movs	r0, #1
+  57 0024 0243     		orrs	r2, r0
+  58 0026 4A61     		str	r2, [r1, #20]
+ 410:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_PGAERR;
+  59              		.loc 1 410 0
+  60 0028 8022     		movs	r2, #128
+  61 002a 9200     		lsls	r2, r2, #2
+  62 002c 1343     		orrs	r3, r2
+  63              	.LVL3:
+  64              	.L3:
+ 411:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 412:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_SIZERR))
+  65              		.loc 1 412 0
+  66 002e 204A     		ldr	r2, .L10
+  67 0030 9269     		ldr	r2, [r2, #24]
+  68 0032 5205     		lsls	r2, r2, #21
+  69 0034 07D5     		bpl	.L4
+ 413:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   { 
+ 414:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_SIZE;
+  70              		.loc 1 414 0
+  71 0036 1F49     		ldr	r1, .L10+4
+  72 0038 4A69     		ldr	r2, [r1, #20]
+  73 003a 0820     		movs	r0, #8
+  74 003c 0243     		orrs	r2, r0
+  75 003e 4A61     		str	r2, [r1, #20]
+ 415:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_SIZERR;
+  76              		.loc 1 415 0
+  77 0040 8022     		movs	r2, #128
+  78 0042 D200     		lsls	r2, r2, #3
+  79 0044 1343     		orrs	r3, r2
+  80              	.LVL4:
+  81              	.L4:
+ 416:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 417:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_OPTVERR))
+  82              		.loc 1 417 0
+  83 0046 1A4A     		ldr	r2, .L10
+  84 0048 9269     		ldr	r2, [r2, #24]
+  85 004a 1205     		lsls	r2, r2, #20
+  86 004c 07D5     		bpl	.L5
+ 418:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 419:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* WARNING : On the first cut of STM32L031xx and STM32L041xx devices,
+ 420:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           (RefID = 0x1000) the FLASH_FLAG_OPTVERR bit was not behaving
+ 421:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           as expected. If the user run an application using the first
+ 422:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           cut of the STM32L031xx device or the first cut of the STM32L041xx
+ 423:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           device, this error should be ignored. The revId of the device
+ 424:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           can be retrieved via the HAL_GetREVID() function.
+ 425:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *
+ 426:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      */
+ 427:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_OPTV;
+  87              		.loc 1 427 0
+ARM GAS  /tmp/ccyUAuoP.s 			page 10
+
+
+  88 004e 1949     		ldr	r1, .L10+4
+  89 0050 4A69     		ldr	r2, [r1, #20]
+  90 0052 0420     		movs	r0, #4
+  91 0054 0243     		orrs	r2, r0
+  92 0056 4A61     		str	r2, [r1, #20]
+ 428:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_OPTVERR;
+  93              		.loc 1 428 0
+  94 0058 8022     		movs	r2, #128
+  95 005a 1201     		lsls	r2, r2, #4
+  96 005c 1343     		orrs	r3, r2
+  97              	.LVL5:
+  98              	.L5:
+ 429:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 430:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 431:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_RDERR))
+  99              		.loc 1 431 0
+ 100 005e 144A     		ldr	r2, .L10
+ 101 0060 9269     		ldr	r2, [r2, #24]
+ 102 0062 9204     		lsls	r2, r2, #18
+ 103 0064 07D5     		bpl	.L6
+ 432:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 433:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_RD;
+ 104              		.loc 1 433 0
+ 105 0066 1349     		ldr	r1, .L10+4
+ 106 0068 4A69     		ldr	r2, [r1, #20]
+ 107 006a 1020     		movs	r0, #16
+ 108 006c 0243     		orrs	r2, r0
+ 109 006e 4A61     		str	r2, [r1, #20]
+ 434:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_RDERR;
+ 110              		.loc 1 434 0
+ 111 0070 8022     		movs	r2, #128
+ 112 0072 9201     		lsls	r2, r2, #6
+ 113 0074 1343     		orrs	r3, r2
+ 114              	.LVL6:
+ 115              	.L6:
+ 435:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 436:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_FWWERR))
+ 116              		.loc 1 436 0
+ 117 0076 0E4A     		ldr	r2, .L10
+ 118 0078 9269     		ldr	r2, [r2, #24]
+ 119 007a 9203     		lsls	r2, r2, #14
+ 120 007c 05D5     		bpl	.L7
+ 437:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   { 
+ 438:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_FWWERR;
+ 121              		.loc 1 438 0
+ 122 007e 0D48     		ldr	r0, .L10+4
+ 123 0080 4269     		ldr	r2, [r0, #20]
+ 124 0082 2021     		movs	r1, #32
+ 125 0084 0A43     		orrs	r2, r1
+ 126 0086 4261     		str	r2, [r0, #20]
+ 439:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= HAL_FLASH_ERROR_FWWERR;
+ 127              		.loc 1 439 0
+ 128 0088 0B43     		orrs	r3, r1
+ 129              	.LVL7:
+ 130              	.L7:
+ 440:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 441:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if(__HAL_FLASH_GET_FLAG(FLASH_FLAG_NOTZEROERR))
+ARM GAS  /tmp/ccyUAuoP.s 			page 11
+
+
+ 131              		.loc 1 441 0
+ 132 008a 094A     		ldr	r2, .L10
+ 133 008c 9269     		ldr	r2, [r2, #24]
+ 134 008e D203     		lsls	r2, r2, #15
+ 135 0090 07D5     		bpl	.L8
+ 442:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   { 
+ 443:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     pFlash.ErrorCode |= HAL_FLASH_ERROR_NOTZERO;
+ 136              		.loc 1 443 0
+ 137 0092 0849     		ldr	r1, .L10+4
+ 138 0094 4A69     		ldr	r2, [r1, #20]
+ 139 0096 4020     		movs	r0, #64
+ 140 0098 0243     		orrs	r2, r0
+ 141 009a 4A61     		str	r2, [r1, #20]
+ 444:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_NOTZEROERR;
+ 142              		.loc 1 444 0
+ 143 009c 8022     		movs	r2, #128
+ 144 009e 5202     		lsls	r2, r2, #9
+ 145 00a0 1343     		orrs	r3, r2
+ 146              	.LVL8:
+ 147              	.L8:
+ 445:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 446:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 447:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Clear FLASH error pending bits */
+ 448:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   __HAL_FLASH_CLEAR_FLAG(flags);
+ 148              		.loc 1 448 0
+ 149 00a2 034A     		ldr	r2, .L10
+ 150 00a4 9361     		str	r3, [r2, #24]
+ 449:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 450:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 451:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }  
+ 151              		.loc 1 451 0
+ 152 00a6 0020     		movs	r0, #0
+ 153              		@ sp needed
+ 154 00a8 7047     		bx	lr
+ 155              	.LVL9:
+ 156              	.L9:
+ 400:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 157              		.loc 1 400 0
+ 158 00aa 0023     		movs	r3, #0
+ 159 00ac B3E7     		b	.L2
+ 160              	.L11:
+ 161 00ae C046     		.align	2
+ 162              	.L10:
+ 163 00b0 00200240 		.word	1073881088
+ 164 00b4 00000000 		.word	pFlash
+ 165              		.cfi_endproc
+ 166              	.LFE38:
+ 168              		.align	1
+ 169              		.syntax unified
+ 170              		.code	16
+ 171              		.thumb_func
+ 172              		.fpu softvfp
+ 174              	FLASHRAM_WaitForLastOperation:
+ 175              	.LFB39:
+ 452:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 453:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
+ 454:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @brief  Wait for a FLASH operation to complete.
+ARM GAS  /tmp/ccyUAuoP.s 			page 12
+
+
+ 455:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Timeout maximum flash operationtimeout
+ 456:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL status
+ 457:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
+ 458:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** static __RAM_FUNC HAL_StatusTypeDef FLASHRAM_WaitForLastOperation(uint32_t Timeout)
+ 459:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** { 
+ 176              		.loc 1 459 0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180              	.LVL10:
+ 181 00b8 10B5     		push	{r4, lr}
+ 182              	.LCFI0:
+ 183              		.cfi_def_cfa_offset 8
+ 184              		.cfi_offset 4, -8
+ 185              		.cfi_offset 14, -4
+ 460:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Wait for the FLASH operation to complete by polling on BUSY flag to be reset.
+ 461:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****        Even if the FLASH operation fails, the BUSY flag will be reset and an error
+ 462:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****        flag will be set */
+ 463:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****        
+ 464:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     while(__HAL_FLASH_GET_FLAG(FLASH_FLAG_BSY) && (Timeout != 0x00U)) 
+ 186              		.loc 1 464 0
+ 187 00ba 00E0     		b	.L13
+ 188              	.L15:
+ 465:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     { 
+ 466:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       Timeout--;
+ 189              		.loc 1 466 0
+ 190 00bc 0138     		subs	r0, r0, #1
+ 191              	.LVL11:
+ 192              	.L13:
+ 464:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     { 
+ 193              		.loc 1 464 0
+ 194 00be 194B     		ldr	r3, .L21
+ 195 00c0 9B69     		ldr	r3, [r3, #24]
+ 196 00c2 DB07     		lsls	r3, r3, #31
+ 197 00c4 01D5     		bpl	.L14
+ 464:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     { 
+ 198              		.loc 1 464 0 is_stmt 0 discriminator 1
+ 199 00c6 0028     		cmp	r0, #0
+ 200 00c8 F8D1     		bne	.L15
+ 201              	.L14:
+ 467:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 468:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     
+ 469:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     if(Timeout == 0x00U)
+ 202              		.loc 1 469 0 is_stmt 1
+ 203 00ca 0028     		cmp	r0, #0
+ 204 00cc 26D0     		beq	.L19
+ 470:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     {
+ 471:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       return HAL_TIMEOUT;
+ 472:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 473:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     
+ 474:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Check FLASH End of Operation flag  */
+ 475:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if (__HAL_FLASH_GET_FLAG(FLASH_FLAG_EOP))
+ 205              		.loc 1 475 0
+ 206 00ce 154B     		ldr	r3, .L21
+ 207 00d0 9B69     		ldr	r3, [r3, #24]
+ 208 00d2 9B07     		lsls	r3, r3, #30
+ 209 00d4 02D5     		bpl	.L17
+ARM GAS  /tmp/ccyUAuoP.s 			page 13
+
+
+ 476:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 477:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Clear FLASH End of Operation pending bit */
+ 478:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_EOP);
+ 210              		.loc 1 478 0
+ 211 00d6 134B     		ldr	r3, .L21
+ 212 00d8 0222     		movs	r2, #2
+ 213 00da 9A61     		str	r2, [r3, #24]
+ 214              	.L17:
+ 479:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 480:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 481:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   if( __HAL_FLASH_GET_FLAG(FLASH_FLAG_WRPERR)     || 
+ 215              		.loc 1 481 0
+ 216 00dc 114B     		ldr	r3, .L21
+ 217 00de 9B69     		ldr	r3, [r3, #24]
+ 218 00e0 DB05     		lsls	r3, r3, #23
+ 219 00e2 17D4     		bmi	.L18
+ 482:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_PGAERR)     || 
+ 220              		.loc 1 482 0 discriminator 1
+ 221 00e4 0F4B     		ldr	r3, .L21
+ 222 00e6 9B69     		ldr	r3, [r3, #24]
+ 481:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_PGAERR)     || 
+ 223              		.loc 1 481 0 discriminator 1
+ 224 00e8 9B05     		lsls	r3, r3, #22
+ 225 00ea 13D4     		bmi	.L18
+ 483:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_SIZERR)     || 
+ 226              		.loc 1 483 0
+ 227 00ec 0D4B     		ldr	r3, .L21
+ 228 00ee 9B69     		ldr	r3, [r3, #24]
+ 482:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_PGAERR)     || 
+ 229              		.loc 1 482 0
+ 230 00f0 5B05     		lsls	r3, r3, #21
+ 231 00f2 0FD4     		bmi	.L18
+ 484:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_OPTVERR)    || 
+ 232              		.loc 1 484 0
+ 233 00f4 0B4B     		ldr	r3, .L21
+ 234 00f6 9B69     		ldr	r3, [r3, #24]
+ 483:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_SIZERR)     || 
+ 235              		.loc 1 483 0
+ 236 00f8 1B05     		lsls	r3, r3, #20
+ 237 00fa 0BD4     		bmi	.L18
+ 485:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_RDERR)      || 
+ 238              		.loc 1 485 0
+ 239 00fc 094B     		ldr	r3, .L21
+ 240 00fe 9B69     		ldr	r3, [r3, #24]
+ 484:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_OPTVERR)    || 
+ 241              		.loc 1 484 0
+ 242 0100 9B04     		lsls	r3, r3, #18
+ 243 0102 07D4     		bmi	.L18
+ 486:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_FWWERR)     || 
+ 244              		.loc 1 486 0
+ 245 0104 074B     		ldr	r3, .L21
+ 246 0106 9B69     		ldr	r3, [r3, #24]
+ 485:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_RDERR)      || 
+ 247              		.loc 1 485 0
+ 248 0108 9B03     		lsls	r3, r3, #14
+ 249 010a 03D4     		bmi	.L18
+ 487:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_NOTZEROERR) )
+ARM GAS  /tmp/ccyUAuoP.s 			page 14
+
+
+ 250              		.loc 1 487 0
+ 251 010c 054B     		ldr	r3, .L21
+ 252 010e 9B69     		ldr	r3, [r3, #24]
+ 486:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_FWWERR)     || 
+ 253              		.loc 1 486 0
+ 254 0110 DB03     		lsls	r3, r3, #15
+ 255 0112 05D5     		bpl	.L20
+ 256              	.L18:
+ 488:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /*Save the error code*/
+ 490:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 491:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* WARNING : On the first cut of STM32L031xx and STM32L041xx devices,
+ 492:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           (RefID = 0x1000) the FLASH_FLAG_OPTVERR bit was not behaving
+ 493:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           as expected. If the user run an application using the first
+ 494:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           cut of the STM32L031xx device or the first cut of the STM32L041xx
+ 495:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           device, this error should be ignored. The revId of the device
+ 496:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *           can be retrieved via the HAL_GetREVID() function.
+ 497:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      *
+ 498:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****      */
+ 499:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     FLASHRAM_SetErrorCode();
+ 257              		.loc 1 499 0
+ 258 0114 FFF774FF 		bl	FLASHRAM_SetErrorCode
+ 259              	.LVL12:
+ 500:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     return HAL_ERROR;
+ 260              		.loc 1 500 0
+ 261 0118 0120     		movs	r0, #1
+ 262              	.L16:
+ 501:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 502:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 503:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* There is no error flag set */
+ 504:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;
+ 505:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 263              		.loc 1 505 0
+ 264              		@ sp needed
+ 265 011a 10BD     		pop	{r4, pc}
+ 266              	.LVL13:
+ 267              	.L19:
+ 471:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 268              		.loc 1 471 0
+ 269 011c 0320     		movs	r0, #3
+ 270              	.LVL14:
+ 271 011e FCE7     		b	.L16
+ 272              	.LVL15:
+ 273              	.L20:
+ 504:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
+ 274              		.loc 1 504 0
+ 275 0120 0020     		movs	r0, #0
+ 276              	.LVL16:
+ 277 0122 FAE7     		b	.L16
+ 278              	.L22:
+ 279              		.align	2
+ 280              	.L21:
+ 281 0124 00200240 		.word	1073881088
+ 282              		.cfi_endproc
+ 283              	.LFE39:
+ 285              		.align	1
+ 286              		.global	HAL_FLASHEx_EnableRunPowerDown
+ARM GAS  /tmp/ccyUAuoP.s 			page 15
+
+
+ 287              		.syntax unified
+ 288              		.code	16
+ 289              		.thumb_func
+ 290              		.fpu softvfp
+ 292              	HAL_FLASHEx_EnableRunPowerDown:
+ 293              	.LFB34:
+ 116:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Enable the Power Down in Run mode*/
+ 294              		.loc 1 116 0
+ 295              		.cfi_startproc
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 118:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 299              		.loc 1 118 0
+ 300 0128 054B     		ldr	r3, .L24
+ 301 012a 064A     		ldr	r2, .L24+4
+ 302 012c 9A60     		str	r2, [r3, #8]
+ 303 012e 064A     		ldr	r2, .L24+8
+ 304 0130 9A60     		str	r2, [r3, #8]
+ 305 0132 1A68     		ldr	r2, [r3]
+ 306 0134 1021     		movs	r1, #16
+ 307 0136 0A43     		orrs	r2, r1
+ 308 0138 1A60     		str	r2, [r3]
+ 121:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 309              		.loc 1 121 0
+ 310 013a 0020     		movs	r0, #0
+ 311              		@ sp needed
+ 312 013c 7047     		bx	lr
+ 313              	.L25:
+ 314 013e C046     		.align	2
+ 315              	.L24:
+ 316 0140 00200240 		.word	1073881088
+ 317 0144 37261504 		.word	68494903
+ 318 0148 FDFCFBFA 		.word	-84148995
+ 319              		.cfi_endproc
+ 320              	.LFE34:
+ 322              		.align	1
+ 323              		.global	HAL_FLASHEx_DisableRunPowerDown
+ 324              		.syntax unified
+ 325              		.code	16
+ 326              		.thumb_func
+ 327              		.fpu softvfp
+ 329              	HAL_FLASHEx_DisableRunPowerDown:
+ 330              	.LFB35:
+ 129:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Disable the Power Down in Run mode*/
+ 331              		.loc 1 129 0
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		@ link register save eliminated.
+ 131:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 336              		.loc 1 131 0
+ 337 014c 054B     		ldr	r3, .L27
+ 338 014e 064A     		ldr	r2, .L27+4
+ 339 0150 9A60     		str	r2, [r3, #8]
+ 340 0152 064A     		ldr	r2, .L27+8
+ 341 0154 9A60     		str	r2, [r3, #8]
+ARM GAS  /tmp/ccyUAuoP.s 			page 16
+
+
+ 342 0156 1A68     		ldr	r2, [r3]
+ 343 0158 1021     		movs	r1, #16
+ 344 015a 8A43     		bics	r2, r1
+ 345 015c 1A60     		str	r2, [r3]
+ 134:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 346              		.loc 1 134 0
+ 347 015e 0020     		movs	r0, #0
+ 348              		@ sp needed
+ 349 0160 7047     		bx	lr
+ 350              	.L28:
+ 351 0162 C046     		.align	2
+ 352              	.L27:
+ 353 0164 00200240 		.word	1073881088
+ 354 0168 37261504 		.word	68494903
+ 355 016c FDFCFBFA 		.word	-84148995
+ 356              		.cfi_endproc
+ 357              	.LFE35:
+ 359              		.align	1
+ 360              		.global	HAL_FLASHEx_HalfPageProgram
+ 361              		.syntax unified
+ 362              		.code	16
+ 363              		.thumb_func
+ 364              		.fpu softvfp
+ 366              	HAL_FLASHEx_HalfPageProgram:
+ 367              	.LFB36:
+ 306:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   uint32_t count = 0U; 
+ 368              		.loc 1 306 0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              	.LVL17:
+ 373 0170 70B5     		push	{r4, r5, r6, lr}
+ 374              	.LCFI1:
+ 375              		.cfi_def_cfa_offset 16
+ 376              		.cfi_offset 4, -16
+ 377              		.cfi_offset 5, -12
+ 378              		.cfi_offset 6, -8
+ 379              		.cfi_offset 14, -4
+ 380 0172 0500     		movs	r5, r0
+ 381 0174 0C00     		movs	r4, r1
+ 382              	.LVL18:
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
+ 383              		.loc 1 311 0
+ 384 0176 1248     		ldr	r0, .L33
+ 385              	.LVL19:
+ 386 0178 FFF79EFF 		bl	FLASHRAM_WaitForLastOperation
+ 387              	.LVL20:
+ 313:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   {
+ 388              		.loc 1 313 0
+ 389 017c 0028     		cmp	r0, #0
+ 390 017e 1ED1     		bne	.L30
+ 316:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PROG);
+ 391              		.loc 1 316 0
+ 392 0180 104B     		ldr	r3, .L33+4
+ 393 0182 5968     		ldr	r1, [r3, #4]
+ 394 0184 8022     		movs	r2, #128
+ 395 0186 D200     		lsls	r2, r2, #3
+ARM GAS  /tmp/ccyUAuoP.s 			page 17
+
+
+ 396 0188 0A43     		orrs	r2, r1
+ 397 018a 5A60     		str	r2, [r3, #4]
+ 317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     
+ 398              		.loc 1 317 0
+ 399 018c 5A68     		ldr	r2, [r3, #4]
+ 400 018e 0821     		movs	r1, #8
+ 401 0190 0A43     		orrs	r2, r1
+ 402 0192 5A60     		str	r2, [r3, #4]
+ 403              	.LBB6:
+ 404              	.LBB7:
+ 405              		.file 2 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h
+   1:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS Cortex-M Core Function/Instruction Header File
+   4:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V4.30
+   5:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     20. October 2015
+   6:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
+   8:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+   9:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    All rights reserved.
+  10:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    Redistribution and use in source and binary forms, with or without
+  11:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    modification, are permitted provided that the following conditions are met:
+  12:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    - Redistributions of source code must retain the above copyright
+  13:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer.
+  14:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    - Redistributions in binary form must reproduce the above copyright
+  15:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer in the
+  16:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      documentation and/or other materials provided with the distribution.
+  17:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  18:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      to endorse or promote products derived from this software without
+  19:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      specific prior written permission.
+  20:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    *
+  21:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  25:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    POSSIBILITY OF SUCH DAMAGE.
+  32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    ---------------------------------------------------------------------------*/
+  33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  34:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  35:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  36:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  37:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  38:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  39:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined ( __GNUC__ )
+  40:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  41:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  42:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  43:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  44:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  45:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  46:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  /tmp/ccyUAuoP.s 			page 18
+
+
+  47:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+  48:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+  49:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+  50:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+  51:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  52:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  53:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+  54:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+  55:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+  56:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+  57:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  58:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+  59:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** {
+  60:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+  61:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** }
+  62:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  63:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  64:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+  65:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+  66:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+  67:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   Can only be executed in Privileged modes.
+  68:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  69:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+  70:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** {
+  71:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 406              		.loc 2 71 0
+ 407              		.syntax divided
+ 408              	@ 71 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 409 0194 72B6     		cpsid i
+ 410              	@ 0 "" 2
+ 411              		.thumb
+ 412              		.syntax unified
+ 413              	.LBE7:
+ 414              	.LBE6:
+ 307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 415              		.loc 1 307 0
+ 416 0196 0023     		movs	r3, #0
+ 417 0198 02E0     		b	.L31
+ 418              	.LVL21:
+ 419              	.L32:
+ 326:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       pBuffer++;
+ 420              		.loc 1 326 0
+ 421 019a 04CC     		ldmia	r4!, {r2}
+ 422              	.LVL22:
+ 423 019c 2A60     		str	r2, [r5]
+ 424              	.LVL23:
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     }
+ 425              		.loc 1 328 0
+ 426 019e 0133     		adds	r3, r3, #1
+ 427              	.LVL24:
+ 428              	.L31:
+ 323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     {
+ 429              		.loc 1 323 0
+ 430 01a0 0F2B     		cmp	r3, #15
+ 431 01a2 FAD9     		bls	.L32
+ 432              	.LBB8:
+ 433              	.LBB9:
+ARM GAS  /tmp/ccyUAuoP.s 			page 19
+
+
+  60:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 434              		.loc 2 60 0
+ 435              		.syntax divided
+ 436              	@ 60 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 437 01a4 62B6     		cpsie i
+ 438              	@ 0 "" 2
+ 439              		.thumb
+ 440              		.syntax unified
+ 441              	.LBE9:
+ 442              	.LBE8:
+ 335:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  
+ 443              		.loc 1 335 0
+ 444 01a6 0648     		ldr	r0, .L33
+ 445              	.LVL25:
+ 446 01a8 FFF786FF 		bl	FLASHRAM_WaitForLastOperation
+ 447              	.LVL26:
+ 338:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_FPRG);
+ 448              		.loc 1 338 0
+ 449 01ac 054B     		ldr	r3, .L33+4
+ 450 01ae 5A68     		ldr	r2, [r3, #4]
+ 451 01b0 0821     		movs	r1, #8
+ 452 01b2 8A43     		bics	r2, r1
+ 453 01b4 5A60     		str	r2, [r3, #4]
+ 339:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
+ 454              		.loc 1 339 0
+ 455 01b6 5A68     		ldr	r2, [r3, #4]
+ 456 01b8 0349     		ldr	r1, .L33+8
+ 457 01ba 0A40     		ands	r2, r1
+ 458 01bc 5A60     		str	r2, [r3, #4]
+ 459              	.LVL27:
+ 460              	.L30:
+ 344:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 461              		.loc 1 344 0
+ 462              		@ sp needed
+ 463              	.LVL28:
+ 464              	.LVL29:
+ 465 01be 70BD     		pop	{r4, r5, r6, pc}
+ 466              	.L34:
+ 467              		.align	2
+ 468              	.L33:
+ 469 01c0 50C30000 		.word	50000
+ 470 01c4 00200240 		.word	1073881088
+ 471 01c8 FFFBFFFF 		.word	-1025
+ 472              		.cfi_endproc
+ 473              	.LFE36:
+ 475              		.align	1
+ 476              		.global	HAL_FLASHEx_GetError
+ 477              		.syntax unified
+ 478              		.code	16
+ 479              		.thumb_func
+ 480              		.fpu softvfp
+ 482              	HAL_FLASHEx_GetError:
+ 483              	.LFB37:
+ 377:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *Error = pFlash.ErrorCode;
+ 484              		.loc 1 377 0
+ 485              		.cfi_startproc
+ 486              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccyUAuoP.s 			page 20
+
+
+ 487              		@ frame_needed = 0, uses_anonymous_args = 0
+ 488              		@ link register save eliminated.
+ 489              	.LVL30:
+ 378:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   return HAL_OK;  
+ 490              		.loc 1 378 0
+ 491 01cc 024B     		ldr	r3, .L36
+ 492 01ce 5B69     		ldr	r3, [r3, #20]
+ 493 01d0 0360     		str	r3, [r0]
+ 380:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
+ 494              		.loc 1 380 0
+ 495 01d2 0020     		movs	r0, #0
+ 496              	.LVL31:
+ 497              		@ sp needed
+ 498 01d4 7047     		bx	lr
+ 499              	.L37:
+ 500 01d6 C046     		.align	2
+ 501              	.L36:
+ 502 01d8 00000000 		.word	pFlash
+ 503              		.cfi_endproc
+ 504              	.LFE37:
+ 506              		.text
+ 507              	.Letext0:
+ 508              		.file 3 "/home/maxx/develop/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/machine/_defa
+ 509              		.file 4 "/home/maxx/develop/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/sys/_stdint.h
+ 510              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 511              		.file 6 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 512              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 513              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 514              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ARM GAS  /tmp/ccyUAuoP.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l0xx_hal_flash_ramfunc.c
+     /tmp/ccyUAuoP.s:16     .RamFunc:0000000000000000 $t
+     /tmp/ccyUAuoP.s:22     .RamFunc:0000000000000000 FLASHRAM_SetErrorCode
+     /tmp/ccyUAuoP.s:163    .RamFunc:00000000000000b0 $d
+     /tmp/ccyUAuoP.s:168    .RamFunc:00000000000000b8 $t
+     /tmp/ccyUAuoP.s:174    .RamFunc:00000000000000b8 FLASHRAM_WaitForLastOperation
+     /tmp/ccyUAuoP.s:281    .RamFunc:0000000000000124 $d
+     /tmp/ccyUAuoP.s:285    .RamFunc:0000000000000128 $t
+     /tmp/ccyUAuoP.s:292    .RamFunc:0000000000000128 HAL_FLASHEx_EnableRunPowerDown
+     /tmp/ccyUAuoP.s:316    .RamFunc:0000000000000140 $d
+     /tmp/ccyUAuoP.s:322    .RamFunc:000000000000014c $t
+     /tmp/ccyUAuoP.s:329    .RamFunc:000000000000014c HAL_FLASHEx_DisableRunPowerDown
+     /tmp/ccyUAuoP.s:353    .RamFunc:0000000000000164 $d
+     /tmp/ccyUAuoP.s:359    .RamFunc:0000000000000170 $t
+     /tmp/ccyUAuoP.s:366    .RamFunc:0000000000000170 HAL_FLASHEx_HalfPageProgram
+     /tmp/ccyUAuoP.s:469    .RamFunc:00000000000001c0 $d
+     /tmp/ccyUAuoP.s:475    .RamFunc:00000000000001cc $t
+     /tmp/ccyUAuoP.s:482    .RamFunc:00000000000001cc HAL_FLASHEx_GetError
+     /tmp/ccyUAuoP.s:502    .RamFunc:00000000000001d8 $d
+
+UNDEFINED SYMBOLS
+pFlash

@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "vscode_stm32_c_cpp_properties",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/Core/Inc/",
+                "${workspaceRoot}/Drivers/CMSIS/Include/",
+                "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32L0xx/Include",
+                "${workspaceRoot}/Drivers/STM32L0xx_HAL_Driver/Inc/"
+            ],
+            "defines": [
+                "STM32L011xx"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
