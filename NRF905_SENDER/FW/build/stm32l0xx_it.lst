@@ -1,0 +1,294 @@
+ARM GAS  /tmp/ccKOnTdd.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NMI_Handler:
+  25              	.LFB34:
+  26              		.file 1 "Core/Src/stm32l0xx_it.c"
+   1:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/stm32l0xx_it.c **** /**
+   3:Core/Src/stm32l0xx_it.c ****   ******************************************************************************
+   4:Core/Src/stm32l0xx_it.c ****   * @file    stm32l0xx_it.c
+   5:Core/Src/stm32l0xx_it.c ****   * @brief   Interrupt Service Routines.
+   6:Core/Src/stm32l0xx_it.c ****   ******************************************************************************
+   7:Core/Src/stm32l0xx_it.c ****   * @attention
+   8:Core/Src/stm32l0xx_it.c ****   *
+   9:Core/Src/stm32l0xx_it.c ****   * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  10:Core/Src/stm32l0xx_it.c ****   * All rights reserved.</center></h2>
+  11:Core/Src/stm32l0xx_it.c ****   *
+  12:Core/Src/stm32l0xx_it.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Core/Src/stm32l0xx_it.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Core/Src/stm32l0xx_it.c ****   * License. You may obtain a copy of the License at:
+  15:Core/Src/stm32l0xx_it.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Core/Src/stm32l0xx_it.c ****   *
+  17:Core/Src/stm32l0xx_it.c ****   ******************************************************************************
+  18:Core/Src/stm32l0xx_it.c ****   */
+  19:Core/Src/stm32l0xx_it.c **** /* USER CODE END Header */
+  20:Core/Src/stm32l0xx_it.c **** 
+  21:Core/Src/stm32l0xx_it.c **** /* Includes ------------------------------------------------------------------*/
+  22:Core/Src/stm32l0xx_it.c **** #include "main.h"
+  23:Core/Src/stm32l0xx_it.c **** #include "stm32l0xx_it.h"
+  24:Core/Src/stm32l0xx_it.c **** /* Private includes ----------------------------------------------------------*/
+  25:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN Includes */
+  26:Core/Src/stm32l0xx_it.c **** /* USER CODE END Includes */
+  27:Core/Src/stm32l0xx_it.c **** 
+  28:Core/Src/stm32l0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
+  29:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN TD */
+  30:Core/Src/stm32l0xx_it.c **** 
+  31:Core/Src/stm32l0xx_it.c **** /* USER CODE END TD */
+  32:Core/Src/stm32l0xx_it.c **** 
+ARM GAS  /tmp/ccKOnTdd.s 			page 2
+
+
+  33:Core/Src/stm32l0xx_it.c **** /* Private define ------------------------------------------------------------*/
+  34:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN PD */
+  35:Core/Src/stm32l0xx_it.c ****  
+  36:Core/Src/stm32l0xx_it.c **** /* USER CODE END PD */
+  37:Core/Src/stm32l0xx_it.c **** 
+  38:Core/Src/stm32l0xx_it.c **** /* Private macro -------------------------------------------------------------*/
+  39:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN PM */
+  40:Core/Src/stm32l0xx_it.c **** 
+  41:Core/Src/stm32l0xx_it.c **** /* USER CODE END PM */
+  42:Core/Src/stm32l0xx_it.c **** 
+  43:Core/Src/stm32l0xx_it.c **** /* Private variables ---------------------------------------------------------*/
+  44:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN PV */
+  45:Core/Src/stm32l0xx_it.c **** 
+  46:Core/Src/stm32l0xx_it.c **** /* USER CODE END PV */
+  47:Core/Src/stm32l0xx_it.c **** 
+  48:Core/Src/stm32l0xx_it.c **** /* Private function prototypes -----------------------------------------------*/
+  49:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN PFP */
+  50:Core/Src/stm32l0xx_it.c **** 
+  51:Core/Src/stm32l0xx_it.c **** /* USER CODE END PFP */
+  52:Core/Src/stm32l0xx_it.c **** 
+  53:Core/Src/stm32l0xx_it.c **** /* Private user code ---------------------------------------------------------*/
+  54:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN 0 */
+  55:Core/Src/stm32l0xx_it.c **** 
+  56:Core/Src/stm32l0xx_it.c **** /* USER CODE END 0 */
+  57:Core/Src/stm32l0xx_it.c **** 
+  58:Core/Src/stm32l0xx_it.c **** /* External variables --------------------------------------------------------*/
+  59:Core/Src/stm32l0xx_it.c **** 
+  60:Core/Src/stm32l0xx_it.c **** /* USER CODE BEGIN EV */
+  61:Core/Src/stm32l0xx_it.c **** 
+  62:Core/Src/stm32l0xx_it.c **** /* USER CODE END EV */
+  63:Core/Src/stm32l0xx_it.c **** 
+  64:Core/Src/stm32l0xx_it.c **** /******************************************************************************/
+  65:Core/Src/stm32l0xx_it.c **** /*           Cortex-M0+ Processor Interruption and Exception Handlers          */ 
+  66:Core/Src/stm32l0xx_it.c **** /******************************************************************************/
+  67:Core/Src/stm32l0xx_it.c **** /**
+  68:Core/Src/stm32l0xx_it.c ****   * @brief This function handles Non maskable interrupt.
+  69:Core/Src/stm32l0xx_it.c ****   */
+  70:Core/Src/stm32l0xx_it.c **** void NMI_Handler(void)
+  71:Core/Src/stm32l0xx_it.c **** {
+  27              		.loc 1 71 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  72:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+  73:Core/Src/stm32l0xx_it.c **** 
+  74:Core/Src/stm32l0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
+  75:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+  76:Core/Src/stm32l0xx_it.c **** 
+  77:Core/Src/stm32l0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
+  78:Core/Src/stm32l0xx_it.c **** }
+  32              		.loc 1 78 1 view .LVU1
+  33              		@ sp needed
+  34 0000 7047     		bx	lr
+  35              		.cfi_endproc
+  36              	.LFE34:
+  38              		.section	.text.HardFault_Handler,"ax",%progbits
+ARM GAS  /tmp/ccKOnTdd.s 			page 3
+
+
+  39              		.align	1
+  40              		.global	HardFault_Handler
+  41              		.syntax unified
+  42              		.code	16
+  43              		.thumb_func
+  44              		.fpu softvfp
+  46              	HardFault_Handler:
+  47              	.LFB35:
+  79:Core/Src/stm32l0xx_it.c **** 
+  80:Core/Src/stm32l0xx_it.c **** /**
+  81:Core/Src/stm32l0xx_it.c ****   * @brief This function handles Hard fault interrupt.
+  82:Core/Src/stm32l0xx_it.c ****   */
+  83:Core/Src/stm32l0xx_it.c **** void HardFault_Handler(void)
+  84:Core/Src/stm32l0xx_it.c **** {
+  48              		.loc 1 84 1 view -0
+  49              		.cfi_startproc
+  50              		@ Volatile: function does not return.
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53              		@ link register save eliminated.
+  54              	.L3:
+  85:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
+  86:Core/Src/stm32l0xx_it.c **** 
+  87:Core/Src/stm32l0xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
+  88:Core/Src/stm32l0xx_it.c ****   while (1)
+  55              		.loc 1 88 3 discriminator 1 view .LVU3
+  89:Core/Src/stm32l0xx_it.c ****   {
+  90:Core/Src/stm32l0xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+  91:Core/Src/stm32l0xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
+  92:Core/Src/stm32l0xx_it.c ****   }
+  56              		.loc 1 92 3 discriminator 1 view .LVU4
+  88:Core/Src/stm32l0xx_it.c ****   {
+  57              		.loc 1 88 9 discriminator 1 view .LVU5
+  58 0000 FEE7     		b	.L3
+  59              		.cfi_endproc
+  60              	.LFE35:
+  62              		.section	.text.SVC_Handler,"ax",%progbits
+  63              		.align	1
+  64              		.global	SVC_Handler
+  65              		.syntax unified
+  66              		.code	16
+  67              		.thumb_func
+  68              		.fpu softvfp
+  70              	SVC_Handler:
+  71              	.LFB36:
+  93:Core/Src/stm32l0xx_it.c **** }
+  94:Core/Src/stm32l0xx_it.c **** 
+  95:Core/Src/stm32l0xx_it.c **** /**
+  96:Core/Src/stm32l0xx_it.c ****   * @brief This function handles System service call via SWI instruction.
+  97:Core/Src/stm32l0xx_it.c ****   */
+  98:Core/Src/stm32l0xx_it.c **** void SVC_Handler(void)
+  99:Core/Src/stm32l0xx_it.c **** {
+  72              		.loc 1 99 1 view -0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              		@ link register save eliminated.
+ARM GAS  /tmp/ccKOnTdd.s 			page 4
+
+
+ 100:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 0 */
+ 101:Core/Src/stm32l0xx_it.c **** 
+ 102:Core/Src/stm32l0xx_it.c ****   /* USER CODE END SVC_IRQn 0 */
+ 103:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 1 */
+ 104:Core/Src/stm32l0xx_it.c **** 
+ 105:Core/Src/stm32l0xx_it.c ****   /* USER CODE END SVC_IRQn 1 */
+ 106:Core/Src/stm32l0xx_it.c **** }
+  77              		.loc 1 106 1 view .LVU7
+  78              		@ sp needed
+  79 0000 7047     		bx	lr
+  80              		.cfi_endproc
+  81              	.LFE36:
+  83              		.section	.text.PendSV_Handler,"ax",%progbits
+  84              		.align	1
+  85              		.global	PendSV_Handler
+  86              		.syntax unified
+  87              		.code	16
+  88              		.thumb_func
+  89              		.fpu softvfp
+  91              	PendSV_Handler:
+  92              	.LFB37:
+ 107:Core/Src/stm32l0xx_it.c **** 
+ 108:Core/Src/stm32l0xx_it.c **** /**
+ 109:Core/Src/stm32l0xx_it.c ****   * @brief This function handles Pendable request for system service.
+ 110:Core/Src/stm32l0xx_it.c ****   */
+ 111:Core/Src/stm32l0xx_it.c **** void PendSV_Handler(void)
+ 112:Core/Src/stm32l0xx_it.c **** {
+  93              		.loc 1 112 1 view -0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+ 113:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 0 */
+ 114:Core/Src/stm32l0xx_it.c **** 
+ 115:Core/Src/stm32l0xx_it.c ****   /* USER CODE END PendSV_IRQn 0 */
+ 116:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 1 */
+ 117:Core/Src/stm32l0xx_it.c **** 
+ 118:Core/Src/stm32l0xx_it.c ****   /* USER CODE END PendSV_IRQn 1 */
+ 119:Core/Src/stm32l0xx_it.c **** }
+  98              		.loc 1 119 1 view .LVU9
+  99              		@ sp needed
+ 100 0000 7047     		bx	lr
+ 101              		.cfi_endproc
+ 102              	.LFE37:
+ 104              		.section	.text.SysTick_Handler,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	SysTick_Handler
+ 107              		.syntax unified
+ 108              		.code	16
+ 109              		.thumb_func
+ 110              		.fpu softvfp
+ 112              	SysTick_Handler:
+ 113              	.LFB38:
+ 120:Core/Src/stm32l0xx_it.c **** 
+ 121:Core/Src/stm32l0xx_it.c **** /**
+ 122:Core/Src/stm32l0xx_it.c ****   * @brief This function handles System tick timer.
+ 123:Core/Src/stm32l0xx_it.c ****   */
+ARM GAS  /tmp/ccKOnTdd.s 			page 5
+
+
+ 124:Core/Src/stm32l0xx_it.c **** void SysTick_Handler(void)
+ 125:Core/Src/stm32l0xx_it.c **** {
+ 114              		.loc 1 125 1 view -0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 0
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118 0000 10B5     		push	{r4, lr}
+ 119              	.LCFI0:
+ 120              		.cfi_def_cfa_offset 8
+ 121              		.cfi_offset 4, -8
+ 122              		.cfi_offset 14, -4
+ 126:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
+ 127:Core/Src/stm32l0xx_it.c **** 
+ 128:Core/Src/stm32l0xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
+ 129:Core/Src/stm32l0xx_it.c ****   HAL_IncTick();
+ 123              		.loc 1 129 3 view .LVU11
+ 124 0002 FFF7FEFF 		bl	HAL_IncTick
+ 125              	.LVL0:
+ 130:Core/Src/stm32l0xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
+ 131:Core/Src/stm32l0xx_it.c **** 
+ 132:Core/Src/stm32l0xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
+ 133:Core/Src/stm32l0xx_it.c **** }
+ 126              		.loc 1 133 1 is_stmt 0 view .LVU12
+ 127              		@ sp needed
+ 128 0006 10BD     		pop	{r4, pc}
+ 129              		.cfi_endproc
+ 130              	.LFE38:
+ 132              		.text
+ 133              	.Letext0:
+ 134              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
+ 135              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
+ 136              		.file 4 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 137              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ARM GAS  /tmp/ccKOnTdd.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l0xx_it.c
+     /tmp/ccKOnTdd.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccKOnTdd.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccKOnTdd.s:39     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccKOnTdd.s:46     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccKOnTdd.s:63     .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccKOnTdd.s:70     .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccKOnTdd.s:84     .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccKOnTdd.s:91     .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccKOnTdd.s:105    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccKOnTdd.s:112    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+
+UNDEFINED SYMBOLS
+HAL_IncTick

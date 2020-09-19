@@ -1,0 +1,40 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5100 1600 1150 2200
+U 5F662B70
+F0 "MCU" 50
+F1 "mcu.sch" 50
+$EndSheet
+$Sheet
+S 1800 4750 700  1450
+U 5F6650A9
+F0 "NRF905" 50
+F1 "NRF905.sch" 50
+F2 "MISO" O R 2500 4950 50 
+F3 "MOSI" I R 2500 5050 50 
+F4 "SCK" I R 2500 5150 50 
+F5 "CS_NRF" I R 2500 5250 50 
+F6 "CE" I R 2500 5350 50 
+F7 "PWR" I R 2500 5450 50 
+F8 "TX_EN" I R 2500 5550 50 
+F9 "CD" O R 2500 5650 50 
+F10 "AM" O R 2500 5750 50 
+F11 "DR" O R 2500 5850 50 
+F12 "GND" U R 2500 5950 50 
+F13 "VDD_P" U R 2500 6050 50 
+$EndSheet
+$EndSCHEMATC

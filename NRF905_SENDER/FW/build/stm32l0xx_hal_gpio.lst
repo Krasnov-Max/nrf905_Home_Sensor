@@ -1,0 +1,1640 @@
+ARM GAS  /tmp/ccmsmhJx.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_hal_gpio.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_GPIO_Init,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_GPIO_Init
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_GPIO_Init:
+  25              	.LVL0:
+  26              	.LFB34:
+  27              		.file 1 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/
+   1:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+   2:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ******************************************************************************
+   3:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @file    stm32l0xx_hal_gpio.c
+   4:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @author  MCD Application Team
+   5:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief   GPIO HAL module driver.  
+   6:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *          This file provides firmware functions to manage the following 
+   7:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *          functionalities of the General Purpose Input/Output (GPIO) peripheral:
+   8:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *           + Initialization and de-initialization functions
+   9:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *           + IO operation functions
+  10:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *         
+  11:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   @verbatim
+  12:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ==============================================================================
+  13:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****                     ##### GPIO Peripheral features #####
+  14:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ==============================================================================
+  15:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   [..] 
+  16:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) Each port bit of the general-purpose I/O (GPIO) ports can be individually 
+  17:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   configured by software in several modes:
+  18:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Input mode 
+  19:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Analog mode
+  20:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Output mode
+  21:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Alternate function mode
+  22:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) External interrupt/event lines
+  23:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  
+  24:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) During and just after reset, the alternate functions and external interrupt  
+  25:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   lines are not active and the I/O ports are configured in input floating mode.
+  26:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  27:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) All GPIO pins have weak internal pull-up and pull-down resistors, which can be 
+  28:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   activated or not.
+  29:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) In Output or Alternate mode, each IO can be configured on open-drain or push-pull
+  31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   type and the IO speed can be selected depending on the VDD value.
+ARM GAS  /tmp/ccmsmhJx.s 			page 2
+
+
+  32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) The microcontroller IO pins are connected to onboard peripherals/modules through a 
+  34:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         multiplexer that allows only one peripheral alternate function (AF) connected 
+  35:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   to an IO pin at a time. In this way, there can be no conflict between peripherals 
+  36:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   sharing the same IO pin. 
+  37:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  38:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) All ports have external interrupt/event capability. To use external interrupt 
+  39:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   lines, the port must be configured in input mode. All available GPIO pins are 
+  40:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   connected to the 16 external interrupt/event lines from EXTI0 to EXTI15.
+  41:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  42:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) The external interrupt/event controller consists of up to 28 edge detectors
+  43:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   (16 lines are connected to GPIO) for generating event/interrupt requests (each 
+  44:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   input line can be independently configured to select the type (interrupt or event) 
+  45:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   and the corresponding trigger event (rising or falling or both). Each line can 
+  46:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   also be masked independently. 
+  47:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  48:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****                      ##### How to use this driver #####
+  49:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ==============================================================================  
+  50:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   [..]             
+  51:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) Enable the GPIO IOPORT clock using the following function: __HAL_RCC_GPIOx_CLK_ENABLE(). 
+  52:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  53:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) Configure the GPIO pin(s) using HAL_GPIO_Init().
+  54:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Configure the IO mode using "Mode" member from GPIO_InitTypeDef structure
+  55:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Activate Pull-up, Pull-down resistor using "Pull" member from GPIO_InitTypeDef 
+  56:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              structure.
+  57:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) In case of Output or alternate function mode selection: the speed is 
+  58:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              configured through "Speed" member from GPIO_InitTypeDef structure.
+  59:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) In alternate mode is selection, the alternate function connected to the IO
+  60:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              is configured through "Alternate" member from GPIO_InitTypeDef structure.
+  61:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) Analog mode is required when a pin is to be used as ADC channel 
+  62:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              or DAC output.
+  63:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (++) In case of external interrupt/event selection the "Mode" member from 
+  64:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              GPIO_InitTypeDef structure select the type (interrupt or event) and 
+  65:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****              the corresponding trigger event (rising or falling or both).
+  66:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****    
+  67:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) In case of external interrupt/event mode selection, configure NVIC IRQ priority 
+  68:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         mapped to the EXTI line using HAL_NVIC_SetPriority() and enable it using
+  69:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         HAL_NVIC_EnableIRQ().
+  70:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          
+  71:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****    (#) HAL_GPIO_DeInit allows to set register values to their reset value. This function
+  72:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****        is also to be used when unconfiguring pin which was used as an external interrupt
+  73:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****        or in event mode. That is the only way to reset the corresponding bit in
+  74:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****        EXTI & SYSCFG registers.
+  75:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  76:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) To get the level of a pin configured in input mode use HAL_GPIO_ReadPin().
+  77:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****             
+  78:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) To set/reset the level of a pin configured in output mode use 
+  79:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         HAL_GPIO_WritePin()/HAL_GPIO_TogglePin().
+  80:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  81:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) To lock pin configuration until next reset use HAL_GPIO_LockPin().
+  82:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+  83:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) During and just after reset, the alternate functions are not 
+  84:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         active and the GPIO pins are configured in input floating mode (except JTAG
+  85:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         pins).
+  86:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  87:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) The LSE oscillator pins OSC32_IN and OSC32_OUT can be used as general purpose 
+  88:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (PC14 and PC15, respectively) when the LSE oscillator is off. The LSE has 
+ARM GAS  /tmp/ccmsmhJx.s 			page 3
+
+
+  89:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         priority over the GPIO function.
+  90:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  91:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) The HSE oscillator pins OSC_IN/OSC_OUT can be used as 
+  92:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         general purpose PH0 and PH1, respectively, when the HSE oscillator is off. 
+  93:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         The HSE has priority over the GPIO function.
+  94:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+  95:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   @endverbatim
+  96:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ******************************************************************************
+  97:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @attention
+  98:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *
+  99:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * <h2><center>&copy; Copyright(c) 2016 STMicroelectronics.
+ 100:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * All rights reserved.</center></h2>
+ 101:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *
+ 102:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+ 103:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * the "License"; You may not use this file except in compliance with the
+ 104:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * License. You may obtain a copy of the License at:
+ 105:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                        opensource.org/licenses/BSD-3-Clause
+ 106:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *
+ 107:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   ******************************************************************************  
+ 108:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */ 
+ 109:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 110:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /* Includes ------------------------------------------------------------------*/
+ 111:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #include "stm32l0xx_hal.h"
+ 112:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 113:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup STM32L0xx_HAL_Driver
+ 114:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 115:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 116:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 117:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #ifdef HAL_GPIO_MODULE_ENABLED
+ 118:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 119:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO
+ 120:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief GPIO HAL module driver
+ 121:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 122:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 123:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 124:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO_Private
+ 125:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 126:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 127:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /* Private define ------------------------------------------------------------*/
+ 128:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 129:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  
+ 130:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define GPIO_MODE             ((uint32_t)0x00000003U)
+ 131:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define EXTI_MODE             ((uint32_t)0x10000000U)
+ 132:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define GPIO_MODE_IT          ((uint32_t)0x00010000U)
+ 133:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define GPIO_MODE_EVT         ((uint32_t)0x00020000U)
+ 134:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define RISING_EDGE           ((uint32_t)0x00100000U) 
+ 135:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define FALLING_EDGE          ((uint32_t)0x00200000U) 
+ 136:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define GPIO_OUTPUT_TYPE      ((uint32_t)0x00000010U)
+ 137:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 138:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** #define GPIO_NUMBER           ((uint32_t)16U)
+ 139:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 140:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 141:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @}
+ 142:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 143:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO_Exported_Functions
+ 144:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ARM GAS  /tmp/ccmsmhJx.s 			page 4
+
+
+ 146:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 147:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO_Exported_Functions_Group1
+ 148:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  *  @brief    Initialization and de-initialization functions
+ 149:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  *
+ 150:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** @verbatim
+ 151:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  ===============================================================================
+ 152:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****               ##### Initialization and de-initialization functions #####
+ 153:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  ===============================================================================
+ 154:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  
+ 155:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** @endverbatim
+ 156:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 157:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 158:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 159:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 160:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init
+ 161:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..E and H) to select the GPIO peripheral for STM32L0XX family de
+ 162:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                Note that GPIOE is not available on all devices.
+ 163:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Init pointer to a GPIO_InitTypeDef structure that contains
+ 164:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                    the configuration information for the specified GPIO peripheral.
+ 165:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 166:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 167:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_Init(GPIO_TypeDef  *GPIOx, GPIO_InitTypeDef *GPIO_Init)
+ 168:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+  28              		.loc 1 168 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 168 1 is_stmt 0 view .LVU1
+  33 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 20
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 C646     		mov	lr, r8
+  42 0004 00B5     		push	{lr}
+  43              	.LCFI1:
+  44              		.cfi_def_cfa_offset 24
+  45              		.cfi_offset 8, -24
+ 169:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t position = 0x00U;
+  46              		.loc 1 169 3 is_stmt 1 view .LVU2
+  47              	.LVL1:
+ 170:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+  48              		.loc 1 170 3 view .LVU3
+ 171:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t temp = 0x00U;
+  49              		.loc 1 171 3 view .LVU4
+ 172:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  
+ 173:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 174:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_MODE(GPIO_Init->Mode));
+  50              		.loc 1 174 3 view .LVU5
+ 175:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PULL(GPIO_Init->Pull));
+  51              		.loc 1 175 3 view .LVU6
+ 176:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,(GPIO_Init->Pin)));
+  52              		.loc 1 176 3 view .LVU7
+ 177:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ARM GAS  /tmp/ccmsmhJx.s 			page 5
+
+
+ 178:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Configure the port pins */
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   while (((GPIO_Init->Pin) >> position) != 0)
+  53              		.loc 1 179 3 view .LVU8
+ 169:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+  54              		.loc 1 169 12 is_stmt 0 view .LVU9
+  55 0006 0023     		movs	r3, #0
+  56              		.loc 1 179 9 view .LVU10
+  57 0008 77E0     		b	.L2
+  58              	.LVL2:
+  59              	.L6:
+ 180:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 181:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     /* Get the IO position */
+ 182:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     iocurrent = (GPIO_Init->Pin) & (1U << position);
+ 183:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     
+ 184:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     if(iocurrent)
+ 185:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 186:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /*--------------------- GPIO Mode Configuration ------------------------*/
+ 187:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* In case of Alternate function mode selection */
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if((GPIO_Init->Mode == GPIO_MODE_AF_PP) || (GPIO_Init->Mode == GPIO_MODE_AF_OD)) 
+ 189:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 190:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Check the Alternate function parameters */
+ 191:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         assert_param(IS_GPIO_AF_INSTANCE(GPIOx));
+ 192:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         assert_param(IS_GPIO_AF(GPIO_Init->Alternate));
+ 193:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 194:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Configure Alternate function mapped with the current IO */ 
+ 195:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = GPIOx->AFR[position >> 3U];
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)0xFU << ((uint32_t)(position & (uint32_t)0x07U) * 4U)) ;
+ 197:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 198:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 199:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       } 
+ 200:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 201:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* In case of Output or Alternate function mode selection */
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if((GPIO_Init->Mode == GPIO_MODE_OUTPUT_PP) || (GPIO_Init->Mode == GPIO_MODE_AF_PP) ||
+ 203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 204:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 205:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Check the Speed parameter */
+ 206:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));
+  60              		.loc 1 206 9 is_stmt 1 view .LVU11
+ 207:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Configure the IO Speed */
+ 208:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = GPIOx->OSPEEDR;
+  61              		.loc 1 208 9 view .LVU12
+  62              		.loc 1 208 14 is_stmt 0 view .LVU13
+  63 000a 8468     		ldr	r4, [r0, #8]
+  64              	.LVL3:
+ 209:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~(GPIO_OSPEEDER_OSPEED0 << (position * 2U));
+  65              		.loc 1 209 9 is_stmt 1 view .LVU14
+  66              		.loc 1 209 54 is_stmt 0 view .LVU15
+  67 000c 5F00     		lsls	r7, r3, #1
+  68              		.loc 1 209 41 view .LVU16
+  69 000e 0326     		movs	r6, #3
+  70 0010 BE40     		lsls	r6, r6, r7
+  71              		.loc 1 209 14 view .LVU17
+  72 0012 B443     		bics	r4, r6
+  73              	.LVL4:
+  74              		.loc 1 209 14 view .LVU18
+  75 0014 2600     		movs	r6, r4
+  76              	.LVL5:
+ARM GAS  /tmp/ccmsmhJx.s 			page 6
+
+
+ 210:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= (GPIO_Init->Speed << (position * 2U));
+  77              		.loc 1 210 9 is_stmt 1 view .LVU19
+  78              		.loc 1 210 35 is_stmt 0 view .LVU20
+  79 0016 CC68     		ldr	r4, [r1, #12]
+  80              	.LVL6:
+  81              		.loc 1 210 35 view .LVU21
+  82 0018 BC40     		lsls	r4, r4, r7
+  83              		.loc 1 210 14 view .LVU22
+  84 001a 3443     		orrs	r4, r6
+  85              	.LVL7:
+ 211:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->OSPEEDR = temp;
+  86              		.loc 1 211 9 is_stmt 1 view .LVU23
+  87              		.loc 1 211 24 is_stmt 0 view .LVU24
+  88 001c 8460     		str	r4, [r0, #8]
+ 212:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 213:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Configure the IO Output Type */
+ 214:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp= GPIOx->OTYPER;
+  89              		.loc 1 214 9 is_stmt 1 view .LVU25
+  90              		.loc 1 214 13 is_stmt 0 view .LVU26
+  91 001e 4468     		ldr	r4, [r0, #4]
+  92              	.LVL8:
+ 215:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~(GPIO_OTYPER_OT_0 << position) ;
+  93              		.loc 1 215 9 is_stmt 1 view .LVU27
+  94              		.loc 1 215 14 is_stmt 0 view .LVU28
+  95 0020 9443     		bics	r4, r2
+  96              	.LVL9:
+ 216:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= (((GPIO_Init->Mode & GPIO_OUTPUT_TYPE) >> 4U) << position);
+  97              		.loc 1 216 9 is_stmt 1 view .LVU29
+  98              		.loc 1 216 56 is_stmt 0 view .LVU30
+  99 0022 4A68     		ldr	r2, [r1, #4]
+ 100 0024 1609     		lsrs	r6, r2, #4
+ 101 0026 0122     		movs	r2, #1
+ 102 0028 3240     		ands	r2, r6
+ 103              		.loc 1 216 63 view .LVU31
+ 104 002a 9A40     		lsls	r2, r2, r3
+ 105              		.loc 1 216 14 view .LVU32
+ 106 002c 2243     		orrs	r2, r4
+ 107              	.LVL10:
+ 217:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->OTYPER = temp;
+ 108              		.loc 1 217 9 is_stmt 1 view .LVU33
+ 109              		.loc 1 217 23 is_stmt 0 view .LVU34
+ 110 002e 4260     		str	r2, [r0, #4]
+ 111              	.LVL11:
+ 112              	.L7:
+ 218:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       }
+ 219:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 220:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure IO Direction mode (Input, Output, Alternate or Analog) */
+ 221:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp = GPIOx->MODER;
+ 113              		.loc 1 221 7 is_stmt 1 view .LVU35
+ 114              		.loc 1 221 12 is_stmt 0 view .LVU36
+ 115 0030 0468     		ldr	r4, [r0]
+ 116              	.LVL12:
+ 222:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp &= ~(GPIO_MODER_MODE0 << (position * 2U));
+ 117              		.loc 1 222 7 is_stmt 1 view .LVU37
+ 118              		.loc 1 222 47 is_stmt 0 view .LVU38
+ 119 0032 5E00     		lsls	r6, r3, #1
+ 120              		.loc 1 222 34 view .LVU39
+ARM GAS  /tmp/ccmsmhJx.s 			page 7
+
+
+ 121 0034 0322     		movs	r2, #3
+ 122 0036 1700     		movs	r7, r2
+ 123 0038 B740     		lsls	r7, r7, r6
+ 124              		.loc 1 222 12 view .LVU40
+ 125 003a BC43     		bics	r4, r7
+ 126              	.LVL13:
+ 223:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));
+ 127              		.loc 1 223 7 is_stmt 1 view .LVU41
+ 128              		.loc 1 223 33 is_stmt 0 view .LVU42
+ 129 003c 4D68     		ldr	r5, [r1, #4]
+ 130 003e 2A40     		ands	r2, r5
+ 131              		.loc 1 223 46 view .LVU43
+ 132 0040 B240     		lsls	r2, r2, r6
+ 133              		.loc 1 223 12 view .LVU44
+ 134 0042 2243     		orrs	r2, r4
+ 135              	.LVL14:
+ 224:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->MODER = temp;
+ 136              		.loc 1 224 7 is_stmt 1 view .LVU45
+ 137              		.loc 1 224 20 is_stmt 0 view .LVU46
+ 138 0044 0260     		str	r2, [r0]
+ 225:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 226:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Activate the Pull-up or Pull down resistor for the current IO */
+ 227:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp = GPIOx->PUPDR;
+ 139              		.loc 1 227 7 is_stmt 1 view .LVU47
+ 140              		.loc 1 227 12 is_stmt 0 view .LVU48
+ 141 0046 C468     		ldr	r4, [r0, #12]
+ 142              	.LVL15:
+ 228:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp &= ~(GPIO_PUPDR_PUPD0 << (position * 2U));
+ 143              		.loc 1 228 7 is_stmt 1 view .LVU49
+ 144              		.loc 1 228 12 is_stmt 0 view .LVU50
+ 145 0048 BC43     		bics	r4, r7
+ 146              	.LVL16:
+ 229:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp |= ((GPIO_Init->Pull) << (position * 2U)); 
+ 147              		.loc 1 229 7 is_stmt 1 view .LVU51
+ 148              		.loc 1 229 34 is_stmt 0 view .LVU52
+ 149 004a 8A68     		ldr	r2, [r1, #8]
+ 150 004c B240     		lsls	r2, r2, r6
+ 151              		.loc 1 229 12 view .LVU53
+ 152 004e 2243     		orrs	r2, r4
+ 153              	.LVL17:
+ 230:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->PUPDR = temp;
+ 154              		.loc 1 230 7 is_stmt 1 view .LVU54
+ 155              		.loc 1 230 20 is_stmt 0 view .LVU55
+ 156 0050 C260     		str	r2, [r0, #12]
+ 231:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 232:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /*--------------------- EXTI Mode Configuration ------------------------*/
+ 233:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure the External Interrupt or event for the current IO */
+ 234:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if((GPIO_Init->Mode & EXTI_MODE) == EXTI_MODE) 
+ 157              		.loc 1 234 7 is_stmt 1 view .LVU56
+ 158              		.loc 1 234 9 is_stmt 0 view .LVU57
+ 159 0052 4A68     		ldr	r2, [r1, #4]
+ 160              	.LVL18:
+ 161              		.loc 1 234 9 view .LVU58
+ 162 0054 D200     		lsls	r2, r2, #3
+ 163 0056 4FD5     		bpl	.L3
+ 235:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 236:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Enable SYSCFG Clock */
+ARM GAS  /tmp/ccmsmhJx.s 			page 8
+
+
+ 237:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         __HAL_RCC_SYSCFG_CLK_ENABLE();
+ 164              		.loc 1 237 9 is_stmt 1 view .LVU59
+ 165 0058 424C     		ldr	r4, .L19
+ 166 005a 626B     		ldr	r2, [r4, #52]
+ 167 005c 0126     		movs	r6, #1
+ 168 005e 3243     		orrs	r2, r6
+ 169 0060 6263     		str	r2, [r4, #52]
+ 170              	.LVL19:
+ 238:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         
+ 239:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = SYSCFG->EXTICR[position >> 2U];
+ 171              		.loc 1 239 9 view .LVU60
+ 172              		.loc 1 239 40 is_stmt 0 view .LVU61
+ 173 0062 9A08     		lsrs	r2, r3, #2
+ 174              		.loc 1 239 14 view .LVU62
+ 175 0064 941C     		adds	r4, r2, #2
+ 176 0066 A400     		lsls	r4, r4, #2
+ 177 0068 3F4E     		ldr	r6, .L19+4
+ 178 006a A759     		ldr	r7, [r4, r6]
+ 179              	.LVL20:
+ 240:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         CLEAR_BIT(temp, ((uint32_t)0x0FU) << (4U * (position & 0x03U)));
+ 180              		.loc 1 240 9 is_stmt 1 view .LVU63
+ 181 006c 0324     		movs	r4, #3
+ 182 006e 1C40     		ands	r4, r3
+ 183 0070 A400     		lsls	r4, r4, #2
+ 184 0072 0F26     		movs	r6, #15
+ 185 0074 A640     		lsls	r6, r6, r4
+ 186 0076 B743     		bics	r7, r6
+ 187              	.LVL21:
+ 241:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         SET_BIT(temp, (GPIO_GET_INDEX(GPIOx)) << (4 * (position & 0x03U)));
+ 188              		.loc 1 241 9 view .LVU64
+ 189 0078 A026     		movs	r6, #160
+ 190 007a F605     		lsls	r6, r6, #23
+ 191 007c B042     		cmp	r0, r6
+ 192 007e 69D0     		beq	.L14
+ 193              		.loc 1 241 9 is_stmt 0 discriminator 1 view .LVU65
+ 194 0080 3A4E     		ldr	r6, .L19+8
+ 195 0082 B042     		cmp	r0, r6
+ 196 0084 68D0     		beq	.L15
+ 197              		.loc 1 241 9 discriminator 3 view .LVU66
+ 198 0086 3A4E     		ldr	r6, .L19+12
+ 199 0088 B042     		cmp	r0, r6
+ 200 008a 61D0     		beq	.L17
+ 201              		.loc 1 241 9 view .LVU67
+ 202 008c 0626     		movs	r6, #6
+ 203              	.L8:
+ 204              		.loc 1 241 9 discriminator 12 view .LVU68
+ 205 008e A640     		lsls	r6, r6, r4
+ 206 0090 3400     		movs	r4, r6
+ 207 0092 3C43     		orrs	r4, r7
+ 208              	.LVL22:
+ 242:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 209              		.loc 1 242 9 is_stmt 1 discriminator 12 view .LVU69
+ 210              		.loc 1 242 40 is_stmt 0 discriminator 12 view .LVU70
+ 211 0094 0232     		adds	r2, r2, #2
+ 212 0096 9200     		lsls	r2, r2, #2
+ 213 0098 334E     		ldr	r6, .L19+4
+ 214 009a 9451     		str	r4, [r2, r6]
+ARM GAS  /tmp/ccmsmhJx.s 			page 9
+
+
+ 243:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****                   
+ 244:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Clear EXTI line configuration */
+ 245:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = EXTI->IMR;
+ 215              		.loc 1 245 9 is_stmt 1 discriminator 12 view .LVU71
+ 216              		.loc 1 245 14 is_stmt 0 discriminator 12 view .LVU72
+ 217 009c 354A     		ldr	r2, .L19+16
+ 218 009e 1468     		ldr	r4, [r2]
+ 219              	.LVL23:
+ 246:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 220              		.loc 1 246 9 is_stmt 1 discriminator 12 view .LVU73
+ 221              		.loc 1 246 17 is_stmt 0 discriminator 12 view .LVU74
+ 222 00a0 4246     		mov	r2, r8
+ 223 00a2 D243     		mvns	r2, r2
+ 224              		.loc 1 246 14 discriminator 12 view .LVU75
+ 225 00a4 2600     		movs	r6, r4
+ 226 00a6 4546     		mov	r5, r8
+ 227 00a8 AE43     		bics	r6, r5
+ 228              	.LVL24:
+ 247:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & GPIO_MODE_IT) == GPIO_MODE_IT)
+ 229              		.loc 1 247 9 is_stmt 1 discriminator 12 view .LVU76
+ 230              		.loc 1 247 11 is_stmt 0 discriminator 12 view .LVU77
+ 231 00aa 4D68     		ldr	r5, [r1, #4]
+ 232 00ac ED03     		lsls	r5, r5, #15
+ 233 00ae 02D5     		bpl	.L9
+ 248:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         {
+ 249:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****           temp |= iocurrent;
+ 234              		.loc 1 249 11 is_stmt 1 view .LVU78
+ 235              		.loc 1 249 16 is_stmt 0 view .LVU79
+ 236 00b0 4546     		mov	r5, r8
+ 237 00b2 2C43     		orrs	r4, r5
+ 238 00b4 2600     		movs	r6, r4
+ 239              	.LVL25:
+ 240              	.L9:
+ 250:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         }
+ 251:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->IMR = temp;
+ 241              		.loc 1 251 9 is_stmt 1 view .LVU80
+ 242              		.loc 1 251 19 is_stmt 0 view .LVU81
+ 243 00b6 2F4C     		ldr	r4, .L19+16
+ 244 00b8 2660     		str	r6, [r4]
+ 252:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 253:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = EXTI->EMR;
+ 245              		.loc 1 253 9 is_stmt 1 view .LVU82
+ 246              		.loc 1 253 14 is_stmt 0 view .LVU83
+ 247 00ba 6468     		ldr	r4, [r4, #4]
+ 248              	.LVL26:
+ 254:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 249              		.loc 1 254 9 is_stmt 1 view .LVU84
+ 250              		.loc 1 254 14 is_stmt 0 view .LVU85
+ 251 00bc 2600     		movs	r6, r4
+ 252 00be 1640     		ands	r6, r2
+ 253              	.LVL27:
+ 255:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & GPIO_MODE_EVT) == GPIO_MODE_EVT)
+ 254              		.loc 1 255 9 is_stmt 1 view .LVU86
+ 255              		.loc 1 255 11 is_stmt 0 view .LVU87
+ 256 00c0 4D68     		ldr	r5, [r1, #4]
+ 257 00c2 AD03     		lsls	r5, r5, #14
+ 258 00c4 02D5     		bpl	.L10
+ARM GAS  /tmp/ccmsmhJx.s 			page 10
+
+
+ 256:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         {
+ 257:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****           temp |= iocurrent;
+ 259              		.loc 1 257 11 is_stmt 1 view .LVU88
+ 260              		.loc 1 257 16 is_stmt 0 view .LVU89
+ 261 00c6 4546     		mov	r5, r8
+ 262 00c8 2C43     		orrs	r4, r5
+ 263 00ca 2600     		movs	r6, r4
+ 264              	.LVL28:
+ 265              	.L10:
+ 258:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         }
+ 259:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->EMR = temp;
+ 266              		.loc 1 259 9 is_stmt 1 view .LVU90
+ 267              		.loc 1 259 19 is_stmt 0 view .LVU91
+ 268 00cc 294C     		ldr	r4, .L19+16
+ 269 00ce 6660     		str	r6, [r4, #4]
+ 260:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 261:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Clear Rising Falling edge configuration */
+ 262:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = EXTI->RTSR;
+ 270              		.loc 1 262 9 is_stmt 1 view .LVU92
+ 271              		.loc 1 262 14 is_stmt 0 view .LVU93
+ 272 00d0 A468     		ldr	r4, [r4, #8]
+ 273              	.LVL29:
+ 263:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 274              		.loc 1 263 9 is_stmt 1 view .LVU94
+ 275              		.loc 1 263 14 is_stmt 0 view .LVU95
+ 276 00d2 2600     		movs	r6, r4
+ 277 00d4 1640     		ands	r6, r2
+ 278              	.LVL30:
+ 264:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & RISING_EDGE) == RISING_EDGE)
+ 279              		.loc 1 264 9 is_stmt 1 view .LVU96
+ 280              		.loc 1 264 11 is_stmt 0 view .LVU97
+ 281 00d6 4D68     		ldr	r5, [r1, #4]
+ 282 00d8 ED02     		lsls	r5, r5, #11
+ 283 00da 02D5     		bpl	.L11
+ 265:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         {
+ 266:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****           temp |= iocurrent;
+ 284              		.loc 1 266 11 is_stmt 1 view .LVU98
+ 285              		.loc 1 266 16 is_stmt 0 view .LVU99
+ 286 00dc 4546     		mov	r5, r8
+ 287 00de 2C43     		orrs	r4, r5
+ 288 00e0 2600     		movs	r6, r4
+ 289              	.LVL31:
+ 290              	.L11:
+ 267:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         }
+ 268:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->RTSR = temp;
+ 291              		.loc 1 268 9 is_stmt 1 view .LVU100
+ 292              		.loc 1 268 20 is_stmt 0 view .LVU101
+ 293 00e2 244C     		ldr	r4, .L19+16
+ 294 00e4 A660     		str	r6, [r4, #8]
+ 269:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 270:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp = EXTI->FTSR;
+ 295              		.loc 1 270 9 is_stmt 1 view .LVU102
+ 296              		.loc 1 270 14 is_stmt 0 view .LVU103
+ 297 00e6 E468     		ldr	r4, [r4, #12]
+ 298              	.LVL32:
+ 271:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)iocurrent);
+ 299              		.loc 1 271 9 is_stmt 1 view .LVU104
+ARM GAS  /tmp/ccmsmhJx.s 			page 11
+
+
+ 300              		.loc 1 271 14 is_stmt 0 view .LVU105
+ 301 00e8 2240     		ands	r2, r4
+ 302              	.LVL33:
+ 272:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & FALLING_EDGE) == FALLING_EDGE)
+ 303              		.loc 1 272 9 is_stmt 1 view .LVU106
+ 304              		.loc 1 272 11 is_stmt 0 view .LVU107
+ 305 00ea 4D68     		ldr	r5, [r1, #4]
+ 306 00ec AD02     		lsls	r5, r5, #10
+ 307 00ee 01D5     		bpl	.L12
+ 273:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         {
+ 274:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****           temp |= iocurrent;
+ 308              		.loc 1 274 11 is_stmt 1 view .LVU108
+ 309              		.loc 1 274 16 is_stmt 0 view .LVU109
+ 310 00f0 4246     		mov	r2, r8
+ 311              	.LVL34:
+ 312              		.loc 1 274 16 view .LVU110
+ 313 00f2 2243     		orrs	r2, r4
+ 314              	.LVL35:
+ 315              	.L12:
+ 275:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         }
+ 276:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->FTSR = temp;
+ 316              		.loc 1 276 9 is_stmt 1 view .LVU111
+ 317              		.loc 1 276 20 is_stmt 0 view .LVU112
+ 318 00f4 1F4C     		ldr	r4, .L19+16
+ 319 00f6 E260     		str	r2, [r4, #12]
+ 320              	.LVL36:
+ 321              	.L3:
+ 277:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       }
+ 278:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     }
+ 279:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     position++;
+ 322              		.loc 1 279 5 is_stmt 1 view .LVU113
+ 323              		.loc 1 279 13 is_stmt 0 view .LVU114
+ 324 00f8 0133     		adds	r3, r3, #1
+ 325              	.LVL37:
+ 326              	.L2:
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 327              		.loc 1 179 9 is_stmt 1 view .LVU115
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 328              		.loc 1 179 21 is_stmt 0 view .LVU116
+ 329 00fa 0C68     		ldr	r4, [r1]
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 330              		.loc 1 179 28 view .LVU117
+ 331 00fc 2200     		movs	r2, r4
+ 332 00fe DA40     		lsrs	r2, r2, r3
+ 179:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 333              		.loc 1 179 9 view .LVU118
+ 334 0100 2CD0     		beq	.L18
+ 182:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     
+ 335              		.loc 1 182 5 is_stmt 1 view .LVU119
+ 182:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     
+ 336              		.loc 1 182 40 is_stmt 0 view .LVU120
+ 337 0102 0122     		movs	r2, #1
+ 338 0104 9A40     		lsls	r2, r2, r3
+ 182:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     
+ 339              		.loc 1 182 15 view .LVU121
+ 340 0106 2500     		movs	r5, r4
+ 341 0108 1540     		ands	r5, r2
+ARM GAS  /tmp/ccmsmhJx.s 			page 12
+
+
+ 342 010a A846     		mov	r8, r5
+ 343              	.LVL38:
+ 184:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 344              		.loc 1 184 5 is_stmt 1 view .LVU122
+ 184:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 345              		.loc 1 184 7 is_stmt 0 view .LVU123
+ 346 010c 1442     		tst	r4, r2
+ 347 010e F3D0     		beq	.L3
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 348              		.loc 1 188 7 is_stmt 1 view .LVU124
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 349              		.loc 1 188 20 is_stmt 0 view .LVU125
+ 350 0110 4C68     		ldr	r4, [r1, #4]
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 351              		.loc 1 188 9 view .LVU126
+ 352 0112 022C     		cmp	r4, #2
+ 353 0114 01D0     		beq	.L4
+ 188:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 354              		.loc 1 188 47 discriminator 1 view .LVU127
+ 355 0116 122C     		cmp	r4, #18
+ 356 0118 0ED1     		bne	.L5
+ 357              	.L4:
+ 191:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         assert_param(IS_GPIO_AF(GPIO_Init->Alternate));
+ 358              		.loc 1 191 9 is_stmt 1 view .LVU128
+ 192:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 359              		.loc 1 192 9 view .LVU129
+ 195:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)0xFU << ((uint32_t)(position & (uint32_t)0x07U) * 4U)) ;
+ 360              		.loc 1 195 9 view .LVU130
+ 195:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)0xFU << ((uint32_t)(position & (uint32_t)0x07U) * 4U)) ;
+ 361              		.loc 1 195 36 is_stmt 0 view .LVU131
+ 362 011a DC08     		lsrs	r4, r3, #3
+ 195:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~((uint32_t)0xFU << ((uint32_t)(position & (uint32_t)0x07U) * 4U)) ;
+ 363              		.loc 1 195 14 view .LVU132
+ 364 011c 0834     		adds	r4, r4, #8
+ 365 011e A400     		lsls	r4, r4, #2
+ 366 0120 2758     		ldr	r7, [r4, r0]
+ 367              	.LVL39:
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 368              		.loc 1 196 9 is_stmt 1 view .LVU133
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 369              		.loc 1 196 38 is_stmt 0 view .LVU134
+ 370 0122 0726     		movs	r6, #7
+ 371 0124 1E40     		ands	r6, r3
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 372              		.loc 1 196 77 view .LVU135
+ 373 0126 B600     		lsls	r6, r6, #2
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 374              		.loc 1 196 34 view .LVU136
+ 375 0128 0F25     		movs	r5, #15
+ 376              	.LVL40:
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 377              		.loc 1 196 34 view .LVU137
+ 378 012a B540     		lsls	r5, r5, r6
+ 196:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & (uint32_t)0x07U) * 4U))
+ 379              		.loc 1 196 14 view .LVU138
+ 380 012c AF43     		bics	r7, r5
+ 381              	.LVL41:
+ARM GAS  /tmp/ccmsmhJx.s 			page 13
+
+
+ 197:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 382              		.loc 1 197 9 is_stmt 1 view .LVU139
+ 197:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 383              		.loc 1 197 51 is_stmt 0 view .LVU140
+ 384 012e 0D69     		ldr	r5, [r1, #16]
+ 385 0130 B540     		lsls	r5, r5, r6
+ 386 0132 2E00     		movs	r6, r5
+ 197:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         GPIOx->AFR[position >> 3U] = temp;
+ 387              		.loc 1 197 14 view .LVU141
+ 388 0134 3E43     		orrs	r6, r7
+ 389              	.LVL42:
+ 198:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       } 
+ 390              		.loc 1 198 9 is_stmt 1 view .LVU142
+ 198:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       } 
+ 391              		.loc 1 198 36 is_stmt 0 view .LVU143
+ 392 0136 2650     		str	r6, [r4, r0]
+ 393              	.LVL43:
+ 394              	.L5:
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 395              		.loc 1 202 7 is_stmt 1 view .LVU144
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 396              		.loc 1 202 20 is_stmt 0 view .LVU145
+ 397 0138 4C68     		ldr	r4, [r1, #4]
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 398              		.loc 1 202 51 view .LVU146
+ 399 013a 661E     		subs	r6, r4, #1
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 400              		.loc 1 202 9 view .LVU147
+ 401 013c 012E     		cmp	r6, #1
+ 402 013e 00D8     		bhi	.LCB378
+ 403 0140 63E7     		b	.L6	@long jump
+ 404              	.LCB378:
+ 202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****          (GPIO_Init->Mode == GPIO_MODE_OUTPUT_OD) || (GPIO_Init->Mode == GPIO_MODE_AF_OD))
+ 405              		.loc 1 202 91 discriminator 1 view .LVU148
+ 406 0142 112C     		cmp	r4, #17
+ 407 0144 00D1     		bne	.LCB380
+ 408 0146 60E7     		b	.L6	@long jump
+ 409              	.LCB380:
+ 203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 410              		.loc 1 203 51 view .LVU149
+ 411 0148 122C     		cmp	r4, #18
+ 412 014a 00D0     		beq	.LCB382
+ 413 014c 70E7     		b	.L7	@long jump
+ 414              	.LCB382:
+ 415 014e 5CE7     		b	.L6
+ 416              	.LVL44:
+ 417              	.L17:
+ 241:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
+ 418              		.loc 1 241 9 view .LVU150
+ 419 0150 0226     		movs	r6, #2
+ 420 0152 9CE7     		b	.L8
+ 421              	.L14:
+ 422 0154 0026     		movs	r6, #0
+ 423 0156 9AE7     		b	.L8
+ 424              	.L15:
+ 425 0158 0126     		movs	r6, #1
+ 426 015a 98E7     		b	.L8
+ARM GAS  /tmp/ccmsmhJx.s 			page 14
+
+
+ 427              	.LVL45:
+ 428              	.L18:
+ 280:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 281:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 429              		.loc 1 281 1 view .LVU151
+ 430              		@ sp needed
+ 431 015c 80BC     		pop	{r7}
+ 432 015e B846     		mov	r8, r7
+ 433 0160 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 434              	.L20:
+ 435 0162 C046     		.align	2
+ 436              	.L19:
+ 437 0164 00100240 		.word	1073876992
+ 438 0168 00000140 		.word	1073807360
+ 439 016c 00040050 		.word	1342178304
+ 440 0170 00080050 		.word	1342179328
+ 441 0174 00040140 		.word	1073808384
+ 442              		.cfi_endproc
+ 443              	.LFE34:
+ 445              		.section	.text.HAL_GPIO_DeInit,"ax",%progbits
+ 446              		.align	1
+ 447              		.global	HAL_GPIO_DeInit
+ 448              		.syntax unified
+ 449              		.code	16
+ 450              		.thumb_func
+ 451              		.fpu softvfp
+ 453              	HAL_GPIO_DeInit:
+ 454              	.LVL46:
+ 455              	.LFB35:
+ 282:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 283:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 284:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  De-initializes the GPIOx peripheral registers to their default reset values.
+ 285:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..E and H) to select the GPIO peripheral for STM32L0XX family de
+ 286:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                Note that GPIOE is not available on all devices.
+ 287:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be written.
+ 288:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   This parameter can be one of GPIO_PIN_x where x can be (0..15).
+ 289:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   All port bits are not necessarily available on all GPIOs.
+ 290:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 291:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 292:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_DeInit(GPIO_TypeDef  *GPIOx, uint32_t GPIO_Pin)
+ 293:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** { 
+ 456              		.loc 1 293 1 is_stmt 1 view -0
+ 457              		.cfi_startproc
+ 458              		@ args = 0, pretend = 0, frame = 0
+ 459              		@ frame_needed = 0, uses_anonymous_args = 0
+ 460              		.loc 1 293 1 is_stmt 0 view .LVU153
+ 461 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 462              	.LCFI2:
+ 463              		.cfi_def_cfa_offset 20
+ 464              		.cfi_offset 4, -20
+ 465              		.cfi_offset 5, -16
+ 466              		.cfi_offset 6, -12
+ 467              		.cfi_offset 7, -8
+ 468              		.cfi_offset 14, -4
+ 469 0002 D646     		mov	lr, r10
+ 470 0004 4F46     		mov	r7, r9
+ 471 0006 4646     		mov	r6, r8
+ARM GAS  /tmp/ccmsmhJx.s 			page 15
+
+
+ 472 0008 C0B5     		push	{r6, r7, lr}
+ 473              	.LCFI3:
+ 474              		.cfi_def_cfa_offset 32
+ 475              		.cfi_offset 8, -32
+ 476              		.cfi_offset 9, -28
+ 477              		.cfi_offset 10, -24
+ 294:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t position = 0x00U;
+ 478              		.loc 1 294 3 is_stmt 1 view .LVU154
+ 479              	.LVL47:
+ 295:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+ 480              		.loc 1 295 3 view .LVU155
+ 296:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t tmp = 0x00U;
+ 481              		.loc 1 296 3 view .LVU156
+ 297:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 298:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 299:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,GPIO_Pin));
+ 482              		.loc 1 299 3 view .LVU157
+ 300:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 301:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Configure the port pins */
+ 302:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   while ((GPIO_Pin >> position) != 0)
+ 483              		.loc 1 302 3 view .LVU158
+ 294:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   uint32_t iocurrent = 0x00U;
+ 484              		.loc 1 294 12 is_stmt 0 view .LVU159
+ 485 000a 0023     		movs	r3, #0
+ 486              		.loc 1 302 9 view .LVU160
+ 487 000c 06E0     		b	.L22
+ 488              	.LVL48:
+ 489              	.L31:
+ 303:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 304:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     /* Get the IO position */
+ 305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     iocurrent = (GPIO_Pin) & (1U << position);
+ 306:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     if(iocurrent)
+ 308:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 309:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /*------------------------- GPIO Mode Configuration --------------------*/
+ 310:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure IO Direction in Input Floting Mode */
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->MODER |= (GPIO_MODER_MODE0 << (position * 2U));
+ 312:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 313:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure the default Alternate Function in current IO */ 
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->AFR[position >> 3U] &= ~((uint32_t)0xFU << ((uint32_t)(position & (uint32_t)0x07U) * 4
+ 315:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 316:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure the default value for IO Speed */
+ 317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEED0 << (position * 2U));
+ 318:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 319:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Configure the default value IO Output Type */
+ 320:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->OTYPER  &= ~(GPIO_OTYPER_OT_0 << position) ;
+ 321:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 322:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Deactivate the Pull-up oand Pull-down resistor for the current IO */
+ 323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPD0 << (position * 2U));
+ 324:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 325:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /*------------------------- EXTI Mode Configuration --------------------*/
+ 326:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       /* Clear the External Interrupt or Event for the current IO */
+ 327:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       tmp = SYSCFG->EXTICR[position >> 2U];
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       tmp &= (((uint32_t)0x0FU) << (4U * (position & 0x03U)));
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 490              		.loc 1 330 18 view .LVU161
+ARM GAS  /tmp/ccmsmhJx.s 			page 16
+
+
+ 491 000e 0226     		movs	r6, #2
+ 492 0010 00E0     		b	.L24
+ 493              	.L26:
+ 494 0012 0026     		movs	r6, #0
+ 495              	.L24:
+ 496              		.loc 1 330 40 discriminator 12 view .LVU162
+ 497 0014 9640     		lsls	r6, r6, r2
+ 498              		.loc 1 330 9 discriminator 12 view .LVU163
+ 499 0016 A642     		cmp	r6, r4
+ 500 0018 45D0     		beq	.L29
+ 501              	.LVL49:
+ 502              	.L23:
+ 331:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 332:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         tmp = ((uint32_t)0x0FU) << (4U * (position & 0x03U));
+ 333:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] &= ~tmp;
+ 334:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 335:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Clear EXTI line configuration */
+ 336:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->IMR &= ~((uint32_t)iocurrent);
+ 337:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 338:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 339:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         /* Clear Rising Falling edge configuration */
+ 340:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->RTSR &= ~((uint32_t)iocurrent);
+ 341:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->FTSR &= ~((uint32_t)iocurrent);
+ 342:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       }
+ 343:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     }
+ 344:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****      position++;
+ 503              		.loc 1 344 6 is_stmt 1 view .LVU164
+ 504              		.loc 1 344 14 is_stmt 0 view .LVU165
+ 505 001a 0133     		adds	r3, r3, #1
+ 506              	.LVL50:
+ 507              	.L22:
+ 302:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 508              		.loc 1 302 9 is_stmt 1 view .LVU166
+ 302:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 509              		.loc 1 302 20 is_stmt 0 view .LVU167
+ 510 001c 0A00     		movs	r2, r1
+ 511 001e DA40     		lsrs	r2, r2, r3
+ 302:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 512              		.loc 1 302 9 view .LVU168
+ 513 0020 56D0     		beq	.L30
+ 305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 514              		.loc 1 305 5 is_stmt 1 view .LVU169
+ 305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 515              		.loc 1 305 34 is_stmt 0 view .LVU170
+ 516 0022 0122     		movs	r2, #1
+ 517 0024 9A40     		lsls	r2, r2, r3
+ 305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 518              		.loc 1 305 15 view .LVU171
+ 519 0026 0C00     		movs	r4, r1
+ 520 0028 1440     		ands	r4, r2
+ 521 002a A446     		mov	ip, r4
+ 522              	.LVL51:
+ 307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 523              		.loc 1 307 5 is_stmt 1 view .LVU172
+ 307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     {
+ 524              		.loc 1 307 7 is_stmt 0 view .LVU173
+ 525 002c 1142     		tst	r1, r2
+ARM GAS  /tmp/ccmsmhJx.s 			page 17
+
+
+ 526 002e F4D0     		beq	.L23
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 527              		.loc 1 311 7 is_stmt 1 view .LVU174
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 528              		.loc 1 311 20 is_stmt 0 view .LVU175
+ 529 0030 0568     		ldr	r5, [r0]
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 530              		.loc 1 311 54 view .LVU176
+ 531 0032 5E00     		lsls	r6, r3, #1
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 532              		.loc 1 311 41 view .LVU177
+ 533 0034 0324     		movs	r4, #3
+ 534              	.LVL52:
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 535              		.loc 1 311 41 view .LVU178
+ 536 0036 A246     		mov	r10, r4
+ 537 0038 2700     		movs	r7, r4
+ 538 003a B740     		lsls	r7, r7, r6
+ 539 003c B846     		mov	r8, r7
+ 311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            
+ 540              		.loc 1 311 20 view .LVU179
+ 541 003e 3D43     		orrs	r5, r7
+ 542 0040 0560     		str	r5, [r0]
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 543              		.loc 1 314 7 is_stmt 1 view .LVU180
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 544              		.loc 1 314 34 is_stmt 0 view .LVU181
+ 545 0042 DE08     		lsrs	r6, r3, #3
+ 546 0044 0836     		adds	r6, r6, #8
+ 547 0046 B600     		lsls	r6, r6, #2
+ 548 0048 3458     		ldr	r4, [r6, r0]
+ 549 004a A146     		mov	r9, r4
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 550              		.loc 1 314 58 view .LVU182
+ 551 004c 0725     		movs	r5, #7
+ 552 004e 1D40     		ands	r5, r3
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 553              		.loc 1 314 97 view .LVU183
+ 554 0050 AD00     		lsls	r5, r5, #2
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 555              		.loc 1 314 54 view .LVU184
+ 556 0052 0F27     		movs	r7, #15
+ 557 0054 3C00     		movs	r4, r7
+ 558 0056 AC40     		lsls	r4, r4, r5
+ 559 0058 2500     		movs	r5, r4
+ 314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 560              		.loc 1 314 34 view .LVU185
+ 561 005a 4C46     		mov	r4, r9
+ 562 005c AC43     		bics	r4, r5
+ 563 005e 3450     		str	r4, [r6, r0]
+ 317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 564              		.loc 1 317 7 is_stmt 1 view .LVU186
+ 317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 565              		.loc 1 317 22 is_stmt 0 view .LVU187
+ 566 0060 8568     		ldr	r5, [r0, #8]
+ 567 0062 4446     		mov	r4, r8
+ 568 0064 A543     		bics	r5, r4
+ARM GAS  /tmp/ccmsmhJx.s 			page 18
+
+
+ 569 0066 8560     		str	r5, [r0, #8]
+ 320:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 570              		.loc 1 320 7 is_stmt 1 view .LVU188
+ 320:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 571              		.loc 1 320 22 is_stmt 0 view .LVU189
+ 572 0068 4568     		ldr	r5, [r0, #4]
+ 573 006a 9543     		bics	r5, r2
+ 574 006c 4560     		str	r5, [r0, #4]
+ 323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 575              		.loc 1 323 7 is_stmt 1 view .LVU190
+ 323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       
+ 576              		.loc 1 323 20 is_stmt 0 view .LVU191
+ 577 006e C268     		ldr	r2, [r0, #12]
+ 578 0070 A243     		bics	r2, r4
+ 579 0072 C260     		str	r2, [r0, #12]
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       tmp &= (((uint32_t)0x0FU) << (4U * (position & 0x03U)));
+ 580              		.loc 1 328 7 is_stmt 1 view .LVU192
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       tmp &= (((uint32_t)0x0FU) << (4U * (position & 0x03U)));
+ 581              		.loc 1 328 37 is_stmt 0 view .LVU193
+ 582 0074 9D08     		lsrs	r5, r3, #2
+ 328:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       tmp &= (((uint32_t)0x0FU) << (4U * (position & 0x03U)));
+ 583              		.loc 1 328 11 view .LVU194
+ 584 0076 AA1C     		adds	r2, r5, #2
+ 585 0078 9200     		lsls	r2, r2, #2
+ 586 007a 184E     		ldr	r6, .L32
+ 587 007c 9659     		ldr	r6, [r2, r6]
+ 588              	.LVL53:
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 589              		.loc 1 329 7 is_stmt 1 view .LVU195
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 590              		.loc 1 329 52 is_stmt 0 view .LVU196
+ 591 007e 5246     		mov	r2, r10
+ 592 0080 1A40     		ands	r2, r3
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 593              		.loc 1 329 40 view .LVU197
+ 594 0082 9200     		lsls	r2, r2, #2
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 595              		.loc 1 329 33 view .LVU198
+ 596 0084 9740     		lsls	r7, r7, r2
+ 329:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       if(tmp == (GPIO_GET_INDEX(GPIOx) << (4U * (position & 0x03U))))
+ 597              		.loc 1 329 11 view .LVU199
+ 598 0086 3400     		movs	r4, r6
+ 599 0088 3C40     		ands	r4, r7
+ 600              	.LVL54:
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 601              		.loc 1 330 7 is_stmt 1 view .LVU200
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 602              		.loc 1 330 18 is_stmt 0 view .LVU201
+ 603 008a A026     		movs	r6, #160
+ 604 008c F605     		lsls	r6, r6, #23
+ 605 008e B042     		cmp	r0, r6
+ 606 0090 BFD0     		beq	.L26
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 607              		.loc 1 330 18 discriminator 1 view .LVU202
+ 608 0092 134E     		ldr	r6, .L32+4
+ 609 0094 B042     		cmp	r0, r6
+ 610 0096 04D0     		beq	.L27
+ARM GAS  /tmp/ccmsmhJx.s 			page 19
+
+
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 611              		.loc 1 330 18 discriminator 3 view .LVU203
+ 612 0098 124E     		ldr	r6, .L32+8
+ 613 009a B042     		cmp	r0, r6
+ 614 009c B7D0     		beq	.L31
+ 330:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
+ 615              		.loc 1 330 18 view .LVU204
+ 616 009e 0626     		movs	r6, #6
+ 617 00a0 B8E7     		b	.L24
+ 618              	.L27:
+ 619 00a2 0126     		movs	r6, #1
+ 620 00a4 B6E7     		b	.L24
+ 621              	.L29:
+ 332:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] &= ~tmp;
+ 622              		.loc 1 332 9 is_stmt 1 view .LVU205
+ 623              	.LVL55:
+ 333:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 624              		.loc 1 333 9 view .LVU206
+ 333:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 625              		.loc 1 333 40 is_stmt 0 view .LVU207
+ 626 00a6 0D4C     		ldr	r4, .L32
+ 627 00a8 0235     		adds	r5, r5, #2
+ 628 00aa AD00     		lsls	r5, r5, #2
+ 629 00ac 2A59     		ldr	r2, [r5, r4]
+ 630 00ae BA43     		bics	r2, r7
+ 631 00b0 2A51     		str	r2, [r5, r4]
+ 336:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 632              		.loc 1 336 9 is_stmt 1 view .LVU208
+ 336:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->EMR &= ~((uint32_t)iocurrent);
+ 633              		.loc 1 336 19 is_stmt 0 view .LVU209
+ 634 00b2 0D4A     		ldr	r2, .L32+12
+ 635 00b4 1468     		ldr	r4, [r2]
+ 636 00b6 6546     		mov	r5, ip
+ 637 00b8 AC43     		bics	r4, r5
+ 638 00ba 1460     		str	r4, [r2]
+ 337:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 639              		.loc 1 337 9 is_stmt 1 view .LVU210
+ 337:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 640              		.loc 1 337 19 is_stmt 0 view .LVU211
+ 641 00bc 5468     		ldr	r4, [r2, #4]
+ 642 00be AC43     		bics	r4, r5
+ 643 00c0 5460     		str	r4, [r2, #4]
+ 340:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->FTSR &= ~((uint32_t)iocurrent);
+ 644              		.loc 1 340 9 is_stmt 1 view .LVU212
+ 340:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         EXTI->FTSR &= ~((uint32_t)iocurrent);
+ 645              		.loc 1 340 20 is_stmt 0 view .LVU213
+ 646 00c2 9468     		ldr	r4, [r2, #8]
+ 647 00c4 AC43     		bics	r4, r5
+ 648 00c6 9460     		str	r4, [r2, #8]
+ 341:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       }
+ 649              		.loc 1 341 9 is_stmt 1 view .LVU214
+ 341:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       }
+ 650              		.loc 1 341 20 is_stmt 0 view .LVU215
+ 651 00c8 D468     		ldr	r4, [r2, #12]
+ 652 00ca AC43     		bics	r4, r5
+ 653 00cc D460     		str	r4, [r2, #12]
+ 654 00ce A4E7     		b	.L23
+ARM GAS  /tmp/ccmsmhJx.s 			page 20
+
+
+ 655              	.LVL56:
+ 656              	.L30:
+ 345:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 346:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 657              		.loc 1 346 1 view .LVU216
+ 658              		@ sp needed
+ 659 00d0 E0BC     		pop	{r5, r6, r7}
+ 660 00d2 BA46     		mov	r10, r7
+ 661 00d4 B146     		mov	r9, r6
+ 662 00d6 A846     		mov	r8, r5
+ 663 00d8 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 664              	.L33:
+ 665 00da C046     		.align	2
+ 666              	.L32:
+ 667 00dc 00000140 		.word	1073807360
+ 668 00e0 00040050 		.word	1342178304
+ 669 00e4 00080050 		.word	1342179328
+ 670 00e8 00040140 		.word	1073808384
+ 671              		.cfi_endproc
+ 672              	.LFE35:
+ 674              		.section	.text.HAL_GPIO_ReadPin,"ax",%progbits
+ 675              		.align	1
+ 676              		.global	HAL_GPIO_ReadPin
+ 677              		.syntax unified
+ 678              		.code	16
+ 679              		.thumb_func
+ 680              		.fpu softvfp
+ 682              	HAL_GPIO_ReadPin:
+ 683              	.LVL57:
+ 684              	.LFB36:
+ 347:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 348:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 349:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @}
+ 350:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 351:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 352:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO_Exported_Functions_Group2
+ 353:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  *  @brief   GPIO Read and Write
+ 354:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  *
+ 355:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** @verbatim
+ 356:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  ===============================================================================
+ 357:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****                        ##### IO operation functions #####
+ 358:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  ===============================================================================
+ 359:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 360:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** @endverbatim
+ 361:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @{
+ 362:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 363:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 364:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 365:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  Reads the specified input port pin.
+ 366:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..E and H) to select the GPIO peripheral for STM32L0xx family de
+ 367:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                Note that GPIOE is not available on all devices.
+ 368:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to read.
+ 369:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   This parameter can be GPIO_PIN_x where x can be (0..15).
+ 370:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   All port bits are not necessarily available on all GPIOs.
+ 371:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval The input port pin value.
+ 372:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 373:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ARM GAS  /tmp/ccmsmhJx.s 			page 21
+
+
+ 374:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 685              		.loc 1 374 1 is_stmt 1 view -0
+ 686              		.cfi_startproc
+ 687              		@ args = 0, pretend = 0, frame = 0
+ 688              		@ frame_needed = 0, uses_anonymous_args = 0
+ 689              		@ link register save eliminated.
+ 375:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   GPIO_PinState bitstatus;
+ 690              		.loc 1 375 3 view .LVU218
+ 376:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+ 377:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 378:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,GPIO_Pin));
+ 691              		.loc 1 378 3 view .LVU219
+ 379:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+ 380:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   if((GPIOx->IDR & GPIO_Pin) != (uint32_t)GPIO_PIN_RESET)
+ 692              		.loc 1 380 3 view .LVU220
+ 693              		.loc 1 380 12 is_stmt 0 view .LVU221
+ 694 0000 0369     		ldr	r3, [r0, #16]
+ 695              		.loc 1 380 5 view .LVU222
+ 696 0002 0B42     		tst	r3, r1
+ 697 0004 01D0     		beq	.L36
+ 381:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 382:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     bitstatus = GPIO_PIN_SET;
+ 698              		.loc 1 382 15 view .LVU223
+ 699 0006 0120     		movs	r0, #1
+ 700              	.LVL58:
+ 701              	.L35:
+ 383:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 384:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   else
+ 385:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 386:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     bitstatus = GPIO_PIN_RESET;
+ 387:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 388:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   return bitstatus;
+ 702              		.loc 1 388 3 is_stmt 1 view .LVU224
+ 389:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 703              		.loc 1 389 1 is_stmt 0 view .LVU225
+ 704              		@ sp needed
+ 705 0008 7047     		bx	lr
+ 706              	.LVL59:
+ 707              	.L36:
+ 386:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 708              		.loc 1 386 15 view .LVU226
+ 709 000a 0020     		movs	r0, #0
+ 710              	.LVL60:
+ 386:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 711              		.loc 1 386 15 view .LVU227
+ 712 000c FCE7     		b	.L35
+ 713              		.cfi_endproc
+ 714              	.LFE36:
+ 716              		.section	.text.HAL_GPIO_WritePin,"ax",%progbits
+ 717              		.align	1
+ 718              		.global	HAL_GPIO_WritePin
+ 719              		.syntax unified
+ 720              		.code	16
+ 721              		.thumb_func
+ 722              		.fpu softvfp
+ 724              	HAL_GPIO_WritePin:
+ 725              	.LVL61:
+ARM GAS  /tmp/ccmsmhJx.s 			page 22
+
+
+ 726              	.LFB37:
+ 390:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 391:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 392:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  Sets or clears the selected data port bit.
+ 393:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * 
+ 394:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @note   This function uses GPIOx_BSRR register to allow atomic read/modify 
+ 395:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *         accesses. In this way, there is no risk of an IRQ occurring between
+ 396:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *         the read and the modify access.
+ 397:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *               
+ 398:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..E and H) to select the GPIO peripheral for STM32L0xx family de
+ 399:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                Note that GPIOE is not available on all devices.
+ 400:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be written.
+ 401:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   This parameter can be one of GPIO_PIN_x where x can be (0..15).
+ 402:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   All port bits are not necessarily available on all GPIOs.
+ 403:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  PinState specifies the value to be written to the selected bit.
+ 404:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                   This parameter can be one of the GPIO_PinState enum values:
+ 405:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                        GPIO_PIN_RESET: to clear the port pin
+ 406:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                        GPIO_PIN_SET: to set the port pin
+ 407:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 408:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 409:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)
+ 410:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 727              		.loc 1 410 1 is_stmt 1 view -0
+ 728              		.cfi_startproc
+ 729              		@ args = 0, pretend = 0, frame = 0
+ 730              		@ frame_needed = 0, uses_anonymous_args = 0
+ 731              		@ link register save eliminated.
+ 411:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 412:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,GPIO_Pin));
+ 732              		.loc 1 412 3 view .LVU229
+ 413:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_ACTION(PinState));
+ 733              		.loc 1 413 3 view .LVU230
+ 414:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
+ 415:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   if(PinState != GPIO_PIN_RESET)
+ 734              		.loc 1 415 3 view .LVU231
+ 735              		.loc 1 415 5 is_stmt 0 view .LVU232
+ 736 0000 002A     		cmp	r2, #0
+ 737 0002 01D0     		beq	.L38
+ 416:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 417:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     GPIOx->BSRR = GPIO_Pin;
+ 738              		.loc 1 417 5 is_stmt 1 view .LVU233
+ 739              		.loc 1 417 17 is_stmt 0 view .LVU234
+ 740 0004 8161     		str	r1, [r0, #24]
+ 741              	.L37:
+ 418:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 419:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   else
+ 420:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 421:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     GPIOx->BRR = GPIO_Pin ;
+ 422:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 423:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 742              		.loc 1 423 1 view .LVU235
+ 743              		@ sp needed
+ 744 0006 7047     		bx	lr
+ 745              	.L38:
+ 421:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 746              		.loc 1 421 5 is_stmt 1 view .LVU236
+ 421:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ARM GAS  /tmp/ccmsmhJx.s 			page 23
+
+
+ 747              		.loc 1 421 16 is_stmt 0 view .LVU237
+ 748 0008 8162     		str	r1, [r0, #40]
+ 749              		.loc 1 423 1 view .LVU238
+ 750 000a FCE7     		b	.L37
+ 751              		.cfi_endproc
+ 752              	.LFE37:
+ 754              		.section	.text.HAL_GPIO_TogglePin,"ax",%progbits
+ 755              		.align	1
+ 756              		.global	HAL_GPIO_TogglePin
+ 757              		.syntax unified
+ 758              		.code	16
+ 759              		.thumb_func
+ 760              		.fpu softvfp
+ 762              	HAL_GPIO_TogglePin:
+ 763              	.LVL62:
+ 764              	.LFB38:
+ 424:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 425:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 426:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  Toggles the specified GPIO pins.
+ 427:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIOx Where x can be (A..E and H) to select the GPIO peripheral for STM32L0xx family de
+ 428:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                Note that GPIOE is not available on all devices.
+ 429:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   *                All port bits are not necessarily available on all GPIOs.
+ 430:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins to be toggled.
+ 431:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 432:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 433:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_TogglePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 434:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 765              		.loc 1 434 1 is_stmt 1 view -0
+ 766              		.cfi_startproc
+ 767              		@ args = 0, pretend = 0, frame = 0
+ 768              		@ frame_needed = 0, uses_anonymous_args = 0
+ 769              		@ link register save eliminated.
+ 435:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 436:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,GPIO_Pin));
+ 770              		.loc 1 436 3 view .LVU240
+ 437:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 438:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   GPIOx->ODR ^= GPIO_Pin;
+ 771              		.loc 1 438 3 view .LVU241
+ 772              		.loc 1 438 14 is_stmt 0 view .LVU242
+ 773 0000 4369     		ldr	r3, [r0, #20]
+ 774 0002 5940     		eors	r1, r3
+ 775              	.LVL63:
+ 776              		.loc 1 438 14 view .LVU243
+ 777 0004 4161     		str	r1, [r0, #20]
+ 439:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 778              		.loc 1 439 1 view .LVU244
+ 779              		@ sp needed
+ 780 0006 7047     		bx	lr
+ 781              		.cfi_endproc
+ 782              	.LFE38:
+ 784              		.section	.text.HAL_GPIO_LockPin,"ax",%progbits
+ 785              		.align	1
+ 786              		.global	HAL_GPIO_LockPin
+ 787              		.syntax unified
+ 788              		.code	16
+ 789              		.thumb_func
+ 790              		.fpu softvfp
+ARM GAS  /tmp/ccmsmhJx.s 			page 24
+
+
+ 792              	HAL_GPIO_LockPin:
+ 793              	.LVL64:
+ 794              	.LFB39:
+ 440:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 441:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 442:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @brief  Locks GPIO Pins configuration registers.
+ 443:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @note   The locked registers are GPIOx_MODER, GPIOx_OTYPER, GPIOx_OSPEEDR,
+ 444:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** *         GPIOx_PUPDR, GPIOx_AFRL and GPIOx_AFRH.
+ 445:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @note   The configuration of the locked GPIO pins can no longer be modified
+ 446:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** *         until the next reset.
+ 447:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @param  GPIOx where x can be (A..E and H) to select the GPIO peripheral for STM32L0xx family.
+ 448:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** *                Note that GPIOE is not available on all devices.
+ 449:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @param  GPIO_Pin specifies the port bit to be locked.
+ 450:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** *         This parameter can be any combination of GPIO_Pin_x where x can be (0..15).
+ 451:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** *         All port bits are not necessarily available on all GPIOs.
+ 452:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** * @retval None
+ 453:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** */
+ 454:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** HAL_StatusTypeDef HAL_GPIO_LockPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 455:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 795              		.loc 1 455 1 is_stmt 1 view -0
+ 796              		.cfi_startproc
+ 797              		@ args = 0, pretend = 0, frame = 8
+ 798              		@ frame_needed = 0, uses_anonymous_args = 0
+ 799              		@ link register save eliminated.
+ 800              		.loc 1 455 1 is_stmt 0 view .LVU246
+ 801 0000 82B0     		sub	sp, sp, #8
+ 802              	.LCFI4:
+ 803              		.cfi_def_cfa_offset 8
+ 456:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   __IO uint32_t tmp = GPIO_LCKR_LCKK;
+ 804              		.loc 1 456 3 is_stmt 1 view .LVU247
+ 805              		.loc 1 456 17 is_stmt 0 view .LVU248
+ 806 0002 8022     		movs	r2, #128
+ 807 0004 5202     		lsls	r2, r2, #9
+ 808 0006 0192     		str	r2, [sp, #4]
+ 457:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 458:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Check the parameters */
+ 459:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN_AVAILABLE(GPIOx,GPIO_Pin));
+ 809              		.loc 1 459 3 is_stmt 1 view .LVU249
+ 460:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 461:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Apply lock key write sequence */
+ 462:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   tmp |= GPIO_Pin;
+ 810              		.loc 1 462 3 view .LVU250
+ 811              		.loc 1 462 7 is_stmt 0 view .LVU251
+ 812 0008 019B     		ldr	r3, [sp, #4]
+ 813 000a 0B43     		orrs	r3, r1
+ 814 000c 0193     		str	r3, [sp, #4]
+ 463:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
+ 464:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   GPIOx->LCKR = tmp;
+ 815              		.loc 1 464 3 is_stmt 1 view .LVU252
+ 816              		.loc 1 464 15 is_stmt 0 view .LVU253
+ 817 000e 019B     		ldr	r3, [sp, #4]
+ 818 0010 C361     		str	r3, [r0, #28]
+ 465:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Reset LCKx bit(s): LCKK='0' + LCK[15-0] */
+ 466:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   GPIOx->LCKR = GPIO_Pin;
+ 819              		.loc 1 466 3 is_stmt 1 view .LVU254
+ 820              		.loc 1 466 15 is_stmt 0 view .LVU255
+ 821 0012 C161     		str	r1, [r0, #28]
+ARM GAS  /tmp/ccmsmhJx.s 			page 25
+
+
+ 467:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
+ 468:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   GPIOx->LCKR = tmp;
+ 822              		.loc 1 468 3 is_stmt 1 view .LVU256
+ 823              		.loc 1 468 15 is_stmt 0 view .LVU257
+ 824 0014 019B     		ldr	r3, [sp, #4]
+ 825 0016 C361     		str	r3, [r0, #28]
+ 469:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Read LCKK bit*/
+ 470:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   tmp = GPIOx->LCKR;
+ 826              		.loc 1 470 3 is_stmt 1 view .LVU258
+ 827              		.loc 1 470 14 is_stmt 0 view .LVU259
+ 828 0018 C369     		ldr	r3, [r0, #28]
+ 829              		.loc 1 470 7 view .LVU260
+ 830 001a 0193     		str	r3, [sp, #4]
+ 471:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 472:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   if((GPIOx->LCKR & GPIO_LCKR_LCKK) != RESET)
+ 831              		.loc 1 472 3 is_stmt 1 view .LVU261
+ 832              		.loc 1 472 12 is_stmt 0 view .LVU262
+ 833 001c C369     		ldr	r3, [r0, #28]
+ 834              		.loc 1 472 5 view .LVU263
+ 835 001e 1342     		tst	r3, r2
+ 836 0020 02D0     		beq	.L43
+ 473:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 474:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     return HAL_OK;
+ 837              		.loc 1 474 12 view .LVU264
+ 838 0022 0020     		movs	r0, #0
+ 839              	.LVL65:
+ 840              	.L42:
+ 475:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 476:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   else
+ 477:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
+ 478:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     return HAL_ERROR;
+ 479:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 480:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 841              		.loc 1 480 1 view .LVU265
+ 842 0024 02B0     		add	sp, sp, #8
+ 843              		@ sp needed
+ 844 0026 7047     		bx	lr
+ 845              	.LVL66:
+ 846              	.L43:
+ 478:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 847              		.loc 1 478 12 view .LVU266
+ 848 0028 0120     		movs	r0, #1
+ 849              	.LVL67:
+ 478:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 850              		.loc 1 478 12 view .LVU267
+ 851 002a FBE7     		b	.L42
+ 852              		.cfi_endproc
+ 853              	.LFE39:
+ 855              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 856              		.align	1
+ 857              		.weak	HAL_GPIO_EXTI_Callback
+ 858              		.syntax unified
+ 859              		.code	16
+ 860              		.thumb_func
+ 861              		.fpu softvfp
+ 863              	HAL_GPIO_EXTI_Callback:
+ 864              	.LVL68:
+ARM GAS  /tmp/ccmsmhJx.s 			page 26
+
+
+ 865              	.LFB41:
+ 481:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 482:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  This function handles EXTI interrupt request.
+ 483:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins connected to the EXTI line.
+ 484:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 485:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 486:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
+ 487:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 488:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ 489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   if(__HAL_GPIO_EXTI_GET_IT(GPIO_Pin) != RESET) 
+ 490:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   { 
+ 491:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);
+ 492:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     HAL_GPIO_EXTI_Callback(GPIO_Pin);
+ 493:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 494:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 495:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 496:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /**
+ 497:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @brief  EXTI line detection callbacks.
+ 498:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @param  GPIO_Pin Specifies the pins connected to the EXTI line.
+ 499:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   * @retval None
+ 500:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
+ 501:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+ 502:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
+ 866              		.loc 1 502 1 is_stmt 1 view -0
+ 867              		.cfi_startproc
+ 868              		@ args = 0, pretend = 0, frame = 0
+ 869              		@ frame_needed = 0, uses_anonymous_args = 0
+ 870              		@ link register save eliminated.
+ 503:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* Prevent unused argument(s) compilation warning */
+ 504:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   UNUSED(GPIO_Pin);
+ 871              		.loc 1 504 3 view .LVU269
+ 505:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 506:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* NOTE: This function Should not be modified, when the callback is needed,
+ 507:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****            the HAL_GPIO_EXTI_Callback could be implemented in the user file
+ 508:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****    */ 
+ 509:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** }
+ 872              		.loc 1 509 1 is_stmt 0 view .LVU270
+ 873              		@ sp needed
+ 874 0000 7047     		bx	lr
+ 875              		.cfi_endproc
+ 876              	.LFE41:
+ 878              		.section	.text.HAL_GPIO_EXTI_IRQHandler,"ax",%progbits
+ 879              		.align	1
+ 880              		.global	HAL_GPIO_EXTI_IRQHandler
+ 881              		.syntax unified
+ 882              		.code	16
+ 883              		.thumb_func
+ 884              		.fpu softvfp
+ 886              	HAL_GPIO_EXTI_IRQHandler:
+ 887              	.LVL69:
+ 888              	.LFB40:
+ 487:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ 889              		.loc 1 487 1 is_stmt 1 view -0
+ 890              		.cfi_startproc
+ 891              		@ args = 0, pretend = 0, frame = 0
+ 892              		@ frame_needed = 0, uses_anonymous_args = 0
+ 487:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   /* EXTI line interrupt detected */
+ARM GAS  /tmp/ccmsmhJx.s 			page 27
+
+
+ 893              		.loc 1 487 1 is_stmt 0 view .LVU272
+ 894 0000 10B5     		push	{r4, lr}
+ 895              	.LCFI5:
+ 896              		.cfi_def_cfa_offset 8
+ 897              		.cfi_offset 4, -8
+ 898              		.cfi_offset 14, -4
+ 489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   { 
+ 899              		.loc 1 489 3 is_stmt 1 view .LVU273
+ 489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   { 
+ 900              		.loc 1 489 6 is_stmt 0 view .LVU274
+ 901 0002 054B     		ldr	r3, .L48
+ 902 0004 5B69     		ldr	r3, [r3, #20]
+ 489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   { 
+ 903              		.loc 1 489 5 view .LVU275
+ 904 0006 1842     		tst	r0, r3
+ 905 0008 00D1     		bne	.L47
+ 906              	.LVL70:
+ 907              	.L45:
+ 494:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 908              		.loc 1 494 1 view .LVU276
+ 909              		@ sp needed
+ 910 000a 10BD     		pop	{r4, pc}
+ 911              	.LVL71:
+ 912              	.L47:
+ 491:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     HAL_GPIO_EXTI_Callback(GPIO_Pin);
+ 913              		.loc 1 491 5 is_stmt 1 view .LVU277
+ 914 000c 024B     		ldr	r3, .L48
+ 915 000e 5861     		str	r0, [r3, #20]
+ 492:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
+ 916              		.loc 1 492 5 view .LVU278
+ 917 0010 FFF7FEFF 		bl	HAL_GPIO_EXTI_Callback
+ 918              	.LVL72:
+ 494:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
+ 919              		.loc 1 494 1 is_stmt 0 view .LVU279
+ 920 0014 F9E7     		b	.L45
+ 921              	.L49:
+ 922 0016 C046     		.align	2
+ 923              	.L48:
+ 924 0018 00040140 		.word	1073808384
+ 925              		.cfi_endproc
+ 926              	.LFE40:
+ 928              		.text
+ 929              	.Letext0:
+ 930              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
+ 931              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
+ 932              		.file 4 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 933              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 934              		.file 6 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 935              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 936              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 937              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ARM GAS  /tmp/ccmsmhJx.s 			page 28
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l0xx_hal_gpio.c
+     /tmp/ccmsmhJx.s:16     .text.HAL_GPIO_Init:0000000000000000 $t
+     /tmp/ccmsmhJx.s:24     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
+     /tmp/ccmsmhJx.s:437    .text.HAL_GPIO_Init:0000000000000164 $d
+     /tmp/ccmsmhJx.s:446    .text.HAL_GPIO_DeInit:0000000000000000 $t
+     /tmp/ccmsmhJx.s:453    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
+     /tmp/ccmsmhJx.s:667    .text.HAL_GPIO_DeInit:00000000000000dc $d
+     /tmp/ccmsmhJx.s:675    .text.HAL_GPIO_ReadPin:0000000000000000 $t
+     /tmp/ccmsmhJx.s:682    .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
+     /tmp/ccmsmhJx.s:717    .text.HAL_GPIO_WritePin:0000000000000000 $t
+     /tmp/ccmsmhJx.s:724    .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
+     /tmp/ccmsmhJx.s:755    .text.HAL_GPIO_TogglePin:0000000000000000 $t
+     /tmp/ccmsmhJx.s:762    .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
+     /tmp/ccmsmhJx.s:785    .text.HAL_GPIO_LockPin:0000000000000000 $t
+     /tmp/ccmsmhJx.s:792    .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
+     /tmp/ccmsmhJx.s:856    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+     /tmp/ccmsmhJx.s:863    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+     /tmp/ccmsmhJx.s:879    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
+     /tmp/ccmsmhJx.s:886    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
+     /tmp/ccmsmhJx.s:924    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000018 $d
+
+NO UNDEFINED SYMBOLS

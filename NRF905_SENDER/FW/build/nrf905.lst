@@ -1,0 +1,1289 @@
+ARM GAS  /tmp/cc2TCIKW.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"nrf905.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NRF905_ReadReg,"ax",%progbits
+  16              		.align	1
+  17              		.global	NRF905_ReadReg
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NRF905_ReadReg:
+  25              	.LVL0:
+  26              	.LFB34:
+  27              		.file 1 "Core/Src/nrf905.c"
+   1:Core/Src/nrf905.c **** 
+   2:Core/Src/nrf905.c **** #include "main.h"
+   3:Core/Src/nrf905.c **** #include "nrf905.h"
+   4:Core/Src/nrf905.c **** #include "spi.h"
+   5:Core/Src/nrf905.c **** //extern SPI_HandleTypeDef hspi1;
+   6:Core/Src/nrf905.c **** 
+   7:Core/Src/nrf905.c **** uint8_t NRF905_ReadReg(uint8_t reg)
+   8:Core/Src/nrf905.c **** {
+  28              		.loc 1 8 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 16
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 8 1 is_stmt 0 view .LVU1
+  33 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 20
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 87B0     		sub	sp, sp, #28
+  42              	.LCFI1:
+  43              		.cfi_def_cfa_offset 48
+  44 0004 0F27     		movs	r7, #15
+  45 0006 6F44     		add	r7, r7, sp
+   9:Core/Src/nrf905.c ****  uint8_t dt=0, cmd=0;
+  46              		.loc 1 9 2 is_stmt 1 view .LVU2
+  47              		.loc 1 9 10 is_stmt 0 view .LVU3
+  48 0008 0023     		movs	r3, #0
+  49 000a 6A46     		mov	r2, sp
+ARM GAS  /tmp/cc2TCIKW.s 			page 2
+
+
+  50 000c D375     		strb	r3, [r2, #23]
+  51              	.LVL1:
+  10:Core/Src/nrf905.c ****  reg |= R_CONFIG;
+  52              		.loc 1 10 2 is_stmt 1 view .LVU4
+  53              		.loc 1 10 6 is_stmt 0 view .LVU5
+  54 000e 1023     		movs	r3, #16
+  55 0010 1843     		orrs	r0, r3
+  56              	.LVL2:
+  57              		.loc 1 10 6 view .LVU6
+  58 0012 3870     		strb	r0, [r7]
+  11:Core/Src/nrf905.c ****  NRF905_CS_LO;
+  59              		.loc 1 11 2 is_stmt 1 view .LVU7
+  60 0014 A024     		movs	r4, #160
+  61 0016 E405     		lsls	r4, r4, #23
+  62 0018 0022     		movs	r2, #0
+  63 001a 1021     		movs	r1, #16
+  64 001c 2000     		movs	r0, r4
+  65 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  66              	.LVL3:
+  12:Core/Src/nrf905.c ****  HAL_SPI_TransmitReceive(&hspi1,&reg,&dt,1,1000);
+  67              		.loc 1 12 2 view .LVU8
+  68 0022 0D4D     		ldr	r5, .L2
+  69 0024 FA26     		movs	r6, #250
+  70 0026 B600     		lsls	r6, r6, #2
+  71 0028 0096     		str	r6, [sp]
+  72 002a 0123     		movs	r3, #1
+  73 002c 1722     		movs	r2, #23
+  74 002e 6A44     		add	r2, r2, sp
+  75 0030 3900     		movs	r1, r7
+  76 0032 2800     		movs	r0, r5
+  77 0034 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+  78              	.LVL4:
+  13:Core/Src/nrf905.c ****  HAL_SPI_Receive(&hspi1,&dt,1,1000);
+  79              		.loc 1 13 2 view .LVU9
+  80 0038 3300     		movs	r3, r6
+  81 003a 0122     		movs	r2, #1
+  82 003c 1721     		movs	r1, #23
+  83 003e 6944     		add	r1, r1, sp
+  84 0040 2800     		movs	r0, r5
+  85 0042 FFF7FEFF 		bl	HAL_SPI_Receive
+  86              	.LVL5:
+  14:Core/Src/nrf905.c ****   NRF905_CS_HI;	
+  87              		.loc 1 14 3 view .LVU10
+  88 0046 0122     		movs	r2, #1
+  89 0048 1021     		movs	r1, #16
+  90 004a 2000     		movs	r0, r4
+  91 004c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  92              	.LVL6:
+  15:Core/Src/nrf905.c ****  return dt;
+  93              		.loc 1 15 2 view .LVU11
+  94              		.loc 1 15 9 is_stmt 0 view .LVU12
+  95 0050 6B46     		mov	r3, sp
+  96 0052 D87D     		ldrb	r0, [r3, #23]
+  16:Core/Src/nrf905.c **** }
+  97              		.loc 1 16 1 view .LVU13
+  98 0054 07B0     		add	sp, sp, #28
+  99              		@ sp needed
+ARM GAS  /tmp/cc2TCIKW.s 			page 3
+
+
+ 100 0056 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 101              	.L3:
+ 102              		.align	2
+ 103              	.L2:
+ 104 0058 00000000 		.word	hspi1
+ 105              		.cfi_endproc
+ 106              	.LFE34:
+ 108              		.section	.text.NRF905_WriteReg,"ax",%progbits
+ 109              		.align	1
+ 110              		.global	NRF905_WriteReg
+ 111              		.syntax unified
+ 112              		.code	16
+ 113              		.thumb_func
+ 114              		.fpu softvfp
+ 116              	NRF905_WriteReg:
+ 117              	.LVL7:
+ 118              	.LFB35:
+  17:Core/Src/nrf905.c **** 
+  18:Core/Src/nrf905.c **** uint8_t NRF905_WriteReg(uint8_t reg, uint8_t data )
+  19:Core/Src/nrf905.c **** {
+ 119              		.loc 1 19 1 is_stmt 1 view -0
+ 120              		.cfi_startproc
+ 121              		@ args = 0, pretend = 0, frame = 8
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123              		.loc 1 19 1 is_stmt 0 view .LVU15
+ 124 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 125              	.LCFI2:
+ 126              		.cfi_def_cfa_offset 20
+ 127              		.cfi_offset 4, -20
+ 128              		.cfi_offset 5, -16
+ 129              		.cfi_offset 6, -12
+ 130              		.cfi_offset 7, -8
+ 131              		.cfi_offset 14, -4
+ 132 0002 C646     		mov	lr, r8
+ 133 0004 00B5     		push	{lr}
+ 134              	.LCFI3:
+ 135              		.cfi_def_cfa_offset 24
+ 136              		.cfi_offset 8, -24
+ 137 0006 82B0     		sub	sp, sp, #8
+ 138              	.LCFI4:
+ 139              		.cfi_def_cfa_offset 32
+ 140 0008 0723     		movs	r3, #7
+ 141 000a 6B44     		add	r3, r3, sp
+ 142 000c 9846     		mov	r8, r3
+ 143 000e 1870     		strb	r0, [r3]
+ 144 0010 6B46     		mov	r3, sp
+ 145 0012 9E1D     		adds	r6, r3, #6
+ 146 0014 9971     		strb	r1, [r3, #6]
+  20:Core/Src/nrf905.c ****  reg |= W_CONFIG;
+ 147              		.loc 1 20 2 is_stmt 1 view .LVU16
+  21:Core/Src/nrf905.c ****  NRF905_CS_LO;
+ 148              		.loc 1 21 2 view .LVU17
+ 149 0016 A024     		movs	r4, #160
+ 150 0018 E405     		lsls	r4, r4, #23
+ 151 001a 0022     		movs	r2, #0
+ 152 001c 1021     		movs	r1, #16
+ 153              	.LVL8:
+ARM GAS  /tmp/cc2TCIKW.s 			page 4
+
+
+ 154              		.loc 1 21 2 is_stmt 0 view .LVU18
+ 155 001e 2000     		movs	r0, r4
+ 156              	.LVL9:
+ 157              		.loc 1 21 2 view .LVU19
+ 158 0020 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 159              	.LVL10:
+  22:Core/Src/nrf905.c ****  HAL_SPI_Transmit(&hspi1,&reg,1,1000);
+ 160              		.loc 1 22 2 is_stmt 1 view .LVU20
+ 161 0024 FA27     		movs	r7, #250
+ 162 0026 BF00     		lsls	r7, r7, #2
+ 163 0028 0B4D     		ldr	r5, .L5
+ 164 002a 3B00     		movs	r3, r7
+ 165 002c 0122     		movs	r2, #1
+ 166 002e 4146     		mov	r1, r8
+ 167 0030 2800     		movs	r0, r5
+ 168 0032 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 169              	.LVL11:
+  23:Core/Src/nrf905.c ****  HAL_SPI_Transmit(&hspi1,&data,1,1000);
+ 170              		.loc 1 23 2 view .LVU21
+ 171 0036 3B00     		movs	r3, r7
+ 172 0038 0122     		movs	r2, #1
+ 173 003a 3100     		movs	r1, r6
+ 174 003c 2800     		movs	r0, r5
+ 175 003e FFF7FEFF 		bl	HAL_SPI_Transmit
+ 176              	.LVL12:
+  24:Core/Src/nrf905.c ****  NRF905_CS_HI;
+ 177              		.loc 1 24 2 view .LVU22
+ 178 0042 0122     		movs	r2, #1
+ 179 0044 1021     		movs	r1, #16
+ 180 0046 2000     		movs	r0, r4
+ 181 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 182              	.LVL13:
+  25:Core/Src/nrf905.c ****  return 0;
+ 183              		.loc 1 25 2 view .LVU23
+  26:Core/Src/nrf905.c **** }
+ 184              		.loc 1 26 1 is_stmt 0 view .LVU24
+ 185 004c 0020     		movs	r0, #0
+ 186 004e 02B0     		add	sp, sp, #8
+ 187              		@ sp needed
+ 188 0050 80BC     		pop	{r7}
+ 189 0052 B846     		mov	r8, r7
+ 190 0054 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 191              	.L6:
+ 192 0056 C046     		.align	2
+ 193              	.L5:
+ 194 0058 00000000 		.word	hspi1
+ 195              		.cfi_endproc
+ 196              	.LFE35:
+ 198              		.section	.text.NRF905_ReadBuf,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	NRF905_ReadBuf
+ 201              		.syntax unified
+ 202              		.code	16
+ 203              		.thumb_func
+ 204              		.fpu softvfp
+ 206              	NRF905_ReadBuf:
+ 207              	.LVL14:
+ARM GAS  /tmp/cc2TCIKW.s 			page 5
+
+
+ 208              	.LFB36:
+  27:Core/Src/nrf905.c **** void NRF905_ReadBuf(uint8_t reg,uint8_t *pBuf,uint8_t bytes)
+  28:Core/Src/nrf905.c **** {
+ 209              		.loc 1 28 1 is_stmt 1 view -0
+ 210              		.cfi_startproc
+ 211              		@ args = 0, pretend = 0, frame = 16
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213              		.loc 1 28 1 is_stmt 0 view .LVU26
+ 214 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 215              	.LCFI5:
+ 216              		.cfi_def_cfa_offset 20
+ 217              		.cfi_offset 4, -20
+ 218              		.cfi_offset 5, -16
+ 219              		.cfi_offset 6, -12
+ 220              		.cfi_offset 7, -8
+ 221              		.cfi_offset 14, -4
+ 222 0002 87B0     		sub	sp, sp, #28
+ 223              	.LCFI6:
+ 224              		.cfi_def_cfa_offset 48
+ 225 0004 0D00     		movs	r5, r1
+ 226 0006 1600     		movs	r6, r2
+ 227 0008 0F27     		movs	r7, #15
+ 228 000a 6F44     		add	r7, r7, sp
+  29:Core/Src/nrf905.c ****   uint8_t i=0, tmp;
+ 229              		.loc 1 29 3 is_stmt 1 view .LVU27
+ 230              	.LVL15:
+  30:Core/Src/nrf905.c ****  reg |= R_CONFIG;
+ 231              		.loc 1 30 2 view .LVU28
+ 232              		.loc 1 30 6 is_stmt 0 view .LVU29
+ 233 000c 1023     		movs	r3, #16
+ 234 000e 1843     		orrs	r0, r3
+ 235              	.LVL16:
+ 236              		.loc 1 30 6 view .LVU30
+ 237 0010 3870     		strb	r0, [r7]
+  31:Core/Src/nrf905.c ****  
+  32:Core/Src/nrf905.c ****  NRF905_CS_LO;
+ 238              		.loc 1 32 2 is_stmt 1 view .LVU31
+ 239 0012 A020     		movs	r0, #160
+ 240 0014 0022     		movs	r2, #0
+ 241              	.LVL17:
+ 242              		.loc 1 32 2 is_stmt 0 view .LVU32
+ 243 0016 1021     		movs	r1, #16
+ 244              	.LVL18:
+ 245              		.loc 1 32 2 view .LVU33
+ 246 0018 C005     		lsls	r0, r0, #23
+ 247 001a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 248              	.LVL19:
+  33:Core/Src/nrf905.c ****  HAL_SPI_TransmitReceive(&hspi1,&reg,&tmp,1,1000);
+ 249              		.loc 1 33 2 is_stmt 1 view .LVU34
+ 250 001e 1724     		movs	r4, #23
+ 251 0020 6C44     		add	r4, r4, sp
+ 252 0022 FA23     		movs	r3, #250
+ 253 0024 9B00     		lsls	r3, r3, #2
+ 254 0026 0093     		str	r3, [sp]
+ 255 0028 0123     		movs	r3, #1
+ 256 002a 2200     		movs	r2, r4
+ 257 002c 3900     		movs	r1, r7
+ARM GAS  /tmp/cc2TCIKW.s 			page 6
+
+
+ 258 002e 0F48     		ldr	r0, .L11
+ 259 0030 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 260              	.LVL20:
+  34:Core/Src/nrf905.c ****  tmp = NOP;
+ 261              		.loc 1 34 2 view .LVU35
+ 262              		.loc 1 34 6 is_stmt 0 view .LVU36
+ 263 0034 FF23     		movs	r3, #255
+ 264 0036 2370     		strb	r3, [r4]
+  35:Core/Src/nrf905.c **** for (i=0; i<bytes; i++)
+ 265              		.loc 1 35 1 is_stmt 1 view .LVU37
+ 266              		.loc 1 35 7 is_stmt 0 view .LVU38
+ 267 0038 0024     		movs	r4, #0
+ 268              	.LVL21:
+ 269              	.L8:
+ 270              		.loc 1 35 11 is_stmt 1 discriminator 1 view .LVU39
+ 271              		.loc 1 35 1 is_stmt 0 discriminator 1 view .LVU40
+ 272 003a B442     		cmp	r4, r6
+ 273 003c 0DD2     		bcs	.L10
+  36:Core/Src/nrf905.c ****   {
+  37:Core/Src/nrf905.c ****    HAL_SPI_TransmitReceive(&hspi1,&tmp,pBuf,1,1000);
+ 274              		.loc 1 37 4 is_stmt 1 discriminator 3 view .LVU41
+ 275 003e FA23     		movs	r3, #250
+ 276 0040 9B00     		lsls	r3, r3, #2
+ 277 0042 0093     		str	r3, [sp]
+ 278 0044 0123     		movs	r3, #1
+ 279 0046 2A00     		movs	r2, r5
+ 280 0048 1721     		movs	r1, #23
+ 281 004a 6944     		add	r1, r1, sp
+ 282 004c 0748     		ldr	r0, .L11
+ 283 004e FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 284              	.LVL22:
+  38:Core/Src/nrf905.c ****     pBuf++;
+ 285              		.loc 1 38 5 discriminator 3 view .LVU42
+ 286              		.loc 1 38 9 is_stmt 0 discriminator 3 view .LVU43
+ 287 0052 0135     		adds	r5, r5, #1
+ 288              	.LVL23:
+  35:Core/Src/nrf905.c **** for (i=0; i<bytes; i++)
+ 289              		.loc 1 35 20 is_stmt 1 discriminator 3 view .LVU44
+  35:Core/Src/nrf905.c **** for (i=0; i<bytes; i++)
+ 290              		.loc 1 35 21 is_stmt 0 discriminator 3 view .LVU45
+ 291 0054 0134     		adds	r4, r4, #1
+ 292              	.LVL24:
+  35:Core/Src/nrf905.c **** for (i=0; i<bytes; i++)
+ 293              		.loc 1 35 21 discriminator 3 view .LVU46
+ 294 0056 E4B2     		uxtb	r4, r4
+ 295              	.LVL25:
+  35:Core/Src/nrf905.c **** for (i=0; i<bytes; i++)
+ 296              		.loc 1 35 21 discriminator 3 view .LVU47
+ 297 0058 EFE7     		b	.L8
+ 298              	.L10:
+  39:Core/Src/nrf905.c ****   }
+  40:Core/Src/nrf905.c ****  NRF905_CS_HI;
+ 299              		.loc 1 40 2 is_stmt 1 view .LVU48
+ 300 005a A020     		movs	r0, #160
+ 301 005c 0122     		movs	r2, #1
+ 302 005e 1021     		movs	r1, #16
+ 303 0060 C005     		lsls	r0, r0, #23
+ARM GAS  /tmp/cc2TCIKW.s 			page 7
+
+
+ 304 0062 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 305              	.LVL26:
+  41:Core/Src/nrf905.c **** }
+ 306              		.loc 1 41 1 is_stmt 0 view .LVU49
+ 307 0066 07B0     		add	sp, sp, #28
+ 308              		@ sp needed
+ 309              	.LVL27:
+ 310              	.LVL28:
+ 311              		.loc 1 41 1 view .LVU50
+ 312 0068 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 313              	.L12:
+ 314 006a C046     		.align	2
+ 315              	.L11:
+ 316 006c 00000000 		.word	hspi1
+ 317              		.cfi_endproc
+ 318              	.LFE36:
+ 320              		.section	.text.NRF905_WriteBuf,"ax",%progbits
+ 321              		.align	1
+ 322              		.global	NRF905_WriteBuf
+ 323              		.syntax unified
+ 324              		.code	16
+ 325              		.thumb_func
+ 326              		.fpu softvfp
+ 328              	NRF905_WriteBuf:
+ 329              	.LVL29:
+ 330              	.LFB37:
+  42:Core/Src/nrf905.c **** 
+  43:Core/Src/nrf905.c **** 
+  44:Core/Src/nrf905.c **** void NRF905_WriteBuf(uint8_t reg,uint8_t *pBuf,uint8_t bytes)
+  45:Core/Src/nrf905.c **** {
+ 331              		.loc 1 45 1 is_stmt 1 view -0
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 16
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		.loc 1 45 1 is_stmt 0 view .LVU52
+ 336 0000 70B5     		push	{r4, r5, r6, lr}
+ 337              	.LCFI7:
+ 338              		.cfi_def_cfa_offset 16
+ 339              		.cfi_offset 4, -16
+ 340              		.cfi_offset 5, -12
+ 341              		.cfi_offset 6, -8
+ 342              		.cfi_offset 14, -4
+ 343 0002 86B0     		sub	sp, sp, #24
+ 344              	.LCFI8:
+ 345              		.cfi_def_cfa_offset 40
+ 346 0004 0D00     		movs	r5, r1
+ 347 0006 1600     		movs	r6, r2
+ 348 0008 0F24     		movs	r4, #15
+ 349 000a 6C44     		add	r4, r4, sp
+ 350 000c 2070     		strb	r0, [r4]
+  46:Core/Src/nrf905.c ****  uint8_t i,y; 
+ 351              		.loc 1 46 2 is_stmt 1 view .LVU53
+  47:Core/Src/nrf905.c ****  reg |=W_CONFIG;
+ 352              		.loc 1 47 2 view .LVU54
+  48:Core/Src/nrf905.c ****  NRF905_CS_LO;
+ 353              		.loc 1 48 2 view .LVU55
+ 354 000e A020     		movs	r0, #160
+ARM GAS  /tmp/cc2TCIKW.s 			page 8
+
+
+ 355              	.LVL30:
+ 356              		.loc 1 48 2 is_stmt 0 view .LVU56
+ 357 0010 0022     		movs	r2, #0
+ 358              	.LVL31:
+ 359              		.loc 1 48 2 view .LVU57
+ 360 0012 1021     		movs	r1, #16
+ 361              	.LVL32:
+ 362              		.loc 1 48 2 view .LVU58
+ 363 0014 C005     		lsls	r0, r0, #23
+ 364 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 365              	.LVL33:
+  49:Core/Src/nrf905.c ****  HAL_SPI_TransmitReceive(&hspi1,&reg, &y,1,1000);
+ 366              		.loc 1 49 2 is_stmt 1 view .LVU59
+ 367 001a FA23     		movs	r3, #250
+ 368 001c 9B00     		lsls	r3, r3, #2
+ 369 001e 0093     		str	r3, [sp]
+ 370 0020 0123     		movs	r3, #1
+ 371 0022 1722     		movs	r2, #23
+ 372 0024 6A44     		add	r2, r2, sp
+ 373 0026 2100     		movs	r1, r4
+ 374 0028 0D48     		ldr	r0, .L17
+ 375 002a FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 376              	.LVL34:
+  50:Core/Src/nrf905.c ****  for (i=0;i<bytes;i++) 
+ 377              		.loc 1 50 2 view .LVU60
+ 378              		.loc 1 50 8 is_stmt 0 view .LVU61
+ 379 002e 0024     		movs	r4, #0
+ 380              	.LVL35:
+ 381              	.L14:
+ 382              		.loc 1 50 11 is_stmt 1 discriminator 1 view .LVU62
+ 383              		.loc 1 50 2 is_stmt 0 discriminator 1 view .LVU63
+ 384 0030 B442     		cmp	r4, r6
+ 385 0032 0DD2     		bcs	.L16
+  51:Core/Src/nrf905.c ****    {
+  52:Core/Src/nrf905.c ****      HAL_SPI_TransmitReceive(&hspi1,pBuf,&y,1,1000);
+ 386              		.loc 1 52 6 is_stmt 1 discriminator 3 view .LVU64
+ 387 0034 FA23     		movs	r3, #250
+ 388 0036 9B00     		lsls	r3, r3, #2
+ 389 0038 0093     		str	r3, [sp]
+ 390 003a 0123     		movs	r3, #1
+ 391 003c 1722     		movs	r2, #23
+ 392 003e 6A44     		add	r2, r2, sp
+ 393 0040 2900     		movs	r1, r5
+ 394 0042 0748     		ldr	r0, .L17
+ 395 0044 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 396              	.LVL36:
+  53:Core/Src/nrf905.c ****      pBuf++;
+ 397              		.loc 1 53 6 discriminator 3 view .LVU65
+ 398              		.loc 1 53 10 is_stmt 0 discriminator 3 view .LVU66
+ 399 0048 0135     		adds	r5, r5, #1
+ 400              	.LVL37:
+  50:Core/Src/nrf905.c ****  for (i=0;i<bytes;i++) 
+ 401              		.loc 1 50 19 is_stmt 1 discriminator 3 view .LVU67
+  50:Core/Src/nrf905.c ****  for (i=0;i<bytes;i++) 
+ 402              		.loc 1 50 20 is_stmt 0 discriminator 3 view .LVU68
+ 403 004a 0134     		adds	r4, r4, #1
+ 404              	.LVL38:
+ARM GAS  /tmp/cc2TCIKW.s 			page 9
+
+
+  50:Core/Src/nrf905.c ****  for (i=0;i<bytes;i++) 
+ 405              		.loc 1 50 20 discriminator 3 view .LVU69
+ 406 004c E4B2     		uxtb	r4, r4
+ 407              	.LVL39:
+  50:Core/Src/nrf905.c ****  for (i=0;i<bytes;i++) 
+ 408              		.loc 1 50 20 discriminator 3 view .LVU70
+ 409 004e EFE7     		b	.L14
+ 410              	.L16:
+  54:Core/Src/nrf905.c ****    }
+  55:Core/Src/nrf905.c ****  NRF905_CS_HI;
+ 411              		.loc 1 55 2 is_stmt 1 view .LVU71
+ 412 0050 A020     		movs	r0, #160
+ 413 0052 0122     		movs	r2, #1
+ 414 0054 1021     		movs	r1, #16
+ 415 0056 C005     		lsls	r0, r0, #23
+ 416 0058 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 417              	.LVL40:
+  56:Core/Src/nrf905.c **** }
+ 418              		.loc 1 56 1 is_stmt 0 view .LVU72
+ 419 005c 06B0     		add	sp, sp, #24
+ 420              		@ sp needed
+ 421              	.LVL41:
+ 422              	.LVL42:
+ 423              		.loc 1 56 1 view .LVU73
+ 424 005e 70BD     		pop	{r4, r5, r6, pc}
+ 425              	.L18:
+ 426              		.align	2
+ 427              	.L17:
+ 428 0060 00000000 		.word	hspi1
+ 429              		.cfi_endproc
+ 430              	.LFE37:
+ 432              		.section	.text.NRF905_POWER_OFF,"ax",%progbits
+ 433              		.align	1
+ 434              		.global	NRF905_POWER_OFF
+ 435              		.syntax unified
+ 436              		.code	16
+ 437              		.thumb_func
+ 438              		.fpu softvfp
+ 440              	NRF905_POWER_OFF:
+ 441              	.LFB39:
+  57:Core/Src/nrf905.c **** void NRF905_POWER_ON (void)
+  58:Core/Src/nrf905.c **** {
+  59:Core/Src/nrf905.c ****  HAL_GPIO_WritePin(PWR_GPIO_Port, PWR_Pin, GPIO_PIN_SET);
+  60:Core/Src/nrf905.c ****  HAL_Delay(1);
+  61:Core/Src/nrf905.c ****  ReciveOn ();
+  62:Core/Src/nrf905.c ****  HAL_Delay(2);
+  63:Core/Src/nrf905.c **** }
+  64:Core/Src/nrf905.c **** void NRF905_POWER_OFF (void)
+  65:Core/Src/nrf905.c **** {
+ 442              		.loc 1 65 1 is_stmt 1 view -0
+ 443              		.cfi_startproc
+ 444              		@ args = 0, pretend = 0, frame = 0
+ 445              		@ frame_needed = 0, uses_anonymous_args = 0
+ 446 0000 10B5     		push	{r4, lr}
+ 447              	.LCFI9:
+ 448              		.cfi_def_cfa_offset 8
+ 449              		.cfi_offset 4, -8
+ARM GAS  /tmp/cc2TCIKW.s 			page 10
+
+
+ 450              		.cfi_offset 14, -4
+  66:Core/Src/nrf905.c ****  HAL_GPIO_WritePin(PWR_GPIO_Port, PWR_Pin, GPIO_PIN_RESET);
+ 451              		.loc 1 66 2 view .LVU75
+ 452 0002 A020     		movs	r0, #160
+ 453 0004 0022     		movs	r2, #0
+ 454 0006 0121     		movs	r1, #1
+ 455 0008 C005     		lsls	r0, r0, #23
+ 456 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 457              	.LVL43:
+  67:Core/Src/nrf905.c **** }
+ 458              		.loc 1 67 1 is_stmt 0 view .LVU76
+ 459              		@ sp needed
+ 460 000e 10BD     		pop	{r4, pc}
+ 461              		.cfi_endproc
+ 462              	.LFE39:
+ 464              		.section	.text.NRF905_INIT,"ax",%progbits
+ 465              		.align	1
+ 466              		.global	NRF905_INIT
+ 467              		.syntax unified
+ 468              		.code	16
+ 469              		.thumb_func
+ 470              		.fpu softvfp
+ 472              	NRF905_INIT:
+ 473              	.LVL44:
+ 474              	.LFB40:
+  68:Core/Src/nrf905.c **** uint8_t NRF905_INIT(struct NRF905_Conf *Conf)
+  69:Core/Src/nrf905.c **** {
+ 475              		.loc 1 69 1 is_stmt 1 view -0
+ 476              		.cfi_startproc
+ 477              		@ args = 0, pretend = 0, frame = 24
+ 478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 479              		.loc 1 69 1 is_stmt 0 view .LVU78
+ 480 0000 30B5     		push	{r4, r5, lr}
+ 481              	.LCFI10:
+ 482              		.cfi_def_cfa_offset 12
+ 483              		.cfi_offset 4, -12
+ 484              		.cfi_offset 5, -8
+ 485              		.cfi_offset 14, -4
+ 486 0002 87B0     		sub	sp, sp, #28
+ 487              	.LCFI11:
+ 488              		.cfi_def_cfa_offset 40
+ 489 0004 0400     		movs	r4, r0
+  70:Core/Src/nrf905.c ****  struct NRF905_Conf tmp;   
+ 490              		.loc 1 70 2 is_stmt 1 view .LVU79
+  71:Core/Src/nrf905.c **** 
+  72:Core/Src/nrf905.c ****  NRF905_ReadBuf(0,&tmp,sizeof(tmp));
+ 491              		.loc 1 72 2 view .LVU80
+ 492 0006 0A22     		movs	r2, #10
+ 493 0008 03A9     		add	r1, sp, #12
+ 494 000a 0020     		movs	r0, #0
+ 495              	.LVL45:
+ 496              		.loc 1 72 2 is_stmt 0 view .LVU81
+ 497 000c FFF7FEFF 		bl	NRF905_ReadBuf
+ 498              	.LVL46:
+  73:Core/Src/nrf905.c ****  tmp.RX_ADDRESS=0xE7E7E7E7;
+ 499              		.loc 1 73 2 is_stmt 1 view .LVU82
+ 500              		.loc 1 73 16 is_stmt 0 view .LVU83
+ARM GAS  /tmp/cc2TCIKW.s 			page 11
+
+
+ 501 0010 049B     		ldr	r3, [sp, #16]
+ 502 0012 0193     		str	r3, [sp, #4]
+ 503 0014 FF25     		movs	r5, #255
+ 504 0016 1A00     		movs	r2, r3
+ 505 0018 2A40     		ands	r2, r5
+ 506 001a 164B     		ldr	r3, .L24
+ 507 001c 1343     		orrs	r3, r2
+ 508 001e 0493     		str	r3, [sp, #16]
+ 509 0020 1923     		movs	r3, #25
+ 510 0022 5B42     		rsbs	r3, r3, #0
+ 511 0024 02AA     		add	r2, sp, #8
+ 512 0026 1373     		strb	r3, [r2, #12]
+  74:Core/Src/nrf905.c ****  NRF905_WriteBuf(0,&tmp,sizeof(tmp));
+ 513              		.loc 1 74 2 is_stmt 1 view .LVU84
+ 514 0028 0A22     		movs	r2, #10
+ 515 002a 03A9     		add	r1, sp, #12
+ 516 002c 0020     		movs	r0, #0
+ 517 002e FFF7FEFF 		bl	NRF905_WriteBuf
+ 518              	.LVL47:
+  75:Core/Src/nrf905.c ****  tmp.RX_ADDRESS = 0;
+ 519              		.loc 1 75 2 view .LVU85
+ 520              		.loc 1 75 17 is_stmt 0 view .LVU86
+ 521 0032 049B     		ldr	r3, [sp, #16]
+ 522 0034 0193     		str	r3, [sp, #4]
+ 523 0036 1D40     		ands	r5, r3
+ 524 0038 0495     		str	r5, [sp, #16]
+ 525 003a 0023     		movs	r3, #0
+ 526 003c 02AA     		add	r2, sp, #8
+ 527 003e 1373     		strb	r3, [r2, #12]
+  76:Core/Src/nrf905.c ****  NRF905_ReadBuf(0,&tmp,sizeof(tmp));
+ 528              		.loc 1 76 2 is_stmt 1 view .LVU87
+ 529 0040 0A22     		movs	r2, #10
+ 530 0042 03A9     		add	r1, sp, #12
+ 531 0044 0020     		movs	r0, #0
+ 532 0046 FFF7FEFF 		bl	NRF905_ReadBuf
+ 533              	.LVL48:
+  77:Core/Src/nrf905.c ****  if ((tmp.RX_ADDRESS != 0xE7E7E7E7)) 
+ 534              		.loc 1 77 2 view .LVU88
+ 535              		.loc 1 77 10 is_stmt 0 view .LVU89
+ 536 004a 049B     		ldr	r3, [sp, #16]
+ 537 004c 0193     		str	r3, [sp, #4]
+ 538 004e 1A0A     		lsrs	r2, r3, #8
+ 539 0050 02AB     		add	r3, sp, #8
+ 540 0052 1B7B     		ldrb	r3, [r3, #12]
+ 541 0054 1B06     		lsls	r3, r3, #24
+ 542 0056 1343     		orrs	r3, r2
+ 543              		.loc 1 77 5 view .LVU90
+ 544 0058 074A     		ldr	r2, .L24+4
+ 545 005a 9342     		cmp	r3, r2
+ 546 005c 02D0     		beq	.L23
+  78:Core/Src/nrf905.c ****    {
+  79:Core/Src/nrf905.c ****      return 0;
+ 547              		.loc 1 79 13 view .LVU91
+ 548 005e 0020     		movs	r0, #0
+ 549              	.L21:
+  80:Core/Src/nrf905.c ****    } else
+  81:Core/Src/nrf905.c ****       {
+ARM GAS  /tmp/cc2TCIKW.s 			page 12
+
+
+  82:Core/Src/nrf905.c ****      /* code */
+  83:Core/Src/nrf905.c ****        NRF905_WriteBuf(0,Conf,10);
+  84:Core/Src/nrf905.c ****        return 1;
+  85:Core/Src/nrf905.c ****       }
+  86:Core/Src/nrf905.c ****   
+  87:Core/Src/nrf905.c **** }
+ 550              		.loc 1 87 1 view .LVU92
+ 551 0060 07B0     		add	sp, sp, #28
+ 552              		@ sp needed
+ 553              	.LVL49:
+ 554              		.loc 1 87 1 view .LVU93
+ 555 0062 30BD     		pop	{r4, r5, pc}
+ 556              	.LVL50:
+ 557              	.L23:
+  83:Core/Src/nrf905.c ****        return 1;
+ 558              		.loc 1 83 8 is_stmt 1 view .LVU94
+ 559 0064 0A22     		movs	r2, #10
+ 560 0066 2100     		movs	r1, r4
+ 561 0068 0020     		movs	r0, #0
+ 562 006a FFF7FEFF 		bl	NRF905_WriteBuf
+ 563              	.LVL51:
+  84:Core/Src/nrf905.c ****       }
+ 564              		.loc 1 84 8 view .LVU95
+  84:Core/Src/nrf905.c ****       }
+ 565              		.loc 1 84 15 is_stmt 0 view .LVU96
+ 566 006e 0120     		movs	r0, #1
+ 567 0070 F6E7     		b	.L21
+ 568              	.L25:
+ 569 0072 C046     		.align	2
+ 570              	.L24:
+ 571 0074 00E7E7E7 		.word	-404232448
+ 572 0078 E7E7E7E7 		.word	-404232217
+ 573              		.cfi_endproc
+ 574              	.LFE40:
+ 576              		.section	.text.WriteDataToSend,"ax",%progbits
+ 577              		.align	1
+ 578              		.global	WriteDataToSend
+ 579              		.syntax unified
+ 580              		.code	16
+ 581              		.thumb_func
+ 582              		.fpu softvfp
+ 584              	WriteDataToSend:
+ 585              	.LVL52:
+ 586              	.LFB41:
+  88:Core/Src/nrf905.c **** void WriteDataToSend(uint32_t addr, uint8_t *pBuf, uint8_t size)
+  89:Core/Src/nrf905.c **** {
+ 587              		.loc 1 89 1 is_stmt 1 view -0
+ 588              		.cfi_startproc
+ 589              		@ args = 0, pretend = 0, frame = 8
+ 590              		@ frame_needed = 0, uses_anonymous_args = 0
+ 591              		.loc 1 89 1 is_stmt 0 view .LVU98
+ 592 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 593              	.LCFI12:
+ 594              		.cfi_def_cfa_offset 20
+ 595              		.cfi_offset 4, -20
+ 596              		.cfi_offset 5, -16
+ 597              		.cfi_offset 6, -12
+ARM GAS  /tmp/cc2TCIKW.s 			page 13
+
+
+ 598              		.cfi_offset 7, -8
+ 599              		.cfi_offset 14, -4
+ 600 0002 CE46     		mov	lr, r9
+ 601 0004 4746     		mov	r7, r8
+ 602 0006 80B5     		push	{r7, lr}
+ 603              	.LCFI13:
+ 604              		.cfi_def_cfa_offset 28
+ 605              		.cfi_offset 8, -28
+ 606              		.cfi_offset 9, -24
+ 607 0008 85B0     		sub	sp, sp, #20
+ 608              	.LCFI14:
+ 609              		.cfi_def_cfa_offset 48
+ 610 000a 8146     		mov	r9, r0
+ 611 000c 0D00     		movs	r5, r1
+ 612 000e 1600     		movs	r6, r2
+  90:Core/Src/nrf905.c ****   uint8_t i,y, tmp;
+ 613              		.loc 1 90 3 is_stmt 1 view .LVU99
+  91:Core/Src/nrf905.c ****   tmp = W_TX_ADDRESS; 
+ 614              		.loc 1 91 3 view .LVU100
+ 615              		.loc 1 91 7 is_stmt 0 view .LVU101
+ 616 0010 2223     		movs	r3, #34
+ 617 0012 6A46     		mov	r2, sp
+ 618              	.LVL53:
+ 619              		.loc 1 91 7 view .LVU102
+ 620 0014 9373     		strb	r3, [r2, #14]
+  92:Core/Src/nrf905.c ****   NRF905_CS_LO;
+ 621              		.loc 1 92 3 is_stmt 1 view .LVU103
+ 622 0016 A023     		movs	r3, #160
+ 623 0018 DB05     		lsls	r3, r3, #23
+ 624 001a 9846     		mov	r8, r3
+ 625 001c 0022     		movs	r2, #0
+ 626 001e 1021     		movs	r1, #16
+ 627              	.LVL54:
+ 628              		.loc 1 92 3 is_stmt 0 view .LVU104
+ 629 0020 1800     		movs	r0, r3
+ 630              	.LVL55:
+ 631              		.loc 1 92 3 view .LVU105
+ 632 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 633              	.LVL56:
+  93:Core/Src/nrf905.c ****   HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000);
+ 634              		.loc 1 93 3 is_stmt 1 view .LVU106
+ 635 0026 254C     		ldr	r4, .L30
+ 636 0028 FA27     		movs	r7, #250
+ 637 002a BF00     		lsls	r7, r7, #2
+ 638 002c 0097     		str	r7, [sp]
+ 639 002e 0123     		movs	r3, #1
+ 640 0030 0F22     		movs	r2, #15
+ 641 0032 6A44     		add	r2, r2, sp
+ 642 0034 0E21     		movs	r1, #14
+ 643 0036 6944     		add	r1, r1, sp
+ 644 0038 2000     		movs	r0, r4
+ 645 003a FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 646              	.LVL57:
+  94:Core/Src/nrf905.c ****   tmp = addr;
+ 647              		.loc 1 94 3 view .LVU107
+ 648              		.loc 1 94 7 is_stmt 0 view .LVU108
+ 649 003e 6B46     		mov	r3, sp
+ARM GAS  /tmp/cc2TCIKW.s 			page 14
+
+
+ 650 0040 4A46     		mov	r2, r9
+ 651 0042 9A73     		strb	r2, [r3, #14]
+  95:Core/Src/nrf905.c ****   HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000); 
+ 652              		.loc 1 95 3 is_stmt 1 view .LVU109
+ 653 0044 0097     		str	r7, [sp]
+ 654 0046 0123     		movs	r3, #1
+ 655 0048 0F22     		movs	r2, #15
+ 656 004a 6A44     		add	r2, r2, sp
+ 657 004c 0E21     		movs	r1, #14
+ 658 004e 6944     		add	r1, r1, sp
+ 659 0050 2000     		movs	r0, r4
+ 660 0052 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 661              	.LVL58:
+  96:Core/Src/nrf905.c ****   NRF905_CS_HI;
+ 662              		.loc 1 96 3 view .LVU110
+ 663 0056 0122     		movs	r2, #1
+ 664 0058 1021     		movs	r1, #16
+ 665 005a 4046     		mov	r0, r8
+ 666 005c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 667              	.LVL59:
+  97:Core/Src/nrf905.c ****   NRF905_CS_LO;
+ 668              		.loc 1 97 3 view .LVU111
+ 669 0060 0022     		movs	r2, #0
+ 670 0062 1021     		movs	r1, #16
+ 671 0064 4046     		mov	r0, r8
+ 672 0066 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 673              	.LVL60:
+  98:Core/Src/nrf905.c ****   tmp = W_TX_PAYLOAD;
+ 674              		.loc 1 98 3 view .LVU112
+ 675              		.loc 1 98 7 is_stmt 0 view .LVU113
+ 676 006a 2023     		movs	r3, #32
+ 677 006c 6A46     		mov	r2, sp
+ 678 006e 9373     		strb	r3, [r2, #14]
+  99:Core/Src/nrf905.c ****   HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000);
+ 679              		.loc 1 99 3 is_stmt 1 view .LVU114
+ 680 0070 0097     		str	r7, [sp]
+ 681 0072 1F3B     		subs	r3, r3, #31
+ 682 0074 0F22     		movs	r2, #15
+ 683 0076 6A44     		add	r2, r2, sp
+ 684 0078 0E21     		movs	r1, #14
+ 685 007a 6944     		add	r1, r1, sp
+ 686 007c 2000     		movs	r0, r4
+ 687 007e FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 688              	.LVL61:
+ 100:Core/Src/nrf905.c ****   for (i=0;i<size;i++) 
+ 689              		.loc 1 100 3 view .LVU115
+ 690              		.loc 1 100 9 is_stmt 0 view .LVU116
+ 691 0082 0024     		movs	r4, #0
+ 692              	.LVL62:
+ 693              	.L27:
+ 694              		.loc 1 100 12 is_stmt 1 discriminator 1 view .LVU117
+ 695              		.loc 1 100 3 is_stmt 0 discriminator 1 view .LVU118
+ 696 0084 B442     		cmp	r4, r6
+ 697 0086 0DD2     		bcs	.L29
+ 101:Core/Src/nrf905.c ****    {
+ 102:Core/Src/nrf905.c ****      HAL_SPI_TransmitReceive(&hspi1,pBuf,&y,1,1000);
+ 698              		.loc 1 102 6 is_stmt 1 discriminator 3 view .LVU119
+ARM GAS  /tmp/cc2TCIKW.s 			page 15
+
+
+ 699 0088 FA23     		movs	r3, #250
+ 700 008a 9B00     		lsls	r3, r3, #2
+ 701 008c 0093     		str	r3, [sp]
+ 702 008e 0123     		movs	r3, #1
+ 703 0090 0F22     		movs	r2, #15
+ 704 0092 6A44     		add	r2, r2, sp
+ 705 0094 2900     		movs	r1, r5
+ 706 0096 0948     		ldr	r0, .L30
+ 707 0098 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 708              	.LVL63:
+ 103:Core/Src/nrf905.c ****      pBuf++;
+ 709              		.loc 1 103 6 discriminator 3 view .LVU120
+ 710              		.loc 1 103 10 is_stmt 0 discriminator 3 view .LVU121
+ 711 009c 0135     		adds	r5, r5, #1
+ 712              	.LVL64:
+ 100:Core/Src/nrf905.c ****   for (i=0;i<size;i++) 
+ 713              		.loc 1 100 19 is_stmt 1 discriminator 3 view .LVU122
+ 100:Core/Src/nrf905.c ****   for (i=0;i<size;i++) 
+ 714              		.loc 1 100 20 is_stmt 0 discriminator 3 view .LVU123
+ 715 009e 0134     		adds	r4, r4, #1
+ 716              	.LVL65:
+ 100:Core/Src/nrf905.c ****   for (i=0;i<size;i++) 
+ 717              		.loc 1 100 20 discriminator 3 view .LVU124
+ 718 00a0 E4B2     		uxtb	r4, r4
+ 719              	.LVL66:
+ 100:Core/Src/nrf905.c ****   for (i=0;i<size;i++) 
+ 720              		.loc 1 100 20 discriminator 3 view .LVU125
+ 721 00a2 EFE7     		b	.L27
+ 722              	.L29:
+ 104:Core/Src/nrf905.c ****    }
+ 105:Core/Src/nrf905.c ****  NRF905_CS_HI;
+ 723              		.loc 1 105 2 is_stmt 1 view .LVU126
+ 724 00a4 A020     		movs	r0, #160
+ 725 00a6 0122     		movs	r2, #1
+ 726 00a8 1021     		movs	r1, #16
+ 727 00aa C005     		lsls	r0, r0, #23
+ 728 00ac FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 729              	.LVL67:
+ 106:Core/Src/nrf905.c **** }
+ 730              		.loc 1 106 1 is_stmt 0 view .LVU127
+ 731 00b0 05B0     		add	sp, sp, #20
+ 732              		@ sp needed
+ 733              	.LVL68:
+ 734              	.LVL69:
+ 735              	.LVL70:
+ 736              		.loc 1 106 1 view .LVU128
+ 737 00b2 C0BC     		pop	{r6, r7}
+ 738 00b4 B946     		mov	r9, r7
+ 739 00b6 B046     		mov	r8, r6
+ 740 00b8 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 741              	.L31:
+ 742 00ba C046     		.align	2
+ 743              	.L30:
+ 744 00bc 00000000 		.word	hspi1
+ 745              		.cfi_endproc
+ 746              	.LFE41:
+ 748              		.section	.text.ReadReciveData,"ax",%progbits
+ARM GAS  /tmp/cc2TCIKW.s 			page 16
+
+
+ 749              		.align	1
+ 750              		.global	ReadReciveData
+ 751              		.syntax unified
+ 752              		.code	16
+ 753              		.thumb_func
+ 754              		.fpu softvfp
+ 756              	ReadReciveData:
+ 757              	.LVL71:
+ 758              	.LFB42:
+ 107:Core/Src/nrf905.c **** void ReadReciveData(uint8_t *pBuf, uint8_t size)
+ 108:Core/Src/nrf905.c **** {
+ 759              		.loc 1 108 1 is_stmt 1 view -0
+ 760              		.cfi_startproc
+ 761              		@ args = 0, pretend = 0, frame = 8
+ 762              		@ frame_needed = 0, uses_anonymous_args = 0
+ 763              		.loc 1 108 1 is_stmt 0 view .LVU130
+ 764 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 765              	.LCFI15:
+ 766              		.cfi_def_cfa_offset 20
+ 767              		.cfi_offset 4, -20
+ 768              		.cfi_offset 5, -16
+ 769              		.cfi_offset 6, -12
+ 770              		.cfi_offset 7, -8
+ 771              		.cfi_offset 14, -4
+ 772 0002 85B0     		sub	sp, sp, #20
+ 773              	.LCFI16:
+ 774              		.cfi_def_cfa_offset 40
+ 775 0004 0500     		movs	r5, r0
+ 776 0006 0E00     		movs	r6, r1
+ 109:Core/Src/nrf905.c ****    uint8_t i=0, tmp, tmp1;
+ 777              		.loc 1 109 4 is_stmt 1 view .LVU131
+ 778              	.LVL72:
+ 110:Core/Src/nrf905.c ****    tmp1 = R_RX_PAYLOAD;
+ 779              		.loc 1 110 4 view .LVU132
+ 780              		.loc 1 110 9 is_stmt 0 view .LVU133
+ 781 0008 0E27     		movs	r7, #14
+ 782 000a 6F44     		add	r7, r7, sp
+ 783 000c 2423     		movs	r3, #36
+ 784 000e 3B70     		strb	r3, [r7]
+ 111:Core/Src/nrf905.c ****   
+ 112:Core/Src/nrf905.c ****  NRF905_CS_LO;
+ 785              		.loc 1 112 2 is_stmt 1 view .LVU134
+ 786 0010 A020     		movs	r0, #160
+ 787              	.LVL73:
+ 788              		.loc 1 112 2 is_stmt 0 view .LVU135
+ 789 0012 0022     		movs	r2, #0
+ 790 0014 1021     		movs	r1, #16
+ 791              	.LVL74:
+ 792              		.loc 1 112 2 view .LVU136
+ 793 0016 C005     		lsls	r0, r0, #23
+ 794 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 795              	.LVL75:
+ 113:Core/Src/nrf905.c ****  HAL_SPI_TransmitReceive(&hspi1,&tmp1,&tmp,1,1000);
+ 796              		.loc 1 113 2 is_stmt 1 view .LVU137
+ 797 001c 0F24     		movs	r4, #15
+ 798 001e 6C44     		add	r4, r4, sp
+ 799 0020 FA23     		movs	r3, #250
+ARM GAS  /tmp/cc2TCIKW.s 			page 17
+
+
+ 800 0022 9B00     		lsls	r3, r3, #2
+ 801 0024 0093     		str	r3, [sp]
+ 802 0026 0123     		movs	r3, #1
+ 803 0028 2200     		movs	r2, r4
+ 804 002a 3900     		movs	r1, r7
+ 805 002c 0E48     		ldr	r0, .L36
+ 806 002e FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 807              	.LVL76:
+ 114:Core/Src/nrf905.c ****  tmp = NOP;
+ 808              		.loc 1 114 2 view .LVU138
+ 809              		.loc 1 114 6 is_stmt 0 view .LVU139
+ 810 0032 FF23     		movs	r3, #255
+ 811 0034 2370     		strb	r3, [r4]
+ 115:Core/Src/nrf905.c **** for (i=0; i<size; i++)
+ 812              		.loc 1 115 1 is_stmt 1 view .LVU140
+ 813              		.loc 1 115 7 is_stmt 0 view .LVU141
+ 814 0036 0024     		movs	r4, #0
+ 815              	.LVL77:
+ 816              	.L33:
+ 817              		.loc 1 115 11 is_stmt 1 discriminator 1 view .LVU142
+ 818              		.loc 1 115 1 is_stmt 0 discriminator 1 view .LVU143
+ 819 0038 B442     		cmp	r4, r6
+ 820 003a 0DD2     		bcs	.L35
+ 116:Core/Src/nrf905.c ****   {
+ 117:Core/Src/nrf905.c ****    HAL_SPI_TransmitReceive(&hspi1,&tmp,pBuf,1,1000);
+ 821              		.loc 1 117 4 is_stmt 1 discriminator 3 view .LVU144
+ 822 003c FA23     		movs	r3, #250
+ 823 003e 9B00     		lsls	r3, r3, #2
+ 824 0040 0093     		str	r3, [sp]
+ 825 0042 0123     		movs	r3, #1
+ 826 0044 2A00     		movs	r2, r5
+ 827 0046 0F21     		movs	r1, #15
+ 828 0048 6944     		add	r1, r1, sp
+ 829 004a 0748     		ldr	r0, .L36
+ 830 004c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 831              	.LVL78:
+ 118:Core/Src/nrf905.c ****     pBuf++;
+ 832              		.loc 1 118 5 discriminator 3 view .LVU145
+ 833              		.loc 1 118 9 is_stmt 0 discriminator 3 view .LVU146
+ 834 0050 0135     		adds	r5, r5, #1
+ 835              	.LVL79:
+ 115:Core/Src/nrf905.c **** for (i=0; i<size; i++)
+ 836              		.loc 1 115 19 is_stmt 1 discriminator 3 view .LVU147
+ 115:Core/Src/nrf905.c **** for (i=0; i<size; i++)
+ 837              		.loc 1 115 20 is_stmt 0 discriminator 3 view .LVU148
+ 838 0052 0134     		adds	r4, r4, #1
+ 839              	.LVL80:
+ 115:Core/Src/nrf905.c **** for (i=0; i<size; i++)
+ 840              		.loc 1 115 20 discriminator 3 view .LVU149
+ 841 0054 E4B2     		uxtb	r4, r4
+ 842              	.LVL81:
+ 115:Core/Src/nrf905.c **** for (i=0; i<size; i++)
+ 843              		.loc 1 115 20 discriminator 3 view .LVU150
+ 844 0056 EFE7     		b	.L33
+ 845              	.L35:
+ 119:Core/Src/nrf905.c ****   }
+ 120:Core/Src/nrf905.c ****  NRF905_CS_HI;
+ARM GAS  /tmp/cc2TCIKW.s 			page 18
+
+
+ 846              		.loc 1 120 2 is_stmt 1 view .LVU151
+ 847 0058 A020     		movs	r0, #160
+ 848 005a 0122     		movs	r2, #1
+ 849 005c 1021     		movs	r1, #16
+ 850 005e C005     		lsls	r0, r0, #23
+ 851 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 852              	.LVL82:
+ 121:Core/Src/nrf905.c **** }
+ 853              		.loc 1 121 1 is_stmt 0 view .LVU152
+ 854 0064 05B0     		add	sp, sp, #20
+ 855              		@ sp needed
+ 856              	.LVL83:
+ 857              	.LVL84:
+ 858              		.loc 1 121 1 view .LVU153
+ 859 0066 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 860              	.L37:
+ 861              		.align	2
+ 862              	.L36:
+ 863 0068 00000000 		.word	hspi1
+ 864              		.cfi_endproc
+ 865              	.LFE42:
+ 867              		.section	.text.StartSend,"ax",%progbits
+ 868              		.align	1
+ 869              		.global	StartSend
+ 870              		.syntax unified
+ 871              		.code	16
+ 872              		.thumb_func
+ 873              		.fpu softvfp
+ 875              	StartSend:
+ 876              	.LFB43:
+ 122:Core/Src/nrf905.c **** void StartSend( void )
+ 123:Core/Src/nrf905.c **** {
+ 877              		.loc 1 123 1 is_stmt 1 view -0
+ 878              		.cfi_startproc
+ 879              		@ args = 0, pretend = 0, frame = 0
+ 880              		@ frame_needed = 0, uses_anonymous_args = 0
+ 881 0000 10B5     		push	{r4, lr}
+ 882              	.LCFI17:
+ 883              		.cfi_def_cfa_offset 8
+ 884              		.cfi_offset 4, -8
+ 885              		.cfi_offset 14, -4
+ 124:Core/Src/nrf905.c ****    HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_SET);
+ 886              		.loc 1 124 4 view .LVU155
+ 887 0002 A020     		movs	r0, #160
+ 888 0004 0122     		movs	r2, #1
+ 889 0006 0221     		movs	r1, #2
+ 890 0008 C005     		lsls	r0, r0, #23
+ 891 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 892              	.LVL85:
+ 125:Core/Src/nrf905.c ****    while (HAL_GPIO_ReadPin(DR_GPIO_Port, DR_Pin) != 1)
+ 893              		.loc 1 125 4 view .LVU156
+ 894              	.L39:
+ 126:Core/Src/nrf905.c ****    {}
+ 895              		.loc 1 126 5 discriminator 1 view .LVU157
+ 125:Core/Src/nrf905.c ****    while (HAL_GPIO_ReadPin(DR_GPIO_Port, DR_Pin) != 1)
+ 896              		.loc 1 125 10 discriminator 1 view .LVU158
+ 125:Core/Src/nrf905.c ****    while (HAL_GPIO_ReadPin(DR_GPIO_Port, DR_Pin) != 1)
+ARM GAS  /tmp/cc2TCIKW.s 			page 19
+
+
+ 897              		.loc 1 125 11 is_stmt 0 discriminator 1 view .LVU159
+ 898 000e 8021     		movs	r1, #128
+ 899 0010 A020     		movs	r0, #160
+ 900 0012 4900     		lsls	r1, r1, #1
+ 901 0014 C005     		lsls	r0, r0, #23
+ 902 0016 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 903              	.LVL86:
+ 125:Core/Src/nrf905.c ****    while (HAL_GPIO_ReadPin(DR_GPIO_Port, DR_Pin) != 1)
+ 904              		.loc 1 125 10 discriminator 1 view .LVU160
+ 905 001a 0128     		cmp	r0, #1
+ 906 001c F7D1     		bne	.L39
+ 127:Core/Src/nrf905.c ****    HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_RESET);
+ 907              		.loc 1 127 4 is_stmt 1 view .LVU161
+ 908 001e 9F30     		adds	r0, r0, #159
+ 909 0020 0022     		movs	r2, #0
+ 910 0022 0221     		movs	r1, #2
+ 911 0024 C005     		lsls	r0, r0, #23
+ 912 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 913              	.LVL87:
+ 128:Core/Src/nrf905.c **** }
+ 914              		.loc 1 128 1 is_stmt 0 view .LVU162
+ 915              		@ sp needed
+ 916 002a 10BD     		pop	{r4, pc}
+ 917              		.cfi_endproc
+ 918              	.LFE43:
+ 920              		.section	.text.ReciveOn,"ax",%progbits
+ 921              		.align	1
+ 922              		.global	ReciveOn
+ 923              		.syntax unified
+ 924              		.code	16
+ 925              		.thumb_func
+ 926              		.fpu softvfp
+ 928              	ReciveOn:
+ 929              	.LFB44:
+ 129:Core/Src/nrf905.c **** void ReciveOn ( void )
+ 130:Core/Src/nrf905.c **** {
+ 930              		.loc 1 130 1 is_stmt 1 view -0
+ 931              		.cfi_startproc
+ 932              		@ args = 0, pretend = 0, frame = 0
+ 933              		@ frame_needed = 0, uses_anonymous_args = 0
+ 934 0000 10B5     		push	{r4, lr}
+ 935              	.LCFI18:
+ 936              		.cfi_def_cfa_offset 8
+ 937              		.cfi_offset 4, -8
+ 938              		.cfi_offset 14, -4
+ 131:Core/Src/nrf905.c ****   HAL_GPIO_WritePin(TXE_GPIO_Port, TXE_Pin, GPIO_PIN_SET);
+ 939              		.loc 1 131 3 view .LVU164
+ 940 0002 A020     		movs	r0, #160
+ 941 0004 0122     		movs	r2, #1
+ 942 0006 0421     		movs	r1, #4
+ 943 0008 C005     		lsls	r0, r0, #23
+ 944 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 945              	.LVL88:
+ 132:Core/Src/nrf905.c **** }
+ 946              		.loc 1 132 1 is_stmt 0 view .LVU165
+ 947              		@ sp needed
+ 948 000e 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/cc2TCIKW.s 			page 20
+
+
+ 949              		.cfi_endproc
+ 950              	.LFE44:
+ 952              		.section	.text.NRF905_POWER_ON,"ax",%progbits
+ 953              		.align	1
+ 954              		.global	NRF905_POWER_ON
+ 955              		.syntax unified
+ 956              		.code	16
+ 957              		.thumb_func
+ 958              		.fpu softvfp
+ 960              	NRF905_POWER_ON:
+ 961              	.LFB38:
+  58:Core/Src/nrf905.c ****  HAL_GPIO_WritePin(PWR_GPIO_Port, PWR_Pin, GPIO_PIN_SET);
+ 962              		.loc 1 58 1 is_stmt 1 view -0
+ 963              		.cfi_startproc
+ 964              		@ args = 0, pretend = 0, frame = 0
+ 965              		@ frame_needed = 0, uses_anonymous_args = 0
+ 966 0000 10B5     		push	{r4, lr}
+ 967              	.LCFI19:
+ 968              		.cfi_def_cfa_offset 8
+ 969              		.cfi_offset 4, -8
+ 970              		.cfi_offset 14, -4
+  59:Core/Src/nrf905.c ****  HAL_Delay(1);
+ 971              		.loc 1 59 2 view .LVU167
+ 972 0002 A020     		movs	r0, #160
+ 973 0004 0122     		movs	r2, #1
+ 974 0006 0121     		movs	r1, #1
+ 975 0008 C005     		lsls	r0, r0, #23
+ 976 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 977              	.LVL89:
+  60:Core/Src/nrf905.c ****  ReciveOn ();
+ 978              		.loc 1 60 2 view .LVU168
+ 979 000e 0120     		movs	r0, #1
+ 980 0010 FFF7FEFF 		bl	HAL_Delay
+ 981              	.LVL90:
+  61:Core/Src/nrf905.c ****  HAL_Delay(2);
+ 982              		.loc 1 61 2 view .LVU169
+ 983 0014 FFF7FEFF 		bl	ReciveOn
+ 984              	.LVL91:
+  62:Core/Src/nrf905.c **** }
+ 985              		.loc 1 62 2 view .LVU170
+ 986 0018 0220     		movs	r0, #2
+ 987 001a FFF7FEFF 		bl	HAL_Delay
+ 988              	.LVL92:
+  63:Core/Src/nrf905.c **** void NRF905_POWER_OFF (void)
+ 989              		.loc 1 63 1 is_stmt 0 view .LVU171
+ 990              		@ sp needed
+ 991 001e 10BD     		pop	{r4, pc}
+ 992              		.cfi_endproc
+ 993              	.LFE38:
+ 995              		.section	.text.ReciveOff,"ax",%progbits
+ 996              		.align	1
+ 997              		.global	ReciveOff
+ 998              		.syntax unified
+ 999              		.code	16
+ 1000              		.thumb_func
+ 1001              		.fpu softvfp
+ 1003              	ReciveOff:
+ARM GAS  /tmp/cc2TCIKW.s 			page 21
+
+
+ 1004              	.LFB45:
+ 133:Core/Src/nrf905.c **** void ReciveOff ( void )
+ 134:Core/Src/nrf905.c **** {
+ 1005              		.loc 1 134 1 is_stmt 1 view -0
+ 1006              		.cfi_startproc
+ 1007              		@ args = 0, pretend = 0, frame = 0
+ 1008              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1009 0000 10B5     		push	{r4, lr}
+ 1010              	.LCFI20:
+ 1011              		.cfi_def_cfa_offset 8
+ 1012              		.cfi_offset 4, -8
+ 1013              		.cfi_offset 14, -4
+ 135:Core/Src/nrf905.c ****   HAL_GPIO_WritePin(TXE_GPIO_Port, TXE_Pin, GPIO_PIN_RESET);
+ 1014              		.loc 1 135 3 view .LVU173
+ 1015 0002 A020     		movs	r0, #160
+ 1016 0004 0022     		movs	r2, #0
+ 1017 0006 0421     		movs	r1, #4
+ 1018 0008 C005     		lsls	r0, r0, #23
+ 1019 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1020              	.LVL93:
+ 136:Core/Src/nrf905.c **** }...
+ 1021              		.loc 1 136 1 is_stmt 0 view .LVU174
+ 1022              		@ sp needed
+ 1023 000e 10BD     		pop	{r4, pc}
+ 1024              		.cfi_endproc
+ 1025              	.LFE45:
+ 1027              		.comm	NRF905_Config_t,10,4
+ 1028              		.text
+ 1029              	.Letext0:
+ 1030              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
+ 1031              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
+ 1032              		.file 4 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 1033              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
+ 1034              		.file 6 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 1035              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 1036              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 1037              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
+ 1038              		.file 10 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc
+ 1039              		.file 11 "Core/Inc/nrf905.h"
+ 1040              		.file 12 "Core/Inc/spi.h"
+ARM GAS  /tmp/cc2TCIKW.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 nrf905.c
+     /tmp/cc2TCIKW.s:16     .text.NRF905_ReadReg:0000000000000000 $t
+     /tmp/cc2TCIKW.s:24     .text.NRF905_ReadReg:0000000000000000 NRF905_ReadReg
+     /tmp/cc2TCIKW.s:104    .text.NRF905_ReadReg:0000000000000058 $d
+     /tmp/cc2TCIKW.s:109    .text.NRF905_WriteReg:0000000000000000 $t
+     /tmp/cc2TCIKW.s:116    .text.NRF905_WriteReg:0000000000000000 NRF905_WriteReg
+     /tmp/cc2TCIKW.s:194    .text.NRF905_WriteReg:0000000000000058 $d
+     /tmp/cc2TCIKW.s:199    .text.NRF905_ReadBuf:0000000000000000 $t
+     /tmp/cc2TCIKW.s:206    .text.NRF905_ReadBuf:0000000000000000 NRF905_ReadBuf
+     /tmp/cc2TCIKW.s:316    .text.NRF905_ReadBuf:000000000000006c $d
+     /tmp/cc2TCIKW.s:321    .text.NRF905_WriteBuf:0000000000000000 $t
+     /tmp/cc2TCIKW.s:328    .text.NRF905_WriteBuf:0000000000000000 NRF905_WriteBuf
+     /tmp/cc2TCIKW.s:428    .text.NRF905_WriteBuf:0000000000000060 $d
+     /tmp/cc2TCIKW.s:433    .text.NRF905_POWER_OFF:0000000000000000 $t
+     /tmp/cc2TCIKW.s:440    .text.NRF905_POWER_OFF:0000000000000000 NRF905_POWER_OFF
+     /tmp/cc2TCIKW.s:465    .text.NRF905_INIT:0000000000000000 $t
+     /tmp/cc2TCIKW.s:472    .text.NRF905_INIT:0000000000000000 NRF905_INIT
+     /tmp/cc2TCIKW.s:571    .text.NRF905_INIT:0000000000000074 $d
+     /tmp/cc2TCIKW.s:577    .text.WriteDataToSend:0000000000000000 $t
+     /tmp/cc2TCIKW.s:584    .text.WriteDataToSend:0000000000000000 WriteDataToSend
+     /tmp/cc2TCIKW.s:744    .text.WriteDataToSend:00000000000000bc $d
+     /tmp/cc2TCIKW.s:749    .text.ReadReciveData:0000000000000000 $t
+     /tmp/cc2TCIKW.s:756    .text.ReadReciveData:0000000000000000 ReadReciveData
+     /tmp/cc2TCIKW.s:863    .text.ReadReciveData:0000000000000068 $d
+     /tmp/cc2TCIKW.s:868    .text.StartSend:0000000000000000 $t
+     /tmp/cc2TCIKW.s:875    .text.StartSend:0000000000000000 StartSend
+     /tmp/cc2TCIKW.s:921    .text.ReciveOn:0000000000000000 $t
+     /tmp/cc2TCIKW.s:928    .text.ReciveOn:0000000000000000 ReciveOn
+     /tmp/cc2TCIKW.s:953    .text.NRF905_POWER_ON:0000000000000000 $t
+     /tmp/cc2TCIKW.s:960    .text.NRF905_POWER_ON:0000000000000000 NRF905_POWER_ON
+     /tmp/cc2TCIKW.s:996    .text.ReciveOff:0000000000000000 $t
+     /tmp/cc2TCIKW.s:1003   .text.ReciveOff:0000000000000000 ReciveOff
+                            *COM*:000000000000000a NRF905_Config_t
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_SPI_TransmitReceive
+HAL_SPI_Receive
+hspi1
+HAL_SPI_Transmit
+HAL_GPIO_ReadPin
+HAL_Delay
