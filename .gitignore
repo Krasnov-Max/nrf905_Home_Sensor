@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
-
+*geber*
+*-bak*
 # Object files
 *.o
 *.ko
