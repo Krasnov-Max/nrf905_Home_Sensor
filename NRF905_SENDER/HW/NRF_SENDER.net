@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/maxx/Project/NRF905_SENDER/KICAD/NRF_SENDER/NRF_SENDER.sch)
-    (date "Сб 12 сен 2020 00:39:25")
+    (source /home/maxx/Project/NRF905_SENDER/NRF905_SENDER/HW/NRF_SENDER.sch)
+    (date "Пт 09 окт 2020 18:34:08")
     (tool "Eeschema 5.1.5+dfsg1-2build2")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -432,7 +432,7 @@
       (sheetpath (names /POWER/) (tstamps /5EB5508A/))
       (tstamp 5F5E02F9))
     (comp (ref C19)
-      (value C)
+      (value "10 uf")
       (footprint Capacitor_SMD:C_0603_1608Metric)
       (datasheet ~)
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))

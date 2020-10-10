@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccxUQaiE.s 			page 1
+ARM GAS  /tmp/ccfOSRsL.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
   30:Core/Src/main.c **** 
   31:Core/Src/main.c **** /* USER CODE END Includes */
   32:Core/Src/main.c **** 
-ARM GAS  /tmp/ccxUQaiE.s 			page 2
+ARM GAS  /tmp/ccfOSRsL.s 			page 2
 
 
   33:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
   87:Core/Src/main.c **** 
   88:Core/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   89:Core/Src/main.c ****   HAL_Init();
-ARM GAS  /tmp/ccxUQaiE.s 			page 3
+ARM GAS  /tmp/ccfOSRsL.s 			page 3
 
 
   90:Core/Src/main.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  144:Core/Src/main.c **** 		  GetCalibData_BME280(&dev_bme);
  145:Core/Src/main.c **** 		  GetData_BME280(&dev_bme); 
  146:Core/Src/main.c ****   	 }
-ARM GAS  /tmp/ccxUQaiE.s 			page 4
+ARM GAS  /tmp/ccfOSRsL.s 			page 4
 
 
  147:Core/Src/main.c ****      P.descr[0]='B';
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  175:Core/Src/main.c ****   /** Configure the main internal regulator output voltage 
  176:Core/Src/main.c ****   */
  177:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-ARM GAS  /tmp/ccxUQaiE.s 			page 5
+ARM GAS  /tmp/ccfOSRsL.s 			page 5
 
 
   53              		.loc 1 177 3 is_stmt 1 view .LVU5
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
   91              		.loc 1 193 3 is_stmt 1 view .LVU20
   92              		.loc 1 193 34 is_stmt 0 view .LVU21
   93 0046 0194     		str	r4, [sp, #4]
-ARM GAS  /tmp/ccxUQaiE.s 			page 6
+ARM GAS  /tmp/ccfOSRsL.s 			page 6
 
 
  194:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  140              		.cfi_offset 6, -12
  141              		.cfi_offset 7, -8
  142              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccxUQaiE.s 			page 7
+ARM GAS  /tmp/ccfOSRsL.s 			page 7
 
 
  143 0002 C646     		mov	lr, r8
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  186 003a 4178     		ldrb	r1, [r0, #1]
  111:Core/Src/main.c **** NRF905_Config_t.CH_NO_2 = 0;
  187              		.loc 1 111 1 is_stmt 1 view .LVU43
-ARM GAS  /tmp/ccxUQaiE.s 			page 8
+ARM GAS  /tmp/ccfOSRsL.s 			page 8
 
 
  111:Core/Src/main.c **** NRF905_Config_t.CH_NO_2 = 0;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  227 006c 8278     		ldrb	r2, [r0, #2]
  228 006e 0724     		movs	r4, #7
  229 0070 A243     		bics	r2, r4
-ARM GAS  /tmp/ccxUQaiE.s 			page 9
+ARM GAS  /tmp/ccfOSRsL.s 			page 9
 
 
  230 0072 0424     		movs	r4, #4
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  271              		.loc 1 125 1 is_stmt 1 view .LVU71
  125:Core/Src/main.c **** 
  272              		.loc 1 125 21 is_stmt 0 view .LVU72
-ARM GAS  /tmp/ccxUQaiE.s 			page 10
+ARM GAS  /tmp/ccfOSRsL.s 			page 10
 
 
  273 00ac DBB2     		uxtb	r3, r3
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  152:Core/Src/main.c **** 	   P.press = dev_bme.data.pressure;
  312              		.loc 1 152 12 view .LVU88
  313 00d8 DA6E     		ldr	r2, [r3, #108]
-ARM GAS  /tmp/ccxUQaiE.s 			page 11
+ARM GAS  /tmp/ccfOSRsL.s 			page 11
 
 
  314 00da A260     		str	r2, [r4, #8]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  141:Core/Src/main.c ****     if (initBME280(&dev_bme) == 1)
  353              		.loc 1 141 5 view .LVU104
  354 0106 0122     		movs	r2, #1
-ARM GAS  /tmp/ccxUQaiE.s 			page 12
+ARM GAS  /tmp/ccfOSRsL.s 			page 12
 
 
  355 0108 0821     		movs	r1, #8
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  402              		@ args = 0, pretend = 0, frame = 0
  403              		@ frame_needed = 0, uses_anonymous_args = 0
  404              		.loc 1 206 1 is_stmt 0 view .LVU111
-ARM GAS  /tmp/ccxUQaiE.s 			page 13
+ARM GAS  /tmp/ccfOSRsL.s 			page 13
 
 
  405 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  454 0038 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  455              	.L11:
  456 003a C046     		.align	2
-ARM GAS  /tmp/ccxUQaiE.s 			page 14
+ARM GAS  /tmp/ccfOSRsL.s 			page 14
 
 
  457              	.L10:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  505 0016 0022     		movs	r2, #0
  506 0018 0821     		movs	r1, #8
  507              	.LVL34:
-ARM GAS  /tmp/ccxUQaiE.s 			page 15
+ARM GAS  /tmp/ccfOSRsL.s 			page 15
 
 
  508              		.loc 1 219 2 is_stmt 0 view .LVU129
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  226:Core/Src/main.c **** /**
  227:Core/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
  228:Core/Src/main.c ****   * @retval None
-ARM GAS  /tmp/ccxUQaiE.s 			page 16
+ARM GAS  /tmp/ccfOSRsL.s 			page 16
 
 
  229:Core/Src/main.c ****   */
@@ -950,29 +950,29 @@ ARM GAS  /tmp/ccxUQaiE.s 			page 1
  595              		.file 16 "Core/Inc/gpio.h"
  596              		.file 17 "Core/Inc/bme280.h"
  597              		.file 18 "<built-in>"
-ARM GAS  /tmp/ccxUQaiE.s 			page 17
+ARM GAS  /tmp/ccfOSRsL.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccxUQaiE.s:16     .text.SystemClock_Config:0000000000000000 $t
-     /tmp/ccxUQaiE.s:24     .text.SystemClock_Config:0000000000000000 SystemClock_Config
-     /tmp/ccxUQaiE.s:116    .text.SystemClock_Config:000000000000005c $d
-     /tmp/ccxUQaiE.s:122    .text.main:0000000000000000 $t
-     /tmp/ccxUQaiE.s:129    .text.main:0000000000000000 main
-     /tmp/ccxUQaiE.s:380    .text.main:000000000000012c $d
+     /tmp/ccfOSRsL.s:16     .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccfOSRsL.s:24     .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccfOSRsL.s:116    .text.SystemClock_Config:000000000000005c $d
+     /tmp/ccfOSRsL.s:122    .text.main:0000000000000000 $t
+     /tmp/ccfOSRsL.s:129    .text.main:0000000000000000 main
+     /tmp/ccfOSRsL.s:380    .text.main:000000000000012c $d
                             *COM*:000000000000000a NRF905_Config_t
                             *COM*:000000000000001c P
-     /tmp/ccxUQaiE.s:390    .text.SPI_GET_DAT:0000000000000000 $t
-     /tmp/ccxUQaiE.s:397    .text.SPI_GET_DAT:0000000000000000 SPI_GET_DAT
-     /tmp/ccxUQaiE.s:458    .text.SPI_GET_DAT:000000000000003c $d
-     /tmp/ccxUQaiE.s:463    .text.SPI_SET_DAT:0000000000000000 $t
-     /tmp/ccxUQaiE.s:470    .text.SPI_SET_DAT:0000000000000000 SPI_SET_DAT
-     /tmp/ccxUQaiE.s:544    .text.SPI_SET_DAT:0000000000000048 $d
-     /tmp/ccxUQaiE.s:549    .text.Error_Handler:0000000000000000 $t
-     /tmp/ccxUQaiE.s:556    .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/ccxUQaiE.s:577    .bss.dev_bme:0000000000000000 dev_bme
-     /tmp/ccxUQaiE.s:573    .bss.dev_bme:0000000000000000 $d
+     /tmp/ccfOSRsL.s:390    .text.SPI_GET_DAT:0000000000000000 $t
+     /tmp/ccfOSRsL.s:397    .text.SPI_GET_DAT:0000000000000000 SPI_GET_DAT
+     /tmp/ccfOSRsL.s:458    .text.SPI_GET_DAT:000000000000003c $d
+     /tmp/ccfOSRsL.s:463    .text.SPI_SET_DAT:0000000000000000 $t
+     /tmp/ccfOSRsL.s:470    .text.SPI_SET_DAT:0000000000000000 SPI_SET_DAT
+     /tmp/ccfOSRsL.s:544    .text.SPI_SET_DAT:0000000000000048 $d
+     /tmp/ccfOSRsL.s:549    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccfOSRsL.s:556    .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccfOSRsL.s:577    .bss.dev_bme:0000000000000000 dev_bme
+     /tmp/ccfOSRsL.s:573    .bss.dev_bme:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 memset

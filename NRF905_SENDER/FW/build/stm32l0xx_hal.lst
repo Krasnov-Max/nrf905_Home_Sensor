@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccjGCX15.s 			page 1
+ARM GAS  /tmp/ccOjs6Gb.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
   30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   *                        opensource.org/licenses/BSD-3-Clause
   31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   *
   32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   ******************************************************************************
-ARM GAS  /tmp/ccjGCX15.s 			page 2
+ARM GAS  /tmp/ccOjs6Gb.s 			page 2
 
 
   33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
   87:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
   88:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /* Exported functions --------------------------------------------------------*/
   89:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /** @addtogroup HAL_Exported_Functions
-ARM GAS  /tmp/ccjGCX15.s 			page 3
+ARM GAS  /tmp/ccOjs6Gb.s 			page 3
 
 
   90:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  144:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   __HAL_FLASH_BUFFER_CACHE_DISABLE();
  145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** #endif /* BUFFER_CACHE_DISABLE */
  146:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
-ARM GAS  /tmp/ccjGCX15.s 			page 4
+ARM GAS  /tmp/ccOjs6Gb.s 			page 4
 
 
  147:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** #if (PREREAD_ENABLE != 0)
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  201:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   */
  202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** __weak void HAL_MspInit(void)
  203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** {
-ARM GAS  /tmp/ccjGCX15.s 			page 5
+ARM GAS  /tmp/ccOjs6Gb.s 			page 5
 
 
   27              		.loc 1 203 1 view -0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
   69              		.loc 1 177 1 view -0
   70              		.cfi_startproc
   71              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccjGCX15.s 			page 6
+ARM GAS  /tmp/ccOjs6Gb.s 			page 6
 
 
   72              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  116              		.weak	HAL_InitTick
  117              		.syntax unified
  118              		.code	16
-ARM GAS  /tmp/ccjGCX15.s 			page 7
+ARM GAS  /tmp/ccOjs6Gb.s 			page 7
 
 
  119              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  151 0014 0028     		cmp	r0, #0
  152 0016 01D0     		beq	.L9
  242:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   {
-ARM GAS  /tmp/ccjGCX15.s 			page 8
+ARM GAS  /tmp/ccOjs6Gb.s 			page 8
 
 
  243:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****     status = HAL_ERROR;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  195              		@ frame_needed = 0, uses_anonymous_args = 0
  196 0000 10B5     		push	{r4, lr}
  197              	.LCFI2:
-ARM GAS  /tmp/ccjGCX15.s 			page 9
+ARM GAS  /tmp/ccOjs6Gb.s 			page 9
 
 
  198              		.cfi_def_cfa_offset 8
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  243              		.weak	HAL_IncTick
  244              		.syntax unified
  245              		.code	16
-ARM GAS  /tmp/ccjGCX15.s 			page 10
+ARM GAS  /tmp/ccOjs6Gb.s 			page 10
 
 
  246              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  263              		@ sp needed
  264 0008 7047     		bx	lr
  265              	.L20:
-ARM GAS  /tmp/ccjGCX15.s 			page 11
+ARM GAS  /tmp/ccOjs6Gb.s 			page 11
 
 
  266 000a C046     		.align	2
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  304:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /**
  305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @brief This function provides minimum delay (in milliseconds) based
  306:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   *        on variable incremented.
-ARM GAS  /tmp/ccjGCX15.s 			page 12
+ARM GAS  /tmp/ccOjs6Gb.s 			page 12
 
 
  307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @note In the default implementation , SysTick timer is the source of time base.
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  343              		.loc 1 326 8 discriminator 1 view .LVU59
  326:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   {
  344              		.loc 1 326 10 is_stmt 0 discriminator 1 view .LVU60
-ARM GAS  /tmp/ccjGCX15.s 			page 13
+ARM GAS  /tmp/ccOjs6Gb.s 			page 13
 
 
  345 0010 FFF7FEFF 		bl	HAL_GetTick
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  345:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** }
  383              		.loc 1 345 1 view .LVU68
  384              		@ sp needed
-ARM GAS  /tmp/ccjGCX15.s 			page 14
+ARM GAS  /tmp/ccOjs6Gb.s 			page 14
 
 
  385 000a 7047     		bx	lr
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  426              		.align	1
  427              		.global	HAL_GetHalVersion
  428              		.syntax unified
-ARM GAS  /tmp/ccjGCX15.s 			page 15
+ARM GAS  /tmp/ccOjs6Gb.s 			page 15
 
 
  429              		.code	16
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  469 0000 014B     		ldr	r3, .L37
  470 0002 1868     		ldr	r0, [r3]
  471              		.loc 1 378 27 view .LVU79
-ARM GAS  /tmp/ccjGCX15.s 			page 16
+ARM GAS  /tmp/ccOjs6Gb.s 			page 16
 
 
  472 0004 000C     		lsrs	r0, r0, #16
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  519              		.code	16
  520              		.thumb_func
  521              		.fpu softvfp
-ARM GAS  /tmp/ccjGCX15.s 			page 17
+ARM GAS  /tmp/ccOjs6Gb.s 			page 17
 
 
  523              	HAL_GetUIDw0:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  562 0002 1868     		ldr	r0, [r3]
  406:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** }
  563              		.loc 1 406 1 view .LVU93
-ARM GAS  /tmp/ccjGCX15.s 			page 18
+ARM GAS  /tmp/ccOjs6Gb.s 			page 18
 
 
  564              		@ sp needed
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  417:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /**
  418:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @}
  419:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   */
-ARM GAS  /tmp/ccjGCX15.s 			page 19
+ARM GAS  /tmp/ccOjs6Gb.s 			page 19
 
 
  420:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  445:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
  446:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /**
  447:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @brief  Disables the Debug Module during SLEEP mode
-ARM GAS  /tmp/ccjGCX15.s 			page 20
+ARM GAS  /tmp/ccOjs6Gb.s 			page 20
 
 
  448:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @retval None
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  462:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** }
  685              		.loc 1 462 1 is_stmt 0 view .LVU106
  686              		@ sp needed
-ARM GAS  /tmp/ccjGCX15.s 			page 21
+ARM GAS  /tmp/ccOjs6Gb.s 			page 21
 
 
  687 000a 7047     		bx	lr
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  472:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
  473:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /**
  474:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @brief  Enables the Debug Module during STANDBY mode
-ARM GAS  /tmp/ccjGCX15.s 			page 22
+ARM GAS  /tmp/ccOjs6Gb.s 			page 22
 
 
  475:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c ****   * @retval None
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  489:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** }
  778              		.loc 1 489 1 is_stmt 0 view .LVU115
  779              		@ sp needed
-ARM GAS  /tmp/ccjGCX15.s 			page 23
+ARM GAS  /tmp/ccOjs6Gb.s 			page 23
 
 
  780 000a 7047     		bx	lr
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  818              		.cfi_endproc
  819              	.LFE56:
  821              		.section	.text.HAL_DBGMCU_DBG_DisableLowPowerConfig,"ax",%progbits
-ARM GAS  /tmp/ccjGCX15.s 			page 24
+ARM GAS  /tmp/ccOjs6Gb.s 			page 24
 
 
  822              		.align	1
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  862              	HAL_SYSCFG_GetBootMode:
  863              	.LFB58:
  525:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** 
-ARM GAS  /tmp/ccjGCX15.s 			page 25
+ARM GAS  /tmp/ccOjs6Gb.s 			page 25
 
 
  526:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** /**
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  887              		.section	.text.HAL_SYSCFG_VREFINT_OutputSelect,"ax",%progbits
  888              		.align	1
  889              		.global	HAL_SYSCFG_VREFINT_OutputSelect
-ARM GAS  /tmp/ccjGCX15.s 			page 26
+ARM GAS  /tmp/ccOjs6Gb.s 			page 26
 
 
  890              		.syntax unified
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  923              		.cfi_endproc
  924              	.LFE59:
  926              		.section	.text.HAL_SYSCFG_Enable_Lock_VREFINT,"ax",%progbits
-ARM GAS  /tmp/ccjGCX15.s 			page 27
+ARM GAS  /tmp/ccOjs6Gb.s 			page 27
 
 
  927              		.align	1
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  596:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c **** {
  968              		.loc 1 596 1 is_stmt 1 view -0
  969              		.cfi_startproc
-ARM GAS  /tmp/ccjGCX15.s 			page 28
+ARM GAS  /tmp/ccOjs6Gb.s 			page 28
 
 
  970              		@ args = 0, pretend = 0, frame = 0
@@ -1653,96 +1653,96 @@ ARM GAS  /tmp/ccjGCX15.s 			page 1
  997              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  998              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  999              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
-ARM GAS  /tmp/ccjGCX15.s 			page 29
+ARM GAS  /tmp/ccOjs6Gb.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l0xx_hal.c
-     /tmp/ccjGCX15.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/ccjGCX15.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/ccjGCX15.s:39     .text.HAL_MspDeInit:0000000000000000 $t
-     /tmp/ccjGCX15.s:46     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
-     /tmp/ccjGCX15.s:60     .text.HAL_DeInit:0000000000000000 $t
-     /tmp/ccjGCX15.s:67     .text.HAL_DeInit:0000000000000000 HAL_DeInit
-     /tmp/ccjGCX15.s:109    .text.HAL_DeInit:0000000000000024 $d
-     /tmp/ccjGCX15.s:115    .text.HAL_InitTick:0000000000000000 $t
-     /tmp/ccjGCX15.s:122    .text.HAL_InitTick:0000000000000000 HAL_InitTick
-     /tmp/ccjGCX15.s:178    .text.HAL_InitTick:000000000000002c $d
-     /tmp/ccjGCX15.s:183    .text.HAL_Init:0000000000000000 $t
-     /tmp/ccjGCX15.s:190    .text.HAL_Init:0000000000000000 HAL_Init
-     /tmp/ccjGCX15.s:237    .text.HAL_Init:0000000000000024 $d
-     /tmp/ccjGCX15.s:242    .text.HAL_IncTick:0000000000000000 $t
-     /tmp/ccjGCX15.s:249    .text.HAL_IncTick:0000000000000000 HAL_IncTick
-     /tmp/ccjGCX15.s:268    .text.HAL_IncTick:000000000000000c $d
+     /tmp/ccOjs6Gb.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccOjs6Gb.s:39     .text.HAL_MspDeInit:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:46     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
+     /tmp/ccOjs6Gb.s:60     .text.HAL_DeInit:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:67     .text.HAL_DeInit:0000000000000000 HAL_DeInit
+     /tmp/ccOjs6Gb.s:109    .text.HAL_DeInit:0000000000000024 $d
+     /tmp/ccOjs6Gb.s:115    .text.HAL_InitTick:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:122    .text.HAL_InitTick:0000000000000000 HAL_InitTick
+     /tmp/ccOjs6Gb.s:178    .text.HAL_InitTick:000000000000002c $d
+     /tmp/ccOjs6Gb.s:183    .text.HAL_Init:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:190    .text.HAL_Init:0000000000000000 HAL_Init
+     /tmp/ccOjs6Gb.s:237    .text.HAL_Init:0000000000000024 $d
+     /tmp/ccOjs6Gb.s:242    .text.HAL_IncTick:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:249    .text.HAL_IncTick:0000000000000000 HAL_IncTick
+     /tmp/ccOjs6Gb.s:268    .text.HAL_IncTick:000000000000000c $d
                             *COM*:0000000000000004 uwTick
-     /tmp/ccjGCX15.s:273    .text.HAL_GetTick:0000000000000000 $t
-     /tmp/ccjGCX15.s:280    .text.HAL_GetTick:0000000000000000 HAL_GetTick
-     /tmp/ccjGCX15.s:297    .text.HAL_GetTick:0000000000000008 $d
-     /tmp/ccjGCX15.s:302    .text.HAL_Delay:0000000000000000 $t
-     /tmp/ccjGCX15.s:309    .text.HAL_Delay:0000000000000000 HAL_Delay
-     /tmp/ccjGCX15.s:362    .text.HAL_SuspendTick:0000000000000000 $t
-     /tmp/ccjGCX15.s:369    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
-     /tmp/ccjGCX15.s:389    .text.HAL_SuspendTick:000000000000000c $d
-     /tmp/ccjGCX15.s:394    .text.HAL_ResumeTick:0000000000000000 $t
-     /tmp/ccjGCX15.s:401    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
-     /tmp/ccjGCX15.s:421    .text.HAL_ResumeTick:000000000000000c $d
-     /tmp/ccjGCX15.s:426    .text.HAL_GetHalVersion:0000000000000000 $t
-     /tmp/ccjGCX15.s:433    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
-     /tmp/ccjGCX15.s:448    .text.HAL_GetHalVersion:0000000000000004 $d
-     /tmp/ccjGCX15.s:453    .text.HAL_GetREVID:0000000000000000 $t
-     /tmp/ccjGCX15.s:460    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
-     /tmp/ccjGCX15.s:479    .text.HAL_GetREVID:0000000000000008 $d
-     /tmp/ccjGCX15.s:484    .text.HAL_GetDEVID:0000000000000000 $t
-     /tmp/ccjGCX15.s:491    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
-     /tmp/ccjGCX15.s:511    .text.HAL_GetDEVID:000000000000000c $d
-     /tmp/ccjGCX15.s:516    .text.HAL_GetUIDw0:0000000000000000 $t
-     /tmp/ccjGCX15.s:523    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
-     /tmp/ccjGCX15.s:540    .text.HAL_GetUIDw0:0000000000000008 $d
-     /tmp/ccjGCX15.s:545    .text.HAL_GetUIDw1:0000000000000000 $t
-     /tmp/ccjGCX15.s:552    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
-     /tmp/ccjGCX15.s:569    .text.HAL_GetUIDw1:0000000000000008 $d
-     /tmp/ccjGCX15.s:574    .text.HAL_GetUIDw2:0000000000000000 $t
-     /tmp/ccjGCX15.s:581    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
-     /tmp/ccjGCX15.s:598    .text.HAL_GetUIDw2:0000000000000008 $d
-     /tmp/ccjGCX15.s:603    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:610    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
-     /tmp/ccjGCX15.s:629    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
-     /tmp/ccjGCX15.s:634    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:641    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
-     /tmp/ccjGCX15.s:660    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
-     /tmp/ccjGCX15.s:665    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:672    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
-     /tmp/ccjGCX15.s:691    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
-ARM GAS  /tmp/ccjGCX15.s 			page 30
+     /tmp/ccOjs6Gb.s:273    .text.HAL_GetTick:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:280    .text.HAL_GetTick:0000000000000000 HAL_GetTick
+     /tmp/ccOjs6Gb.s:297    .text.HAL_GetTick:0000000000000008 $d
+     /tmp/ccOjs6Gb.s:302    .text.HAL_Delay:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:309    .text.HAL_Delay:0000000000000000 HAL_Delay
+     /tmp/ccOjs6Gb.s:362    .text.HAL_SuspendTick:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:369    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+     /tmp/ccOjs6Gb.s:389    .text.HAL_SuspendTick:000000000000000c $d
+     /tmp/ccOjs6Gb.s:394    .text.HAL_ResumeTick:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:401    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+     /tmp/ccOjs6Gb.s:421    .text.HAL_ResumeTick:000000000000000c $d
+     /tmp/ccOjs6Gb.s:426    .text.HAL_GetHalVersion:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:433    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
+     /tmp/ccOjs6Gb.s:448    .text.HAL_GetHalVersion:0000000000000004 $d
+     /tmp/ccOjs6Gb.s:453    .text.HAL_GetREVID:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:460    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
+     /tmp/ccOjs6Gb.s:479    .text.HAL_GetREVID:0000000000000008 $d
+     /tmp/ccOjs6Gb.s:484    .text.HAL_GetDEVID:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:491    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
+     /tmp/ccOjs6Gb.s:511    .text.HAL_GetDEVID:000000000000000c $d
+     /tmp/ccOjs6Gb.s:516    .text.HAL_GetUIDw0:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:523    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
+     /tmp/ccOjs6Gb.s:540    .text.HAL_GetUIDw0:0000000000000008 $d
+     /tmp/ccOjs6Gb.s:545    .text.HAL_GetUIDw1:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:552    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
+     /tmp/ccOjs6Gb.s:569    .text.HAL_GetUIDw1:0000000000000008 $d
+     /tmp/ccOjs6Gb.s:574    .text.HAL_GetUIDw2:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:581    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
+     /tmp/ccOjs6Gb.s:598    .text.HAL_GetUIDw2:0000000000000008 $d
+     /tmp/ccOjs6Gb.s:603    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:610    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
+     /tmp/ccOjs6Gb.s:629    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:634    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:641    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
+     /tmp/ccOjs6Gb.s:660    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:665    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:672    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
+     /tmp/ccOjs6Gb.s:691    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
+ARM GAS  /tmp/ccOjs6Gb.s 			page 30
 
 
-     /tmp/ccjGCX15.s:696    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:703    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
-     /tmp/ccjGCX15.s:722    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
-     /tmp/ccjGCX15.s:727    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:734    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
-     /tmp/ccjGCX15.s:753    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
-     /tmp/ccjGCX15.s:758    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:765    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
-     /tmp/ccjGCX15.s:784    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
-     /tmp/ccjGCX15.s:789    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:0000000000000000 $t
-     /tmp/ccjGCX15.s:796    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:0000000000000000 HAL_DBGMCU_DBG_EnableLowPowerConfig
-     /tmp/ccjGCX15.s:817    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:000000000000000c $d
-     /tmp/ccjGCX15.s:822    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:0000000000000000 $t
-     /tmp/ccjGCX15.s:829    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:0000000000000000 HAL_DBGMCU_DBG_DisableLowPowerConfig
-     /tmp/ccjGCX15.s:850    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:000000000000000c $d
-     /tmp/ccjGCX15.s:855    .text.HAL_SYSCFG_GetBootMode:0000000000000000 $t
-     /tmp/ccjGCX15.s:862    .text.HAL_SYSCFG_GetBootMode:0000000000000000 HAL_SYSCFG_GetBootMode
-     /tmp/ccjGCX15.s:883    .text.HAL_SYSCFG_GetBootMode:000000000000000c $d
-     /tmp/ccjGCX15.s:888    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000000 $t
-     /tmp/ccjGCX15.s:895    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000000 HAL_SYSCFG_VREFINT_OutputSelect
-     /tmp/ccjGCX15.s:922    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000014 $d
-     /tmp/ccjGCX15.s:927    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000000 $t
-     /tmp/ccjGCX15.s:934    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000000 HAL_SYSCFG_Enable_Lock_VREFINT
-     /tmp/ccjGCX15.s:954    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000010 $d
-     /tmp/ccjGCX15.s:959    .text.HAL_SYSCFG_Disable_Lock_VREFINT:0000000000000000 $t
-     /tmp/ccjGCX15.s:966    .text.HAL_SYSCFG_Disable_Lock_VREFINT:0000000000000000 HAL_SYSCFG_Disable_Lock_VREFINT
-     /tmp/ccjGCX15.s:985    .text.HAL_SYSCFG_Disable_Lock_VREFINT:000000000000000c $d
+     /tmp/ccOjs6Gb.s:696    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:703    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
+     /tmp/ccOjs6Gb.s:722    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:727    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:734    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
+     /tmp/ccOjs6Gb.s:753    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:758    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:765    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
+     /tmp/ccOjs6Gb.s:784    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:789    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:796    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:0000000000000000 HAL_DBGMCU_DBG_EnableLowPowerConfig
+     /tmp/ccOjs6Gb.s:817    .text.HAL_DBGMCU_DBG_EnableLowPowerConfig:000000000000000c $d
+     /tmp/ccOjs6Gb.s:822    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:829    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:0000000000000000 HAL_DBGMCU_DBG_DisableLowPowerConfig
+     /tmp/ccOjs6Gb.s:850    .text.HAL_DBGMCU_DBG_DisableLowPowerConfig:000000000000000c $d
+     /tmp/ccOjs6Gb.s:855    .text.HAL_SYSCFG_GetBootMode:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:862    .text.HAL_SYSCFG_GetBootMode:0000000000000000 HAL_SYSCFG_GetBootMode
+     /tmp/ccOjs6Gb.s:883    .text.HAL_SYSCFG_GetBootMode:000000000000000c $d
+     /tmp/ccOjs6Gb.s:888    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:895    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000000 HAL_SYSCFG_VREFINT_OutputSelect
+     /tmp/ccOjs6Gb.s:922    .text.HAL_SYSCFG_VREFINT_OutputSelect:0000000000000014 $d
+     /tmp/ccOjs6Gb.s:927    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:934    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000000 HAL_SYSCFG_Enable_Lock_VREFINT
+     /tmp/ccOjs6Gb.s:954    .text.HAL_SYSCFG_Enable_Lock_VREFINT:0000000000000010 $d
+     /tmp/ccOjs6Gb.s:959    .text.HAL_SYSCFG_Disable_Lock_VREFINT:0000000000000000 $t
+     /tmp/ccOjs6Gb.s:966    .text.HAL_SYSCFG_Disable_Lock_VREFINT:0000000000000000 HAL_SYSCFG_Disable_Lock_VREFINT
+     /tmp/ccOjs6Gb.s:985    .text.HAL_SYSCFG_Disable_Lock_VREFINT:000000000000000c $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6FXKp3.s 			page 1
+ARM GAS  /tmp/cc3peMGb.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
   30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       (+) Configure the clock source(s) for peripherals whose clocks are not
   31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           derived from the System clock (I2S, RTC, ADC, USB OTG FS/SDIO/RNG)
   32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           (*) SDIO only for STM32L0xxxD devices
-ARM GAS  /tmp/cc6FXKp3.s 			page 2
+ARM GAS  /tmp/cc3peMGb.s 			page 2
 
 
   33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
   87:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
   88:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #define MCO2_CLK_ENABLE()     __HAL_RCC_GPIOA_CLK_ENABLE()
   89:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #define MCO2_GPIO_PORT        GPIOA
-ARM GAS  /tmp/cc6FXKp3.s 			page 3
+ARM GAS  /tmp/cc3peMGb.s 			page 3
 
 
   90:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #define MCO2_PIN              GPIO_PIN_9
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  144:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           is generated if enabled. The interrupt is linked to the Cortex-M0+ NMI
  145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           (Non-Maskable Interrupt) exception vector.
  146:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 4
+ARM GAS  /tmp/cc3peMGb.s 			page 4
 
 
  147:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       (#) MCO1/MCO2/MCO3 (microcontroller clock output), used to output SYSCLK, HSI, LSI, MSI, LSE,
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  201:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   |-----------------|---------|--------|-----------------------------|-----------------------|
  202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   | Range 2 (1.5 V) | 4.2 MHz | 16 MHz |         16 MHz              |         16 MHz        |
  203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   |                 |         |        |                             | (PLLVCO max = 48 MHz) |
-ARM GAS  /tmp/cc6FXKp3.s 			page 5
+ARM GAS  /tmp/cc3peMGb.s 			page 5
 
 
  204:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   |-----------------|---------|--------|-----------------------------|-----------------------|
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
   52 0012 5A60     		str	r2, [r3, #4]
  233:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****             ((RCC_MSICALIBRATION_DEFAULT << RCC_ICSCR_MSITRIM_Pos) | (RCC_HSICALIBRATION_DEFAULT <<
  234:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 6
+ARM GAS  /tmp/cc3peMGb.s 			page 6
 
 
  235:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Set MSION bit */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  255:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
  256:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     if ((HAL_GetTick() - tickstart) > CLOCKSWITCH_TIMEOUT_VALUE)
  257:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
-ARM GAS  /tmp/cc6FXKp3.s 			page 7
+ARM GAS  /tmp/cc3peMGb.s 			page 7
 
 
  258:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       return HAL_TIMEOUT;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  312:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   vl_mask |= RCC_CICR_HSI48RDYC;
  313:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #endif
  314:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #if defined(RCC_HSECSS_SUPPORT)
-ARM GAS  /tmp/cc6FXKp3.s 			page 8
+ARM GAS  /tmp/cc3peMGb.s 			page 8
 
 
  315:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   vl_mask |= RCC_CICR_CSSHSEC;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  122              	.LVL6:
  258:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     }
  123              		.loc 1 258 14 view .LVU29
-ARM GAS  /tmp/cc6FXKp3.s 			page 9
+ARM GAS  /tmp/cc3peMGb.s 			page 9
 
 
  124 0060 EAE7     		b	.L3
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  164              		.loc 1 292 15 is_stmt 0 view .LVU43
  165 0090 FFF7FEFF 		bl	HAL_GetTick
  166              	.LVL10:
-ARM GAS  /tmp/cc6FXKp3.s 			page 10
+ARM GAS  /tmp/cc3peMGb.s 			page 10
 
 
  292:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  320:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  206              		.loc 1 320 3 view .LVU59
  207 00b8 196D     		ldr	r1, [r3, #80]
-ARM GAS  /tmp/cc6FXKp3.s 			page 11
+ARM GAS  /tmp/cc3peMGb.s 			page 11
 
 
  208 00ba 8022     		movs	r2, #128
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  347:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   if(RCC_OscInitStruct == NULL)
  348:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
  349:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     return HAL_ERROR;
-ARM GAS  /tmp/cc6FXKp3.s 			page 12
+ARM GAS  /tmp/cc3peMGb.s 			page 12
 
 
  350:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   }
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  404:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         }
  405:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       }
  406:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     }
-ARM GAS  /tmp/cc6FXKp3.s 			page 13
+ARM GAS  /tmp/cc3peMGb.s 			page 13
 
 
  407:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   }
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  461:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         /* Enable the Internal High Speed oscillator (HSI or HSIdiv4) */
  462:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         __HAL_RCC_HSI_CONFIG(hsi_state);
  463:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 14
+ARM GAS  /tmp/cc3peMGb.s 			page 14
 
 
  464:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         /* Get Start Tick */
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  518:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         __HAL_RCC_MSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->MSICalibrationValue);
  519:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  520:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 15
+ARM GAS  /tmp/cc3peMGb.s 			page 15
 
 
  521:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         /* Update the SystemCoreClock global variable */
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  575:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           if((HAL_GetTick() - tickstart) > MSI_TIMEOUT_VALUE)
  576:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           {
  577:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****             return HAL_TIMEOUT;
-ARM GAS  /tmp/cc6FXKp3.s 			page 16
+ARM GAS  /tmp/cc3peMGb.s 			page 16
 
 
  578:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           }
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  632:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  633:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     /* Update LSE configuration in Backup Domain control register    */
  634:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     /* Requires to enable write access to Backup Domain of necessary */
-ARM GAS  /tmp/cc6FXKp3.s 			page 17
+ARM GAS  /tmp/cc3peMGb.s 			page 17
 
 
  635:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  689:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  690:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     /* Require to disable power clock if necessary */
  691:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     if(pwrclkchanged == SET)
-ARM GAS  /tmp/cc6FXKp3.s 			page 18
+ARM GAS  /tmp/cc3peMGb.s 			page 18
 
 
  692:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  746:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
  747:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     /* Check if the PLL is used as system clock or not */
  748:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     if(sysclk_source != RCC_SYSCLKSOURCE_STATUS_PLLCLK)
-ARM GAS  /tmp/cc6FXKp3.s 			page 19
+ARM GAS  /tmp/cc3peMGb.s 			page 19
 
 
  749:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  803:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           {
  804:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****             return HAL_TIMEOUT;
  805:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           }
-ARM GAS  /tmp/cc6FXKp3.s 			page 20
+ARM GAS  /tmp/cc3peMGb.s 			page 20
 
 
  806:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  860:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** {
  861:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   uint32_t tickstart;
  862:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   HAL_StatusTypeDef status;
-ARM GAS  /tmp/cc6FXKp3.s 			page 21
+ARM GAS  /tmp/cc3peMGb.s 			page 21
 
 
  863:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  917:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       {
  918:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         return HAL_ERROR;
  919:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       }
-ARM GAS  /tmp/cc6FXKp3.s 			page 22
+ARM GAS  /tmp/cc3peMGb.s 			page 22
 
 
  920:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     }
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  974:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     else
  975:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
  976:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       while(__HAL_RCC_GET_SYSCLK_SOURCE() != RCC_SYSCLKSOURCE_STATUS_MSI)
-ARM GAS  /tmp/cc6FXKp3.s 			page 23
+ARM GAS  /tmp/cc3peMGb.s 			page 23
 
 
  977:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       {
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1031:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *  @brief   RCC clocks control functions
 1032:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *
 1033:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   @verbatim
-ARM GAS  /tmp/cc6FXKp3.s 			page 24
+ARM GAS  /tmp/cc3peMGb.s 			page 24
 
 
 1034:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   ===============================================================================
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1088:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *            @arg @ref RCC_MCO1SOURCE_HSI48       HSI48 clock selected as MCO clock
 1089:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   @elseif STM32L073xx
 1090:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *            @arg @ref RCC_MCO1SOURCE_HSI48       HSI48 clock selected as MCO clock
-ARM GAS  /tmp/cc6FXKp3.s 			page 25
+ARM GAS  /tmp/cc3peMGb.s 			page 25
 
 
 1091:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   @elseif STM32L082xx
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1112:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   assert_param(IS_RCC_MCO1SOURCE(RCC_MCOSource));
  272              		.loc 1 1112 3 view .LVU71
 1113:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 26
+ARM GAS  /tmp/cc3peMGb.s 			page 26
 
 
 1114:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Configure the MCO1 pin in alternate function mode */
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  315              	.LVL21:
  316              	.L19:
 1126:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   }
-ARM GAS  /tmp/cc6FXKp3.s 			page 27
+ARM GAS  /tmp/cc3peMGb.s 			page 27
 
 
 1127:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** #if  defined(STM32L031xx) || defined(STM32L041xx) || defined(STM32L073xx) || defined(STM32L083xx) \
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  342              		.loc 1 1142 20 is_stmt 0 view .LVU97
  343 005a 0023     		movs	r3, #0
  344 005c 0793     		str	r3, [sp, #28]
-ARM GAS  /tmp/cc6FXKp3.s 			page 28
+ARM GAS  /tmp/cc3peMGb.s 			page 28
 
 
 1145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     HAL_GPIO_Init(MCO2_GPIO_PORT, &gpio);
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1158:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *         software about the failure (Clock Security System Interrupt, CSSI),
 1159:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *         allowing the MCU to perform rescue operations. The CSSI is linked to
 1160:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *         the Cortex-M0+ NMI (Non-Maskable Interrupt) exception vector.
-ARM GAS  /tmp/cc6FXKp3.s 			page 29
+ARM GAS  /tmp/cc3peMGb.s 			page 29
 
 
 1161:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   * @retval None
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1204:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   tmpreg = RCC->CFGR;
  399              		.loc 1 1204 3 view .LVU108
  400              		.loc 1 1204 10 is_stmt 0 view .LVU109
-ARM GAS  /tmp/cc6FXKp3.s 			page 30
+ARM GAS  /tmp/cc3peMGb.s 			page 30
 
 
  401 0002 264B     		ldr	r3, .L31
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1245:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       }
 1246:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       sysclockfreq = pllvco;
 1247:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       break;
-ARM GAS  /tmp/cc6FXKp3.s 			page 31
+ARM GAS  /tmp/cc3peMGb.s 			page 31
 
 
 1248:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     }
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1228:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       plld = ((uint32_t)(tmpreg & RCC_CFGR_PLLDIV) >> RCC_CFGR_PLLDIV_Pos) + 1U;
  453              		.loc 1 1228 63 is_stmt 0 view .LVU127
  454 0036 8A0C     		lsrs	r2, r1, #18
-ARM GAS  /tmp/cc6FXKp3.s 			page 32
+ARM GAS  /tmp/cc3peMGb.s 			page 32
 
 
  455 0038 0F23     		movs	r3, #15
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  495              		.loc 1 1237 17 is_stmt 0 view .LVU141
  496 0064 0D4B     		ldr	r3, .L31
  497 0066 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/cc6FXKp3.s 			page 33
+ARM GAS  /tmp/cc3peMGb.s 			page 33
 
 
 1237:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  540              		.loc 1 1257 3 is_stmt 1 view .LVU153
 1257:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** }
  541              		.loc 1 1257 10 is_stmt 0 view .LVU154
-ARM GAS  /tmp/cc6FXKp3.s 			page 34
+ARM GAS  /tmp/cc3peMGb.s 			page 34
 
 
  542 009a C5E7     		b	.L22
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  590              	.LCB528:
  352:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  591              		.loc 1 352 3 is_stmt 1 view .LVU163
-ARM GAS  /tmp/cc6FXKp3.s 			page 35
+ARM GAS  /tmp/cc3peMGb.s 			page 35
 
 
  354:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   pll_config = __HAL_RCC_GET_PLL_OSCSOURCE();
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  375:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  631              		.loc 1 375 7 discriminator 2 view .LVU179
  632 0032 A022     		movs	r2, #160
-ARM GAS  /tmp/cc6FXKp3.s 			page 36
+ARM GAS  /tmp/cc3peMGb.s 			page 36
 
 
  633 0034 D202     		lsls	r2, r2, #11
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  674 0064 AD4B     		ldr	r3, .L132
  675 0066 1B68     		ldr	r3, [r3]
  384:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
-ARM GAS  /tmp/cc6FXKp3.s 			page 37
+ARM GAS  /tmp/cc3peMGb.s 			page 37
 
 
  676              		.loc 1 384 14 view .LVU193
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  717              		.loc 1 412 5 is_stmt 1 view .LVU206
  413:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  718              		.loc 1 413 5 view .LVU207
-ARM GAS  /tmp/cc6FXKp3.s 			page 38
+ARM GAS  /tmp/cc3peMGb.s 			page 38
 
 
  415:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  759              		.loc 1 462 9 is_stmt 0 view .LVU221
  760 00be 0B60     		str	r3, [r1]
  465:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
-ARM GAS  /tmp/cc6FXKp3.s 			page 39
+ARM GAS  /tmp/cc3peMGb.s 			page 39
 
 
  761              		.loc 1 465 9 is_stmt 1 view .LVU222
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  803 00ec 8B4B     		ldr	r3, .L132
  804 00ee 1968     		ldr	r1, [r3]
  805 00f0 8022     		movs	r2, #128
-ARM GAS  /tmp/cc6FXKp3.s 			page 40
+ARM GAS  /tmp/cc3peMGb.s 			page 40
 
 
  806 00f2 D202     		lsls	r2, r2, #11
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  846 011e D7E1     		b	.L34
  847              	.LVL60:
  848              	.L121:
-ARM GAS  /tmp/cc6FXKp3.s 			page 41
+ARM GAS  /tmp/cc3peMGb.s 			page 41
 
 
  429:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  447:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  891              		.loc 1 447 95 view .LVU261
  892 0152 1209     		lsrs	r2, r2, #4
-ARM GAS  /tmp/cc6FXKp3.s 			page 42
+ARM GAS  /tmp/cc3peMGb.s 			page 42
 
 
  893 0154 0F23     		movs	r3, #15
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  932              		.loc 1 504 54 discriminator 1 view .LVU276
  933 0180 A369     		ldr	r3, [r4, #24]
  934 0182 002B     		cmp	r3, #0
-ARM GAS  /tmp/cc6FXKp3.s 			page 43
+ARM GAS  /tmp/cc3peMGb.s 			page 43
 
 
  935 0184 00D1     		bne	.LCB859
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  977 01bc D340     		lsrs	r3, r3, r2
  522:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****                            >> AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos)];
  978              		.loc 1 522 25 view .LVU289
-ARM GAS  /tmp/cc6FXKp3.s 			page 44
+ARM GAS  /tmp/cc3peMGb.s 			page 44
 
 
  979 01be 5C4A     		ldr	r2, .L132+20
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1019              		.loc 1 599 12 view .LVU303
  599:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       {
  1020              		.loc 1 599 13 is_stmt 0 view .LVU304
-ARM GAS  /tmp/cc6FXKp3.s 			page 45
+ARM GAS  /tmp/cc3peMGb.s 			page 45
 
 
  1021 01ea 4C4B     		ldr	r3, .L132
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1064              	.LVL74:
  488:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
  1065              		.loc 1 488 9 is_stmt 1 view .LVU316
-ARM GAS  /tmp/cc6FXKp3.s 			page 46
+ARM GAS  /tmp/cc3peMGb.s 			page 46
 
 
  1066              	.L54:
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1106              	.LVL78:
  548:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
  1107              		.loc 1 548 9 is_stmt 1 view .LVU331
-ARM GAS  /tmp/cc6FXKp3.s 			page 47
+ARM GAS  /tmp/cc3peMGb.s 			page 47
 
 
  1108              	.L60:
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  567:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  1150              		.loc 1 567 9 view .LVU344
  1151 0284 254A     		ldr	r2, .L132
-ARM GAS  /tmp/cc6FXKp3.s 			page 48
+ARM GAS  /tmp/cc3peMGb.s 			page 48
 
 
  1152 0286 1368     		ldr	r3, [r2]
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1192              		.loc 1 613 19 is_stmt 0 view .LVU358
  1193 02b4 FFF7FEFF 		bl	HAL_GetTick
  1194              	.LVL85:
-ARM GAS  /tmp/cc6FXKp3.s 			page 49
+ARM GAS  /tmp/cc3peMGb.s 			page 49
 
 
  1195 02b8 0600     		movs	r6, r0
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1234 02da 9B6B     		ldr	r3, [r3, #56]
  635:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
  1235              		.loc 1 635 7 view .LVU374
-ARM GAS  /tmp/cc6FXKp3.s 			page 50
+ARM GAS  /tmp/cc3peMGb.s 			page 50
 
 
  1236 02dc DB00     		lsls	r3, r3, #3
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1279 0314 1A65     		str	r2, [r3, #80]
  1280 0316 2FE0     		b	.L76
  1281              	.LVL92:
-ARM GAS  /tmp/cc6FXKp3.s 			page 51
+ARM GAS  /tmp/cc3peMGb.s 			page 51
 
 
  1282              	.L105:
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1326              	.LVL96:
  651:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
  1327              		.loc 1 651 27 view .LVU396
-ARM GAS  /tmp/cc6FXKp3.s 			page 52
+ARM GAS  /tmp/cc3peMGb.s 			page 52
 
 
  1328 0362 C01B     		subs	r0, r0, r7
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1368 038c FFF7FEFF 		bl	HAL_GetTick
  1369              	.LVL100:
  669:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****         {
-ARM GAS  /tmp/cc6FXKp3.s 			page 53
+ARM GAS  /tmp/cc3peMGb.s 			page 53
 
 
  1370              		.loc 1 669 27 view .LVU411
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1415              		.loc 1 678 19 is_stmt 0 view .LVU420
  1416 03d0 FFF7FEFF 		bl	HAL_GetTick
  1417              	.LVL102:
-ARM GAS  /tmp/cc6FXKp3.s 			page 54
+ARM GAS  /tmp/cc3peMGb.s 			page 54
 
 
  1418 03d4 0700     		movs	r7, r0
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1456 03f4 002B     		cmp	r3, #0
  1457 03f6 00D1     		bne	.LCB1390
  1458 03f8 72E0     		b	.L109	@long jump
-ARM GAS  /tmp/cc6FXKp3.s 			page 55
+ARM GAS  /tmp/cc3peMGb.s 			page 55
 
 
  1459              	.LCB1390:
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  804:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           }
  1498              		.loc 1 804 20 view .LVU452
  1499 0424 0320     		movs	r0, #3
-ARM GAS  /tmp/cc6FXKp3.s 			page 56
+ARM GAS  /tmp/cc3peMGb.s 			page 56
 
 
  1500 0426 53E0     		b	.L34
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1540              		.loc 1 766 15 is_stmt 0 view .LVU466
  1541 044c FFF7FEFF 		bl	HAL_GetTick
  1542              	.LVL113:
-ARM GAS  /tmp/cc6FXKp3.s 			page 57
+ARM GAS  /tmp/cc3peMGb.s 			page 57
 
 
  766:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           {
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1585              		.loc 1 785 11 is_stmt 1 view .LVU478
  785:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****           {
  1586              		.loc 1 785 15 is_stmt 0 view .LVU479
-ARM GAS  /tmp/cc6FXKp3.s 			page 58
+ARM GAS  /tmp/cc3peMGb.s 			page 58
 
 
  1587 0488 FFF7FEFF 		bl	HAL_GetTick
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1628 04b4 9B03     		lsls	r3, r3, #14
  1629 04b6 1340     		ands	r3, r2
  820:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****            (READ_BIT(pll_config, RCC_CFGR_PLLMUL) != RCC_OscInitStruct->PLL.PLLMUL) ||
-ARM GAS  /tmp/cc6FXKp3.s 			page 59
+ARM GAS  /tmp/cc3peMGb.s 			page 59
 
 
  1630              		.loc 1 820 88 discriminator 1 view .LVU493
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1674              	.L109:
  830:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** }
  1675              		.loc 1 830 10 view .LVU504
-ARM GAS  /tmp/cc6FXKp3.s 			page 60
+ARM GAS  /tmp/cc3peMGb.s 			page 60
 
 
  1676 04e0 0020     		movs	r0, #0
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1727              		.cfi_def_cfa_offset 16
  1728              		.cfi_offset 4, -16
  1729              		.cfi_offset 5, -12
-ARM GAS  /tmp/cc6FXKp3.s 			page 61
+ARM GAS  /tmp/cc3peMGb.s 			page 61
 
 
  1730              		.cfi_offset 6, -8
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1770              	.LCB1710:
  1771              	.L138:
  892:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
-ARM GAS  /tmp/cc6FXKp3.s 			page 62
+ARM GAS  /tmp/cc3peMGb.s 			page 62
 
 
  1772              		.loc 1 892 3 is_stmt 1 view .LVU524
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  934:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****       {
  1811              		.loc 1 934 9 view .LVU540
  1812 005a 9205     		lsls	r2, r2, #22
-ARM GAS  /tmp/cc6FXKp3.s 			page 63
+ARM GAS  /tmp/cc3peMGb.s 			page 63
 
 
  1813 005c 06D4     		bmi	.L142
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1853              		.loc 1 954 12 is_stmt 0 view .LVU554
  1854 0084 032B     		cmp	r3, #3
  1855 0086 28D0     		beq	.L148
-ARM GAS  /tmp/cc6FXKp3.s 			page 64
+ARM GAS  /tmp/cc3peMGb.s 			page 64
 
 
  964:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     {
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1895              		.loc 1 918 16 view .LVU569
  1896 00b0 63E0     		b	.L137
  1897              	.LVL140:
-ARM GAS  /tmp/cc6FXKp3.s 			page 65
+ARM GAS  /tmp/cc3peMGb.s 			page 65
 
 
  1898              	.L173:
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1937              		.loc 1 956 14 is_stmt 0 view .LVU584
  1938 00da 2D4B     		ldr	r3, .L175+4
  1939 00dc DA68     		ldr	r2, [r3, #12]
-ARM GAS  /tmp/cc6FXKp3.s 			page 66
+ARM GAS  /tmp/cc3peMGb.s 			page 66
 
 
  1940 00de 0C23     		movs	r3, #12
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  1980 0110 33E0     		b	.L137
  1981              	.LVL146:
  1982              	.L140:
-ARM GAS  /tmp/cc6FXKp3.s 			page 67
+ARM GAS  /tmp/cc3peMGb.s 			page 67
 
 
  986:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2024 0146 2368     		ldr	r3, [r4]
  2025 0148 1B07     		lsls	r3, r3, #28
  2026 014a 07D5     		bpl	.L157
-ARM GAS  /tmp/cc6FXKp3.s 			page 68
+ARM GAS  /tmp/cc3peMGb.s 			page 68
 
 
 1009:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE2, ((RCC_ClkInitStruct->APB2CLKDivider) << 3));
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1024:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
  2068              		.loc 1 1024 1 view .LVU625
  2069 017a 70BD     		pop	{r4, r5, r6, pc}
-ARM GAS  /tmp/cc6FXKp3.s 			page 69
+ARM GAS  /tmp/cc3peMGb.s 			page 69
 
 
  2070              	.LVL151:
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1260:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** /**
 1261:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   * @brief  Returns the HCLK frequency
 1262:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   * @note   Each time HCLK changes, this function must be called to update the
-ARM GAS  /tmp/cc6FXKp3.s 			page 70
+ARM GAS  /tmp/cc3peMGb.s 			page 70
 
 
 1263:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   *         right HCLK value. Otherwise, any configuration based on this function will be incorrect
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2155              		.cfi_offset 14, -4
 1282:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Get HCLK source and Compute PCLK1 frequency ---------------------------*/
 1283:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE1) >> RCC_CFGR_PPRE1_Pos
-ARM GAS  /tmp/cc6FXKp3.s 			page 71
+ARM GAS  /tmp/cc3peMGb.s 			page 71
 
 
  2156              		.loc 1 1283 3 view .LVU638
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1294:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Get HCLK source and Compute PCLK2 frequency ---------------------------*/
 1295:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   return (HAL_RCC_GetHCLKFreq()>> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE2) >> RCC_CFGR_PPRE2_Pos]
  2202              		.loc 1 1295 3 view .LVU646
-ARM GAS  /tmp/cc6FXKp3.s 			page 72
+ARM GAS  /tmp/cc3peMGb.s 			page 72
 
 
  2203              		.loc 1 1295 11 is_stmt 0 view .LVU647
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1309:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
 1310:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Set all possible values for the Oscillator type parameter ---------------*/
 1311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   RCC_OscInitStruct->OscillatorType = RCC_OSCILLATORTYPE_HSE | RCC_OSCILLATORTYPE_HSI  \
-ARM GAS  /tmp/cc6FXKp3.s 			page 73
+ARM GAS  /tmp/cc3peMGb.s 			page 73
 
 
  2246              		.loc 1 1311 3 view .LVU655
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1337:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   else
 1338:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
 1339:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****     RCC_OscInitStruct->HSIState = RCC_HSI_OFF;
-ARM GAS  /tmp/cc6FXKp3.s 			page 74
+ARM GAS  /tmp/cc3peMGb.s 			page 74
 
 
 1340:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   }
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
 1356:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c **** 
 1357:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   /* Get the LSE configuration -----------------------------------------------*/
 1358:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   if((RCC->CSR &RCC_CSR_LSEBYP) == RCC_CSR_LSEBYP)
-ARM GAS  /tmp/cc6FXKp3.s 			page 75
+ARM GAS  /tmp/cc3peMGb.s 			page 75
 
 
  2313              		.loc 1 1358 3 is_stmt 1 view .LVU684
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2338              		.loc 1 1387 10 is_stmt 0 view .LVU695
  2339 005e 1C4B     		ldr	r3, .L201
  2340 0060 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/cc6FXKp3.s 			page 76
+ARM GAS  /tmp/cc3peMGb.s 			page 76
 
 
  2341              		.loc 1 1387 5 view .LVU696
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2382              		.loc 1 1323 15 is_stmt 0 view .LVU713
  2383 008c 104B     		ldr	r3, .L201
  2384 008e 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/cc6FXKp3.s 			page 77
+ARM GAS  /tmp/cc3peMGb.s 			page 77
 
 
 1323:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   {
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2425 00bc C9E7     		b	.L195
  2426              	.L196:
 1368:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c ****   }
-ARM GAS  /tmp/cc6FXKp3.s 			page 78
+ARM GAS  /tmp/cc3peMGb.s 			page 78
 
 
  2427              		.loc 1 1368 5 is_stmt 1 view .LVU728
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2467 0000 30B5     		push	{r4, r5, lr}
  2468              	.LCFI10:
  2469              		.cfi_def_cfa_offset 12
-ARM GAS  /tmp/cc6FXKp3.s 			page 79
+ARM GAS  /tmp/cc3peMGb.s 			page 79
 
 
  2470              		.cfi_offset 4, -12
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2506              		.loc 1 1427 54 is_stmt 0 view .LVU753
  2507 0022 D368     		ldr	r3, [r2, #12]
  2508              		.loc 1 1427 39 view .LVU754
-ARM GAS  /tmp/cc6FXKp3.s 			page 80
+ARM GAS  /tmp/cc3peMGb.s 			page 80
 
 
  2509 0024 DB08     		lsrs	r3, r3, #3
@@ -4779,43 +4779,43 @@ ARM GAS  /tmp/cc6FXKp3.s 			page 1
  2541              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  2542              		.file 10 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc
  2543              		.file 11 "<built-in>"
-ARM GAS  /tmp/cc6FXKp3.s 			page 81
+ARM GAS  /tmp/cc3peMGb.s 			page 81
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l0xx_hal_rcc.c
-     /tmp/cc6FXKp3.s:16     .text.HAL_RCC_DeInit:0000000000000000 $t
-     /tmp/cc6FXKp3.s:24     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-     /tmp/cc6FXKp3.s:218    .text.HAL_RCC_DeInit:00000000000000c4 $d
-     /tmp/cc6FXKp3.s:229    .text.HAL_RCC_MCOConfig:0000000000000000 $t
-     /tmp/cc6FXKp3.s:236    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-     /tmp/cc6FXKp3.s:372    .text.HAL_RCC_MCOConfig:000000000000007c $d
-     /tmp/cc6FXKp3.s:379    .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-     /tmp/cc6FXKp3.s:386    .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-     /tmp/cc6FXKp3.s:546    .text.HAL_RCC_GetSysClockFreq:000000000000009c $d
-     /tmp/cc6FXKp3.s:555    .text.HAL_RCC_OscConfig:0000000000000000 $t
-     /tmp/cc6FXKp3.s:562    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-     /tmp/cc6FXKp3.s:1289   .text.HAL_RCC_OscConfig:000000000000031c $d
-     /tmp/cc6FXKp3.s:1302   .text.HAL_RCC_OscConfig:0000000000000344 $t
-     /tmp/cc6FXKp3.s:1698   .text.HAL_RCC_OscConfig:00000000000004f4 $d
-     /tmp/cc6FXKp3.s:1710   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-     /tmp/cc6FXKp3.s:1717   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-     /tmp/cc6FXKp3.s:2098   .text.HAL_RCC_ClockConfig:000000000000018c $d
-     /tmp/cc6FXKp3.s:2109   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-     /tmp/cc6FXKp3.s:2116   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-     /tmp/cc6FXKp3.s:2133   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
-     /tmp/cc6FXKp3.s:2138   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-     /tmp/cc6FXKp3.s:2145   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-     /tmp/cc6FXKp3.s:2178   .text.HAL_RCC_GetPCLK1Freq:0000000000000018 $d
-     /tmp/cc6FXKp3.s:2184   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-     /tmp/cc6FXKp3.s:2191   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-     /tmp/cc6FXKp3.s:2224   .text.HAL_RCC_GetPCLK2Freq:0000000000000018 $d
-     /tmp/cc6FXKp3.s:2230   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-     /tmp/cc6FXKp3.s:2237   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-     /tmp/cc6FXKp3.s:2447   .text.HAL_RCC_GetOscConfig:00000000000000d0 $d
-     /tmp/cc6FXKp3.s:2452   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-     /tmp/cc6FXKp3.s:2459   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-     /tmp/cc6FXKp3.s:2527   .text.HAL_RCC_GetClockConfig:0000000000000038 $d
+     /tmp/cc3peMGb.s:16     .text.HAL_RCC_DeInit:0000000000000000 $t
+     /tmp/cc3peMGb.s:24     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+     /tmp/cc3peMGb.s:218    .text.HAL_RCC_DeInit:00000000000000c4 $d
+     /tmp/cc3peMGb.s:229    .text.HAL_RCC_MCOConfig:0000000000000000 $t
+     /tmp/cc3peMGb.s:236    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
+     /tmp/cc3peMGb.s:372    .text.HAL_RCC_MCOConfig:000000000000007c $d
+     /tmp/cc3peMGb.s:379    .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+     /tmp/cc3peMGb.s:386    .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+     /tmp/cc3peMGb.s:546    .text.HAL_RCC_GetSysClockFreq:000000000000009c $d
+     /tmp/cc3peMGb.s:555    .text.HAL_RCC_OscConfig:0000000000000000 $t
+     /tmp/cc3peMGb.s:562    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+     /tmp/cc3peMGb.s:1289   .text.HAL_RCC_OscConfig:000000000000031c $d
+     /tmp/cc3peMGb.s:1302   .text.HAL_RCC_OscConfig:0000000000000344 $t
+     /tmp/cc3peMGb.s:1698   .text.HAL_RCC_OscConfig:00000000000004f4 $d
+     /tmp/cc3peMGb.s:1710   .text.HAL_RCC_ClockConfig:0000000000000000 $t
+     /tmp/cc3peMGb.s:1717   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
+     /tmp/cc3peMGb.s:2098   .text.HAL_RCC_ClockConfig:000000000000018c $d
+     /tmp/cc3peMGb.s:2109   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
+     /tmp/cc3peMGb.s:2116   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
+     /tmp/cc3peMGb.s:2133   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
+     /tmp/cc3peMGb.s:2138   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
+     /tmp/cc3peMGb.s:2145   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
+     /tmp/cc3peMGb.s:2178   .text.HAL_RCC_GetPCLK1Freq:0000000000000018 $d
+     /tmp/cc3peMGb.s:2184   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
+     /tmp/cc3peMGb.s:2191   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
+     /tmp/cc3peMGb.s:2224   .text.HAL_RCC_GetPCLK2Freq:0000000000000018 $d
+     /tmp/cc3peMGb.s:2230   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+     /tmp/cc3peMGb.s:2237   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+     /tmp/cc3peMGb.s:2447   .text.HAL_RCC_GetOscConfig:00000000000000d0 $d
+     /tmp/cc3peMGb.s:2452   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
+     /tmp/cc3peMGb.s:2459   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
+     /tmp/cc3peMGb.s:2527   .text.HAL_RCC_GetClockConfig:0000000000000038 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

@@ -386,7 +386,7 @@ Discarded input sections
                 0x0000000000000000      0x288 build/stm32l0xx_hal_i2c.o
  .debug_ranges  0x0000000000000000      0x278 build/stm32l0xx_hal_i2c.o
  .debug_line    0x0000000000000000     0x47d0 build/stm32l0xx_hal_i2c.o
- .debug_str     0x0000000000000000      0xf88 build/stm32l0xx_hal_i2c.o
+ .debug_str     0x0000000000000000      0xf8e build/stm32l0xx_hal_i2c.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_i2c.o
  .debug_frame   0x0000000000000000      0x844 build/stm32l0xx_hal_i2c.o
  .ARM.attributes
@@ -413,7 +413,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/stm32l0xx_hal_i2c_ex.o
  .debug_ranges  0x0000000000000000       0x38 build/stm32l0xx_hal_i2c_ex.o
  .debug_line    0x0000000000000000      0x530 build/stm32l0xx_hal_i2c_ex.o
- .debug_str     0x0000000000000000      0x892 build/stm32l0xx_hal_i2c_ex.o
+ .debug_str     0x0000000000000000      0x898 build/stm32l0xx_hal_i2c_ex.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_i2c_ex.o
  .debug_frame   0x0000000000000000       0xa8 build/stm32l0xx_hal_i2c_ex.o
  .ARM.attributes
@@ -461,7 +461,7 @@ Discarded input sections
                 0x0000000000000000       0x58 build/stm32l0xx_hal_rcc_ex.o
  .debug_ranges  0x0000000000000000       0x60 build/stm32l0xx_hal_rcc_ex.o
  .debug_line    0x0000000000000000      0x6e3 build/stm32l0xx_hal_rcc_ex.o
- .debug_str     0x0000000000000000      0x51e build/stm32l0xx_hal_rcc_ex.o
+ .debug_str     0x0000000000000000      0x524 build/stm32l0xx_hal_rcc_ex.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_rcc_ex.o
  .debug_frame   0x0000000000000000       0xac build/stm32l0xx_hal_rcc_ex.o
  .ARM.attributes
@@ -477,7 +477,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/stm32l0xx_hal_flash_ramfunc.o
  .debug_ranges  0x0000000000000000       0x38 build/stm32l0xx_hal_flash_ramfunc.o
  .debug_line    0x0000000000000000      0x4ab build/stm32l0xx_hal_flash_ramfunc.o
- .debug_str     0x0000000000000000      0x455 build/stm32l0xx_hal_flash_ramfunc.o
+ .debug_str     0x0000000000000000      0x45b build/stm32l0xx_hal_flash_ramfunc.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_flash_ramfunc.o
  .debug_frame   0x0000000000000000       0x84 build/stm32l0xx_hal_flash_ramfunc.o
  .ARM.attributes
@@ -518,7 +518,7 @@ Discarded input sections
                 0x0000000000000000       0x80 build/stm32l0xx_hal_flash.o
  .debug_ranges  0x0000000000000000       0x70 build/stm32l0xx_hal_flash.o
  .debug_line    0x0000000000000000      0x7fc build/stm32l0xx_hal_flash.o
- .debug_str     0x0000000000000000      0x526 build/stm32l0xx_hal_flash.o
+ .debug_str     0x0000000000000000      0x52c build/stm32l0xx_hal_flash.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_flash.o
  .debug_frame   0x0000000000000000      0x114 build/stm32l0xx_hal_flash.o
  .ARM.attributes
@@ -584,7 +584,7 @@ Discarded input sections
                 0x0000000000000000       0xe0 build/stm32l0xx_hal_flash_ex.o
  .debug_ranges  0x0000000000000000       0xd0 build/stm32l0xx_hal_flash_ex.o
  .debug_line    0x0000000000000000      0xba3 build/stm32l0xx_hal_flash_ex.o
- .debug_str     0x0000000000000000      0x804 build/stm32l0xx_hal_flash_ex.o
+ .debug_str     0x0000000000000000      0x80a build/stm32l0xx_hal_flash_ex.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_flash_ex.o
  .debug_frame   0x0000000000000000      0x228 build/stm32l0xx_hal_flash_ex.o
  .ARM.attributes
@@ -640,7 +640,7 @@ Discarded input sections
                 0x0000000000000000       0x80 build/stm32l0xx_hal_dma.o
  .debug_ranges  0x0000000000000000       0x70 build/stm32l0xx_hal_dma.o
  .debug_line    0x0000000000000000      0x9e8 build/stm32l0xx_hal_dma.o
- .debug_str     0x0000000000000000      0x6a0 build/stm32l0xx_hal_dma.o
+ .debug_str     0x0000000000000000      0x6a6 build/stm32l0xx_hal_dma.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_dma.o
  .debug_frame   0x0000000000000000      0x150 build/stm32l0xx_hal_dma.o
  .ARM.attributes
@@ -689,7 +689,7 @@ Discarded input sections
                 0x0000000000000000       0xa0 build/stm32l0xx_hal_pwr.o
  .debug_ranges  0x0000000000000000       0x90 build/stm32l0xx_hal_pwr.o
  .debug_line    0x0000000000000000      0x56b build/stm32l0xx_hal_pwr.o
- .debug_str     0x0000000000000000      0x509 build/stm32l0xx_hal_pwr.o
+ .debug_str     0x0000000000000000      0x50f build/stm32l0xx_hal_pwr.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_pwr.o
  .debug_frame   0x0000000000000000      0x138 build/stm32l0xx_hal_pwr.o
  .ARM.attributes
@@ -718,7 +718,7 @@ Discarded input sections
                 0x0000000000000000       0x50 build/stm32l0xx_hal_pwr_ex.o
  .debug_ranges  0x0000000000000000       0x40 build/stm32l0xx_hal_pwr_ex.o
  .debug_line    0x0000000000000000      0x2fb build/stm32l0xx_hal_pwr_ex.o
- .debug_str     0x0000000000000000      0x347 build/stm32l0xx_hal_pwr_ex.o
+ .debug_str     0x0000000000000000      0x34d build/stm32l0xx_hal_pwr_ex.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_pwr_ex.o
  .debug_frame   0x0000000000000000       0x88 build/stm32l0xx_hal_pwr_ex.o
  .ARM.attributes
@@ -754,7 +754,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build/stm32l0xx_hal_tim.o
  .debug_line    0x0000000000000000      0x170 build/stm32l0xx_hal_tim.o
- .debug_str     0x0000000000000000      0x221 build/stm32l0xx_hal_tim.o
+ .debug_str     0x0000000000000000      0x227 build/stm32l0xx_hal_tim.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_tim.o
  .ARM.attributes
                 0x0000000000000000       0x32 build/stm32l0xx_hal_tim.o
@@ -766,7 +766,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build/stm32l0xx_hal_tim_ex.o
  .debug_line    0x0000000000000000      0x170 build/stm32l0xx_hal_tim_ex.o
- .debug_str     0x0000000000000000      0x224 build/stm32l0xx_hal_tim_ex.o
+ .debug_str     0x0000000000000000      0x22a build/stm32l0xx_hal_tim_ex.o
  .comment       0x0000000000000000       0x4d build/stm32l0xx_hal_tim_ex.o
  .ARM.attributes
                 0x0000000000000000       0x32 build/stm32l0xx_hal_tim_ex.o
@@ -1356,35 +1356,35 @@ LOAD /usr/local/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a
  .debug_line    0x0000000000005f58      0x350 build/system_stm32l0xx.o
  .debug_line    0x00000000000062a8       0x8c build/startup_stm32l011xx.o
 
-.debug_str      0x0000000000000000     0x1dc5
- .debug_str     0x0000000000000000      0x9fd build/main.o
-                                        0xaf6 (size before relaxing)
- .debug_str     0x00000000000009fd      0x18e build/bme280.o
-                                        0x522 (size before relaxing)
- .debug_str     0x0000000000000b8b       0xf3 build/gpio.o
-                                        0x345 (size before relaxing)
- .debug_str     0x0000000000000c7e       0x58 build/spi.o
-                                        0x741 (size before relaxing)
- .debug_str     0x0000000000000cd6       0xc1 build/nrf905.o
-                                        0x7c4 (size before relaxing)
- .debug_str     0x0000000000000d97       0x6d build/stm32l0xx_it.o
-                                        0x221 (size before relaxing)
- .debug_str     0x0000000000000e04       0x29 build/stm32l0xx_hal_msp.o
-                                        0x275 (size before relaxing)
- .debug_str     0x0000000000000e2d      0x57d build/stm32l0xx_hal_spi.o
-                                        0xb99 (size before relaxing)
- .debug_str     0x00000000000013aa      0x4b4 build/stm32l0xx_hal.o
-                                        0x786 (size before relaxing)
- .debug_str     0x000000000000185e      0x1a4 build/stm32l0xx_hal_rcc.o
-                                        0x6aa (size before relaxing)
- .debug_str     0x0000000000001a02      0x119 build/stm32l0xx_hal_gpio.o
-                                        0x4ba (size before relaxing)
- .debug_str     0x0000000000001b1b      0x228 build/stm32l0xx_hal_cortex.o
-                                        0x606 (size before relaxing)
- .debug_str     0x0000000000001d43       0x5e build/system_stm32l0xx.o
-                                        0x2d9 (size before relaxing)
- .debug_str     0x0000000000001da1       0x24 build/startup_stm32l011xx.o
-                                         0x50 (size before relaxing)
+.debug_str      0x0000000000000000     0x1dcb
+ .debug_str     0x0000000000000000      0xa03 build/main.o
+                                        0xafc (size before relaxing)
+ .debug_str     0x0000000000000a03      0x18e build/bme280.o
+                                        0x528 (size before relaxing)
+ .debug_str     0x0000000000000b91       0xf3 build/gpio.o
+                                        0x34b (size before relaxing)
+ .debug_str     0x0000000000000c84       0x58 build/spi.o
+                                        0x747 (size before relaxing)
+ .debug_str     0x0000000000000cdc       0xc1 build/nrf905.o
+                                        0x7ca (size before relaxing)
+ .debug_str     0x0000000000000d9d       0x6d build/stm32l0xx_it.o
+                                        0x227 (size before relaxing)
+ .debug_str     0x0000000000000e0a       0x29 build/stm32l0xx_hal_msp.o
+                                        0x27b (size before relaxing)
+ .debug_str     0x0000000000000e33      0x57d build/stm32l0xx_hal_spi.o
+                                        0xb9f (size before relaxing)
+ .debug_str     0x00000000000013b0      0x4b4 build/stm32l0xx_hal.o
+                                        0x78c (size before relaxing)
+ .debug_str     0x0000000000001864      0x1a4 build/stm32l0xx_hal_rcc.o
+                                        0x6b0 (size before relaxing)
+ .debug_str     0x0000000000001a08      0x119 build/stm32l0xx_hal_gpio.o
+                                        0x4c0 (size before relaxing)
+ .debug_str     0x0000000000001b21      0x228 build/stm32l0xx_hal_cortex.o
+                                        0x60c (size before relaxing)
+ .debug_str     0x0000000000001d49       0x5e build/system_stm32l0xx.o
+                                        0x2df (size before relaxing)
+ .debug_str     0x0000000000001da7       0x24 build/startup_stm32l011xx.o
+                                         0x56 (size before relaxing)
 
 .comment        0x0000000000000000       0x4c
  .comment       0x0000000000000000       0x4c build/main.o

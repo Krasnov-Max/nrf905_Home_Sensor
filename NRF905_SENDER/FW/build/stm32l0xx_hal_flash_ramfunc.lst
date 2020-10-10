@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cccE3NEC.s 			page 1
+ARM GAS  /tmp/ccmSgHyQ.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
   31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @attention
   32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *
   33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics. 
-ARM GAS  /tmp/cccE3NEC.s 			page 2
+ARM GAS  /tmp/ccmSgHyQ.s 			page 2
 
 
   34:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * All rights reserved.</center></h2>
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
   88:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
   89:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
   90:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /* Private functions ---------------------------------------------------------*/
-ARM GAS  /tmp/cccE3NEC.s 			page 3
+ARM GAS  /tmp/ccmSgHyQ.s 			page 3
 
 
   91:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****  
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  145:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
  146:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
  147:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** #if defined(FLASH_PECR_PARALLBANK)
-ARM GAS  /tmp/cccE3NEC.s 			page 4
+ARM GAS  /tmp/ccmSgHyQ.s 			page 4
 
 
  148:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  202:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *         to the first half page in the first bank.
  203:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  Address2: specifies the second address to be written in the second bank
  204:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *        (BANK2). This parameter should be between FLASH_BANK2_BASE and (FLASH_BANK2_END - FLASH_
-ARM GAS  /tmp/cccE3NEC.s 			page 5
+ARM GAS  /tmp/ccmSgHyQ.s 			page 5
 
 
  205:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @param  pBuffer2: pointer to the buffer containing the data to be  written 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  259:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         /* Address2 doesn't need to be increased */ 
  260:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         *(__IO uint32_t*) Address2 = *pBuffer2;
  261:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         pBuffer2++;
-ARM GAS  /tmp/cccE3NEC.s 			page 6
+ARM GAS  /tmp/ccmSgHyQ.s 			page 6
 
 
  262:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****         count ++;  
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  316:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_FPRG);
  317:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     SET_BIT(FLASH->PECR, FLASH_PECR_PROG);
  318:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     
-ARM GAS  /tmp/cccE3NEC.s 			page 7
+ARM GAS  /tmp/ccmSgHyQ.s 			page 7
 
 
  319:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     /* Disable all IRQs */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  373:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   *            @arg @ref HAL_FLASH_ERROR_NOTZERO FLASH Write operation is done in a not-erased regi
  374:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   * @retval HAL Status
  375:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   */
-ARM GAS  /tmp/cccE3NEC.s 			page 8
+ARM GAS  /tmp/ccmSgHyQ.s 			page 8
 
 
  376:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_GetError(uint32_t * Error)
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  405:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     flags |= FLASH_FLAG_WRPERR;
   51              		.loc 1 405 5 is_stmt 1 view .LVU7
   52              	.LVL1:
-ARM GAS  /tmp/cccE3NEC.s 			page 9
+ARM GAS  /tmp/ccmSgHyQ.s 			page 9
 
 
   53              		.loc 1 405 11 is_stmt 0 view .LVU8
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
   97 004c 1343     		orrs	r3, r2
   98              	.LVL4:
   99              	.L4:
-ARM GAS  /tmp/cccE3NEC.s 			page 10
+ARM GAS  /tmp/ccmSgHyQ.s 			page 10
 
 
  416:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  135              		.loc 1 434 5 is_stmt 1 view .LVU35
  136              		.loc 1 434 11 is_stmt 0 view .LVU36
  137 0078 8022     		movs	r2, #128
-ARM GAS  /tmp/cccE3NEC.s 			page 11
+ARM GAS  /tmp/ccmSgHyQ.s 			page 11
 
 
  138 007a 9201     		lsls	r2, r2, #6
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  445:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
  446:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
  447:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   /* Clear FLASH error pending bits */
-ARM GAS  /tmp/cccE3NEC.s 			page 12
+ARM GAS  /tmp/ccmSgHyQ.s 			page 12
 
 
  448:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   __HAL_FLASH_CLEAR_FLAG(flags);
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  221 00be 1A4B     		ldr	r3, .L20
  222 00c0 9B69     		ldr	r3, [r3, #24]
  223              		.loc 1 464 10 view .LVU59
-ARM GAS  /tmp/cccE3NEC.s 			page 13
+ARM GAS  /tmp/ccmSgHyQ.s 			page 13
 
 
  224 00c2 DB07     		lsls	r3, r3, #31
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  260 00e8 0F4B     		ldr	r3, .L20
  261 00ea 9B69     		ldr	r3, [r3, #24]
  481:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****       __HAL_FLASH_GET_FLAG(FLASH_FLAG_PGAERR)     || 
-ARM GAS  /tmp/cccE3NEC.s 			page 14
+ARM GAS  /tmp/ccmSgHyQ.s 			page 14
 
 
  262              		.loc 1 481 51 discriminator 1 view .LVU74
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  499:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     FLASHRAM_SetErrorCode();
  500:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     return HAL_ERROR;
  501:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   }
-ARM GAS  /tmp/cccE3NEC.s 			page 15
+ARM GAS  /tmp/ccmSgHyQ.s 			page 15
 
 
  502:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  340              		.loc 1 118 3 view .LVU94
  118:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
  341              		.loc 1 118 3 view .LVU95
-ARM GAS  /tmp/cccE3NEC.s 			page 16
+ARM GAS  /tmp/ccmSgHyQ.s 			page 16
 
 
  342 012c 054B     		ldr	r3, .L23
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  389 0158 9A60     		str	r2, [r3, #8]
  131:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
  390              		.loc 1 131 3 view .LVU105
-ARM GAS  /tmp/cccE3NEC.s 			page 17
+ARM GAS  /tmp/ccmSgHyQ.s 			page 17
 
 
  391 015a 1A68     		ldr	r2, [r3]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  438              		.loc 1 311 12 is_stmt 0 view .LVU114
  439 017a 1248     		ldr	r0, .L33
  440              	.LVL18:
-ARM GAS  /tmp/cccE3NEC.s 			page 18
+ARM GAS  /tmp/ccmSgHyQ.s 			page 18
 
 
  311:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
   26:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
   27:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
   28:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-ARM GAS  /tmp/cccE3NEC.s 			page 19
+ARM GAS  /tmp/ccmSgHyQ.s 			page 19
 
 
   29:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****   HAL_StatusTypeDef status = HAL_OK;
  475              		.loc 1 307 12 is_stmt 0 view .LVU123
  476 019a 0023     		movs	r3, #0
-ARM GAS  /tmp/cccE3NEC.s 			page 20
+ARM GAS  /tmp/ccmSgHyQ.s 			page 20
 
 
  477              	.LVL20:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  517              	.LVL25:
  338:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c ****     CLEAR_BIT(FLASH->PECR, FLASH_PECR_FPRG);
  518              		.loc 1 338 5 is_stmt 1 view .LVU138
-ARM GAS  /tmp/cccE3NEC.s 			page 21
+ARM GAS  /tmp/ccmSgHyQ.s 			page 21
 
 
  519 01b0 054B     		ldr	r3, .L33+4
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  567 01d4 0360     		str	r3, [r0]
  379:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** }
  568              		.loc 1 379 3 is_stmt 1 view .LVU147
-ARM GAS  /tmp/cccE3NEC.s 			page 22
+ARM GAS  /tmp/ccmSgHyQ.s 			page 22
 
 
  380:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c **** 
@@ -1284,29 +1284,29 @@ ARM GAS  /tmp/cccE3NEC.s 			page 1
  588              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  589              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  590              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
-ARM GAS  /tmp/cccE3NEC.s 			page 23
+ARM GAS  /tmp/ccmSgHyQ.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l0xx_hal_flash_ramfunc.c
-     /tmp/cccE3NEC.s:16     .RamFunc:0000000000000000 $t
-     /tmp/cccE3NEC.s:23     .RamFunc:0000000000000000 FLASHRAM_SetErrorCode
-     /tmp/cccE3NEC.s:193    .RamFunc:00000000000000b4 $d
-     /tmp/cccE3NEC.s:198    .RamFunc:00000000000000bc $t
-     /tmp/cccE3NEC.s:204    .RamFunc:00000000000000bc FLASHRAM_WaitForLastOperation
-     /tmp/cccE3NEC.s:322    .RamFunc:0000000000000128 $d
-     /tmp/cccE3NEC.s:326    .RamFunc:000000000000012c $t
-     /tmp/cccE3NEC.s:333    .RamFunc:000000000000012c HAL_FLASHEx_EnableRunPowerDown
-     /tmp/cccE3NEC.s:362    .RamFunc:0000000000000144 $d
-     /tmp/cccE3NEC.s:368    .RamFunc:0000000000000150 $t
-     /tmp/cccE3NEC.s:375    .RamFunc:0000000000000150 HAL_FLASHEx_DisableRunPowerDown
-     /tmp/cccE3NEC.s:404    .RamFunc:0000000000000168 $d
-     /tmp/cccE3NEC.s:410    .RamFunc:0000000000000174 $t
-     /tmp/cccE3NEC.s:417    .RamFunc:0000000000000174 HAL_FLASHEx_HalfPageProgram
-     /tmp/cccE3NEC.s:541    .RamFunc:00000000000001c4 $d
-     /tmp/cccE3NEC.s:547    .RamFunc:00000000000001d0 $t
-     /tmp/cccE3NEC.s:554    .RamFunc:00000000000001d0 HAL_FLASHEx_GetError
-     /tmp/cccE3NEC.s:578    .RamFunc:00000000000001dc $d
+     /tmp/ccmSgHyQ.s:16     .RamFunc:0000000000000000 $t
+     /tmp/ccmSgHyQ.s:23     .RamFunc:0000000000000000 FLASHRAM_SetErrorCode
+     /tmp/ccmSgHyQ.s:193    .RamFunc:00000000000000b4 $d
+     /tmp/ccmSgHyQ.s:198    .RamFunc:00000000000000bc $t
+     /tmp/ccmSgHyQ.s:204    .RamFunc:00000000000000bc FLASHRAM_WaitForLastOperation
+     /tmp/ccmSgHyQ.s:322    .RamFunc:0000000000000128 $d
+     /tmp/ccmSgHyQ.s:326    .RamFunc:000000000000012c $t
+     /tmp/ccmSgHyQ.s:333    .RamFunc:000000000000012c HAL_FLASHEx_EnableRunPowerDown
+     /tmp/ccmSgHyQ.s:362    .RamFunc:0000000000000144 $d
+     /tmp/ccmSgHyQ.s:368    .RamFunc:0000000000000150 $t
+     /tmp/ccmSgHyQ.s:375    .RamFunc:0000000000000150 HAL_FLASHEx_DisableRunPowerDown
+     /tmp/ccmSgHyQ.s:404    .RamFunc:0000000000000168 $d
+     /tmp/ccmSgHyQ.s:410    .RamFunc:0000000000000174 $t
+     /tmp/ccmSgHyQ.s:417    .RamFunc:0000000000000174 HAL_FLASHEx_HalfPageProgram
+     /tmp/ccmSgHyQ.s:541    .RamFunc:00000000000001c4 $d
+     /tmp/ccmSgHyQ.s:547    .RamFunc:00000000000001d0 $t
+     /tmp/ccmSgHyQ.s:554    .RamFunc:00000000000001d0 HAL_FLASHEx_GetError
+     /tmp/ccmSgHyQ.s:578    .RamFunc:00000000000001dc $d
 
 UNDEFINED SYMBOLS
 pFlash

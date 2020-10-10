@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc3vukm8.s 			page 1
+ARM GAS  /tmp/ccBO1c0k.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
   30:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** /** @addtogroup STM32L0xx_HAL_Driver
   31:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   * @{
   32:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   */
-ARM GAS  /tmp/cc3vukm8.s 			page 2
+ARM GAS  /tmp/ccBO1c0k.s 			page 2
 
 
   33:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
   82:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   __HAL_RCC_PWR_FORCE_RESET();
   32              		.loc 1 82 3 view .LVU1
   33 0000 054B     		ldr	r3, .L2
-ARM GAS  /tmp/cc3vukm8.s 			page 3
+ARM GAS  /tmp/ccBO1c0k.s 			page 3
 
 
   34 0002 996A     		ldr	r1, [r3, #40]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  108:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****         (+) Enable access to RTC domain using the HAL_PWR_EnableBkUpAccess() function.
  109:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  110:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     *** PVD configuration ***
-ARM GAS  /tmp/cc3vukm8.s 			page 4
+ARM GAS  /tmp/ccBO1c0k.s 			page 4
 
 
  111:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     =========================
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  165:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   
  166:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****    *** Low power run mode ***
  167:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****    =========================
-ARM GAS  /tmp/cc3vukm8.s 			page 5
+ARM GAS  /tmp/ccBO1c0k.s 			page 5
 
 
  168:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     [..]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  222:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****       To get the lowest consumption in Stop mode, the internal Flash memory also enters low
  223:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****       power mode. When the Flash memory is in power-down mode, an additional startup delay is
  224:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****       incurred when waking up from Stop mode.
-ARM GAS  /tmp/cc3vukm8.s 			page 6
+ARM GAS  /tmp/ccBO1c0k.s 			page 6
 
 
  225:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****       To minimize the consumption In Stop mode, VREFINT, the BOR, PVD, and temperature
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  279:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****                    or Event modes) using the EXTI_Init() function.
  280:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****              (+++) Enable the RTC Tamper or time stamp Interrupt using the RTC_ITConfig() 
  281:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****                    function.
-ARM GAS  /tmp/cc3vukm8.s 			page 7
+ARM GAS  /tmp/ccBO1c0k.s 			page 7
 
 
  282:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****              (+++) Configure the RTC to detect the tamper or time stamp event using the
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
   70              		.loc 1 330 3 view .LVU5
   71 0000 034A     		ldr	r2, .L5
   72 0002 1168     		ldr	r1, [r2]
-ARM GAS  /tmp/cc3vukm8.s 			page 8
+ARM GAS  /tmp/ccBO1c0k.s 			page 8
 
 
   73 0004 8023     		movs	r3, #128
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  115 0010 FFFEFFFF 		.word	-257
  116              		.cfi_endproc
  117              	.LFE36:
-ARM GAS  /tmp/cc3vukm8.s 			page 9
+ARM GAS  /tmp/ccBO1c0k.s 			page 9
 
 
  119              		.section	.text.HAL_PWR_ConfigPVD,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  151              		.loc 1 367 3 view .LVU15
  152 0018 1968     		ldr	r1, [r3]
  153 001a 1140     		ands	r1, r2
-ARM GAS  /tmp/cc3vukm8.s 			page 10
+ARM GAS  /tmp/ccBO1c0k.s 			page 10
 
 
  154 001c 1960     		str	r1, [r3]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  191 004e 4368     		ldr	r3, [r0, #4]
  192 0050 DB07     		lsls	r3, r3, #31
  193 0052 05D5     		bpl	.L13
-ARM GAS  /tmp/cc3vukm8.s 			page 11
+ARM GAS  /tmp/ccBO1c0k.s 			page 11
 
 
  385:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   {
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  397:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   * @retval None
  398:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   */
  399:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** void HAL_PWR_EnablePVD(void)
-ARM GAS  /tmp/cc3vukm8.s 			page 12
+ARM GAS  /tmp/ccBO1c0k.s 			page 12
 
 
  400:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** {
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  280              		.loc 1 413 1 is_stmt 0 view .LVU37
  281              		@ sp needed
  282 000a 7047     		bx	lr
-ARM GAS  /tmp/cc3vukm8.s 			page 13
+ARM GAS  /tmp/ccBO1c0k.s 			page 13
 
 
  283              	.L22:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  322              		.section	.text.HAL_PWR_DisableWakeUpPin,"ax",%progbits
  323              		.align	1
  324              		.global	HAL_PWR_DisableWakeUpPin
-ARM GAS  /tmp/cc3vukm8.s 			page 14
+ARM GAS  /tmp/ccBO1c0k.s 			page 14
 
 
  325              		.syntax unified
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  449:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  450:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** /**
  451:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   * @brief Enters Sleep mode.
-ARM GAS  /tmp/cc3vukm8.s 			page 15
+ARM GAS  /tmp/ccBO1c0k.s 			page 15
 
 
  452:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   * @note In Sleep mode, all I/O pins keep the same state as in Run mode.
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  480:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  481:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   /* Store the new value */
  482:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   PWR->CR = tmpreg;
-ARM GAS  /tmp/cc3vukm8.s 			page 16
+ARM GAS  /tmp/ccBO1c0k.s 			page 16
 
 
  391              		.loc 1 482 3 view .LVU55
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
   19:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****      specific prior written permission.
   20:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    *
   21:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-ARM GAS  /tmp/cc3vukm8.s 			page 17
+ARM GAS  /tmp/ccBO1c0k.s 			page 17
 
 
   22:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
   76:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
   77:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
   78:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Control Register value
-ARM GAS  /tmp/cc3vukm8.s 			page 18
+ARM GAS  /tmp/ccBO1c0k.s 			page 18
 
 
   79:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  133:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  134:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_xPSR(void)
  135:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/cc3vukm8.s 			page 19
+ARM GAS  /tmp/ccBO1c0k.s 			page 19
 
 
  136:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  190:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
  191:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** }
  192:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/cc3vukm8.s 			page 20
+ARM GAS  /tmp/ccBO1c0k.s 			page 20
 
 
  193:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  247:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  248:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_BASEPRI(void)
  249:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/cc3vukm8.s 			page 21
+ARM GAS  /tmp/ccBO1c0k.s 			page 21
 
 
  250:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  304:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #endif /* (__CORTEX_M >= 0x03U) */
  305:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
  306:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/cc3vukm8.s 			page 22
+ARM GAS  /tmp/ccBO1c0k.s 			page 22
 
 
  307:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #if       (__CORTEX_M == 0x04U) || (__CORTEX_M == 0x07U)
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  361:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
  362:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
  363:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
-ARM GAS  /tmp/cc3vukm8.s 			page 23
+ARM GAS  /tmp/ccBO1c0k.s 			page 23
 
 
  364:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  497:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     __WFE();
  424              		.loc 1 497 5 view .LVU65
  425              	.LBB24:
-ARM GAS  /tmp/cc3vukm8.s 			page 24
+ARM GAS  /tmp/ccBO1c0k.s 			page 24
 
 
  426              	.LBI24:
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  467              		.loc 1 504 1 is_stmt 0 view .LVU74
  468              		@ sp needed
  469              		.loc 1 504 1 view .LVU75
-ARM GAS  /tmp/cc3vukm8.s 			page 25
+ARM GAS  /tmp/ccBO1c0k.s 			page 25
 
 
  470 0024 10BD     		pop	{r4, pc}
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  520:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   * @param Regulator: Specifies the regulator state in Stop mode.
  521:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   *          This parameter can be one of the following values:
  522:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   *            @arg PWR_MAINREGULATOR_ON: Stop mode with regulator ON
-ARM GAS  /tmp/cc3vukm8.s 			page 26
+ARM GAS  /tmp/ccBO1c0k.s 			page 26
 
 
  523:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   *            @arg PWR_LOWPOWERREGULATOR_ON: Stop mode with low power regulator ON
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  535 000c 1360     		str	r3, [r2]
  549:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  550:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   /* Set SLEEPDEEP bit of Cortex System Control Register */
-ARM GAS  /tmp/cc3vukm8.s 			page 27
+ARM GAS  /tmp/ccBO1c0k.s 			page 27
 
 
  551:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****   SET_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  574              	@ 0 "" 2
  575              		.thumb
  576              		.syntax unified
-ARM GAS  /tmp/cc3vukm8.s 			page 28
+ARM GAS  /tmp/ccBO1c0k.s 			page 28
 
 
  577              	.LBE35:
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  618              		.loc 2 386 1 is_stmt 0 view .LVU112
  619              		.thumb
  620              		.syntax unified
-ARM GAS  /tmp/cc3vukm8.s 			page 29
+ARM GAS  /tmp/ccBO1c0k.s 			page 29
 
 
  621 0030 F7E7     		b	.L37
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  656 000e 0231     		adds	r1, r1, #2
  657 0010 0B43     		orrs	r3, r1
  658 0012 1361     		str	r3, [r2, #16]
-ARM GAS  /tmp/cc3vukm8.s 			page 30
+ARM GAS  /tmp/ccBO1c0k.s 			page 30
 
 
  592:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  694              		.loc 1 610 1 is_stmt 1 view -0
  695              		.cfi_startproc
  696              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc3vukm8.s 			page 31
+ARM GAS  /tmp/ccBO1c0k.s 			page 31
 
 
  697              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  737              		@ sp needed
  738 000a 7047     		bx	lr
  739              	.L49:
-ARM GAS  /tmp/cc3vukm8.s 			page 32
+ARM GAS  /tmp/ccBO1c0k.s 			page 32
 
 
  740              		.align	2
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  785              	HAL_PWR_DisableSEVOnPend:
  786              	.LFB48:
  640:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
-ARM GAS  /tmp/cc3vukm8.s 			page 33
+ARM GAS  /tmp/ccBO1c0k.s 			page 33
 
 
  641:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  666:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     HAL_PWR_PVDCallback();
  667:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  668:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     /* Clear PWR Exti pending bit */
-ARM GAS  /tmp/cc3vukm8.s 			page 34
+ARM GAS  /tmp/ccBO1c0k.s 			page 34
 
 
  669:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c ****     __HAL_PWR_PVD_EXTI_CLEAR_FLAG();
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  671:/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c **** 
  856              		.loc 1 671 1 view .LVU138
  857              		@ sp needed
-ARM GAS  /tmp/cc3vukm8.s 			page 35
+ARM GAS  /tmp/ccBO1c0k.s 			page 35
 
 
  858 000a 10BD     		pop	{r4, pc}
@@ -2072,60 +2072,60 @@ ARM GAS  /tmp/cc3vukm8.s 			page 1
  884              		.file 8 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  885              		.file 9 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
  886              		.file 10 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0x
-ARM GAS  /tmp/cc3vukm8.s 			page 36
+ARM GAS  /tmp/ccBO1c0k.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l0xx_hal_pwr.c
-     /tmp/cc3vukm8.s:16     .text.HAL_PWR_DeInit:0000000000000000 $t
-     /tmp/cc3vukm8.s:24     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
-     /tmp/cc3vukm8.s:50     .text.HAL_PWR_DeInit:0000000000000018 $d
-     /tmp/cc3vukm8.s:56     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
-     /tmp/cc3vukm8.s:63     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
-     /tmp/cc3vukm8.s:83     .text.HAL_PWR_EnableBkUpAccess:0000000000000010 $d
-     /tmp/cc3vukm8.s:88     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
-     /tmp/cc3vukm8.s:95     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
-     /tmp/cc3vukm8.s:114    .text.HAL_PWR_DisableBkUpAccess:000000000000000c $d
-     /tmp/cc3vukm8.s:120    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
-     /tmp/cc3vukm8.s:127    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
-     /tmp/cc3vukm8.s:222    .text.HAL_PWR_ConfigPVD:0000000000000074 $d
-     /tmp/cc3vukm8.s:229    .text.HAL_PWR_EnablePVD:0000000000000000 $t
-     /tmp/cc3vukm8.s:236    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
-     /tmp/cc3vukm8.s:255    .text.HAL_PWR_EnablePVD:000000000000000c $d
-     /tmp/cc3vukm8.s:260    .text.HAL_PWR_DisablePVD:0000000000000000 $t
-     /tmp/cc3vukm8.s:267    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
-     /tmp/cc3vukm8.s:286    .text.HAL_PWR_DisablePVD:000000000000000c $d
-     /tmp/cc3vukm8.s:291    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
-     /tmp/cc3vukm8.s:298    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
-     /tmp/cc3vukm8.s:318    .text.HAL_PWR_EnableWakeUpPin:000000000000000c $d
-     /tmp/cc3vukm8.s:323    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
-     /tmp/cc3vukm8.s:330    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
-     /tmp/cc3vukm8.s:350    .text.HAL_PWR_DisableWakeUpPin:000000000000000c $d
-     /tmp/cc3vukm8.s:355    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
-     /tmp/cc3vukm8.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
-     /tmp/cc3vukm8.s:489    .text.HAL_PWR_EnterSLEEPMode:000000000000002c $d
-     /tmp/cc3vukm8.s:497    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
-     /tmp/cc3vukm8.s:504    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
-     /tmp/cc3vukm8.s:625    .text.HAL_PWR_EnterSTOPMode:0000000000000034 $d
-     /tmp/cc3vukm8.s:633    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
-     /tmp/cc3vukm8.s:640    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
-     /tmp/cc3vukm8.s:679    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
-     /tmp/cc3vukm8.s:685    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
-     /tmp/cc3vukm8.s:692    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
-     /tmp/cc3vukm8.s:711    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
-     /tmp/cc3vukm8.s:716    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
-     /tmp/cc3vukm8.s:723    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
-     /tmp/cc3vukm8.s:742    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
-     /tmp/cc3vukm8.s:747    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
-     /tmp/cc3vukm8.s:754    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
-     /tmp/cc3vukm8.s:773    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
-     /tmp/cc3vukm8.s:778    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
-     /tmp/cc3vukm8.s:785    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
-     /tmp/cc3vukm8.s:804    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
-     /tmp/cc3vukm8.s:809    .text.HAL_PWR_PVDCallback:0000000000000000 $t
-     /tmp/cc3vukm8.s:816    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
-     /tmp/cc3vukm8.s:830    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
-     /tmp/cc3vukm8.s:837    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
-     /tmp/cc3vukm8.s:873    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
+     /tmp/ccBO1c0k.s:16     .text.HAL_PWR_DeInit:0000000000000000 $t
+     /tmp/ccBO1c0k.s:24     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
+     /tmp/ccBO1c0k.s:50     .text.HAL_PWR_DeInit:0000000000000018 $d
+     /tmp/ccBO1c0k.s:56     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
+     /tmp/ccBO1c0k.s:63     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
+     /tmp/ccBO1c0k.s:83     .text.HAL_PWR_EnableBkUpAccess:0000000000000010 $d
+     /tmp/ccBO1c0k.s:88     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
+     /tmp/ccBO1c0k.s:95     .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
+     /tmp/ccBO1c0k.s:114    .text.HAL_PWR_DisableBkUpAccess:000000000000000c $d
+     /tmp/ccBO1c0k.s:120    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+     /tmp/ccBO1c0k.s:127    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+     /tmp/ccBO1c0k.s:222    .text.HAL_PWR_ConfigPVD:0000000000000074 $d
+     /tmp/ccBO1c0k.s:229    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+     /tmp/ccBO1c0k.s:236    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+     /tmp/ccBO1c0k.s:255    .text.HAL_PWR_EnablePVD:000000000000000c $d
+     /tmp/ccBO1c0k.s:260    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+     /tmp/ccBO1c0k.s:267    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+     /tmp/ccBO1c0k.s:286    .text.HAL_PWR_DisablePVD:000000000000000c $d
+     /tmp/ccBO1c0k.s:291    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
+     /tmp/ccBO1c0k.s:298    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
+     /tmp/ccBO1c0k.s:318    .text.HAL_PWR_EnableWakeUpPin:000000000000000c $d
+     /tmp/ccBO1c0k.s:323    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
+     /tmp/ccBO1c0k.s:330    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
+     /tmp/ccBO1c0k.s:350    .text.HAL_PWR_DisableWakeUpPin:000000000000000c $d
+     /tmp/ccBO1c0k.s:355    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
+     /tmp/ccBO1c0k.s:362    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
+     /tmp/ccBO1c0k.s:489    .text.HAL_PWR_EnterSLEEPMode:000000000000002c $d
+     /tmp/ccBO1c0k.s:497    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
+     /tmp/ccBO1c0k.s:504    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
+     /tmp/ccBO1c0k.s:625    .text.HAL_PWR_EnterSTOPMode:0000000000000034 $d
+     /tmp/ccBO1c0k.s:633    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
+     /tmp/ccBO1c0k.s:640    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
+     /tmp/ccBO1c0k.s:679    .text.HAL_PWR_EnterSTANDBYMode:0000000000000018 $d
+     /tmp/ccBO1c0k.s:685    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
+     /tmp/ccBO1c0k.s:692    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
+     /tmp/ccBO1c0k.s:711    .text.HAL_PWR_EnableSleepOnExit:000000000000000c $d
+     /tmp/ccBO1c0k.s:716    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
+     /tmp/ccBO1c0k.s:723    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
+     /tmp/ccBO1c0k.s:742    .text.HAL_PWR_DisableSleepOnExit:000000000000000c $d
+     /tmp/ccBO1c0k.s:747    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
+     /tmp/ccBO1c0k.s:754    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
+     /tmp/ccBO1c0k.s:773    .text.HAL_PWR_EnableSEVOnPend:000000000000000c $d
+     /tmp/ccBO1c0k.s:778    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
+     /tmp/ccBO1c0k.s:785    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
+     /tmp/ccBO1c0k.s:804    .text.HAL_PWR_DisableSEVOnPend:000000000000000c $d
+     /tmp/ccBO1c0k.s:809    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+     /tmp/ccBO1c0k.s:816    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+     /tmp/ccBO1c0k.s:830    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
+     /tmp/ccBO1c0k.s:837    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
+     /tmp/ccBO1c0k.s:873    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-16783902072118202
+16787133477945217
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -45814,6 +45814,20 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+ESP32 WROVER-IB
+ESP32-WROVER-IB
+
+
+0
+39
+39
+ESP32-WROVER-I
+XCVR_ESP32-WROVER-I
+
+
+0
+39
+39
 Fiducial
 Fiducial_0.5mm_Mask1.5mm
 Circular Fiducial, 0.5mm bare copper, 1.5mm soldermask opening
