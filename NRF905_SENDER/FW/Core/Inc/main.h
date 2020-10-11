@@ -58,20 +58,22 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define PWR_Pin GPIO_PIN_0
-#define PWR_GPIO_Port GPIOA
-#define CE_Pin GPIO_PIN_1
+#define PWR_Pin GPIO_PIN_14
+#define PWR_GPIO_Port GPIOC
+#define CE_Pin GPIO_PIN_10
 #define CE_GPIO_Port GPIOA
-#define TXE_Pin GPIO_PIN_2
-#define TXE_GPIO_Port GPIOA
-#define CS_BME_Pin GPIO_PIN_3
+#define TXE_Pin GPIO_PIN_15
+#define TXE_GPIO_Port GPIOC
+#define CS_BME_Pin GPIO_PIN_9
 #define CS_BME_GPIO_Port GPIOA
-#define CS_NRF_Pin GPIO_PIN_4
-#define CS_NRF_GPIO_Port GPIOA
-#define DR_Pin GPIO_PIN_8
+#define CS_NRF_Pin GPIO_PIN_1
+#define CS_NRF_GPIO_Port GPIOB
+#define DR_Pin GPIO_PIN_4
 #define DR_GPIO_Port GPIOA
-#define LD3_Pin GPIO_PIN_3
-#define LD3_GPIO_Port GPIOB
+#define SP_EN_Pin  GPIO_PIN_1
+#define SP_EN_Port  GPIOA
+//#define LD3_Pin GPIO_PIN_3
+//#define LD3_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 typedef struct {
 //char Name[10];

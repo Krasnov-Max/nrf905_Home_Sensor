@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccUjG03Q.s 			page 1
+ARM GAS  /tmp/ccP7hiLw.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
   30:Core/Src/system_stm32l0xx.c ****   * License. You may obtain a copy of the License at:
   31:Core/Src/system_stm32l0xx.c ****   *                        opensource.org/licenses/BSD-3-Clause
   32:Core/Src/system_stm32l0xx.c ****   *
-ARM GAS  /tmp/ccUjG03Q.s 			page 2
+ARM GAS  /tmp/ccP7hiLw.s 			page 2
 
 
   33:Core/Src/system_stm32l0xx.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
   87:Core/Src/system_stm32l0xx.c ****   * @}
   88:Core/Src/system_stm32l0xx.c ****   */
   89:Core/Src/system_stm32l0xx.c **** 
-ARM GAS  /tmp/ccUjG03Q.s 			page 3
+ARM GAS  /tmp/ccP7hiLw.s 			page 3
 
 
   90:Core/Src/system_stm32l0xx.c **** /** @addtogroup STM32L0xx_System_Private_Macros
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
   32              		.loc 1 138 3 view .LVU1
   33              		.loc 1 138 11 is_stmt 0 view .LVU2
   34 0000 104B     		ldr	r3, .L2
-ARM GAS  /tmp/ccUjG03Q.s 			page 4
+ARM GAS  /tmp/ccP7hiLw.s 			page 4
 
 
   35 0002 1968     		ldr	r1, [r3]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
   71              		.loc 1 156 13 is_stmt 0 view .LVU14
   72 0034 0022     		movs	r2, #0
   73 0036 1A61     		str	r2, [r3, #16]
-ARM GAS  /tmp/ccUjG03Q.s 			page 5
+ARM GAS  /tmp/ccP7hiLw.s 			page 5
 
 
  157:Core/Src/system_stm32l0xx.c **** 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  181:Core/Src/system_stm32l0xx.c ****   *             value as defined by the MSI range.
  182:Core/Src/system_stm32l0xx.c ****   *
  183:Core/Src/system_stm32l0xx.c ****   *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
-ARM GAS  /tmp/ccUjG03Q.s 			page 6
+ARM GAS  /tmp/ccP7hiLw.s 			page 6
 
 
  184:Core/Src/system_stm32l0xx.c ****   *
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  212:Core/Src/system_stm32l0xx.c ****   {
  213:Core/Src/system_stm32l0xx.c ****     case 0x00U:  /* MSI used as system clock */
  214:Core/Src/system_stm32l0xx.c ****       msirange = (RCC->ICSCR & RCC_ICSCR_MSIRANGE) >> RCC_ICSCR_MSIRANGE_Pos;
-ARM GAS  /tmp/ccUjG03Q.s 			page 7
+ARM GAS  /tmp/ccP7hiLw.s 			page 7
 
 
  215:Core/Src/system_stm32l0xx.c ****       SystemCoreClock = (32768U * (1U << (msirange + 1U)));
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  165              	.LVL9:
  236:Core/Src/system_stm32l0xx.c **** 
  237:Core/Src/system_stm32l0xx.c ****       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
-ARM GAS  /tmp/ccUjG03Q.s 			page 8
+ARM GAS  /tmp/ccP7hiLw.s 			page 8
 
 
  166              		.loc 1 237 7 is_stmt 1 view .LVU38
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  214:Core/Src/system_stm32l0xx.c ****       SystemCoreClock = (32768U * (1U << (msirange + 1U)));
  209              		.loc 1 214 16 view .LVU53
  210 005a 0723     		movs	r3, #7
-ARM GAS  /tmp/ccUjG03Q.s 			page 9
+ARM GAS  /tmp/ccP7hiLw.s 			page 9
 
 
  211 005c 1340     		ands	r3, r2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  242              		.loc 1 262 19 is_stmt 0 view .LVU64
  243 007a 184A     		ldr	r2, .L13+8
  244 007c 1168     		ldr	r1, [r2]
-ARM GAS  /tmp/ccUjG03Q.s 			page 10
+ARM GAS  /tmp/ccP7hiLw.s 			page 10
 
 
  245 007e D940     		lsrs	r1, r1, r3
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  285              		.loc 1 228 23 view .LVU78
  286 009e 134A     		ldr	r2, .L13+24
  287              	.LVL28:
-ARM GAS  /tmp/ccUjG03Q.s 			page 11
+ARM GAS  /tmp/ccP7hiLw.s 			page 11
 
 
  228:Core/Src/system_stm32l0xx.c ****       break;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  332 00d8 00000000 		.word	.LANCHOR1
  333 00dc 00000000 		.word	.LANCHOR0
  334 00e0 00000000 		.word	.LANCHOR2
-ARM GAS  /tmp/ccUjG03Q.s 			page 12
+ARM GAS  /tmp/ccP7hiLw.s 			page 12
 
 
  335 00e4 00093D00 		.word	4000000
@@ -698,31 +698,30 @@ ARM GAS  /tmp/ccUjG03Q.s 			page 1
  372      30
  373              		.text
  374              	.Letext0:
- 375              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
- 376              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
- 377              		.file 4 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include/core_cm0plu
- 378              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
- 379              		.file 6 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
- 380              		.file 7 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
-ARM GAS  /tmp/ccUjG03Q.s 			page 13
+ 375              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 376              		.file 3 "Drivers/CMSIS/Include/core_cm0plus.h"
+ 377              		.file 4 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
+ 378              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l031xx.h"
+ 379              		.file 6 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
+ARM GAS  /tmp/ccP7hiLw.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32l0xx.c
-     /tmp/ccUjG03Q.s:16     .text.SystemInit:0000000000000000 $t
-     /tmp/ccUjG03Q.s:24     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/ccUjG03Q.s:86     .text.SystemInit:0000000000000044 $d
-     /tmp/ccUjG03Q.s:97     .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/ccUjG03Q.s:104    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/ccUjG03Q.s:331    .text.SystemCoreClockUpdate:00000000000000d4 $d
-     /tmp/ccUjG03Q.s:371    .rodata.PLLMulTable:0000000000000000 PLLMulTable
-     /tmp/ccUjG03Q.s:364    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-     /tmp/ccUjG03Q.s:357    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-     /tmp/ccUjG03Q.s:350    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/ccUjG03Q.s:346    .data.SystemCoreClock:0000000000000000 $d
-     /tmp/ccUjG03Q.s:353    .rodata.AHBPrescTable:0000000000000000 $d
-     /tmp/ccUjG03Q.s:361    .rodata.APBPrescTable:0000000000000000 $d
-     /tmp/ccUjG03Q.s:367    .rodata.PLLMulTable:0000000000000000 $d
+     /tmp/ccP7hiLw.s:16     .text.SystemInit:0000000000000000 $t
+     /tmp/ccP7hiLw.s:24     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccP7hiLw.s:86     .text.SystemInit:0000000000000044 $d
+     /tmp/ccP7hiLw.s:97     .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccP7hiLw.s:104    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccP7hiLw.s:331    .text.SystemCoreClockUpdate:00000000000000d4 $d
+     /tmp/ccP7hiLw.s:371    .rodata.PLLMulTable:0000000000000000 PLLMulTable
+     /tmp/ccP7hiLw.s:364    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+     /tmp/ccP7hiLw.s:357    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+     /tmp/ccP7hiLw.s:350    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccP7hiLw.s:346    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccP7hiLw.s:353    .rodata.AHBPrescTable:0000000000000000 $d
+     /tmp/ccP7hiLw.s:361    .rodata.APBPrescTable:0000000000000000 $d
+     /tmp/ccP7hiLw.s:367    .rodata.PLLMulTable:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

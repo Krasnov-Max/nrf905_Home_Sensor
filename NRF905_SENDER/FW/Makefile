@@ -43,27 +43,27 @@ Core/Src/spi.c \
 Core/Src/nrf905.c \
 Core/Src/stm32l0xx_it.c \
 Core/Src/stm32l0xx_hal_msp.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_spi.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c \
-/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_spi.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c \
 Core/Src/system_stm32l0xx.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32l011xx.s
+startup_stm32l031xx.s
 
 
 #######################################
@@ -108,7 +108,7 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
--DSTM32L011xx
+-DSTM32L031xx
 
 
 # AS includes
@@ -117,10 +117,10 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -ICore/Inc \
--I/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc \
--I/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy \
--I/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx/Include \
--I/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Include
+-IDrivers/STM32L0xx_HAL_Driver/Inc \
+-ISTM32L0xx_HAL_Driver/Inc/Legacy \
+-IDrivers/CMSIS/Device/ST/STM32L0xx/Include \
+-IDrivers/CMSIS/Include
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
@@ -140,7 +140,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32L011K4Tx_FLASH.ld
+LDSCRIPT = STM32L031F6Px_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 

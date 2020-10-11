@@ -105,6 +105,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 HAL_GPIO_WritePin(CS_BME_GPIO_Port, CS_BME_Pin, GPIO_PIN_SET);
 HAL_GPIO_WritePin(CS_NRF_GPIO_Port, CS_NRF_Pin, GPIO_PIN_SET);
+HAL_GPIO_WritePin(GPIOA, SP_EN_Pin, GPIO_PIN_SET);
 NRF905_POWER_ON();
 HAL_Delay(2);
 NRF905_Config_t.AUTO_RETRAN = AUTO_RET_DISABLE ;
@@ -138,7 +139,7 @@ if (NRF905_INIT(&NRF905_Config_t ))
   {
     /* USER CODE END WHILE */
     
-    HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
+   // HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
     if (initBME280(&dev_bme) == 1)
 	   { 
 		  GetCalibData_BME280(&dev_bme);
@@ -153,7 +154,7 @@ if (NRF905_INIT(&NRF905_Config_t ))
 	   P.press = dev_bme.data.pressure;
 	   P.temp = dev_bme.data.temperature;
 	   P.count = j;
-     HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
+     //HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
      WriteDataToSend(0xE7E7E7E7, &P, sizeof(P));
      StartSend();
      j++;

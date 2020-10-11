@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDhEwf1.s 			page 1
+ARM GAS  /tmp/ccNro1eN.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
   36              		.cfi_offset 14, -4
   21:Core/Src/bme280.c ****     /* Variables to store the sensor data */
   22:Core/Src/bme280.c ****     uint32_t data_xlsb;
-ARM GAS  /tmp/ccDhEwf1.s 			page 2
+ARM GAS  /tmp/ccNro1eN.s 			page 2
 
 
   37              		.loc 1 22 5 is_stmt 1 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
   79              	.LVL7:
   35:Core/Src/bme280.c ****     data_xlsb = (uint32_t)reg_data[5] >> 4;
   80              		.loc 1 35 5 is_stmt 1 view .LVU25
-ARM GAS  /tmp/ccDhEwf1.s 			page 3
+ARM GAS  /tmp/ccNro1eN.s 			page 3
 
 
   81              		.loc 1 35 35 is_stmt 0 view .LVU26
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
   44:Core/Src/bme280.c **** int8_t bme280_compensate_data(struct bme280_dev *dev)
   45:Core/Src/bme280.c **** {
   46:Core/Src/bme280.c ****     int8_t rslt = 1;
-ARM GAS  /tmp/ccDhEwf1.s 			page 4
+ARM GAS  /tmp/ccNro1eN.s 			page 4
 
 
   47:Core/Src/bme280.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  161 000e 415F     		ldrsh	r1, [r0, r5]
  162              		.loc 1 68 18 view .LVU57
  163 0010 5943     		muls	r1, r3
-ARM GAS  /tmp/ccDhEwf1.s 			page 5
+ARM GAS  /tmp/ccNro1eN.s 			page 5
 
 
  164              		.loc 1 68 10 view .LVU58
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  214              		.loc 1 72 47 view .LVU75
  215 0044 1A00     		movs	r2, r3
  216 0046 8032     		adds	r2, r2, #128
-ARM GAS  /tmp/ccDhEwf1.s 			page 6
+ARM GAS  /tmp/ccNro1eN.s 			page 6
 
 
  217              		.loc 1 72 17 view .LVU76
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
   82:Core/Src/bme280.c **** }
  256              		.loc 1 82 12 is_stmt 0 view .LVU88
  257 0066 FAE7     		b	.L2
-ARM GAS  /tmp/ccDhEwf1.s 			page 7
+ARM GAS  /tmp/ccNro1eN.s 			page 7
 
 
  258              	.L8:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
   95:Core/Src/bme280.c ****     var1 = (((int32_t)dev->calib_data.t_fine) / 2) - (int32_t)64000;
  303              		.loc 1 95 5 view .LVU99
  304              		.loc 1 95 38 is_stmt 0 view .LVU100
-ARM GAS  /tmp/ccDhEwf1.s 			page 8
+ARM GAS  /tmp/ccNro1eN.s 			page 8
 
 
  305 0004 026D     		ldr	r2, [r0, #80]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  356 0042 A05E     		ldrsh	r0, [r4, r2]
  357              	.LVL40:
  358              		.loc 1 98 60 view .LVU117
-ARM GAS  /tmp/ccDhEwf1.s 			page 9
+ARM GAS  /tmp/ccNro1eN.s 			page 9
 
 
  359 0044 0004     		lsls	r0, r0, #16
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  409              	.LVL48:
  410              		.loc 1 102 21 view .LVU134
  411 007a 1B02     		lsls	r3, r3, #8
-ARM GAS  /tmp/ccDhEwf1.s 			page 10
+ARM GAS  /tmp/ccNro1eN.s 			page 10
 
 
  412 007c 9C46     		mov	ip, r3
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  459 00a8 0028     		cmp	r0, #0
  460 00aa 29DB     		blt	.L11
  110:Core/Src/bme280.c ****         {
-ARM GAS  /tmp/ccDhEwf1.s 			page 11
+ARM GAS  /tmp/ccNro1eN.s 			page 11
 
 
  111:Core/Src/bme280.c ****             pressure = (pressure << 1) / ((uint32_t)var1);
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  506              		.loc 1 119 9 is_stmt 1 view .LVU168
  507              		.loc 1 119 58 is_stmt 0 view .LVU169
  508 00dc 1B18     		adds	r3, r3, r0
-ARM GAS  /tmp/ccDhEwf1.s 			page 12
+ARM GAS  /tmp/ccNro1eN.s 			page 12
 
 
  509              	.LVL62:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  546              	.LVL67:
  115:Core/Src/bme280.c ****         }
  547              		.loc 1 115 22 view .LVU183
-ARM GAS  /tmp/ccDhEwf1.s 			page 13
+ARM GAS  /tmp/ccNro1eN.s 			page 13
 
 
  548 0104 4200     		lsls	r2, r0, #1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  597              	.LCFI3:
  598              		.cfi_def_cfa_offset 12
  599              		.cfi_offset 4, -12
-ARM GAS  /tmp/ccDhEwf1.s 			page 14
+ARM GAS  /tmp/ccNro1eN.s 			page 14
 
 
  600              		.cfi_offset 5, -8
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  641 001e 641A     		subs	r4, r4, r1
  642              		.loc 1 150 36 view .LVU212
  643 0020 8023     		movs	r3, #128
-ARM GAS  /tmp/ccDhEwf1.s 			page 15
+ARM GAS  /tmp/ccNro1eN.s 			page 15
 
 
  644              	.LVL80:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  695              	.LVL87:
  696              		.loc 1 153 46 view .LVU228
  697 005c D317     		asrs	r3, r2, #31
-ARM GAS  /tmp/ccDhEwf1.s 			page 16
+ARM GAS  /tmp/ccNro1eN.s 			page 16
 
 
  698              	.LVL88:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  749 0094 D417     		asrs	r4, r2, #31
  750 0096 7F23     		movs	r3, #127
  751              	.LVL96:
-ARM GAS  /tmp/ccDhEwf1.s 			page 17
+ARM GAS  /tmp/ccNro1eN.s 			page 17
 
 
  752              		.loc 1 156 10 view .LVU245
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  801 00c8 5B02     		lsls	r3, r3, #9
  802 00ca 9842     		cmp	r0, r3
  803 00cc 02D8     		bhi	.L24
-ARM GAS  /tmp/ccDhEwf1.s 			page 18
+ARM GAS  /tmp/ccNro1eN.s 			page 18
 
 
  804              	.LVL104:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  848              		.cfi_def_cfa_offset 8
  849              		.cfi_offset 4, -8
  850              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccDhEwf1.s 			page 19
+ARM GAS  /tmp/ccNro1eN.s 			page 19
 
 
  851 0002 0400     		movs	r4, r0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  887              		@ sp needed
  888              	.LVL114:
   57:Core/Src/bme280.c **** 
-ARM GAS  /tmp/ccDhEwf1.s 			page 20
+ARM GAS  /tmp/ccNro1eN.s 			page 20
 
 
  889              		.loc 1 57 1 view .LVU287
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  937              		.loc 1 175 26 is_stmt 0 view .LVU302
  938 001e C279     		ldrb	r2, [r0, #7]
  939 0020 1202     		lsls	r2, r2, #8
-ARM GAS  /tmp/ccDhEwf1.s 			page 21
+ARM GAS  /tmp/ccNro1eN.s 			page 21
 
 
  940 0022 8379     		ldrb	r3, [r0, #6]
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  181:Core/Src/bme280.c ****     calib_data->dig_P7 = (int16_t)BME280_CONCAT_BYTES(reg_data[19], reg_data[18]);
  989              		.loc 1 181 5 is_stmt 1 view .LVU324
  990              		.loc 1 181 35 is_stmt 0 view .LVU325
-ARM GAS  /tmp/ccDhEwf1.s 			page 22
+ARM GAS  /tmp/ccNro1eN.s 			page 22
 
 
  991 005a C27C     		ldrb	r2, [r0, #19]
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1041              		.loc 1 187 1 is_stmt 1 view -0
  1042              		.cfi_startproc
  1043              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccDhEwf1.s 			page 23
+ARM GAS  /tmp/ccNro1eN.s 			page 23
 
 
  1044              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1088              		.loc 1 197 36 is_stmt 0 view .LVU360
  1089 0020 0479     		ldrb	r4, [r0, #4]
  1090              		.loc 1 197 16 view .LVU361
-ARM GAS  /tmp/ccDhEwf1.s 			page 24
+ARM GAS  /tmp/ccNro1eN.s 			page 24
 
 
  1091 0022 0F22     		movs	r2, #15
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1139              		.loc 1 203 1 view .LVU381
  1140              		@ sp needed
  1141              	.LVL132:
-ARM GAS  /tmp/ccDhEwf1.s 			page 25
+ARM GAS  /tmp/ccNro1eN.s 			page 25
 
 
  1142              		.loc 1 203 1 view .LVU382
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1189 0010 0733     		adds	r3, r3, #7
  1190 0012 1B78     		ldrb	r3, [r3]
  1191              		.loc 1 211 3 discriminator 1 view .LVU393
-ARM GAS  /tmp/ccDhEwf1.s 			page 26
+ARM GAS  /tmp/ccNro1eN.s 			page 26
 
 
  1192 0014 A12B     		cmp	r3, #161
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1233 0042 0231     		adds	r1, r1, #2
  1234 0044 6B46     		mov	r3, sp
  1235 0046 D81D     		adds	r0, r3, #7
-ARM GAS  /tmp/ccDhEwf1.s 			page 27
+ARM GAS  /tmp/ccNro1eN.s 			page 27
 
 
  1236 0048 FFF7FEFF 		bl	SPI_GET_DAT
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  226:Core/Src/bme280.c **** {
  1283              		.loc 1 226 1 is_stmt 1 view -0
  1284              		.cfi_startproc
-ARM GAS  /tmp/ccDhEwf1.s 			page 28
+ARM GAS  /tmp/ccNro1eN.s 			page 28
 
 
  1285              		@ args = 0, pretend = 0, frame = 8
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1329              		.loc 1 235 12 is_stmt 0 discriminator 3 view .LVU429
  1330 0028 0134     		adds	r4, r4, #1
  1331              	.LVL151:
-ARM GAS  /tmp/ccDhEwf1.s 			page 29
+ARM GAS  /tmp/ccNro1eN.s 			page 29
 
 
  1332              		.loc 1 235 12 discriminator 3 view .LVU430
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1379              		.section	.text.initBME280,"ax",%progbits
  1380              		.align	1
  1381              		.global	initBME280
-ARM GAS  /tmp/ccDhEwf1.s 			page 30
+ARM GAS  /tmp/ccNro1eN.s 			page 30
 
 
  1382              		.syntax unified
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  251:Core/Src/bme280.c **** 	addr = BME280_CHIP_ID_ADDR;
  1428              		.loc 1 251 2 is_stmt 1 view .LVU455
  1429              		.loc 1 251 7 is_stmt 0 view .LVU456
-ARM GAS  /tmp/ccDhEwf1.s 			page 31
+ARM GAS  /tmp/ccNro1eN.s 			page 31
 
 
  1430 001e D033     		adds	r3, r3, #208
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  257:Core/Src/bme280.c **** 	dev->settings.ctrl_hum |= BME280_OSRS_H_OVERSAMPLING_1X;
  1461              		.loc 1 257 2 is_stmt 1 view .LVU467
  258:Core/Src/bme280.c **** 	dev->settings.ctrl_meas = 0;
-ARM GAS  /tmp/ccDhEwf1.s 			page 32
+ARM GAS  /tmp/ccNro1eN.s 			page 32
 
 
  1462              		.loc 1 258 2 view .LVU468
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1503 0074 901D     		adds	r0, r2, #6
  1504 0076 FFF7FEFF 		bl	SPI_SET_DAT
  1505              	.LVL167:
-ARM GAS  /tmp/ccDhEwf1.s 			page 33
+ARM GAS  /tmp/ccNro1eN.s 			page 33
 
 
  270:Core/Src/bme280.c **** }
@@ -1978,48 +1978,47 @@ ARM GAS  /tmp/ccDhEwf1.s 			page 1
  1554              		@ sp needed
  1555 0016 00BD     		pop	{pc}
  1556              		.cfi_endproc
-ARM GAS  /tmp/ccDhEwf1.s 			page 34
+ARM GAS  /tmp/ccNro1eN.s 			page 34
 
 
  1557              	.LFE44:
  1559              		.text
  1560              	.Letext0:
- 1561              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
- 1562              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
- 1563              		.file 4 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/CMSIS/Device/ST/STM32L0xx
- 1564              		.file 5 "/home/maxx/STM32Cube/Repository/STM32Cube_FW_L0_V1.11.2/Drivers/STM32L0xx_HAL_Driver/Inc/
- 1565              		.file 6 "Core/Inc/bme280_defs.h"
- 1566              		.file 7 "Core/Inc/bme280.h"
-ARM GAS  /tmp/ccDhEwf1.s 			page 35
+ 1561              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 1562              		.file 3 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
+ 1563              		.file 4 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
+ 1564              		.file 5 "Core/Inc/bme280_defs.h"
+ 1565              		.file 6 "Core/Inc/bme280.h"
+ARM GAS  /tmp/ccNro1eN.s 			page 35
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 bme280.c
-     /tmp/ccDhEwf1.s:16     .text.bme280_parse_sensor_data:0000000000000000 $t
-     /tmp/ccDhEwf1.s:23     .text.bme280_parse_sensor_data:0000000000000000 bme280_parse_sensor_data
-     /tmp/ccDhEwf1.s:120    .text.compensate_temperature:0000000000000000 $t
-     /tmp/ccDhEwf1.s:126    .text.compensate_temperature:0000000000000000 compensate_temperature
-     /tmp/ccDhEwf1.s:261    .text.compensate_temperature:0000000000000068 $d
-     /tmp/ccDhEwf1.s:270    .text.compensate_pressure:0000000000000000 $t
-     /tmp/ccDhEwf1.s:276    .text.compensate_pressure:0000000000000000 compensate_pressure
-     /tmp/ccDhEwf1.s:573    .text.compensate_pressure:0000000000000110 $d
-     /tmp/ccDhEwf1.s:582    .text.compensate_humidity:0000000000000000 $t
-     /tmp/ccDhEwf1.s:588    .text.compensate_humidity:0000000000000000 compensate_humidity
-     /tmp/ccDhEwf1.s:827    .text.compensate_humidity:00000000000000d8 $d
-     /tmp/ccDhEwf1.s:832    .text.bme280_compensate_data:0000000000000000 $t
-     /tmp/ccDhEwf1.s:838    .text.bme280_compensate_data:0000000000000000 bme280_compensate_data
-     /tmp/ccDhEwf1.s:895    .text.parse_temp_press_calib_data:0000000000000000 $t
-     /tmp/ccDhEwf1.s:901    .text.parse_temp_press_calib_data:0000000000000000 parse_temp_press_calib_data
-     /tmp/ccDhEwf1.s:1032   .text.parse_humidity_calib_data:0000000000000000 $t
-     /tmp/ccDhEwf1.s:1038   .text.parse_humidity_calib_data:0000000000000000 parse_humidity_calib_data
-     /tmp/ccDhEwf1.s:1148   .text.GetCalibData_BME280:0000000000000000 $t
-     /tmp/ccDhEwf1.s:1155   .text.GetCalibData_BME280:0000000000000000 GetCalibData_BME280
-     /tmp/ccDhEwf1.s:1273   .text.GetData_BME280:0000000000000000 $t
-     /tmp/ccDhEwf1.s:1280   .text.GetData_BME280:0000000000000000 GetData_BME280
-     /tmp/ccDhEwf1.s:1380   .text.initBME280:0000000000000000 $t
-     /tmp/ccDhEwf1.s:1387   .text.initBME280:0000000000000000 initBME280
-     /tmp/ccDhEwf1.s:1514   .text.FORCEMode:0000000000000000 $t
-     /tmp/ccDhEwf1.s:1521   .text.FORCEMode:0000000000000000 FORCEMode
+     /tmp/ccNro1eN.s:16     .text.bme280_parse_sensor_data:0000000000000000 $t
+     /tmp/ccNro1eN.s:23     .text.bme280_parse_sensor_data:0000000000000000 bme280_parse_sensor_data
+     /tmp/ccNro1eN.s:120    .text.compensate_temperature:0000000000000000 $t
+     /tmp/ccNro1eN.s:126    .text.compensate_temperature:0000000000000000 compensate_temperature
+     /tmp/ccNro1eN.s:261    .text.compensate_temperature:0000000000000068 $d
+     /tmp/ccNro1eN.s:270    .text.compensate_pressure:0000000000000000 $t
+     /tmp/ccNro1eN.s:276    .text.compensate_pressure:0000000000000000 compensate_pressure
+     /tmp/ccNro1eN.s:573    .text.compensate_pressure:0000000000000110 $d
+     /tmp/ccNro1eN.s:582    .text.compensate_humidity:0000000000000000 $t
+     /tmp/ccNro1eN.s:588    .text.compensate_humidity:0000000000000000 compensate_humidity
+     /tmp/ccNro1eN.s:827    .text.compensate_humidity:00000000000000d8 $d
+     /tmp/ccNro1eN.s:832    .text.bme280_compensate_data:0000000000000000 $t
+     /tmp/ccNro1eN.s:838    .text.bme280_compensate_data:0000000000000000 bme280_compensate_data
+     /tmp/ccNro1eN.s:895    .text.parse_temp_press_calib_data:0000000000000000 $t
+     /tmp/ccNro1eN.s:901    .text.parse_temp_press_calib_data:0000000000000000 parse_temp_press_calib_data
+     /tmp/ccNro1eN.s:1032   .text.parse_humidity_calib_data:0000000000000000 $t
+     /tmp/ccNro1eN.s:1038   .text.parse_humidity_calib_data:0000000000000000 parse_humidity_calib_data
+     /tmp/ccNro1eN.s:1148   .text.GetCalibData_BME280:0000000000000000 $t
+     /tmp/ccNro1eN.s:1155   .text.GetCalibData_BME280:0000000000000000 GetCalibData_BME280
+     /tmp/ccNro1eN.s:1273   .text.GetData_BME280:0000000000000000 $t
+     /tmp/ccNro1eN.s:1280   .text.GetData_BME280:0000000000000000 GetData_BME280
+     /tmp/ccNro1eN.s:1380   .text.initBME280:0000000000000000 $t
+     /tmp/ccNro1eN.s:1387   .text.initBME280:0000000000000000 initBME280
+     /tmp/ccNro1eN.s:1514   .text.FORCEMode:0000000000000000 $t
+     /tmp/ccNro1eN.s:1521   .text.FORCEMode:0000000000000000 FORCEMode
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv
