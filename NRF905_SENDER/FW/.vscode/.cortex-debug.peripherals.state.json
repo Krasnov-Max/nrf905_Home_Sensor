@@ -1,1 +1,1 @@
-[{"node":"ADC","expanded":true,"format":0},{"node":"GPIOA","expanded":true,"format":0},{"node":"GPIOA.MODER","expanded":true,"format":0},{"node":"GPIOA.ODR","expanded":true,"format":0}]
+[{"node":"RTC","expanded":true,"format":0},{"node":"RTC.ISR","expanded":true,"format":0},{"node":"RTC.ALRMBSSR","expanded":true,"format":0}]

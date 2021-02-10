@@ -59,31 +59,32 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 #define PWR_Pin GPIO_PIN_14
-#define PWR_GPIO_Port GPIOC
-#define CE_Pin GPIO_PIN_10
-#define CE_GPIO_Port GPIOA
-#define TXE_Pin GPIO_PIN_15
-#define TXE_GPIO_Port GPIOC
+#define PWR_Port GPIOC
+#define TRX_CE_Pin GPIO_PIN_10
+#define TRX_CE_Port GPIOA
+#define TX_EN_Pin GPIO_PIN_15
+#define TX_EN_Port GPIOC
 #define CS_BME_Pin GPIO_PIN_9
-#define CS_BME_GPIO_Port GPIOA
+#define CS_BME_Port GPIOA
 #define CS_NRF_Pin GPIO_PIN_1
-#define CS_NRF_GPIO_Port GPIOB
+#define CS_NRF_Port GPIOB
 #define DR_Pin GPIO_PIN_4
-#define DR_GPIO_Port GPIOA
-#define SP_EN_Pin  GPIO_PIN_1
-#define SP_EN_Port  GPIOA
-//#define LD3_Pin GPIO_PIN_3
-//#define LD3_GPIO_Port GPIOB
+#define DR_Port GPIOA
+#define StepUP_EN_Pin  GPIO_PIN_1
+#define StepUP_EN_Port  GPIOA
+#define SlaveDevice_Pin GPIO_PIN_3
+#define SlaveDevice_Port GPIOA
 /* USER CODE BEGIN Private defines */
 typedef struct {
-//char Name[10];
-uint8_t descr[6];
+uint8_t id[4];
 long humm;
 long temp;
 long press;
 long count;
 uint16_t vbat;
 }Packet_send;
+
+uint16_t flash_read(uint32_t address);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

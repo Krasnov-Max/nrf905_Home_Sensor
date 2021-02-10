@@ -7,19 +7,23 @@
         {
             "type": "cortex-debug",
             "request": "launch",
-            "name": "Debug (OpenOCD)",
-            "servertype": "openocd",
+            "name": "Debug",
+            "servertype": "stutil",
+            
             "cwd": "${workspaceRoot}",
+           
             "interface": "swd",
             "device": "STM32L031P6",
-            //"preLaunchTask": "cargo build",
+            "svdFile": "/home/max/svd/STM32L0/STM32L0x1.svd",
+                     //"preLaunchTask": "cargo build",
             "runToMain": true,
             "executable": "build/nrf905.elf",
             "configFiles": [
-                "/usr/local/share/openocd/scripts/interface/stlink.cfg",
-                "/usr/local/share/openocd/scripts/target/stm32l0.cfg"
+                "/usr/share/openocd/scripts/interface/stlink-v2.cfg",
+                "/usr/share/openocd/scripts/target/stm32l0.cfg"
+                
             ],
-            "svdFile": "/home/maxx/svd/STM32L0/STM32L0x3.svd",
+           
         }
     ]
 }

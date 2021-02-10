@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TEST_RECIVER-rescue)(type Legacy)(uri ${KIPRJMOD}/TEST_RECIVER-rescue.lib)(options "")(descr ""))
+)

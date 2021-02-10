@@ -35,7 +35,8 @@
 
 /* USER CODE END Private defines */
 
-void MX_GPIO_Init(void);
+void GPIO_Init(void);
+void GPIO_Stop(void);
 
 /* USER CODE BEGIN Prototypes */
 

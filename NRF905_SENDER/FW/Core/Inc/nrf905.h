@@ -12,10 +12,10 @@
 //------------------------------------------------------------------------------------
 
 
-#define NRF905_CS_HI	HAL_GPIO_WritePin(CS_NRF_GPIO_Port, CS_NRF_Pin, GPIO_PIN_SET)
-#define NRF905_CS_LO	HAL_GPIO_WritePin(CS_NRF_GPIO_Port, CS_NRF_Pin, GPIO_PIN_RESET)
-#define NRF905_CE_HI	HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_SET)
-#define NRF905_CE_LO	HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_RESET)
+#define NRF905_CS_HI	HAL_GPIO_WritePin(CS_NRF_Port, CS_NRF_Pin, GPIO_PIN_SET)
+#define NRF905_CS_LO	HAL_GPIO_WritePin(CS_NRF_Port, CS_NRF_Pin, GPIO_PIN_RESET)
+#define NRF905_CE_HI	HAL_GPIO_WritePin(CE_Port, CE_Pin, GPIO_PIN_SET)
+#define NRF905_CE_LO	HAL_GPIO_WritePin(CE_Port, CE_Pin, GPIO_PIN_RESET)
 
 #define W_CONFIG     0x00
 #define R_CONFIG     0x10
@@ -89,19 +89,20 @@ struct NRF905_Conf
     unsigned char  CRC_MODE :1; // byte 9 bit 7
 
  } ;
-struct NRF905_Conf NRF905_Config_t;
+volatile struct NRF905_Conf NRF905_Config_t;
 #pragma pack(pop) 
  
 uint8_t NRF905_ReadReg(uint8_t reg);
 uint8_t NRF905_WriteReg(uint8_t reg, uint8_t data );
 void NRF905_ReadBuf(uint8_t reg,uint8_t *pBuf,uint8_t bytes); 
 void NRF905_WriteBuf(uint8_t reg,uint8_t *pBuf,uint8_t bytes);
-uint8_t NRF905_INIT(struct NRF905_Conf *Conf);
-void NRF905_POWER_ON (void);
-void NRF905_POWER_OFF (void);
+uint8_t NRF905_Init(struct NRF905_Conf *Conf);
 void WriteDataToSend(uint32_t addr, uint8_t *pBuf, uint8_t size);
 void ReadReciveData(uint8_t *pBuf, uint8_t size);
-void StartSend( void );
-void ReciveOn ( void );
-void ReciveOff ( void );
+void NRF905_PowerOff (void);
+void NRF905_ILDE_Mode(void);
+void NRF905_StartSend(void);
+void NRF905_Reciver_Mode (void);
+void NRF905_Transmitter_Mode(void);
+
 #endif 

@@ -41,8 +41,15 @@ Core/Src/bme280.c \
 Core/Src/gpio.c \
 Core/Src/spi.c \
 Core/Src/nrf905.c \
+Core/Src/rtc.c \
+Core/Src/adc.c \
+Core/Src/dma.c \
 Core/Src/stm32l0xx_it.c \
 Core/Src/stm32l0xx_hal_msp.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc_ex.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c \
+Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c \
 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_spi.c \
 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c \
 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c \
@@ -123,9 +130,9 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Include
 
 # compile gcc flags
-ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections -O2
 
-CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections -O2
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2

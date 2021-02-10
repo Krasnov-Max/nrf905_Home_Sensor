@@ -54,27 +54,17 @@ void NRF905_WriteBuf(uint8_t reg,uint8_t *pBuf,uint8_t bytes)
    }
  NRF905_CS_HI;
 }
-void NRF905_POWER_ON (void)
-{
- HAL_GPIO_WritePin(PWR_GPIO_Port, PWR_Pin, GPIO_PIN_SET);
- HAL_Delay(1);
- ReciveOn ();
- HAL_Delay(2);
-}
-void NRF905_POWER_OFF (void)
-{
- HAL_GPIO_WritePin(PWR_GPIO_Port, PWR_Pin, GPIO_PIN_RESET);
-}
-uint8_t NRF905_INIT(struct NRF905_Conf *Conf)
+
+uint8_t NRF905_Init(struct NRF905_Conf *Conf)
 {
  struct NRF905_Conf tmp;   
 
  NRF905_ReadBuf(0,&tmp,sizeof(tmp));
- tmp.RX_ADDRESS=0xE7E7E7E7;
+ tmp.RX_ADDRESS=0xE4E5E6E7;
  NRF905_WriteBuf(0,&tmp,sizeof(tmp));
  tmp.RX_ADDRESS = 0;
  NRF905_ReadBuf(0,&tmp,sizeof(tmp));
- if ((tmp.RX_ADDRESS != 0xE7E7E7E7)) 
+ if ((tmp.RX_ADDRESS != 0xE4E5E6E7)) 
    {
      return 0;
    } else
@@ -90,18 +80,19 @@ void WriteDataToSend(uint32_t addr, uint8_t *pBuf, uint8_t size)
   uint8_t i,y, tmp;
   tmp = W_TX_ADDRESS; 
   NRF905_CS_LO;
-  HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000);
+  HAL_SPI_Transmit(&hspi1,&tmp, 1, 1000);
   tmp = addr;
-  HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000); 
+  HAL_SPI_Transmit(&hspi1,&tmp, 1, 1000); 
   NRF905_CS_HI;
   NRF905_CS_LO;
   tmp = W_TX_PAYLOAD;
-  HAL_SPI_TransmitReceive(&hspi1,&tmp, &y, 1, 1000);
-  for (i=0;i<size;i++) 
-   {
-     HAL_SPI_TransmitReceive(&hspi1,pBuf,&y,1,1000);
-     pBuf++;
-   }
+  HAL_SPI_Transmit(&hspi1,&tmp, 1, 1000);
+  //for (i=0;i<size;i++) 
+  // {
+  //   HAL_SPI_TransmitReceive(&hspi1,pBuf,&y,1,1000);
+  //   pBuf++;
+  // }
+  HAL_SPI_Transmit(&hspi1,pBuf,size,1000);
  NRF905_CS_HI;
 }
 void ReadReciveData(uint8_t *pBuf, uint8_t size)
@@ -119,18 +110,36 @@ for (i=0; i<size; i++)
   }
  NRF905_CS_HI;
 }
-void StartSend( void )
+
+void NRF905_PowerOff (void)
 {
-   HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_SET);
-   while (HAL_GPIO_ReadPin(DR_GPIO_Port, DR_Pin) != 1)
-   {}
-   HAL_GPIO_WritePin(CE_GPIO_Port, CE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(PWR_Port, PWR_Pin, GPIO_PIN_RESET);
 }
-void ReciveOn ( void )
+void NRF905_ILDE_Mode(void)
 {
-  HAL_GPIO_WritePin(TXE_GPIO_Port, TXE_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(PWR_Port, PWR_Pin, GPIO_PIN_SET);
+  HAL_Delay(1);
+  HAL_GPIO_WritePin(TRX_CE_Port, TRX_CE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(TX_EN_Port, TX_EN_Pin, GPIO_PIN_RESET);
+  
 }
-void ReciveOff ( void )
+void NRF905_StartSend(void)
 {
-  HAL_GPIO_WritePin(TXE_GPIO_Port, TXE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(TRX_CE_Port, TRX_CE_Pin, GPIO_PIN_SET);
+  while (HAL_GPIO_ReadPin(DR_Port, DR_Pin) != 1)   {}
+  HAL_GPIO_WritePin(TRX_CE_Port, TRX_CE_Pin, GPIO_PIN_RESET);
 }
+void NRF905_Reciver_Mode (void)
+{
+  HAL_GPIO_WritePin(PWR_Port, PWR_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(TX_EN_Port, TX_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(TRX_CE_Port, TRX_CE_Pin, GPIO_PIN_SET);
+}
+
+void NRF905_Transmitter_Mode(void)
+{
+  HAL_GPIO_WritePin(PWR_Port, PWR_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(TX_EN_Port, TX_EN_Pin, GPIO_PIN_SET);
+}
+
+
