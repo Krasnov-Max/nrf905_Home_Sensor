@@ -13,7 +13,7 @@
             "cwd": "${workspaceRoot}",
            
             "interface": "swd",
-            "device": "STM32L031P6",
+            "device": "STM32L051C6",
             "svdFile": "/home/max/svd/STM32L0/STM32L0x1.svd",
                      //"preLaunchTask": "cargo build",
             "runToMain": true,

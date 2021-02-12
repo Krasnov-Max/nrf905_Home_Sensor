@@ -31,8 +31,6 @@ extern "C" {
 
 /* USER CODE END Includes */
 
-RTC_HandleTypeDef hrtc;
-
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

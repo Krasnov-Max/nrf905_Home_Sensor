@@ -28,7 +28,23 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32l0xx_hal.h"
+#include "stm32l0xx_ll_adc.h"
+#include "stm32l0xx_ll_dma.h"
+#include "stm32l0xx_ll_crs.h"
+#include "stm32l0xx_ll_rcc.h"
+#include "stm32l0xx_ll_bus.h"
+#include "stm32l0xx_ll_system.h"
+#include "stm32l0xx_ll_exti.h"
+#include "stm32l0xx_ll_cortex.h"
+#include "stm32l0xx_ll_utils.h"
+#include "stm32l0xx_ll_pwr.h"
+#include "stm32l0xx_ll_rtc.h"
+#include "stm32l0xx_ll_spi.h"
+#include "stm32l0xx_ll_gpio.h"
+
+#if defined(USE_FULL_ASSERT)
+#include "stm32_assert.h"
+#endif /* USE_FULL_ASSERT */
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -58,22 +74,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define PWR_Pin GPIO_PIN_14
-#define PWR_Port GPIOC
-#define TRX_CE_Pin GPIO_PIN_10
-#define TRX_CE_Port GPIOA
-#define TX_EN_Pin GPIO_PIN_15
-#define TX_EN_Port GPIOC
-#define CS_BME_Pin GPIO_PIN_9
-#define CS_BME_Port GPIOA
-#define CS_NRF_Pin GPIO_PIN_1
-#define CS_NRF_Port GPIOB
-#define DR_Pin GPIO_PIN_4
-#define DR_Port GPIOA
-#define StepUP_EN_Pin  GPIO_PIN_1
-#define StepUP_EN_Port  GPIOA
-#define SlaveDevice_Pin GPIO_PIN_3
-#define SlaveDevice_Port GPIOA
+#ifndef NVIC_PRIORITYGROUP_0
+#define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
+                                                                 4 bits for subpriority */
+#define NVIC_PRIORITYGROUP_1         ((uint32_t)0x00000006) /*!< 1 bit  for pre-emption priority,
+                                                                 3 bits for subpriority */
+#define NVIC_PRIORITYGROUP_2         ((uint32_t)0x00000005) /*!< 2 bits for pre-emption priority,
+                                                                 2 bits for subpriority */
+#define NVIC_PRIORITYGROUP_3         ((uint32_t)0x00000004) /*!< 3 bits for pre-emption priority,
+                                                                 1 bit  for subpriority */
+#define NVIC_PRIORITYGROUP_4         ((uint32_t)0x00000003) /*!< 4 bits for pre-emption priority,
+                                                                 0 bit  for subpriority */
+#endif
 /* USER CODE BEGIN Private defines */
 typedef struct {
 uint8_t id[4];
