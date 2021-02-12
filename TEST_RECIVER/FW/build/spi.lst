@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cchlkUag.s 			page 1
+ARM GAS  /tmp/ccmzDqyw.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
   30:Core/Src/spi.c **** /* SPI1 init function */
   31:Core/Src/spi.c **** void MX_SPI1_Init(void)
   32:Core/Src/spi.c **** {
-ARM GAS  /tmp/cchlkUag.s 			page 2
+ARM GAS  /tmp/ccmzDqyw.s 			page 2
 
 
   27              		.loc 1 32 1 view -0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
   71 0024 0362     		str	r3, [r0, #32]
   43:Core/Src/spi.c ****   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   72              		.loc 1 43 3 is_stmt 1 view .LVU19
-ARM GAS  /tmp/cchlkUag.s 			page 3
+ARM GAS  /tmp/ccmzDqyw.s 			page 3
 
 
   73              		.loc 1 43 21 is_stmt 0 view .LVU20
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  117              		.global	MX_SPI2_Init
  118              		.syntax unified
  119              		.code	16
-ARM GAS  /tmp/cchlkUag.s 			page 4
+ARM GAS  /tmp/ccmzDqyw.s 			page 4
 
 
  120              		.thumb_func
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
   65:Core/Src/spi.c ****   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
  164              		.loc 1 65 3 is_stmt 1 view .LVU50
  165              		.loc 1 65 32 is_stmt 0 view .LVU51
-ARM GAS  /tmp/cchlkUag.s 			page 5
+ARM GAS  /tmp/ccmzDqyw.s 			page 5
 
 
  166 0022 C361     		str	r3, [r0, #28]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  207              	.L9:
  208 0048 00000000 		.word	hspi2
  209 004c 00380040 		.word	1073756160
-ARM GAS  /tmp/cchlkUag.s 			page 6
+ARM GAS  /tmp/ccmzDqyw.s 			page 6
 
 
  210              		.cfi_endproc
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
   90:Core/Src/spi.c **** 
   91:Core/Src/spi.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
   92:Core/Src/spi.c ****     /**SPI1 GPIO Configuration
-ARM GAS  /tmp/cchlkUag.s 			page 7
+ARM GAS  /tmp/ccmzDqyw.s 			page 7
 
 
   93:Core/Src/spi.c ****     PA5     ------> SPI1_SCK
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  267              	.L14:
   89:Core/Src/spi.c **** 
  268              		.loc 1 89 5 is_stmt 1 view .LVU82
-ARM GAS  /tmp/cchlkUag.s 			page 8
+ARM GAS  /tmp/ccmzDqyw.s 			page 8
 
 
  269              	.LBB2:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  308              		.loc 1 98 26 is_stmt 0 view .LVU97
  309 004c DE3B     		subs	r3, r3, #222
  310 004e 0693     		str	r3, [sp, #24]
-ARM GAS  /tmp/cchlkUag.s 			page 9
+ARM GAS  /tmp/ccmzDqyw.s 			page 9
 
 
   99:Core/Src/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  350              		.loc 1 116 5 view .LVU112
  116:Core/Src/spi.c ****     /**SPI2 GPIO Configuration
  351              		.loc 1 116 5 view .LVU113
-ARM GAS  /tmp/cchlkUag.s 			page 10
+ARM GAS  /tmp/ccmzDqyw.s 			page 10
 
 
  352 007a 5A69     		ldr	r2, [r3, #20]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  392              	.L17:
  393 00aa C046     		.align	2
  394              	.L16:
-ARM GAS  /tmp/cchlkUag.s 			page 11
+ARM GAS  /tmp/ccmzDqyw.s 			page 11
 
 
  395 00ac 00300140 		.word	1073819648
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  155:Core/Src/spi.c ****   /* USER CODE END SPI1_MspDeInit 1 */
  156:Core/Src/spi.c ****   }
  157:Core/Src/spi.c ****   else if(spiHandle->Instance==SPI2)
-ARM GAS  /tmp/cchlkUag.s 			page 12
+ARM GAS  /tmp/ccmzDqyw.s 			page 12
 
 
  430              		.loc 1 157 8 is_stmt 1 view .LVU134
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  461 002a D369     		ldr	r3, [r2, #28]
  462 002c 0849     		ldr	r1, .L23+16
  463 002e 0B40     		ands	r3, r1
-ARM GAS  /tmp/cchlkUag.s 			page 13
+ARM GAS  /tmp/ccmzDqyw.s 			page 13
 
 
  464 0030 D361     		str	r3, [r2, #28]
@@ -760,25 +760,25 @@ ARM GAS  /tmp/cchlkUag.s 			page 1
  499              		.file 10 "Core/Inc/spi.h"
  500              		.file 11 "Core/Inc/main.h"
  501              		.file 12 "<built-in>"
-ARM GAS  /tmp/cchlkUag.s 			page 14
+ARM GAS  /tmp/ccmzDqyw.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi.c
-     /tmp/cchlkUag.s:16     .text.MX_SPI1_Init:0000000000000000 $t
-     /tmp/cchlkUag.s:24     .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
-     /tmp/cchlkUag.s:110    .text.MX_SPI1_Init:0000000000000048 $d
+     /tmp/ccmzDqyw.s:16     .text.MX_SPI1_Init:0000000000000000 $t
+     /tmp/ccmzDqyw.s:24     .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
+     /tmp/ccmzDqyw.s:110    .text.MX_SPI1_Init:0000000000000048 $d
                             *COM*:0000000000000064 hspi1
-     /tmp/cchlkUag.s:116    .text.MX_SPI2_Init:0000000000000000 $t
-     /tmp/cchlkUag.s:123    .text.MX_SPI2_Init:0000000000000000 MX_SPI2_Init
-     /tmp/cchlkUag.s:208    .text.MX_SPI2_Init:0000000000000048 $d
+     /tmp/ccmzDqyw.s:116    .text.MX_SPI2_Init:0000000000000000 $t
+     /tmp/ccmzDqyw.s:123    .text.MX_SPI2_Init:0000000000000000 MX_SPI2_Init
+     /tmp/ccmzDqyw.s:208    .text.MX_SPI2_Init:0000000000000048 $d
                             *COM*:0000000000000064 hspi2
-     /tmp/cchlkUag.s:214    .text.HAL_SPI_MspInit:0000000000000000 $t
-     /tmp/cchlkUag.s:221    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
-     /tmp/cchlkUag.s:395    .text.HAL_SPI_MspInit:00000000000000ac $d
-     /tmp/cchlkUag.s:403    .text.HAL_SPI_MspDeInit:0000000000000000 $t
-     /tmp/cchlkUag.s:410    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
-     /tmp/cchlkUag.s:478    .text.HAL_SPI_MspDeInit:0000000000000040 $d
+     /tmp/ccmzDqyw.s:214    .text.HAL_SPI_MspInit:0000000000000000 $t
+     /tmp/ccmzDqyw.s:221    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+     /tmp/ccmzDqyw.s:395    .text.HAL_SPI_MspInit:00000000000000ac $d
+     /tmp/ccmzDqyw.s:403    .text.HAL_SPI_MspDeInit:0000000000000000 $t
+     /tmp/ccmzDqyw.s:410    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+     /tmp/ccmzDqyw.s:478    .text.HAL_SPI_MspDeInit:0000000000000040 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

@@ -162,32 +162,10 @@ Text Label 8250 4050 0    50   ~ 0
 PWR_L
 Text Label 8250 4150 0    50   ~ 0
 MP_EN
-$Comp
-L MCU_ST_STM32L0:STM32L031F6Px U1
-U 1 1 5EB67DE1
-P 4600 3000
-F 0 "U1" H 4350 2150 50  0000 C CNN
-F 1 "STM32L031F6Px" H 4150 1650 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4200 2300 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00140359.pdf" H 4600 3000 50  0001 C CNN
-	1    4600 3000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 3800 4600 5150
 Wire Wire Line
 	9450 4750 9850 4750
 Wire Wire Line
 	9850 4750 9850 1400
-Wire Wire Line
-	9850 1400 6900 1400
-Wire Wire Line
-	4600 1400 4600 2300
-Wire Wire Line
-	4700 2300 4700 1400
-Connection ~ 4700 1400
-Wire Wire Line
-	4700 1400 4600 1400
 $Comp
 L Device:R R10
 U 1 1 5EB6BE4C
@@ -232,30 +210,6 @@ F 3 "~" H 7250 3750 50  0001 C CNN
 	1    7250 3750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5100 3000 5450 3000
-Wire Wire Line
-	6100 3000 6100 2700
-Wire Wire Line
-	6100 2700 7100 2700
-Wire Wire Line
-	5100 3100 6200 3100
-Wire Wire Line
-	6200 3100 6200 3050
-Wire Wire Line
-	6200 3050 6900 3050
-Wire Wire Line
-	5100 3200 6200 3200
-Wire Wire Line
-	6200 3200 6200 3400
-Wire Wire Line
-	6200 3400 6550 3400
-Wire Wire Line
-	5100 3300 6100 3300
-Wire Wire Line
-	6100 3300 6100 3750
-Wire Wire Line
-	6100 3750 7100 3750
 Entry Wire Line
 	8100 2800 8000 2700
 Wire Wire Line
@@ -291,12 +245,6 @@ F 3 "~" H 7250 4100 50  0001 C CNN
 	1    7250 4100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5100 3400 6000 3400
-Wire Wire Line
-	6000 3400 6000 4100
-Wire Wire Line
-	6000 4100 7100 4100
 Entry Wire Line
 	8000 4100 8100 4200
 Entry Wire Line
@@ -305,50 +253,22 @@ Wire Wire Line
 	7400 4100 8000 4100
 Text Label 7750 4100 0    50   ~ 0
 CE
-Wire Wire Line
-	5100 2500 5100 2000
 Entry Wire Line
 	8000 2000 8100 2100
-Wire Wire Line
-	5100 2000 8000 2000
 Text Label 7650 2000 0    50   ~ 0
 PWR_L
-Wire Wire Line
-	5100 2600 5200 2600
-Wire Wire Line
-	5200 2600 5200 2100
-Wire Wire Line
-	5200 2100 8000 2100
 Text Label 7650 2100 0    50   ~ 0
 SP_EN
 Entry Wire Line
 	8000 2300 8100 2400
-Wire Wire Line
-	5100 2800 5400 2800
-Wire Wire Line
-	5400 2800 5400 2300
-Wire Wire Line
-	5400 2300 8000 2300
 Text Label 7650 2300 0    50   ~ 0
 MP_EN
 Entry Wire Line
 	8000 2400 8100 2500
-Wire Wire Line
-	5100 2900 5600 2900
-Wire Wire Line
-	5600 2900 5600 2400
-Wire Wire Line
-	5600 2400 8000 2400
 Text Label 7650 2400 0    50   ~ 0
 DR
 Entry Wire Line
 	8000 2200 8100 2300
-Wire Wire Line
-	5100 2700 5300 2700
-Wire Wire Line
-	5300 2700 5300 2200
-Wire Wire Line
-	5300 2200 8000 2200
 Text Label 7650 2200 0    50   ~ 0
 KEY
 Wire Wire Line
@@ -407,146 +327,21 @@ Wire Wire Line
 	7700 4800 8000 4800
 Text Label 7850 4800 0    50   ~ 0
 KEY
-$Comp
-L Device:R R5
-U 1 1 5EBB4AD3
-P 5900 4250
-F 0 "R5" V 5693 4250 50  0000 C CNN
-F 1 "120" V 5784 4250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5830 4250 50  0001 C CNN
-F 3 "~" H 5900 4250 50  0001 C CNN
-	1    5900 4250
-	0    1    1    0   
-$EndComp
 Entry Wire Line
 	8000 4250 8100 4350
-Wire Wire Line
-	4100 4250 4100 3600
 Text Label 7750 4250 0    50   ~ 0
 CS_NRF
-$Comp
-L Device:R R7
-U 1 1 5EBCDF71
-P 6100 5450
-F 0 "R7" H 6170 5496 50  0000 L CNN
-F 1 "10 k" H 6170 5405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6030 5450 50  0001 C CNN
-F 3 "~" H 6100 5450 50  0001 C CNN
-	1    6100 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5EBCE237
-P 5700 5450
-F 0 "R4" H 5770 5496 50  0000 L CNN
-F 1 "10 k" H 5770 5405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5630 5450 50  0001 C CNN
-F 3 "~" H 5700 5450 50  0001 C CNN
-	1    5700 5450
-	1    0    0    -1  
-$EndComp
-Connection ~ 6100 3750
-Connection ~ 5700 4250
-Wire Wire Line
-	5700 4250 4100 4250
-Wire Wire Line
-	5700 4250 5700 5300
-Wire Wire Line
-	6100 3750 6100 5300
-Wire Wire Line
-	7700 5700 6100 5700
 Connection ~ 7700 5700
-Wire Wire Line
-	6100 5600 6100 5700
-Connection ~ 6100 5700
 Wire Wire Line
 	7700 5250 7700 4800
 Wire Wire Line
 	7700 5550 7700 5700
-Wire Wire Line
-	5450 3000 5450 5300
-Connection ~ 5450 3000
-Wire Wire Line
-	5450 3000 6100 3000
-$Comp
-L Device:R R3
-U 1 1 5EBED7D6
-P 5450 5450
-F 0 "R3" H 5250 5550 50  0000 L CNN
-F 1 "10 k" H 5200 5450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5380 5450 50  0001 C CNN
-F 3 "~" H 5450 5450 50  0001 C CNN
-	1    5450 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4250 8000 4250
-Wire Wire Line
-	5700 4250 5750 4250
-Wire Wire Line
-	5700 5600 5700 5700
-Wire Wire Line
-	5700 5700 6100 5700
-$Comp
-L Device:R R9
-U 1 1 5EC21377
-P 6900 1700
-F 0 "R9" H 6970 1746 50  0000 L CNN
-F 1 "10 k" H 6970 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6830 1700 50  0001 C CNN
-F 3 "~" H 6900 1700 50  0001 C CNN
-	1    6900 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5EC2182D
-P 6550 1700
-F 0 "R8" H 6620 1746 50  0000 L CNN
-F 1 "10 k" H 6620 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6480 1700 50  0001 C CNN
-F 3 "~" H 6550 1700 50  0001 C CNN
-	1    6550 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 1850 6900 3050
-Connection ~ 6900 3050
-Wire Wire Line
-	6900 3050 7100 3050
-Wire Wire Line
-	6550 1850 6550 3400
-Connection ~ 6550 3400
-Wire Wire Line
-	6550 3400 7100 3400
-Wire Wire Line
-	6900 1550 6900 1400
-Connection ~ 6900 1400
-Wire Wire Line
-	6900 1400 6550 1400
-Wire Wire Line
-	6550 1550 6550 1400
-Connection ~ 6550 1400
-Wire Wire Line
-	6550 1400 4700 1400
 Entry Wire Line
 	3450 3500 3550 3400
 Entry Wire Line
 	3450 3400 3550 3300
 Text Label 3600 3300 0    50   ~ 0
 PWR
-$Comp
-L Device:R R2
-U 1 1 5EC40665
-P 3850 2700
-F 0 "R2" V 3643 2700 50  0000 C CNN
-F 1 "10 k" V 3734 2700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3780 2700 50  0001 C CNN
-F 3 "~" H 3850 2700 50  0001 C CNN
-	1    3850 2700
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R1
 U 1 1 5EC4172A
@@ -570,31 +365,14 @@ F 3 "~" H 3600 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 1400 3600 1400
-Wire Wire Line
 	3600 1400 3600 1450
-Connection ~ 4600 1400
 Wire Wire Line
 	3600 1750 3600 1900
-Wire Wire Line
-	4000 1900 3600 1900
 Connection ~ 3600 1900
 Wire Wire Line
 	3600 1900 3600 2000
 Wire Wire Line
-	4100 2500 4000 2500
-Wire Wire Line
-	4000 2500 4000 1900
-Wire Wire Line
-	4000 2700 4100 2700
-Wire Wire Line
-	3600 2700 3700 2700
-Wire Wire Line
 	3600 2300 3600 2700
-Wire Wire Line
-	3550 3300 4100 3300
-Wire Wire Line
-	3550 3400 4100 3400
 Text Label 3600 3400 0    50   ~ 0
 TX_EN
 Connection ~ 3600 2700
@@ -620,12 +398,6 @@ Wire Wire Line
 Wire Wire Line
 	3200 2700 3200 5150
 Connection ~ 3200 2700
-Connection ~ 4600 5150
-Wire Bus Line
-	8100 4450 3450 4450
-Connection ~ 8100 4450
-Wire Bus Line
-	8100 4450 8100 4900
 Wire Wire Line
 	6950 4800 6800 4800
 Wire Wire Line
@@ -661,8 +433,6 @@ Wire Wire Line
 	2250 5150 2600 5150
 Connection ~ 3200 5150
 Wire Wire Line
-	3200 5150 4600 5150
-Wire Wire Line
 	2600 3300 2600 5150
 Connection ~ 2600 5150
 Wire Wire Line
@@ -678,69 +448,102 @@ Connection ~ 2600 1400
 Wire Wire Line
 	2600 1400 2250 1400
 Wire Wire Line
-	5450 5600 5450 5700
-Wire Wire Line
-	5450 5700 5700 5700
-Connection ~ 5700 5700
-Wire Wire Line
-	5100 3500 5150 3500
-Wire Wire Line
-	4600 5150 6800 5150
-Wire Wire Line
-	4200 6000 5100 6000
-Wire Wire Line
-	5100 3600 5100 6000
-Wire Wire Line
-	4200 6100 5150 6100
-Wire Wire Line
-	4600 6200 4600 5150
-Wire Wire Line
 	3200 1900 2950 1900
-Wire Wire Line
-	2950 1900 2950 5550
 Connection ~ 3200 1900
-Connection ~ 5450 5700
-Wire Wire Line
-	5150 3500 5150 6100
 $Comp
 L NRF_SENDER-rescue:SWD-STM32_SWDIO J1
 U 1 1 5FC24971
-P 3750 5750
-F 0 "J1" H 3867 5915 50  0000 C CNN
-F 1 "SWD" H 3867 5824 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3750 5750 50  0001 C CNN
-F 3 "" H 3750 5750 50  0001 C CNN
-	1    3750 5750
+P 3750 5600
+F 0 "J1" H 3867 5765 50  0000 C CNN
+F 1 "SWD" H 3867 5674 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3750 5600 50  0001 C CNN
+F 3 "" H 3750 5600 50  0001 C CNN
+	1    3750 5600
 	-1   0    0    -1  
 $EndComp
+$Comp
+L MCU_ST_STM32L0:STM32L051C6Tx U?
+U 1 1 60272DBA
+P 5450 3450
+F 0 "U?" H 5450 5231 50  0000 C CNN
+F 1 "STM32L051C6Tx" H 5450 5140 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 4950 1950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00108219.pdf" H 5450 3450 50  0001 C CNN
+	1    5450 3450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4050 5700 5450 5700
+	3600 1400 5350 1400
 Wire Wire Line
-	3850 6250 4100 6250
+	3200 5150 5350 5150
 Wire Wire Line
-	4100 6250 4100 5550
+	3850 5700 7700 5700
 Wire Wire Line
-	4100 5550 2950 5550
+	3850 5900 6800 5900
 Wire Wire Line
-	3850 5850 4050 5850
+	6800 5900 6800 5150
 Wire Wire Line
-	4050 5850 4050 5700
+	2950 6600 4050 6600
 Wire Wire Line
-	3850 6050 4000 6050
+	4050 6600 4050 6100
 Wire Wire Line
-	4000 6050 4000 6200
+	4050 6100 3850 6100
 Wire Wire Line
-	4000 6200 4600 6200
+	2950 1900 2950 6600
 Wire Wire Line
-	3850 5950 4200 5950
+	5350 5050 5350 5150
+Connection ~ 5350 5150
 Wire Wire Line
-	4200 5950 4200 6000
+	5350 5150 5450 5150
 Wire Wire Line
-	3850 6150 4200 6150
+	5450 5050 5450 5150
+Connection ~ 5450 5150
 Wire Wire Line
-	4200 6150 4200 6100
+	5450 5150 5550 5150
+Wire Wire Line
+	5550 5050 5550 5150
+Connection ~ 5550 5150
+Wire Wire Line
+	5550 5150 5650 5150
+Wire Wire Line
+	5650 5050 5650 5150
+Connection ~ 5650 5150
+Wire Wire Line
+	5650 5150 6800 5150
+Wire Bus Line
+	8100 6800 3300 6800
+Wire Bus Line
+	3300 6800 3300 4450
+Wire Bus Line
+	3300 4450 3450 4450
+Wire Wire Line
+	4000 2700 4000 2050
+Wire Wire Line
+	4000 2050 4850 2050
+Wire Wire Line
+	3600 2700 4000 2700
+Wire Wire Line
+	5350 1850 5350 1400
+Connection ~ 5350 1400
+Wire Wire Line
+	5350 1400 5450 1400
+Wire Wire Line
+	5450 1850 5450 1400
+Connection ~ 5450 1400
+Wire Wire Line
+	5450 1400 5550 1400
+Wire Wire Line
+	5550 1850 5550 1400
+Connection ~ 5550 1400
+Wire Wire Line
+	5550 1400 5650 1400
+Wire Wire Line
+	5650 1850 5650 1400
 Wire Bus Line
 	3450 3100 3450 4450
 Wire Bus Line
-	8100 1750 8100 4450
+	8100 1750 8100 6800
+Connection ~ 5650 1400
+Wire Wire Line
+	5650 1400 9850 1400
 $EndSCHEMATC

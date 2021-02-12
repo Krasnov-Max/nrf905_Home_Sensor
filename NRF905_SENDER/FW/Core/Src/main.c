@@ -163,7 +163,6 @@ int main(void)
   t = (vref_cal * 3000) / adc[0];
   P.vbat = (adc[1] * t )/4096;
   j++;
-  NRF9
   HAL_Delay(1);
   k = sizeof(P);
   WriteDataToSend(0xE7E7E7E6, &P, k);

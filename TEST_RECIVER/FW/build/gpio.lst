@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cclfLARG.s 			page 1
+ARM GAS  /tmp/ccCaUsmW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
   30:Core/Src/gpio.c **** 
   31:Core/Src/gpio.c **** /* USER CODE END 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  /tmp/cclfLARG.s 			page 2
+ARM GAS  /tmp/ccCaUsmW.s 			page 2
 
 
   33:Core/Src/gpio.c **** /** Configure pins as
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
   67 001e C003     		lsls	r0, r0, #15
   68 0020 0143     		orrs	r1, r0
   69 0022 5961     		str	r1, [r3, #20]
-ARM GAS  /tmp/cclfLARG.s 			page 3
+ARM GAS  /tmp/ccCaUsmW.s 			page 3
 
 
   70              		.loc 1 46 3 view .LVU6
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
  121              		.loc 1 49 3 view .LVU24
  122 005a 5B69     		ldr	r3, [r3, #20]
  123 005c 0B40     		ands	r3, r1
-ARM GAS  /tmp/cclfLARG.s 			page 4
+ARM GAS  /tmp/ccCaUsmW.s 			page 4
 
 
  124 005e 0493     		str	r3, [sp, #16]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
   62:Core/Src/gpio.c **** 
   63:Core/Src/gpio.c ****   /*Configure GPIO pins : PAPin PAPin */
   64:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = LCD_LED_Pin|LCD_CS_Pin;
-ARM GAS  /tmp/cclfLARG.s 			page 5
+ARM GAS  /tmp/ccCaUsmW.s 			page 5
 
 
  166              		.loc 1 64 3 view .LVU31
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
  206 00cc 5346     		mov	r3, r10
  207 00ce 0593     		str	r3, [sp, #20]
   79:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-ARM GAS  /tmp/cclfLARG.s 			page 6
+ARM GAS  /tmp/ccCaUsmW.s 			page 6
 
 
  208              		.loc 1 79 3 is_stmt 1 view .LVU51
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
  248 00f8 0693     		str	r3, [sp, #24]
   94:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
  249              		.loc 1 94 3 is_stmt 1 view .LVU71
-ARM GAS  /tmp/cclfLARG.s 			page 7
+ARM GAS  /tmp/ccCaUsmW.s 			page 7
 
 
  250              		.loc 1 94 24 is_stmt 0 view .LVU72
@@ -418,19 +418,19 @@ ARM GAS  /tmp/cclfLARG.s 			page 1
  296              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
  297              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
  298              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
-ARM GAS  /tmp/cclfLARG.s 			page 8
+ARM GAS  /tmp/ccCaUsmW.s 			page 8
 
 
  299              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
  300              		.file 7 "<built-in>"
-ARM GAS  /tmp/cclfLARG.s 			page 9
+ARM GAS  /tmp/ccCaUsmW.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-     /tmp/cclfLARG.s:16     .text.MX_GPIO_Init:0000000000000000 $t
-     /tmp/cclfLARG.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-     /tmp/cclfLARG.s:285    .text.MX_GPIO_Init:0000000000000124 $d
+     /tmp/ccCaUsmW.s:16     .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccCaUsmW.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccCaUsmW.s:285    .text.MX_GPIO_Init:0000000000000124 $d
 
 UNDEFINED SYMBOLS
 memset

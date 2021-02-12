@@ -148,7 +148,7 @@ if (NRF905_INIT(&NRF905_Config_t ))
       if (HAL_GPIO_ReadPin(NRF_DR_GPIO_Port, NRF_DR_Pin) == 1) 
         {
           ReadReciveData(&P, sizeof(P));
-          sprintf(buf, "Temoerature = %3d.%2d C",P.temp/100, P.temp%100  );
+          sprintf(buf, "Temoerature = %3d.%2d C",P.temp/100, ((P.temp%100)*-1)  );
           ILI9341_Draw_Text(buf,0,20,WHITE,2,BLACK);
           sprintf(buf, "Pressue = %4d hPa ",P.press/100);
           ILI9341_Draw_Text(buf,0,40,WHITE,2,BLACK);
