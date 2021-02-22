@@ -22,6 +22,7 @@
 #include "rtc.h"
 #include "spi.h"
 #include "gpio.h"
+#include <math.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -69,6 +70,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   uint8_t buf[15];
+  long max=-30,min=30,last=0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -148,12 +150,19 @@ if (NRF905_INIT(&NRF905_Config_t ))
       if (HAL_GPIO_ReadPin(NRF_DR_GPIO_Port, NRF_DR_Pin) == 1) 
         {
           ReadReciveData(&P, sizeof(P));
-          sprintf(buf, "Temoerature = %3d.%2d C",P.temp/100, ((P.temp%100)*-1)  );
+          if (P.temp < 0) {sprintf(buf, "Temoerature = %3d.%2d C",P.temp/100, ((P.temp%100)*-1)  );}
+          if (P.temp >=0) {sprintf(buf, "Temoerature = %3d.%2d C",P.temp/100, P.temp%100);}
+          if(P.temp>last) {max = P.temp; last = P.temp;}
+          if(P.temp<last) {min = P.temp; last = P.temp;}
           ILI9341_Draw_Text(buf,0,20,WHITE,2,BLACK);
           sprintf(buf, "Pressue = %4d hPa ",P.press/100);
           ILI9341_Draw_Text(buf,0,40,WHITE,2,BLACK);
-          sprintf(buf, "humidity = %3d %%RH ",P.humm/1024);
-          ILI9341_Draw_Text(buf,0,60,WHITE,2,BLACK);
+         //sprintf(buf, "humidity = %3d %%RH ",P.humm/1024);
+         //ILI9341_Draw_Text(buf,0,60,WHITE,2,BLACK);
+         sprintf(buf,"Max temp = %3d",max/100);
+         ILI9341_Draw_Text(buf,0,170,WHITE,2,BLACK);
+         sprintf(buf,"Min temp = %3d",min/100);
+         ILI9341_Draw_Text(buf,0,190,WHITE,2,BLACK);
           sprintf(buf, "Vbat = %1d.%3d",P.vbat/1000,P.vbat%1000  );
           ILI9341_Draw_Text(buf,0,220,WHITE,2,BLACK);
 

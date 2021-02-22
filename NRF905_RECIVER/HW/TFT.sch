@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LCD:3.2_ILI9341_16bit U2
+L RECIVER_NRF-rescue:3.2_ILI9341_16bit-LCD U2
 U 1 1 5F66163E
 P 4900 2750
 F 0 "U2" H 5575 3015 50  0000 C CNN

@@ -1,0 +1,104 @@
+Configuration	FW
+STM32CubeMX 	6.1.0
+Date	02/18/2021
+MCU	STM32L051C6Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC	IN0	ADC_IN0	PA0
+ADC	Vrefint Channel	ADC_Vref_Input	VP_ADC_Vref_Input
+RTC	Activate RTC Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI1	Full-Duplex Master	SPI1_MISO	PA6
+SPI1	Full-Duplex Master	SPI1_MOSI	PA7
+SPI1	Full-Duplex Master	SPI1_SCK	PA5
+SYS	Serial_Wire	SYS_SWCLK	PA14
+SYS	Serial_Wire	SYS_SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART1	Asynchronous	USART1_RX	PB7
+USART1	Asynchronous	USART1_TX	PB6
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+10	PA0	ADC_IN0	
+11	PA1	GPIO_Output	TRX_CE
+12	PA2	GPIO_Output	TX_EN
+13	PA3	GPIO_Output	CS_BME
+14	PA4	GPIO_Output	CS_NRF
+15	PA5	SPI1_SCK	
+16	PA6	SPI1_MISO	
+17	PA7	SPI1_MOSI	
+18	PB0	GPIO_EXTI0	DR
+29	PA8	GPIO_Output	LED_1
+30	PA9	GPIO_Output	LED_2
+31	PA10	GPIO_Output	StepUP_EN
+32	PA11	GPIO_Output	SlaveDevice
+33	PA12	GPIO_Input	KEY
+34	PA13	SYS_SWDIO	
+37	PA14	SYS_SWCLK	
+42	PB6	USART1_TX	
+43	PB7	USART1_RX	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+ADC	IN0	ADC_IN0	PA0
+ADC	Vrefint Channel	ADC_Vref_Input	VP_ADC_Vref_Input
+RTC	Activate RTC Clock Source	RTC_VS_RTC_Activate	VP_RTC_VS_RTC_Activate
+RTC	Internal WakeUp	RTC_VS_RTC_WakeUp_intern	VP_RTC_VS_RTC_WakeUp_intern
+SPI1	Full-Duplex Master	SPI1_MISO	PA6
+SPI1	Full-Duplex Master	SPI1_MOSI	PA7
+SPI1	Full-Duplex Master	SPI1_SCK	PA5
+SYS	Serial_Wire	SYS_SWCLK	PA14
+SYS	Serial_Wire	SYS_SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART1	Asynchronous	USART1_RX	PB7
+USART1	Asynchronous	USART1_TX	PB6
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+10	PA0	ADC_IN0	
+11	PA1	GPIO_Output	TRX_CE
+12	PA2	GPIO_Output	TX_EN
+13	PA3	GPIO_Output	CS_BME
+14	PA4	GPIO_Output	CS_NRF
+15	PA5	SPI1_SCK	
+16	PA6	SPI1_MISO	
+17	PA7	SPI1_MOSI	
+18	PB0	GPIO_EXTI0	DR
+29	PA8	GPIO_Output	LED_1
+30	PA9	GPIO_Output	LED_2
+31	PA10	GPIO_Output	StepUP_EN
+32	PA11	GPIO_Output	SlaveDevice
+33	PA12	GPIO_Input	KEY
+34	PA13	SYS_SWDIO	
+37	PA14	SYS_SWCLK	
+42	PB6	USART1_TX	
+43	PB7	USART1_RX	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : FW
+Project Folder : /home/max/Project/NRF905_SENDER/NRF905_SENDER/FW
+Toolchain / IDE : Makefile
+Firmware Package Name and Version : STM32Cube FW_L0 V1.12.0
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy all used libraries into the project folder
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : Yes
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

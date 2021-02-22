@@ -266,7 +266,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 2700 3050 2700
 $Comp
-L _wireless:NRF905 U1
+L RECIVER_NRF-rescue:NRF905-_wireless U1
 U 1 1 5EBD3534
 P 4300 3200
 F 0 "U1" H 4300 4437 60  0000 C CNN

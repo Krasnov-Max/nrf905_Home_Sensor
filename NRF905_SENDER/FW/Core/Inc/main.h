@@ -40,6 +40,7 @@ extern "C" {
 #include "stm32l0xx_ll_pwr.h"
 #include "stm32l0xx_ll_rtc.h"
 #include "stm32l0xx_ll_spi.h"
+#include "stm32l0xx_ll_usart.h"
 #include "stm32l0xx_ll_gpio.h"
 
 #if defined(USE_FULL_ASSERT)
@@ -74,6 +75,29 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TRX_CE_Pin LL_GPIO_PIN_1
+#define TRX_CE_GPIO_Port GPIOA
+#define TX_EN_Pin LL_GPIO_PIN_2
+#define TX_EN_GPIO_Port GPIOA
+#define CS_BME_Pin LL_GPIO_PIN_3
+#define CS_BME_GPIO_Port GPIOA
+#define CS_NRF_Pin LL_GPIO_PIN_4
+#define CS_NRF_GPIO_Port GPIOA
+#define DR_Pin LL_GPIO_PIN_0
+#define DR_GPIO_Port GPIOB
+#define DR_EXTI_IRQn EXTI0_1_IRQn
+#define LED_1_Pin LL_GPIO_PIN_8
+#define LED_1_GPIO_Port GPIOA
+#define LED_2_Pin LL_GPIO_PIN_9
+#define LED_2_GPIO_Port GPIOA
+#define StepUP_EN_Pin LL_GPIO_PIN_10
+#define StepUP_EN_GPIO_Port GPIOA
+#define SlaveDevice_Pin LL_GPIO_PIN_11
+#define SlaveDevice_GPIO_Port GPIOA
+#define KEY_Pin LL_GPIO_PIN_12
+#define KEY_GPIO_Port GPIOA
+#define NRF_POWER_Pin LL_GPIO_PIN_15
+#define NRF_POWER_GPIO_Port GPIOA
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
                                                                  4 bits for subpriority */

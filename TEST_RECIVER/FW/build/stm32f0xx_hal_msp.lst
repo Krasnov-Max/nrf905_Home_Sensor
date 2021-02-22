@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccx2Wcga.s 			page 1
+ARM GAS  /tmp/ccABptcM.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccx2Wcga.s 			page 1
   30:Core/Src/stm32f0xx_hal_msp.c **** 
   31:Core/Src/stm32f0xx_hal_msp.c **** /* USER CODE END TD */
   32:Core/Src/stm32f0xx_hal_msp.c **** 
-ARM GAS  /tmp/ccx2Wcga.s 			page 2
+ARM GAS  /tmp/ccABptcM.s 			page 2
 
 
   33:Core/Src/stm32f0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccx2Wcga.s 			page 1
   43 000a 9961     		str	r1, [r3, #24]
   44              		.loc 1 70 3 view .LVU4
   45 000c 9969     		ldr	r1, [r3, #24]
-ARM GAS  /tmp/ccx2Wcga.s 			page 3
+ARM GAS  /tmp/ccABptcM.s 			page 3
 
 
   46 000e 0A40     		ands	r2, r1
@@ -168,13 +168,13 @@ ARM GAS  /tmp/ccx2Wcga.s 			page 1
   83              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
   84              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
   85              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccx2Wcga.s 			page 4
+ARM GAS  /tmp/ccABptcM.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_msp.c
-     /tmp/ccx2Wcga.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/ccx2Wcga.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/ccx2Wcga.s:76     .text.HAL_MspInit:000000000000002c $d
+     /tmp/ccABptcM.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccABptcM.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccABptcM.s:76     .text.HAL_MspInit:000000000000002c $d
 
 NO UNDEFINED SYMBOLS

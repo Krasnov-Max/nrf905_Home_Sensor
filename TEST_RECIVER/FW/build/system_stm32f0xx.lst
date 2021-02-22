@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc80yrha.s 			page 1
+ARM GAS  /tmp/ccUJHaC4.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
   30:Core/Src/system_stm32f0xx.c ****   *-----------------------------------------------------------------------------
   31:Core/Src/system_stm32f0xx.c ****   *        SYSCLK(Hz)                             | 8000000
   32:Core/Src/system_stm32f0xx.c ****   *-----------------------------------------------------------------------------
-ARM GAS  /tmp/cc80yrha.s 			page 2
+ARM GAS  /tmp/ccUJHaC4.s 			page 2
 
 
   33:Core/Src/system_stm32f0xx.c ****   *        HCLK(Hz)                               | 8000000
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
   87:Core/Src/system_stm32f0xx.c **** 
   88:Core/Src/system_stm32f0xx.c **** #if !defined  (HSI_VALUE)
   89:Core/Src/system_stm32f0xx.c ****   #define HSI_VALUE    ((uint32_t)8000000) /*!< Default value of the Internal oscillator in Hz.
-ARM GAS  /tmp/cc80yrha.s 			page 3
+ARM GAS  /tmp/ccUJHaC4.s 			page 3
 
 
   90:Core/Src/system_stm32f0xx.c ****                                                 This value can be provided and adapted by the user 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  144:Core/Src/system_stm32f0xx.c ****   * @retval None
  145:Core/Src/system_stm32f0xx.c ****   */
  146:Core/Src/system_stm32f0xx.c **** void SystemInit(void)
-ARM GAS  /tmp/cc80yrha.s 			page 4
+ARM GAS  /tmp/ccUJHaC4.s 			page 4
 
 
  147:Core/Src/system_stm32f0xx.c **** {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  181:Core/Src/system_stm32f0xx.c ****   *         (**) HSE_VALUE is a constant defined in stm32f0xx_hal.h file (default value
  182:Core/Src/system_stm32f0xx.c ****   *              8 MHz), user has to ensure that HSE_VALUE is same as the real
  183:Core/Src/system_stm32f0xx.c ****   *              frequency of the crystal used. Otherwise, this function may
-ARM GAS  /tmp/cc80yrha.s 			page 5
+ARM GAS  /tmp/ccUJHaC4.s 			page 5
 
 
  184:Core/Src/system_stm32f0xx.c ****   *              have wrong result.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  212:Core/Src/system_stm32f0xx.c ****       predivfactor = (RCC->CFGR2 & RCC_CFGR2_PREDIV) + 1;
  213:Core/Src/system_stm32f0xx.c **** 
  214:Core/Src/system_stm32f0xx.c ****       if (pllsource == RCC_CFGR_PLLSRC_HSE_PREDIV)
-ARM GAS  /tmp/cc80yrha.s 			page 6
+ARM GAS  /tmp/ccUJHaC4.s 			page 6
 
 
  215:Core/Src/system_stm32f0xx.c ****       {
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
   96 0022 1A60     		str	r2, [r3]
  203:Core/Src/system_stm32f0xx.c ****     case RCC_CFGR_SWS_HSE:  /* HSE used as system clock */
   97              		.loc 1 203 7 is_stmt 1 view .LVU17
-ARM GAS  /tmp/cc80yrha.s 			page 7
+ARM GAS  /tmp/ccUJHaC4.s 			page 7
 
 
   98              	.LVL7:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  138 0044 0E4B     		ldr	r3, .L9
  139              	.LVL13:
  209:Core/Src/system_stm32f0xx.c ****       pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
-ARM GAS  /tmp/cc80yrha.s 			page 8
+ARM GAS  /tmp/ccUJHaC4.s 			page 8
 
 
  140              		.loc 1 209 20 view .LVU32
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  178 0064 074B     		ldr	r3, .L9+4
  179 0066 1C60     		str	r4, [r3]
  180 0068 DCE7     		b	.L6
-ARM GAS  /tmp/cc80yrha.s 			page 9
+ARM GAS  /tmp/ccUJHaC4.s 			page 9
 
 
  181              	.LVL21:
@@ -538,26 +538,26 @@ ARM GAS  /tmp/cc80yrha.s 			page 1
  234              		.file 2 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
  235              		.file 3 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
  236              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f051x8.h"
-ARM GAS  /tmp/cc80yrha.s 			page 10
+ARM GAS  /tmp/ccUJHaC4.s 			page 10
 
 
  237              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/cc80yrha.s 			page 11
+ARM GAS  /tmp/ccUJHaC4.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32f0xx.c
-     /tmp/cc80yrha.s:16     .text.SystemInit:0000000000000000 $t
-     /tmp/cc80yrha.s:24     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/cc80yrha.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/cc80yrha.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/cc80yrha.s:201    .text.SystemCoreClockUpdate:0000000000000080 $d
-     /tmp/cc80yrha.s:230    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-     /tmp/cc80yrha.s:223    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-     /tmp/cc80yrha.s:216    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/cc80yrha.s:212    .data.SystemCoreClock:0000000000000000 $d
-     /tmp/cc80yrha.s:219    .rodata.AHBPrescTable:0000000000000000 $d
-     /tmp/cc80yrha.s:227    .rodata.APBPrescTable:0000000000000000 $d
+     /tmp/ccUJHaC4.s:16     .text.SystemInit:0000000000000000 $t
+     /tmp/ccUJHaC4.s:24     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccUJHaC4.s:40     .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccUJHaC4.s:47     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccUJHaC4.s:201    .text.SystemCoreClockUpdate:0000000000000080 $d
+     /tmp/ccUJHaC4.s:230    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+     /tmp/ccUJHaC4.s:223    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+     /tmp/ccUJHaC4.s:216    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccUJHaC4.s:212    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccUJHaC4.s:219    .rodata.AHBPrescTable:0000000000000000 $d
+     /tmp/ccUJHaC4.s:227    .rodata.APBPrescTable:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv
