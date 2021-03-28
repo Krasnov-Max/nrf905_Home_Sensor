@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "vscode_stm32_c_cpp_properties",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/Core/Inc/",
+                "${workspaceRoot}/Drivers/CMSIS/Include/",
+                "${workspaceRoot}/Drivers/CMSIS/Device/ST/STM32F1xx/Include/",
+                "${workspaceRoot}/Drivers/STM32F1xx_HAL_Driver/Inc/",
+		"${workspaceRoot}/FATFS/App/",
+		"${workspaceRoot}/FATFS/Target/",
+		"${workspaceRoot}/USB_DEVICE/App/",
+		"${workspaceRoot}/USB_DEVICE/Traget/",
+		"${workspaceRoot}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/",
+		${workspaceRoot}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/",
+		${workspaceRoot}/Middlewares/Third_Party/FatFs/src/",
+		${workspaceRoot}/Middlewares/Third_Party/FatFs/src/drivers/",
+		${workspaceRoot}/Middlewares/Third_Party/FatFs/src/option/",
+		${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/",
+		${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/include/",
+		${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/",
+		${workspaceRoot}/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/"
+            ],
+            "defines": [
+                "STM32F103xx"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

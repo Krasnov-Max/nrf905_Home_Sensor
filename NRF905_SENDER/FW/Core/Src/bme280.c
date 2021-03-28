@@ -1,6 +1,9 @@
 #include "main.h"
 #include "bme280_defs.h"
 #include "bme280.h"
+#include "stm32l0xx_ll_spi.h"
+#include "stm32l0xx_ll_gpio.h"
+
 
 static int32_t compensate_temperature(struct bme280_dev *dev);
 
@@ -276,3 +279,21 @@ void FORCEMode (struct bme280_dev *dev)
 	SPI_SET_DAT(&addr, &dev->settings.ctrl_meas);
 }
 
+void SPI_GET_DAT( uint8_t *ADDR, uint8_t *data)
+{
+	LL_GPIO_ResetOutputPin(CS_BME_GPIO_Port, CS_BME_Pin);
+    LL_SPI_TransmitData8(SPI1, ADDR);
+	data = LL_SPI_ReceiveData8(SPI1);
+	LL_GPIO_SetOutputPin(CS_BME_GPIO_Port, CS_BME_Pin);
+}
+
+void SPI_SET_DAT( uint8_t *ADDR, uint8_t *data)
+{
+	uint8_t addr;
+	addr = *(uint8_t *)ADDR;
+	addr = addr & 0x7f;
+    LL_GPIO_ResetOutputPin(CS_BME_GPIO_Port, CS_BME_Pin);
+	LL_SPI_TransmitData8(SPI1, ADDR);
+	LL_SPI_TransmitData8(SPI1, data);
+	LL_GPIO_SetOutputPin(CS_BME_GPIO_Port, CS_BME_Pin);
+}

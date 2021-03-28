@@ -1,0 +1,753 @@
+ARM GAS  /tmp/cc5liAvJ.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"fsmc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_FSMC_MspInit,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	HAL_FSMC_MspInit:
+  24              	.LFB646:
+  25              		.file 1 "Core/Src/fsmc.c"
+   1:Core/Src/fsmc.c **** /**
+   2:Core/Src/fsmc.c ****   ******************************************************************************
+   3:Core/Src/fsmc.c ****   * File Name          : FSMC.c
+   4:Core/Src/fsmc.c ****   * Description        : This file provides code for the configuration
+   5:Core/Src/fsmc.c ****   *                      of the FSMC peripheral.
+   6:Core/Src/fsmc.c ****   ******************************************************************************
+   7:Core/Src/fsmc.c ****   * @attention
+   8:Core/Src/fsmc.c ****   *
+   9:Core/Src/fsmc.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  10:Core/Src/fsmc.c ****   * All rights reserved.</center></h2>
+  11:Core/Src/fsmc.c ****   *
+  12:Core/Src/fsmc.c ****   * This software component is licensed by ST under Ultimate Liberty license
+  13:Core/Src/fsmc.c ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Core/Src/fsmc.c ****   * the License. You may obtain a copy of the License at:
+  15:Core/Src/fsmc.c ****   *                             www.st.com/SLA0044
+  16:Core/Src/fsmc.c ****   *
+  17:Core/Src/fsmc.c ****   ******************************************************************************
+  18:Core/Src/fsmc.c ****   */
+  19:Core/Src/fsmc.c **** 
+  20:Core/Src/fsmc.c **** /* Includes ------------------------------------------------------------------*/
+  21:Core/Src/fsmc.c **** #include "fsmc.h"
+  22:Core/Src/fsmc.c **** 
+  23:Core/Src/fsmc.c **** /* USER CODE BEGIN 0 */
+  24:Core/Src/fsmc.c **** 
+  25:Core/Src/fsmc.c **** /* USER CODE END 0 */
+  26:Core/Src/fsmc.c **** 
+  27:Core/Src/fsmc.c **** SRAM_HandleTypeDef hsram1;
+  28:Core/Src/fsmc.c **** 
+  29:Core/Src/fsmc.c **** /* FSMC initialization function */
+  30:Core/Src/fsmc.c **** void MX_FSMC_Init(void)
+  31:Core/Src/fsmc.c **** {
+  32:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_Init 0 */
+  33:Core/Src/fsmc.c **** 
+ARM GAS  /tmp/cc5liAvJ.s 			page 2
+
+
+  34:Core/Src/fsmc.c ****   /* USER CODE END FSMC_Init 0 */
+  35:Core/Src/fsmc.c **** 
+  36:Core/Src/fsmc.c ****   FSMC_NORSRAM_TimingTypeDef Timing = {0};
+  37:Core/Src/fsmc.c **** 
+  38:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_Init 1 */
+  39:Core/Src/fsmc.c **** 
+  40:Core/Src/fsmc.c ****   /* USER CODE END FSMC_Init 1 */
+  41:Core/Src/fsmc.c **** 
+  42:Core/Src/fsmc.c ****   /** Perform the SRAM1 memory initialization sequence
+  43:Core/Src/fsmc.c ****   */
+  44:Core/Src/fsmc.c ****   hsram1.Instance = FSMC_NORSRAM_DEVICE;
+  45:Core/Src/fsmc.c ****   hsram1.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
+  46:Core/Src/fsmc.c ****   /* hsram1.Init */
+  47:Core/Src/fsmc.c ****   hsram1.Init.NSBank = FSMC_NORSRAM_BANK1;
+  48:Core/Src/fsmc.c ****   hsram1.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_DISABLE;
+  49:Core/Src/fsmc.c ****   hsram1.Init.MemoryType = FSMC_MEMORY_TYPE_SRAM;
+  50:Core/Src/fsmc.c ****   hsram1.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;
+  51:Core/Src/fsmc.c ****   hsram1.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;
+  52:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW;
+  53:Core/Src/fsmc.c ****   hsram1.Init.WrapMode = FSMC_WRAP_MODE_DISABLE;
+  54:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;
+  55:Core/Src/fsmc.c ****   hsram1.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;
+  56:Core/Src/fsmc.c ****   hsram1.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;
+  57:Core/Src/fsmc.c ****   hsram1.Init.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE;
+  58:Core/Src/fsmc.c ****   hsram1.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;
+  59:Core/Src/fsmc.c ****   hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
+  60:Core/Src/fsmc.c ****   /* Timing */
+  61:Core/Src/fsmc.c ****   Timing.AddressSetupTime = 15;
+  62:Core/Src/fsmc.c ****   Timing.AddressHoldTime = 15;
+  63:Core/Src/fsmc.c ****   Timing.DataSetupTime = 255;
+  64:Core/Src/fsmc.c ****   Timing.BusTurnAroundDuration = 15;
+  65:Core/Src/fsmc.c ****   Timing.CLKDivision = 16;
+  66:Core/Src/fsmc.c ****   Timing.DataLatency = 17;
+  67:Core/Src/fsmc.c ****   Timing.AccessMode = FSMC_ACCESS_MODE_A;
+  68:Core/Src/fsmc.c ****   /* ExtTiming */
+  69:Core/Src/fsmc.c **** 
+  70:Core/Src/fsmc.c ****   if (HAL_SRAM_Init(&hsram1, &Timing, NULL) != HAL_OK)
+  71:Core/Src/fsmc.c ****   {
+  72:Core/Src/fsmc.c ****     Error_Handler( );
+  73:Core/Src/fsmc.c ****   }
+  74:Core/Src/fsmc.c **** 
+  75:Core/Src/fsmc.c ****   /** Disconnect NADV
+  76:Core/Src/fsmc.c ****   */
+  77:Core/Src/fsmc.c **** 
+  78:Core/Src/fsmc.c ****   __HAL_AFIO_FSMCNADV_DISCONNECTED();
+  79:Core/Src/fsmc.c **** 
+  80:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_Init 2 */
+  81:Core/Src/fsmc.c **** 
+  82:Core/Src/fsmc.c ****   /* USER CODE END FSMC_Init 2 */
+  83:Core/Src/fsmc.c **** }
+  84:Core/Src/fsmc.c **** 
+  85:Core/Src/fsmc.c **** static uint32_t FSMC_Initialized = 0;
+  86:Core/Src/fsmc.c **** 
+  87:Core/Src/fsmc.c **** static void HAL_FSMC_MspInit(void){
+  26              		.loc 1 87 35 view -0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 24
+ARM GAS  /tmp/cc5liAvJ.s 			page 3
+
+
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 30B5     		push	{r4, r5, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 12
+  33              		.cfi_offset 4, -12
+  34              		.cfi_offset 5, -8
+  35              		.cfi_offset 14, -4
+  36 0002 87B0     		sub	sp, sp, #28
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 40
+  88:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_MspInit 0 */
+  89:Core/Src/fsmc.c **** 
+  90:Core/Src/fsmc.c ****   /* USER CODE END FSMC_MspInit 0 */
+  91:Core/Src/fsmc.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  39              		.loc 1 91 3 view .LVU1
+  40              		.loc 1 91 20 is_stmt 0 view .LVU2
+  41 0004 0023     		movs	r3, #0
+  42 0006 0493     		str	r3, [sp, #16]
+  92:Core/Src/fsmc.c ****   if (FSMC_Initialized) {
+  43              		.loc 1 92 3 is_stmt 1 view .LVU3
+  44              		.loc 1 92 7 is_stmt 0 view .LVU4
+  45 0008 134B     		ldr	r3, .L6
+  46 000a 1B68     		ldr	r3, [r3]
+  47              		.loc 1 92 6 view .LVU5
+  48 000c 0BB1     		cbz	r3, .L5
+  49              	.L1:
+  93:Core/Src/fsmc.c ****     return;
+  94:Core/Src/fsmc.c ****   }
+  95:Core/Src/fsmc.c ****   FSMC_Initialized = 1;
+  96:Core/Src/fsmc.c **** 
+  97:Core/Src/fsmc.c ****   /* Peripheral clock enable */
+  98:Core/Src/fsmc.c ****   __HAL_RCC_FSMC_CLK_ENABLE();
+  99:Core/Src/fsmc.c **** 
+ 100:Core/Src/fsmc.c ****   /** FSMC GPIO Configuration
+ 101:Core/Src/fsmc.c ****   PE7   ------> FSMC_D4
+ 102:Core/Src/fsmc.c ****   PE8   ------> FSMC_D5
+ 103:Core/Src/fsmc.c ****   PE9   ------> FSMC_D6
+ 104:Core/Src/fsmc.c ****   PE10   ------> FSMC_D7
+ 105:Core/Src/fsmc.c ****   PE11   ------> FSMC_D8
+ 106:Core/Src/fsmc.c ****   PE12   ------> FSMC_D9
+ 107:Core/Src/fsmc.c ****   PE13   ------> FSMC_D10
+ 108:Core/Src/fsmc.c ****   PE14   ------> FSMC_D11
+ 109:Core/Src/fsmc.c ****   PE15   ------> FSMC_D12
+ 110:Core/Src/fsmc.c ****   PD8   ------> FSMC_D13
+ 111:Core/Src/fsmc.c ****   PD9   ------> FSMC_D14
+ 112:Core/Src/fsmc.c ****   PD10   ------> FSMC_D15
+ 113:Core/Src/fsmc.c ****   PD11   ------> FSMC_A16
+ 114:Core/Src/fsmc.c ****   PD14   ------> FSMC_D0
+ 115:Core/Src/fsmc.c ****   PD15   ------> FSMC_D1
+ 116:Core/Src/fsmc.c ****   PD0   ------> FSMC_D2
+ 117:Core/Src/fsmc.c ****   PD1   ------> FSMC_D3
+ 118:Core/Src/fsmc.c ****   PD4   ------> FSMC_NOE
+ 119:Core/Src/fsmc.c ****   PD5   ------> FSMC_NWE
+ 120:Core/Src/fsmc.c ****   PD7   ------> FSMC_NE1
+ 121:Core/Src/fsmc.c ****   */
+ 122:Core/Src/fsmc.c ****   /* GPIO_InitStruct */
+ 123:Core/Src/fsmc.c ****   GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
+ARM GAS  /tmp/cc5liAvJ.s 			page 4
+
+
+ 124:Core/Src/fsmc.c ****                           |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+ 125:Core/Src/fsmc.c ****                           |GPIO_PIN_15;
+ 126:Core/Src/fsmc.c ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 127:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 128:Core/Src/fsmc.c **** 
+ 129:Core/Src/fsmc.c ****   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+ 130:Core/Src/fsmc.c **** 
+ 131:Core/Src/fsmc.c ****   /* GPIO_InitStruct */
+ 132:Core/Src/fsmc.c ****   GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
+ 133:Core/Src/fsmc.c ****                           |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1
+ 134:Core/Src/fsmc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7;
+ 135:Core/Src/fsmc.c ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 136:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 137:Core/Src/fsmc.c **** 
+ 138:Core/Src/fsmc.c ****   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+ 139:Core/Src/fsmc.c **** 
+ 140:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_MspInit 1 */
+ 141:Core/Src/fsmc.c **** 
+ 142:Core/Src/fsmc.c ****   /* USER CODE END FSMC_MspInit 1 */
+ 143:Core/Src/fsmc.c **** }
+  50              		.loc 1 143 1 view .LVU6
+  51 000e 07B0     		add	sp, sp, #28
+  52              	.LCFI2:
+  53              		.cfi_remember_state
+  54              		.cfi_def_cfa_offset 12
+  55              		@ sp needed
+  56 0010 30BD     		pop	{r4, r5, pc}
+  57              	.L5:
+  58              	.LCFI3:
+  59              		.cfi_restore_state
+  95:Core/Src/fsmc.c **** 
+  60              		.loc 1 95 3 is_stmt 1 view .LVU7
+  95:Core/Src/fsmc.c **** 
+  61              		.loc 1 95 20 is_stmt 0 view .LVU8
+  62 0012 114B     		ldr	r3, .L6
+  63 0014 0122     		movs	r2, #1
+  64 0016 1A60     		str	r2, [r3]
+  98:Core/Src/fsmc.c **** 
+  65              		.loc 1 98 3 is_stmt 1 view .LVU9
+  66              	.LBB2:
+  98:Core/Src/fsmc.c **** 
+  67              		.loc 1 98 3 view .LVU10
+  98:Core/Src/fsmc.c **** 
+  68              		.loc 1 98 3 view .LVU11
+  69 0018 104B     		ldr	r3, .L6+4
+  70 001a 5A69     		ldr	r2, [r3, #20]
+  71 001c 42F48072 		orr	r2, r2, #256
+  72 0020 5A61     		str	r2, [r3, #20]
+  98:Core/Src/fsmc.c **** 
+  73              		.loc 1 98 3 view .LVU12
+  74 0022 5B69     		ldr	r3, [r3, #20]
+  75 0024 03F48073 		and	r3, r3, #256
+  76 0028 0193     		str	r3, [sp, #4]
+  98:Core/Src/fsmc.c **** 
+  77              		.loc 1 98 3 view .LVU13
+  78 002a 019B     		ldr	r3, [sp, #4]
+  79              	.LBE2:
+ARM GAS  /tmp/cc5liAvJ.s 			page 5
+
+
+  98:Core/Src/fsmc.c **** 
+  80              		.loc 1 98 3 view .LVU14
+ 123:Core/Src/fsmc.c ****                           |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+  81              		.loc 1 123 3 view .LVU15
+ 123:Core/Src/fsmc.c ****                           |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+  82              		.loc 1 123 23 is_stmt 0 view .LVU16
+  83 002c 4FF68073 		movw	r3, #65408
+  84 0030 0293     		str	r3, [sp, #8]
+ 126:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  85              		.loc 1 126 3 is_stmt 1 view .LVU17
+ 126:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  86              		.loc 1 126 24 is_stmt 0 view .LVU18
+  87 0032 0225     		movs	r5, #2
+  88 0034 0395     		str	r5, [sp, #12]
+ 127:Core/Src/fsmc.c **** 
+  89              		.loc 1 127 3 is_stmt 1 view .LVU19
+ 127:Core/Src/fsmc.c **** 
+  90              		.loc 1 127 25 is_stmt 0 view .LVU20
+  91 0036 0324     		movs	r4, #3
+  92 0038 0594     		str	r4, [sp, #20]
+ 129:Core/Src/fsmc.c **** 
+  93              		.loc 1 129 3 is_stmt 1 view .LVU21
+  94 003a 02A9     		add	r1, sp, #8
+  95 003c 0848     		ldr	r0, .L6+8
+  96 003e FFF7FEFF 		bl	HAL_GPIO_Init
+  97              	.LVL0:
+ 132:Core/Src/fsmc.c ****                           |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1
+  98              		.loc 1 132 3 view .LVU22
+ 132:Core/Src/fsmc.c ****                           |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1
+  99              		.loc 1 132 23 is_stmt 0 view .LVU23
+ 100 0042 4CF6B373 		movw	r3, #53171
+ 101 0046 0293     		str	r3, [sp, #8]
+ 135:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 102              		.loc 1 135 3 is_stmt 1 view .LVU24
+ 135:Core/Src/fsmc.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 103              		.loc 1 135 24 is_stmt 0 view .LVU25
+ 104 0048 0395     		str	r5, [sp, #12]
+ 136:Core/Src/fsmc.c **** 
+ 105              		.loc 1 136 3 is_stmt 1 view .LVU26
+ 136:Core/Src/fsmc.c **** 
+ 106              		.loc 1 136 25 is_stmt 0 view .LVU27
+ 107 004a 0594     		str	r4, [sp, #20]
+ 138:Core/Src/fsmc.c **** 
+ 108              		.loc 1 138 3 is_stmt 1 view .LVU28
+ 109 004c 02A9     		add	r1, sp, #8
+ 110 004e 0548     		ldr	r0, .L6+12
+ 111 0050 FFF7FEFF 		bl	HAL_GPIO_Init
+ 112              	.LVL1:
+ 113 0054 DBE7     		b	.L1
+ 114              	.L7:
+ 115 0056 00BF     		.align	2
+ 116              	.L6:
+ 117 0058 00000000 		.word	.LANCHOR0
+ 118 005c 00100240 		.word	1073876992
+ 119 0060 00180140 		.word	1073813504
+ 120 0064 00140140 		.word	1073812480
+ 121              		.cfi_endproc
+ARM GAS  /tmp/cc5liAvJ.s 			page 6
+
+
+ 122              	.LFE646:
+ 124              		.section	.text.HAL_FSMC_MspDeInit,"ax",%progbits
+ 125              		.align	1
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu softvfp
+ 131              	HAL_FSMC_MspDeInit:
+ 132              	.LFB648:
+ 144:Core/Src/fsmc.c **** 
+ 145:Core/Src/fsmc.c **** void HAL_SRAM_MspInit(SRAM_HandleTypeDef* sramHandle){
+ 146:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspInit 0 */
+ 147:Core/Src/fsmc.c **** 
+ 148:Core/Src/fsmc.c ****   /* USER CODE END SRAM_MspInit 0 */
+ 149:Core/Src/fsmc.c ****   HAL_FSMC_MspInit();
+ 150:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspInit 1 */
+ 151:Core/Src/fsmc.c **** 
+ 152:Core/Src/fsmc.c ****   /* USER CODE END SRAM_MspInit 1 */
+ 153:Core/Src/fsmc.c **** }
+ 154:Core/Src/fsmc.c **** 
+ 155:Core/Src/fsmc.c **** static uint32_t FSMC_DeInitialized = 0;
+ 156:Core/Src/fsmc.c **** 
+ 157:Core/Src/fsmc.c **** static void HAL_FSMC_MspDeInit(void){
+ 133              		.loc 1 157 37 view -0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137 0000 08B5     		push	{r3, lr}
+ 138              	.LCFI4:
+ 139              		.cfi_def_cfa_offset 8
+ 140              		.cfi_offset 3, -8
+ 141              		.cfi_offset 14, -4
+ 158:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_MspDeInit 0 */
+ 159:Core/Src/fsmc.c **** 
+ 160:Core/Src/fsmc.c ****   /* USER CODE END FSMC_MspDeInit 0 */
+ 161:Core/Src/fsmc.c ****   if (FSMC_DeInitialized) {
+ 142              		.loc 1 161 3 view .LVU30
+ 143              		.loc 1 161 7 is_stmt 0 view .LVU31
+ 144 0002 0B4B     		ldr	r3, .L12
+ 145 0004 1B68     		ldr	r3, [r3]
+ 146              		.loc 1 161 6 view .LVU32
+ 147 0006 03B1     		cbz	r3, .L11
+ 148              	.L8:
+ 162:Core/Src/fsmc.c ****     return;
+ 163:Core/Src/fsmc.c ****   }
+ 164:Core/Src/fsmc.c ****   FSMC_DeInitialized = 1;
+ 165:Core/Src/fsmc.c ****   /* Peripheral clock enable */
+ 166:Core/Src/fsmc.c ****   __HAL_RCC_FSMC_CLK_DISABLE();
+ 167:Core/Src/fsmc.c **** 
+ 168:Core/Src/fsmc.c ****   /** FSMC GPIO Configuration
+ 169:Core/Src/fsmc.c ****   PE7   ------> FSMC_D4
+ 170:Core/Src/fsmc.c ****   PE8   ------> FSMC_D5
+ 171:Core/Src/fsmc.c ****   PE9   ------> FSMC_D6
+ 172:Core/Src/fsmc.c ****   PE10   ------> FSMC_D7
+ 173:Core/Src/fsmc.c ****   PE11   ------> FSMC_D8
+ 174:Core/Src/fsmc.c ****   PE12   ------> FSMC_D9
+ 175:Core/Src/fsmc.c ****   PE13   ------> FSMC_D10
+ARM GAS  /tmp/cc5liAvJ.s 			page 7
+
+
+ 176:Core/Src/fsmc.c ****   PE14   ------> FSMC_D11
+ 177:Core/Src/fsmc.c ****   PE15   ------> FSMC_D12
+ 178:Core/Src/fsmc.c ****   PD8   ------> FSMC_D13
+ 179:Core/Src/fsmc.c ****   PD9   ------> FSMC_D14
+ 180:Core/Src/fsmc.c ****   PD10   ------> FSMC_D15
+ 181:Core/Src/fsmc.c ****   PD11   ------> FSMC_A16
+ 182:Core/Src/fsmc.c ****   PD14   ------> FSMC_D0
+ 183:Core/Src/fsmc.c ****   PD15   ------> FSMC_D1
+ 184:Core/Src/fsmc.c ****   PD0   ------> FSMC_D2
+ 185:Core/Src/fsmc.c ****   PD1   ------> FSMC_D3
+ 186:Core/Src/fsmc.c ****   PD4   ------> FSMC_NOE
+ 187:Core/Src/fsmc.c ****   PD5   ------> FSMC_NWE
+ 188:Core/Src/fsmc.c ****   PD7   ------> FSMC_NE1
+ 189:Core/Src/fsmc.c ****   */
+ 190:Core/Src/fsmc.c **** 
+ 191:Core/Src/fsmc.c ****   HAL_GPIO_DeInit(GPIOE, GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
+ 192:Core/Src/fsmc.c ****                           |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+ 193:Core/Src/fsmc.c ****                           |GPIO_PIN_15);
+ 194:Core/Src/fsmc.c **** 
+ 195:Core/Src/fsmc.c ****   HAL_GPIO_DeInit(GPIOD, GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
+ 196:Core/Src/fsmc.c ****                           |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1
+ 197:Core/Src/fsmc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7);
+ 198:Core/Src/fsmc.c **** 
+ 199:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_MspDeInit 1 */
+ 200:Core/Src/fsmc.c **** 
+ 201:Core/Src/fsmc.c ****   /* USER CODE END FSMC_MspDeInit 1 */
+ 202:Core/Src/fsmc.c **** }
+ 149              		.loc 1 202 1 view .LVU33
+ 150 0008 08BD     		pop	{r3, pc}
+ 151              	.L11:
+ 164:Core/Src/fsmc.c ****   /* Peripheral clock enable */
+ 152              		.loc 1 164 3 is_stmt 1 view .LVU34
+ 164:Core/Src/fsmc.c ****   /* Peripheral clock enable */
+ 153              		.loc 1 164 22 is_stmt 0 view .LVU35
+ 154 000a 094B     		ldr	r3, .L12
+ 155 000c 0122     		movs	r2, #1
+ 156 000e 1A60     		str	r2, [r3]
+ 166:Core/Src/fsmc.c **** 
+ 157              		.loc 1 166 3 is_stmt 1 view .LVU36
+ 158 0010 084A     		ldr	r2, .L12+4
+ 159 0012 5369     		ldr	r3, [r2, #20]
+ 160 0014 23F48073 		bic	r3, r3, #256
+ 161 0018 5361     		str	r3, [r2, #20]
+ 191:Core/Src/fsmc.c ****                           |GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+ 162              		.loc 1 191 3 view .LVU37
+ 163 001a 4FF68071 		movw	r1, #65408
+ 164 001e 0648     		ldr	r0, .L12+8
+ 165 0020 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 166              	.LVL2:
+ 195:Core/Src/fsmc.c ****                           |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1
+ 167              		.loc 1 195 3 view .LVU38
+ 168 0024 4CF6B371 		movw	r1, #53171
+ 169 0028 0448     		ldr	r0, .L12+12
+ 170 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 171              	.LVL3:
+ 172 002e EBE7     		b	.L8
+ 173              	.L13:
+ARM GAS  /tmp/cc5liAvJ.s 			page 8
+
+
+ 174              		.align	2
+ 175              	.L12:
+ 176 0030 00000000 		.word	.LANCHOR1
+ 177 0034 00100240 		.word	1073876992
+ 178 0038 00180140 		.word	1073813504
+ 179 003c 00140140 		.word	1073812480
+ 180              		.cfi_endproc
+ 181              	.LFE648:
+ 183              		.section	.text.MX_FSMC_Init,"ax",%progbits
+ 184              		.align	1
+ 185              		.global	MX_FSMC_Init
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 189              		.fpu softvfp
+ 191              	MX_FSMC_Init:
+ 192              	.LFB645:
+  31:Core/Src/fsmc.c ****   /* USER CODE BEGIN FSMC_Init 0 */
+ 193              		.loc 1 31 1 view -0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 32
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 10B5     		push	{r4, lr}
+ 198              	.LCFI5:
+ 199              		.cfi_def_cfa_offset 8
+ 200              		.cfi_offset 4, -8
+ 201              		.cfi_offset 14, -4
+ 202 0002 88B0     		sub	sp, sp, #32
+ 203              	.LCFI6:
+ 204              		.cfi_def_cfa_offset 40
+  36:Core/Src/fsmc.c **** 
+ 205              		.loc 1 36 3 view .LVU40
+  44:Core/Src/fsmc.c ****   hsram1.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
+ 206              		.loc 1 44 3 view .LVU41
+  44:Core/Src/fsmc.c ****   hsram1.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
+ 207              		.loc 1 44 19 is_stmt 0 view .LVU42
+ 208 0004 1748     		ldr	r0, .L18
+ 209 0006 4FF02043 		mov	r3, #-1610612736
+ 210 000a 0360     		str	r3, [r0]
+  45:Core/Src/fsmc.c ****   /* hsram1.Init */
+ 211              		.loc 1 45 3 is_stmt 1 view .LVU43
+  45:Core/Src/fsmc.c ****   /* hsram1.Init */
+ 212              		.loc 1 45 19 is_stmt 0 view .LVU44
+ 213 000c 03F58273 		add	r3, r3, #260
+ 214 0010 4360     		str	r3, [r0, #4]
+  47:Core/Src/fsmc.c ****   hsram1.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_DISABLE;
+ 215              		.loc 1 47 3 is_stmt 1 view .LVU45
+  47:Core/Src/fsmc.c ****   hsram1.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_DISABLE;
+ 216              		.loc 1 47 22 is_stmt 0 view .LVU46
+ 217 0012 0022     		movs	r2, #0
+ 218 0014 8260     		str	r2, [r0, #8]
+  48:Core/Src/fsmc.c ****   hsram1.Init.MemoryType = FSMC_MEMORY_TYPE_SRAM;
+ 219              		.loc 1 48 3 is_stmt 1 view .LVU47
+  48:Core/Src/fsmc.c ****   hsram1.Init.MemoryType = FSMC_MEMORY_TYPE_SRAM;
+ 220              		.loc 1 48 30 is_stmt 0 view .LVU48
+ 221 0016 C260     		str	r2, [r0, #12]
+  49:Core/Src/fsmc.c ****   hsram1.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;
+ARM GAS  /tmp/cc5liAvJ.s 			page 9
+
+
+ 222              		.loc 1 49 3 is_stmt 1 view .LVU49
+  49:Core/Src/fsmc.c ****   hsram1.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;
+ 223              		.loc 1 49 26 is_stmt 0 view .LVU50
+ 224 0018 0261     		str	r2, [r0, #16]
+  50:Core/Src/fsmc.c ****   hsram1.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;
+ 225              		.loc 1 50 3 is_stmt 1 view .LVU51
+  50:Core/Src/fsmc.c ****   hsram1.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;
+ 226              		.loc 1 50 31 is_stmt 0 view .LVU52
+ 227 001a 1021     		movs	r1, #16
+ 228 001c 4161     		str	r1, [r0, #20]
+  51:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW;
+ 229              		.loc 1 51 3 is_stmt 1 view .LVU53
+  51:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW;
+ 230              		.loc 1 51 31 is_stmt 0 view .LVU54
+ 231 001e 8261     		str	r2, [r0, #24]
+  52:Core/Src/fsmc.c ****   hsram1.Init.WrapMode = FSMC_WRAP_MODE_DISABLE;
+ 232              		.loc 1 52 3 is_stmt 1 view .LVU55
+  52:Core/Src/fsmc.c ****   hsram1.Init.WrapMode = FSMC_WRAP_MODE_DISABLE;
+ 233              		.loc 1 52 34 is_stmt 0 view .LVU56
+ 234 0020 C261     		str	r2, [r0, #28]
+  53:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;
+ 235              		.loc 1 53 3 is_stmt 1 view .LVU57
+  53:Core/Src/fsmc.c ****   hsram1.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;
+ 236              		.loc 1 53 24 is_stmt 0 view .LVU58
+ 237 0022 0262     		str	r2, [r0, #32]
+  54:Core/Src/fsmc.c ****   hsram1.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;
+ 238              		.loc 1 54 3 is_stmt 1 view .LVU59
+  54:Core/Src/fsmc.c ****   hsram1.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;
+ 239              		.loc 1 54 32 is_stmt 0 view .LVU60
+ 240 0024 4262     		str	r2, [r0, #36]
+  55:Core/Src/fsmc.c ****   hsram1.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;
+ 241              		.loc 1 55 3 is_stmt 1 view .LVU61
+  55:Core/Src/fsmc.c ****   hsram1.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;
+ 242              		.loc 1 55 30 is_stmt 0 view .LVU62
+ 243 0026 4FF48053 		mov	r3, #4096
+ 244 002a 8362     		str	r3, [r0, #40]
+  56:Core/Src/fsmc.c ****   hsram1.Init.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE;
+ 245              		.loc 1 56 3 is_stmt 1 view .LVU63
+  56:Core/Src/fsmc.c ****   hsram1.Init.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE;
+ 246              		.loc 1 56 26 is_stmt 0 view .LVU64
+ 247 002c C262     		str	r2, [r0, #44]
+  57:Core/Src/fsmc.c ****   hsram1.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;
+ 248              		.loc 1 57 3 is_stmt 1 view .LVU65
+  57:Core/Src/fsmc.c ****   hsram1.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;
+ 249              		.loc 1 57 28 is_stmt 0 view .LVU66
+ 250 002e 0263     		str	r2, [r0, #48]
+  58:Core/Src/fsmc.c ****   hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
+ 251              		.loc 1 58 3 is_stmt 1 view .LVU67
+  58:Core/Src/fsmc.c ****   hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
+ 252              		.loc 1 58 32 is_stmt 0 view .LVU68
+ 253 0030 4263     		str	r2, [r0, #52]
+  59:Core/Src/fsmc.c ****   /* Timing */
+ 254              		.loc 1 59 3 is_stmt 1 view .LVU69
+  59:Core/Src/fsmc.c ****   /* Timing */
+ 255              		.loc 1 59 26 is_stmt 0 view .LVU70
+ 256 0032 8263     		str	r2, [r0, #56]
+  61:Core/Src/fsmc.c ****   Timing.AddressHoldTime = 15;
+ARM GAS  /tmp/cc5liAvJ.s 			page 10
+
+
+ 257              		.loc 1 61 3 is_stmt 1 view .LVU71
+  61:Core/Src/fsmc.c ****   Timing.AddressHoldTime = 15;
+ 258              		.loc 1 61 27 is_stmt 0 view .LVU72
+ 259 0034 0F23     		movs	r3, #15
+ 260 0036 0193     		str	r3, [sp, #4]
+  62:Core/Src/fsmc.c ****   Timing.DataSetupTime = 255;
+ 261              		.loc 1 62 3 is_stmt 1 view .LVU73
+  62:Core/Src/fsmc.c ****   Timing.DataSetupTime = 255;
+ 262              		.loc 1 62 26 is_stmt 0 view .LVU74
+ 263 0038 0293     		str	r3, [sp, #8]
+  63:Core/Src/fsmc.c ****   Timing.BusTurnAroundDuration = 15;
+ 264              		.loc 1 63 3 is_stmt 1 view .LVU75
+  63:Core/Src/fsmc.c ****   Timing.BusTurnAroundDuration = 15;
+ 265              		.loc 1 63 24 is_stmt 0 view .LVU76
+ 266 003a FF24     		movs	r4, #255
+ 267 003c 0394     		str	r4, [sp, #12]
+  64:Core/Src/fsmc.c ****   Timing.CLKDivision = 16;
+ 268              		.loc 1 64 3 is_stmt 1 view .LVU77
+  64:Core/Src/fsmc.c ****   Timing.CLKDivision = 16;
+ 269              		.loc 1 64 32 is_stmt 0 view .LVU78
+ 270 003e 0493     		str	r3, [sp, #16]
+  65:Core/Src/fsmc.c ****   Timing.DataLatency = 17;
+ 271              		.loc 1 65 3 is_stmt 1 view .LVU79
+  65:Core/Src/fsmc.c ****   Timing.DataLatency = 17;
+ 272              		.loc 1 65 22 is_stmt 0 view .LVU80
+ 273 0040 0591     		str	r1, [sp, #20]
+  66:Core/Src/fsmc.c ****   Timing.AccessMode = FSMC_ACCESS_MODE_A;
+ 274              		.loc 1 66 3 is_stmt 1 view .LVU81
+  66:Core/Src/fsmc.c ****   Timing.AccessMode = FSMC_ACCESS_MODE_A;
+ 275              		.loc 1 66 22 is_stmt 0 view .LVU82
+ 276 0042 1123     		movs	r3, #17
+ 277 0044 0693     		str	r3, [sp, #24]
+  67:Core/Src/fsmc.c ****   /* ExtTiming */
+ 278              		.loc 1 67 3 is_stmt 1 view .LVU83
+  67:Core/Src/fsmc.c ****   /* ExtTiming */
+ 279              		.loc 1 67 21 is_stmt 0 view .LVU84
+ 280 0046 0792     		str	r2, [sp, #28]
+  70:Core/Src/fsmc.c ****   {
+ 281              		.loc 1 70 3 is_stmt 1 view .LVU85
+  70:Core/Src/fsmc.c ****   {
+ 282              		.loc 1 70 7 is_stmt 0 view .LVU86
+ 283 0048 01A9     		add	r1, sp, #4
+ 284 004a FFF7FEFF 		bl	HAL_SRAM_Init
+ 285              	.LVL4:
+  70:Core/Src/fsmc.c ****   {
+ 286              		.loc 1 70 6 view .LVU87
+ 287 004e 30B9     		cbnz	r0, .L17
+ 288              	.L15:
+  78:Core/Src/fsmc.c **** 
+ 289              		.loc 1 78 3 is_stmt 1 view .LVU88
+ 290 0050 054A     		ldr	r2, .L18+4
+ 291 0052 D369     		ldr	r3, [r2, #28]
+ 292 0054 43F48063 		orr	r3, r3, #1024
+ 293 0058 D361     		str	r3, [r2, #28]
+  83:Core/Src/fsmc.c **** 
+ 294              		.loc 1 83 1 is_stmt 0 view .LVU89
+ 295 005a 08B0     		add	sp, sp, #32
+ARM GAS  /tmp/cc5liAvJ.s 			page 11
+
+
+ 296              	.LCFI7:
+ 297              		.cfi_remember_state
+ 298              		.cfi_def_cfa_offset 8
+ 299              		@ sp needed
+ 300 005c 10BD     		pop	{r4, pc}
+ 301              	.L17:
+ 302              	.LCFI8:
+ 303              		.cfi_restore_state
+  72:Core/Src/fsmc.c ****   }
+ 304              		.loc 1 72 5 is_stmt 1 view .LVU90
+ 305 005e FFF7FEFF 		bl	Error_Handler
+ 306              	.LVL5:
+ 307 0062 F5E7     		b	.L15
+ 308              	.L19:
+ 309              		.align	2
+ 310              	.L18:
+ 311 0064 00000000 		.word	hsram1
+ 312 0068 00000140 		.word	1073807360
+ 313              		.cfi_endproc
+ 314              	.LFE645:
+ 316              		.section	.text.HAL_SRAM_MspInit,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	HAL_SRAM_MspInit
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 322              		.fpu softvfp
+ 324              	HAL_SRAM_MspInit:
+ 325              	.LVL6:
+ 326              	.LFB647:
+ 145:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspInit 0 */
+ 327              		.loc 1 145 54 view -0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspInit 0 */
+ 331              		.loc 1 145 54 is_stmt 0 view .LVU92
+ 332 0000 08B5     		push	{r3, lr}
+ 333              	.LCFI9:
+ 334              		.cfi_def_cfa_offset 8
+ 335              		.cfi_offset 3, -8
+ 336              		.cfi_offset 14, -4
+ 149:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspInit 1 */
+ 337              		.loc 1 149 3 is_stmt 1 view .LVU93
+ 338 0002 FFF7FEFF 		bl	HAL_FSMC_MspInit
+ 339              	.LVL7:
+ 153:Core/Src/fsmc.c **** 
+ 340              		.loc 1 153 1 is_stmt 0 view .LVU94
+ 341 0006 08BD     		pop	{r3, pc}
+ 342              		.cfi_endproc
+ 343              	.LFE647:
+ 345              		.section	.text.HAL_SRAM_MspDeInit,"ax",%progbits
+ 346              		.align	1
+ 347              		.global	HAL_SRAM_MspDeInit
+ 348              		.syntax unified
+ 349              		.thumb
+ 350              		.thumb_func
+ARM GAS  /tmp/cc5liAvJ.s 			page 12
+
+
+ 351              		.fpu softvfp
+ 353              	HAL_SRAM_MspDeInit:
+ 354              	.LVL8:
+ 355              	.LFB649:
+ 203:Core/Src/fsmc.c **** 
+ 204:Core/Src/fsmc.c **** void HAL_SRAM_MspDeInit(SRAM_HandleTypeDef* sramHandle){
+ 356              		.loc 1 204 56 is_stmt 1 view -0
+ 357              		.cfi_startproc
+ 358              		@ args = 0, pretend = 0, frame = 0
+ 359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 360              		.loc 1 204 56 is_stmt 0 view .LVU96
+ 361 0000 08B5     		push	{r3, lr}
+ 362              	.LCFI10:
+ 363              		.cfi_def_cfa_offset 8
+ 364              		.cfi_offset 3, -8
+ 365              		.cfi_offset 14, -4
+ 205:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspDeInit 0 */
+ 206:Core/Src/fsmc.c **** 
+ 207:Core/Src/fsmc.c ****   /* USER CODE END SRAM_MspDeInit 0 */
+ 208:Core/Src/fsmc.c ****   HAL_FSMC_MspDeInit();
+ 366              		.loc 1 208 3 is_stmt 1 view .LVU97
+ 367 0002 FFF7FEFF 		bl	HAL_FSMC_MspDeInit
+ 368              	.LVL9:
+ 209:Core/Src/fsmc.c ****   /* USER CODE BEGIN SRAM_MspDeInit 1 */
+ 210:Core/Src/fsmc.c **** 
+ 211:Core/Src/fsmc.c ****   /* USER CODE END SRAM_MspDeInit 1 */
+ 212:Core/Src/fsmc.c **** }
+ 369              		.loc 1 212 1 is_stmt 0 view .LVU98
+ 370 0006 08BD     		pop	{r3, pc}
+ 371              		.cfi_endproc
+ 372              	.LFE649:
+ 374              		.comm	hsram1,72,4
+ 375              		.section	.bss.FSMC_DeInitialized,"aw",%nobits
+ 376              		.align	2
+ 377              		.set	.LANCHOR1,. + 0
+ 380              	FSMC_DeInitialized:
+ 381 0000 00000000 		.space	4
+ 382              		.section	.bss.FSMC_Initialized,"aw",%nobits
+ 383              		.align	2
+ 384              		.set	.LANCHOR0,. + 0
+ 387              	FSMC_Initialized:
+ 388 0000 00000000 		.space	4
+ 389              		.text
+ 390              	.Letext0:
+ 391              		.file 2 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
+ 392              		.file 3 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
+ 393              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 394              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 395              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 396              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 397              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 398              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 399              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h"
+ 400              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sram.h"
+ 401              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 402              		.file 13 "Core/Inc/fsmc.h"
+ 403              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h"
+ARM GAS  /tmp/cc5liAvJ.s 			page 13
+
+
+ 404              		.file 15 "Core/Inc/main.h"
+ARM GAS  /tmp/cc5liAvJ.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 fsmc.c
+     /tmp/cc5liAvJ.s:16     .text.HAL_FSMC_MspInit:0000000000000000 $t
+     /tmp/cc5liAvJ.s:23     .text.HAL_FSMC_MspInit:0000000000000000 HAL_FSMC_MspInit
+     /tmp/cc5liAvJ.s:117    .text.HAL_FSMC_MspInit:0000000000000058 $d
+     /tmp/cc5liAvJ.s:125    .text.HAL_FSMC_MspDeInit:0000000000000000 $t
+     /tmp/cc5liAvJ.s:131    .text.HAL_FSMC_MspDeInit:0000000000000000 HAL_FSMC_MspDeInit
+     /tmp/cc5liAvJ.s:176    .text.HAL_FSMC_MspDeInit:0000000000000030 $d
+     /tmp/cc5liAvJ.s:184    .text.MX_FSMC_Init:0000000000000000 $t
+     /tmp/cc5liAvJ.s:191    .text.MX_FSMC_Init:0000000000000000 MX_FSMC_Init
+     /tmp/cc5liAvJ.s:311    .text.MX_FSMC_Init:0000000000000064 $d
+                            *COM*:0000000000000048 hsram1
+     /tmp/cc5liAvJ.s:317    .text.HAL_SRAM_MspInit:0000000000000000 $t
+     /tmp/cc5liAvJ.s:324    .text.HAL_SRAM_MspInit:0000000000000000 HAL_SRAM_MspInit
+     /tmp/cc5liAvJ.s:346    .text.HAL_SRAM_MspDeInit:0000000000000000 $t
+     /tmp/cc5liAvJ.s:353    .text.HAL_SRAM_MspDeInit:0000000000000000 HAL_SRAM_MspDeInit
+     /tmp/cc5liAvJ.s:376    .bss.FSMC_DeInitialized:0000000000000000 $d
+     /tmp/cc5liAvJ.s:380    .bss.FSMC_DeInitialized:0000000000000000 FSMC_DeInitialized
+     /tmp/cc5liAvJ.s:383    .bss.FSMC_Initialized:0000000000000000 $d
+     /tmp/cc5liAvJ.s:387    .bss.FSMC_Initialized:0000000000000000 FSMC_Initialized
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_DeInit
+HAL_SRAM_Init
+Error_Handler

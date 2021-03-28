@@ -45,26 +45,6 @@ Core/Src/rtc.c \
 Core/Src/adc.c \
 Core/Src/dma.c \
 Core/Src/stm32l0xx_it.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_spi.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c \
-Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c \
 Core/Src/system_stm32l0xx.c \
 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_gpio.c \
 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_adc.c \
@@ -80,7 +60,7 @@ Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_usart.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32l031xx.s
+startup_stm32l051xx.s
 
 
 #######################################
@@ -124,7 +104,6 @@ AS_DEFS =
 
 # C defines
 C_DEFS =  \
--DSTM32L031xx \
 -DUSE_FULL_LL_DRIVER \
 -DHSE_VALUE=8000000 \
 -DHSE_STARTUP_TIMEOUT=100 \

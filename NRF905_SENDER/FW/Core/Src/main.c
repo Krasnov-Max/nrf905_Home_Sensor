@@ -25,6 +25,7 @@
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
+#include "stm32l051xx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -170,30 +171,13 @@ void SystemClock_Config(void)
   LL_Init1msTick(2097000);
 
   LL_SetSystemCoreClock(2097000);
-  LL_RCC_SetUSARTClockSource(LL_RCC_USART1_CLKSOURCE_PCLK2);
+ // LL_RCC_SetUSARTClockSource(LL_RCC_USART1_CLKSOURCE_PCLK1);
 }
 
 /* USER CODE BEGIN 4 */
-void SPI_GET_DAT( uint8_t *ADDR, uint8_t *data)
-{
-	HAL_GPIO_WritePin(CS_BME_Port, CS_BME_Pin, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi1, ADDR, 1, 10);
-	HAL_SPI_Receive(&hspi1, data, 1, 10);
-	HAL_GPIO_WritePin(CS_BME_Port, CS_BME_Pin, GPIO_PIN_SET);
-}
+/*
 
-void SPI_SET_DAT( uint8_t *ADDR, uint8_t *data)
-{
-	uint8_t addr;
-	addr = *(uint8_t *)ADDR;
-	addr = addr & 0x7f;
-
-	HAL_GPIO_WritePin(CS_BME_Port, CS_BME_Pin, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi1, &addr, 1, 10);
-	HAL_SPI_Transmit(&hspi1, data, 1, 10);
-	HAL_GPIO_WritePin(CS_BME_Port, CS_BME_Pin, GPIO_PIN_SET);
-}
-
+*/
 uint16_t flash_read(uint32_t address)
 {
     return (*(__IO uint16_t*) address);

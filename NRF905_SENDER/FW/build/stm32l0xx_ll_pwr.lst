@@ -1,0 +1,864 @@
+ARM GAS  /tmp/ccUrWfkO.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_ll_pwr.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.LL_PWR_DeInit,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	LL_PWR_DeInit
+  19              		.arch armv6s-m
+  20              		.syntax unified
+  21              		.code	16
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	LL_PWR_DeInit:
+  26              	.LFB114:
+  27              		.file 1 "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c"
+   1:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /**
+   2:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   ******************************************************************************
+   3:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @file    stm32l0xx_ll_pwr.c
+   4:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @author  MCD Application Team
+   5:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @brief   PWR LL module driver.
+   6:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   ******************************************************************************
+   7:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @attention
+   8:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *
+   9:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * <h2><center>&copy; Copyright(c) 2016 STMicroelectronics.
+  10:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * All rights reserved.</center></h2>
+  11:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *
+  12:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * the "License"; You may not use this file except in compliance with the
+  14:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * License. You may obtain a copy of the License at:
+  15:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *
+  17:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   ******************************************************************************
+  18:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  19:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** #if defined(USE_FULL_LL_DRIVER)
+  20:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  21:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Includes ------------------------------------------------------------------*/
+  22:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** #include "stm32l0xx_ll_pwr.h"
+  23:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** #include "stm32l0xx_ll_bus.h"
+  24:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  25:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /** @addtogroup STM32L0xx_LL_Driver
+  26:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @{
+  27:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  28:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  29:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** #if defined(PWR)
+  30:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  31:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /** @defgroup PWR_LL PWR
+ARM GAS  /tmp/ccUrWfkO.s 			page 2
+
+
+  32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @{
+  33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  35:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Private types -------------------------------------------------------------*/
+  36:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Private variables ---------------------------------------------------------*/
+  37:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Private constants ---------------------------------------------------------*/
+  38:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Private macros ------------------------------------------------------------*/
+  39:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Private function prototypes -----------------------------------------------*/
+  40:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  41:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /* Exported functions --------------------------------------------------------*/
+  42:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /** @addtogroup PWR_LL_Exported_Functions
+  43:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @{
+  44:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  45:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  46:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /** @addtogroup PWR_LL_EF_Init
+  47:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @{
+  48:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  49:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  50:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** /**
+  51:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @brief  De-initialize the PWR registers to their default reset values.
+  52:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   * @retval An ErrorStatus enumeration value:
+  53:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *          - SUCCESS: PWR registers are de-initialized
+  54:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   *          - ERROR: not applicable
+  55:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   */
+  56:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** ErrorStatus LL_PWR_DeInit(void)
+  57:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** {
+  28              		.loc 1 57 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  58:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   /* Force reset of PWR clock */
+  59:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   LL_APB1_GRP1_ForceReset(LL_APB1_GRP1_PERIPH_PWR);
+  33              		.loc 1 59 3 view .LVU1
+  34              	.LVL0:
+  35              	.LBB6:
+  36              	.LBI6:
+  37              		.file 2 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h"
+   1:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+   2:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   ******************************************************************************
+   3:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @file    stm32l0xx_ll_bus.h
+   4:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @author  MCD Application Team
+   5:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief   Header file of BUS LL module.
+   6:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+   7:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   @verbatim
+   8:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****                       ##### RCC Limitations #####
+   9:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   ==============================================================================
+  10:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****     [..]
+  11:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       A delay between an RCC peripheral clock enable and the effective peripheral
+  12:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       enabling should be taken into account in order to manage the peripheral read/write
+  13:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       from/to registers.
+  14:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       (+) This delay depends on the peripheral mapping.
+  15:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****         (++) AHB & APB peripherals, 1 dummy read is necessary
+  16:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  17:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****     [..]
+  18:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       Workarounds:
+  19:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****       (#) For AHB & APB peripherals, a dummy read to the peripheral register has been
+ARM GAS  /tmp/ccUrWfkO.s 			page 3
+
+
+  20:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****           inserted in each LL_{BUS}_GRP{x}_EnableClock() function.
+  21:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  22:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   @endverbatim
+  23:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   ******************************************************************************
+  24:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @attention
+  25:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+  26:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * <h2><center>&copy; Copyright(c) 2016 STMicroelectronics.
+  27:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * All rights reserved.</center></h2>
+  28:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+  29:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * This software component is licensed by ST under BSD 3-Clause license,
+  30:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * the "License"; You may not use this file except in compliance with the
+  31:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * License. You may obtain a copy of the License at:
+  32:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *                        opensource.org/licenses/BSD-3-Clause
+  33:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+  34:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   ******************************************************************************
+  35:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  36:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  37:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Define to prevent recursive inclusion -------------------------------------*/
+  38:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #ifndef __STM32L0xx_LL_BUS_H
+  39:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define __STM32L0xx_LL_BUS_H
+  40:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  41:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #ifdef __cplusplus
+  42:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** extern "C" {
+  43:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+  44:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  45:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Includes ------------------------------------------------------------------*/
+  46:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #include "stm32l0xx.h"
+  47:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  48:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @addtogroup STM32L0xx_LL_Driver
+  49:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+  50:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  51:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  52:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(RCC)
+  53:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  54:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL BUS
+  55:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+  56:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  57:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  58:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Private types -------------------------------------------------------------*/
+  59:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Private variables ---------------------------------------------------------*/
+  60:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  61:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Private constants ---------------------------------------------------------*/
+  62:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  63:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Private macros ------------------------------------------------------------*/
+  64:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  65:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Exported types ------------------------------------------------------------*/
+  66:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Exported constants --------------------------------------------------------*/
+  67:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Constants BUS Exported Constants
+  68:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+  69:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  70:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  71:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB1_GRP1_PERIPH  AHB1 GRP1 PERIPH
+  72:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+  73:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  74:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_ALL            0xFFFFFFFFU
+  75:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMA1           RCC_AHBENR_DMA1EN      /*!< DMA1 clock enable */
+  76:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_MIF            RCC_AHBENR_MIFEN       /*!< MIF clock enable */
+ARM GAS  /tmp/ccUrWfkO.s 			page 4
+
+
+  77:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_SRAM           RCC_AHBSMENR_SRAMSMEN  /*!< Sleep Mode SRAM clock enable
+  78:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_CRC            RCC_AHBENR_CRCEN       /*!< CRC clock enable */
+  79:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(TSC)
+  80:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_TSC            RCC_AHBENR_TSCEN       /*!< TSC clock enable */
+  81:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*TSC*/
+  82:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(RNG)
+  83:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_RNG            RCC_AHBENR_RNGEN       /*!< RNG clock enable */
+  84:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*RNG*/
+  85:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(AES)
+  86:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_CRYP           RCC_AHBENR_CRYPEN      /*!< CRYP clock enable */
+  87:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*AES*/
+  88:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+  89:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+  90:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  91:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  92:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+  93:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB1_GRP1_PERIPH  APB1 GRP1 PERIPH
+  94:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+  95:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+  96:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_ALL            0xFFFFFFFFU
+  97:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_TIM2           RCC_APB1ENR_TIM2EN     /*!< TIM2 clock enable */
+  98:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(TIM3)
+  99:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_TIM3           RCC_APB1ENR_TIM3EN     /*!< TIM3 clock enable */
+ 100:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 101:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(TIM6)
+ 102:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_TIM6           RCC_APB1ENR_TIM6EN     /*!< TIM6 clock enable */
+ 103:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 104:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(TIM7)
+ 105:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_TIM7           RCC_APB1ENR_TIM7EN     /*!< TIM7 clock enable */
+ 106:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 107:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(LCD)
+ 108:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_LCD            RCC_APB1ENR_LCDEN      /*!< LCD clock enable */
+ 109:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*LCD*/
+ 110:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_WWDG           RCC_APB1ENR_WWDGEN     /*!< WWDG clock enable */
+ 111:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(SPI2)
+ 112:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI2           RCC_APB1ENR_SPI2EN     /*!< SPI2 clock enable */
+ 113:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 114:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART2         RCC_APB1ENR_USART2EN   /*!< USART2 clock enable */
+ 115:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_LPUART1        RCC_APB1ENR_LPUART1EN  /*!< LPUART1 clock enable */
+ 116:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(USART4)
+ 117:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART4         RCC_APB1ENR_USART4EN   /*!< USART4 clock enable */
+ 118:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 119:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(USART5)
+ 120:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USART5         RCC_APB1ENR_USART5EN   /*!< USART5 clock enable */
+ 121:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 122:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C1           RCC_APB1ENR_I2C1EN     /*!< I2C1 clock enable */
+ 123:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(I2C2)
+ 124:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C2           RCC_APB1ENR_I2C2EN     /*!< I2C2 clock enable */
+ 125:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 126:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(USB)
+ 127:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR_USBEN      /*!< USB clock enable */
+ 128:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*USB*/
+ 129:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(CRS)
+ 130:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_CRS            RCC_APB1ENR_CRSEN      /*!< CRS clock enable */
+ 131:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*CRS*/
+ 132:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_PWR            RCC_APB1ENR_PWREN      /*!< PWR clock enable */
+ 133:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(DAC)
+ARM GAS  /tmp/ccUrWfkO.s 			page 5
+
+
+ 134:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_DAC1           RCC_APB1ENR_DACEN      /*!< DAC clock enable */
+ 135:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 136:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(I2C3)
+ 137:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C3           RCC_APB1ENR_I2C3EN     /*!< I2C3 clock enable */
+ 138:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 139:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_LPTIM1         RCC_APB1ENR_LPTIM1EN   /*!< LPTIM1 clock enable */
+ 140:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 141:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+ 142:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 143:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 144:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 145:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 146:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 147:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB2_GRP1_PERIPH  APB2 GRP1 PERIPH
+ 148:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+ 149:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 150:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ALL            0xFFFFFFFFU
+ 151:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SYSCFG         RCC_APB2ENR_SYSCFGEN  /*!< SYSCFG clock enable */
+ 152:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM21          RCC_APB2ENR_TIM21EN   /*!< TIM21 clock enable */
+ 153:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(TIM22)
+ 154:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM22          RCC_APB2ENR_TIM22EN   /*!< TIM22 clock enable */
+ 155:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 156:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_FW             RCC_APB2ENR_FWEN      /*!< FireWall clock enable */
+ 157:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ADC1           RCC_APB2ENR_ADC1EN    /*!< ADC1 clock enable */
+ 158:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SPI1           RCC_APB2ENR_SPI1EN    /*!< SPI1 clock enable */
+ 159:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(USART1)
+ 160:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_USART1         RCC_APB2ENR_USART1EN  /*!< USART1 clock enable */
+ 161:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif
+ 162:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_DBGMCU         RCC_APB2ENR_DBGMCUEN  /*!< DBGMCU clock enable */
+ 163:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 164:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 165:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+ 166:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 167:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 168:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 169:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 170:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EC_IOP_GRP1_PERIPH  IOP GRP1 PERIPH
+ 171:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+ 172:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 173:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_ALL             0xFFFFFFFFU
+ 174:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOA           RCC_IOPENR_GPIOAEN    /*!< GPIO port A control */
+ 175:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOB           RCC_IOPENR_GPIOBEN    /*!< GPIO port B control */
+ 176:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOC           RCC_IOPENR_GPIOCEN    /*!< GPIO port C control */
+ 177:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(GPIOD)
+ 178:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOD           RCC_IOPENR_GPIODEN    /*!< GPIO port D control */
+ 179:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*GPIOD*/
+ 180:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(GPIOE)
+ 181:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOE           RCC_IOPENR_GPIOEEN    /*!< GPIO port H control */
+ 182:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*GPIOE*/
+ 183:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #if defined(GPIOH)
+ 184:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #define LL_IOP_GRP1_PERIPH_GPIOH           RCC_IOPENR_GPIOHEN    /*!< GPIO port H control */
+ 185:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** #endif /*GPIOH*/
+ 186:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 187:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+ 188:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 189:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 190:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ARM GAS  /tmp/ccUrWfkO.s 			page 6
+
+
+ 191:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 192:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+ 193:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 194:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 195:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Exported macro ------------------------------------------------------------*/
+ 196:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /* Exported functions --------------------------------------------------------*/
+ 197:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Functions BUS Exported Functions
+ 198:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+ 199:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 200:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 201:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB1 AHB1
+ 202:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+ 203:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 204:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 205:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 206:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock.
+ 207:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBENR      DMAEN        LL_AHB1_GRP1_EnableClock\n
+ 208:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      MIFEN        LL_AHB1_GRP1_EnableClock\n
+ 209:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRCEN        LL_AHB1_GRP1_EnableClock\n
+ 210:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      TSCEN        LL_AHB1_GRP1_EnableClock\n
+ 211:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      RNGEN        LL_AHB1_GRP1_EnableClock\n
+ 212:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRYPEN       LL_AHB1_GRP1_EnableClock
+ 213:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 214:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 215:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 216:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 217:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 218:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 219:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 220:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 221:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 222:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 223:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 224:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClock(uint32_t Periphs)
+ 225:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 226:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   __IO uint32_t tmpreg;
+ 227:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   SET_BIT(RCC->AHBENR, Periphs);
+ 228:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 229:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHBENR, Periphs);
+ 230:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   (void)tmpreg;
+ 231:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 232:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 233:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 234:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Check if AHB1 peripheral clock is enabled or not
+ 235:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBENR      DMAEN        LL_AHB1_GRP1_IsEnabledClock\n
+ 236:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      MIFEN        LL_AHB1_GRP1_IsEnabledClock\n
+ 237:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRCEN        LL_AHB1_GRP1_IsEnabledClock\n
+ 238:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      TSCEN        LL_AHB1_GRP1_IsEnabledClock\n
+ 239:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      RNGEN        LL_AHB1_GRP1_IsEnabledClock\n
+ 240:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRYPEN       LL_AHB1_GRP1_IsEnabledClock
+ 241:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 242:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 243:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 244:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 245:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 246:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 247:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ARM GAS  /tmp/ccUrWfkO.s 			page 7
+
+
+ 248:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 249:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 250:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
+ 251:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 252:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB1_GRP1_IsEnabledClock(uint32_t Periphs)
+ 253:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 254:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   return ((READ_BIT(RCC->AHBENR, Periphs) == (Periphs)) ? 1UL : 0UL);
+ 255:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 256:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 257:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 258:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Disable AHB1 peripherals clock.
+ 259:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBENR      DMAEN        LL_AHB1_GRP1_DisableClock\n
+ 260:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      MIFEN        LL_AHB1_GRP1_DisableClock\n
+ 261:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRCEN        LL_AHB1_GRP1_DisableClock\n
+ 262:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      TSCEN        LL_AHB1_GRP1_DisableClock\n
+ 263:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      RNGEN        LL_AHB1_GRP1_DisableClock\n
+ 264:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBENR      CRYPEN       LL_AHB1_GRP1_DisableClock
+ 265:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 266:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 267:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 268:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 269:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 270:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 271:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 272:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 273:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 274:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 275:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 276:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClock(uint32_t Periphs)
+ 277:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 278:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   CLEAR_BIT(RCC->AHBENR, Periphs);
+ 279:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 280:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 281:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 282:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Force AHB1 peripherals reset.
+ 283:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBRSTR      DMARST        LL_AHB1_GRP1_ForceReset\n
+ 284:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      MIFRST        LL_AHB1_GRP1_ForceReset\n
+ 285:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      CRCRST        LL_AHB1_GRP1_ForceReset\n
+ 286:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      TSCRST        LL_AHB1_GRP1_ForceReset\n
+ 287:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      RNGRST        LL_AHB1_GRP1_ForceReset\n
+ 288:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      CRYPRST       LL_AHB1_GRP1_ForceReset
+ 289:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 290:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_ALL
+ 291:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 292:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 293:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 294:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 295:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 296:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 297:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 298:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 299:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 300:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 301:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ForceReset(uint32_t Periphs)
+ 302:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 303:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   SET_BIT(RCC->AHBRSTR, Periphs);
+ 304:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ARM GAS  /tmp/ccUrWfkO.s 			page 8
+
+
+ 305:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 306:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 307:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Release AHB1 peripherals reset.
+ 308:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBRSTR      DMARST        LL_AHB1_GRP1_ReleaseReset\n
+ 309:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      MIFRST        LL_AHB1_GRP1_ReleaseReset\n
+ 310:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      CRCRST        LL_AHB1_GRP1_ReleaseReset\n
+ 311:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      TSCRST        LL_AHB1_GRP1_ReleaseReset\n
+ 312:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      RNGRST        LL_AHB1_GRP1_ReleaseReset\n
+ 313:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBRSTR      CRYPRST       LL_AHB1_GRP1_ReleaseReset
+ 314:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 315:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_ALL
+ 316:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 317:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 318:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 319:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 320:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 321:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 322:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 323:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 324:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 325:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 326:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ReleaseReset(uint32_t Periphs)
+ 327:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 328:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   CLEAR_BIT(RCC->AHBRSTR, Periphs);
+ 329:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 330:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 331:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 332:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock during Low Power (Sleep) mode.
+ 333:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBSMENR     DMASMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 334:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     MIFSMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 335:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     SRAMSMEN      LL_AHB1_GRP1_EnableClockSleep\n
+ 336:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     CRCSMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 337:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     TSCSMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 338:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     RNGSMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 339:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     CRYPSMEN      LL_AHB1_GRP1_EnableClockSleep
+ 340:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 341:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 342:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 343:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM
+ 344:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 345:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 346:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 347:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 348:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 349:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 350:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 351:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 352:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClockSleep(uint32_t Periphs)
+ 353:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 354:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   __IO uint32_t tmpreg;
+ 355:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   SET_BIT(RCC->AHBSMENR, Periphs);
+ 356:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 357:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHBSMENR, Periphs);
+ 358:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   (void)tmpreg;
+ 359:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 360:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 361:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ARM GAS  /tmp/ccUrWfkO.s 			page 9
+
+
+ 362:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Disable AHB1 peripherals clock during Low Power (Sleep) mode.
+ 363:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll AHBSMENR     DMASMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 364:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     MIFSMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 365:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     SRAMSMEN      LL_AHB1_GRP1_DisableClockSleep\n
+ 366:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     CRCSMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 367:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     TSCSMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 368:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     RNGSMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 369:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         AHBSMENR     CRYPSMEN      LL_AHB1_GRP1_DisableClockSleep
+ 370:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 371:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 372:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_MIF
+ 373:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM
+ 374:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 375:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC (*)
+ 376:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_RNG (*)
+ 377:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRYP (*)
+ 378:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 379:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 380:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 381:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 382:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClockSleep(uint32_t Periphs)
+ 383:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 384:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   CLEAR_BIT(RCC->AHBSMENR, Periphs);
+ 385:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 386:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 387:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 388:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @}
+ 389:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 390:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 391:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /** @defgroup BUS_LL_EF_APB1 APB1
+ 392:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @{
+ 393:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   */
+ 394:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 395:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 396:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Enable APB1 peripherals clock.
+ 397:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll APB1ENR     TIM2EN        LL_APB1_GRP1_EnableClock\n
+ 398:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM3EN        LL_APB1_GRP1_EnableClock\n
+ 399:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM6EN        LL_APB1_GRP1_EnableClock\n
+ 400:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM7EN        LL_APB1_GRP1_EnableClock\n
+ 401:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LCDEN         LL_APB1_GRP1_EnableClock\n
+ 402:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     WWDGEN        LL_APB1_GRP1_EnableClock\n
+ 403:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     SPI2EN        LL_APB1_GRP1_EnableClock\n
+ 404:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART2EN      LL_APB1_GRP1_EnableClock\n
+ 405:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPUART1EN     LL_APB1_GRP1_EnableClock\n
+ 406:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART4EN      LL_APB1_GRP1_EnableClock\n
+ 407:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART5EN      LL_APB1_GRP1_EnableClock\n
+ 408:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C1EN        LL_APB1_GRP1_EnableClock\n
+ 409:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C2EN        LL_APB1_GRP1_EnableClock\n
+ 410:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USBEN         LL_APB1_GRP1_EnableClock\n
+ 411:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     CRSEN         LL_APB1_GRP1_EnableClock\n
+ 412:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     PWREN         LL_APB1_GRP1_EnableClock\n
+ 413:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     DACEN         LL_APB1_GRP1_EnableClock\n
+ 414:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C3EN        LL_APB1_GRP1_EnableClock\n
+ 415:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPTIM1EN      LL_APB1_GRP1_EnableClock
+ 416:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 417:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
+ 418:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM3 (*)
+ARM GAS  /tmp/ccUrWfkO.s 			page 10
+
+
+ 419:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6 (*)
+ 420:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7 (*)
+ 421:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LCD (*)
+ 422:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
+ 423:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
+ 424:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
+ 425:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPUART1
+ 426:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART4 (*)
+ 427:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART5 (*)
+ 428:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
+ 429:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2 (*)
+ 430:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
+ 431:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
+ 432:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
+ 433:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_DAC1 (*)
+ 434:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
+ 435:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
+ 436:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 437:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 438:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 439:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 440:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_EnableClock(uint32_t Periphs)
+ 441:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 442:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   __IO uint32_t tmpreg;
+ 443:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   SET_BIT(RCC->APB1ENR, Periphs);
+ 444:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 445:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   tmpreg = READ_BIT(RCC->APB1ENR, Periphs);
+ 446:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   (void)tmpreg;
+ 447:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 448:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 449:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 450:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Check if APB1 peripheral clock is enabled or not
+ 451:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll APB1ENR     TIM2EN        LL_APB1_GRP1_IsEnabledClock\n
+ 452:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM3EN        LL_APB1_GRP1_IsEnabledClock\n
+ 453:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM6EN        LL_APB1_GRP1_IsEnabledClock\n
+ 454:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM7EN        LL_APB1_GRP1_IsEnabledClock\n
+ 455:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LCDEN         LL_APB1_GRP1_IsEnabledClock\n
+ 456:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     WWDGEN        LL_APB1_GRP1_IsEnabledClock\n
+ 457:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     SPI2EN        LL_APB1_GRP1_IsEnabledClock\n
+ 458:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART2EN      LL_APB1_GRP1_IsEnabledClock\n
+ 459:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPUART1EN     LL_APB1_GRP1_IsEnabledClock\n
+ 460:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART4EN      LL_APB1_GRP1_IsEnabledClock\n
+ 461:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART5EN      LL_APB1_GRP1_IsEnabledClock\n
+ 462:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C1EN        LL_APB1_GRP1_IsEnabledClock\n
+ 463:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C2EN        LL_APB1_GRP1_IsEnabledClock\n
+ 464:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USBEN         LL_APB1_GRP1_IsEnabledClock\n
+ 465:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     CRSEN         LL_APB1_GRP1_IsEnabledClock\n
+ 466:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     PWREN         LL_APB1_GRP1_IsEnabledClock\n
+ 467:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     DACEN         LL_APB1_GRP1_IsEnabledClock\n
+ 468:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C3EN        LL_APB1_GRP1_IsEnabledClock\n
+ 469:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPTIM1EN      LL_APB1_GRP1_IsEnabledClock
+ 470:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 471:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
+ 472:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM3 (*)
+ 473:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6 (*)
+ 474:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7 (*)
+ 475:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LCD (*)
+ARM GAS  /tmp/ccUrWfkO.s 			page 11
+
+
+ 476:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
+ 477:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
+ 478:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
+ 479:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPUART1
+ 480:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART4 (*)
+ 481:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART5 (*)
+ 482:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
+ 483:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2 (*)
+ 484:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
+ 485:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
+ 486:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
+ 487:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_DAC1 (*)
+ 488:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
+ 489:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
+ 490:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 491:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 492:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval State of Periphs (1 or 0).
+ 493:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 494:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE uint32_t LL_APB1_GRP1_IsEnabledClock(uint32_t Periphs)
+ 495:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 496:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   return ((READ_BIT(RCC->APB1ENR, Periphs) == (Periphs)) ? 1UL : 0UL);
+ 497:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 498:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 499:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 500:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Disable APB1 peripherals clock.
+ 501:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll APB1ENR     TIM2EN        LL_APB1_GRP1_DisableClock\n
+ 502:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM3EN        LL_APB1_GRP1_DisableClock\n
+ 503:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM6EN        LL_APB1_GRP1_DisableClock\n
+ 504:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     TIM7EN        LL_APB1_GRP1_DisableClock\n
+ 505:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LCDEN         LL_APB1_GRP1_DisableClock\n
+ 506:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     WWDGEN        LL_APB1_GRP1_DisableClock\n
+ 507:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     SPI2EN        LL_APB1_GRP1_DisableClock\n
+ 508:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART2EN      LL_APB1_GRP1_DisableClock\n
+ 509:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPUART1EN     LL_APB1_GRP1_DisableClock\n
+ 510:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART4EN      LL_APB1_GRP1_DisableClock\n
+ 511:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USART5EN      LL_APB1_GRP1_DisableClock\n
+ 512:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C1EN        LL_APB1_GRP1_DisableClock\n
+ 513:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C2EN        LL_APB1_GRP1_DisableClock\n
+ 514:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     USBEN         LL_APB1_GRP1_DisableClock\n
+ 515:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     CRSEN         LL_APB1_GRP1_DisableClock\n
+ 516:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     PWREN         LL_APB1_GRP1_DisableClock\n
+ 517:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     DACEN         LL_APB1_GRP1_DisableClock\n
+ 518:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     I2C3EN        LL_APB1_GRP1_DisableClock\n
+ 519:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1ENR     LPTIM1EN      LL_APB1_GRP1_DisableClock
+ 520:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 521:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
+ 522:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM3 (*)
+ 523:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6 (*)
+ 524:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7 (*)
+ 525:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LCD (*)
+ 526:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
+ 527:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
+ 528:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
+ 529:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPUART1
+ 530:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART4 (*)
+ 531:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART5 (*)
+ 532:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
+ARM GAS  /tmp/ccUrWfkO.s 			page 12
+
+
+ 533:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2 (*)
+ 534:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
+ 535:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
+ 536:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
+ 537:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_DAC1 (*)
+ 538:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
+ 539:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
+ 540:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 541:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 542:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 543:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 544:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_DisableClock(uint32_t Periphs)
+ 545:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 546:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   CLEAR_BIT(RCC->APB1ENR, Periphs);
+ 547:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 548:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 549:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 550:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Force APB1 peripherals reset.
+ 551:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll APB1RSTR     TIM2RST        LL_APB1_GRP1_ForceReset\n
+ 552:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM3RST        LL_APB1_GRP1_ForceReset\n
+ 553:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM6RST        LL_APB1_GRP1_ForceReset\n
+ 554:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM7RST        LL_APB1_GRP1_ForceReset\n
+ 555:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LCDRST         LL_APB1_GRP1_ForceReset\n
+ 556:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     WWDGRST        LL_APB1_GRP1_ForceReset\n
+ 557:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     SPI2RST        LL_APB1_GRP1_ForceReset\n
+ 558:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART2RST      LL_APB1_GRP1_ForceReset\n
+ 559:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LPUART1RST     LL_APB1_GRP1_ForceReset\n
+ 560:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART4RST      LL_APB1_GRP1_ForceReset\n
+ 561:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART5RST      LL_APB1_GRP1_ForceReset\n
+ 562:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C1RST        LL_APB1_GRP1_ForceReset\n
+ 563:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C2RST        LL_APB1_GRP1_ForceReset\n
+ 564:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USBRST         LL_APB1_GRP1_ForceReset\n
+ 565:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     CRSRST         LL_APB1_GRP1_ForceReset\n
+ 566:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     PWRRST         LL_APB1_GRP1_ForceReset\n
+ 567:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     DACRST         LL_APB1_GRP1_ForceReset\n
+ 568:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C3RST        LL_APB1_GRP1_ForceReset\n
+ 569:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LPTIM1RST      LL_APB1_GRP1_ForceReset
+ 570:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 571:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_ALL
+ 572:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
+ 573:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM3 (*)
+ 574:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6 (*)
+ 575:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7 (*)
+ 576:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LCD (*)
+ 577:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
+ 578:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
+ 579:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
+ 580:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPUART1
+ 581:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART4 (*)
+ 582:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART5 (*)
+ 583:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
+ 584:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2 (*)
+ 585:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
+ 586:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
+ 587:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
+ 588:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_DAC1 (*)
+ 589:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
+ARM GAS  /tmp/ccUrWfkO.s 			page 13
+
+
+ 590:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
+ 591:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 592:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 593:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 594:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 595:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_ForceReset(uint32_t Periphs)
+  38              		.loc 2 595 22 view .LVU2
+  39              	.LBB7:
+ 596:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 597:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   SET_BIT(RCC->APB1RSTR, Periphs);
+  40              		.loc 2 597 3 view .LVU3
+  41 0000 8022     		movs	r2, #128
+  42 0002 054B     		ldr	r3, .L3
+  43 0004 5205     		lsls	r2, r2, #21
+  44 0006 996A     		ldr	r1, [r3, #40]
+  45              	.LBE7:
+  46              	.LBE6:
+  60:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  61:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   /* Release reset of PWR clock */
+  62:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   LL_APB1_GRP1_ReleaseReset(LL_APB1_GRP1_PERIPH_PWR);
+  63:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  64:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c ****   return SUCCESS;
+  65:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** }
+  47              		.loc 1 65 1 is_stmt 0 view .LVU4
+  48 0008 0020     		movs	r0, #0
+  49              	.LBB9:
+  50              	.LBB8:
+  51              		.loc 2 597 3 view .LVU5
+  52 000a 0A43     		orrs	r2, r1
+  53 000c 9A62     		str	r2, [r3, #40]
+  54              	.LVL1:
+  55              		.loc 2 597 3 view .LVU6
+  56              	.LBE8:
+  57              	.LBE9:
+  62:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** 
+  58              		.loc 1 62 3 is_stmt 1 view .LVU7
+  59              	.LBB10:
+  60              	.LBI10:
+ 598:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** }
+ 599:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** 
+ 600:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** /**
+ 601:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @brief  Release APB1 peripherals reset.
+ 602:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @rmtoll APB1RSTR     TIM2RST        LL_APB1_GRP1_ReleaseReset\n
+ 603:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM3RST        LL_APB1_GRP1_ReleaseReset\n
+ 604:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM6RST        LL_APB1_GRP1_ReleaseReset\n
+ 605:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     TIM7RST        LL_APB1_GRP1_ReleaseReset\n
+ 606:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LCDRST         LL_APB1_GRP1_ReleaseReset\n
+ 607:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     WWDGRST        LL_APB1_GRP1_ReleaseReset\n
+ 608:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     SPI2RST        LL_APB1_GRP1_ReleaseReset\n
+ 609:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART2RST      LL_APB1_GRP1_ReleaseReset\n
+ 610:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LPUART1RST     LL_APB1_GRP1_ReleaseReset\n
+ 611:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART4RST      LL_APB1_GRP1_ReleaseReset\n
+ 612:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USART5RST      LL_APB1_GRP1_ReleaseReset\n
+ 613:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C1RST        LL_APB1_GRP1_ReleaseReset\n
+ 614:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C2RST        LL_APB1_GRP1_ReleaseReset\n
+ 615:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     USBRST         LL_APB1_GRP1_ReleaseReset\n
+ 616:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     CRSRST         LL_APB1_GRP1_ReleaseReset\n
+ARM GAS  /tmp/ccUrWfkO.s 			page 14
+
+
+ 617:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     PWRRST         LL_APB1_GRP1_ReleaseReset\n
+ 618:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     DACRST         LL_APB1_GRP1_ReleaseReset\n
+ 619:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     I2C3RST        LL_APB1_GRP1_ReleaseReset\n
+ 620:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         APB1RSTR     LPTIM1RST      LL_APB1_GRP1_ReleaseReset
+ 621:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 622:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_ALL
+ 623:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM2
+ 624:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM3 (*)
+ 625:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM6 (*)
+ 626:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_TIM7 (*)
+ 627:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LCD (*)
+ 628:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_WWDG
+ 629:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_SPI2 (*)
+ 630:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART2
+ 631:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPUART1
+ 632:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART4 (*)
+ 633:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USART5 (*)
+ 634:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C1
+ 635:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C2 (*)
+ 636:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_USB (*)
+ 637:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_CRS (*)
+ 638:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_PWR
+ 639:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_DAC1 (*)
+ 640:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_I2C3 (*)
+ 641:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         @arg @ref LL_APB1_GRP1_PERIPH_LPTIM1
+ 642:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *
+ 643:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   *         (*) value not defined in all devices.
+ 644:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   * @retval None
+ 645:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** */
+ 646:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** __STATIC_INLINE void LL_APB1_GRP1_ReleaseReset(uint32_t Periphs)
+  61              		.loc 2 646 22 view .LVU8
+  62              	.LBB11:
+ 647:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h **** {
+ 648:Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_ll_bus.h ****   CLEAR_BIT(RCC->APB1RSTR, Periphs);
+  63              		.loc 2 648 3 view .LVU9
+  64 000e 9A6A     		ldr	r2, [r3, #40]
+  65 0010 0249     		ldr	r1, .L3+4
+  66              	.LBE11:
+  67              	.LBE10:
+  68              		.loc 1 65 1 is_stmt 0 view .LVU10
+  69              		@ sp needed
+  70              	.LBB13:
+  71              	.LBB12:
+  72              		.loc 2 648 3 view .LVU11
+  73 0012 0A40     		ands	r2, r1
+  74 0014 9A62     		str	r2, [r3, #40]
+  75              	.LVL2:
+  76              		.loc 2 648 3 view .LVU12
+  77              	.LBE12:
+  78              	.LBE13:
+  64:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ll_pwr.c **** }
+  79              		.loc 1 64 3 is_stmt 1 view .LVU13
+  80              		.loc 1 65 1 is_stmt 0 view .LVU14
+  81 0016 7047     		bx	lr
+  82              	.L4:
+  83              		.align	2
+  84              	.L3:
+ARM GAS  /tmp/ccUrWfkO.s 			page 15
+
+
+  85 0018 00100240 		.word	1073876992
+  86 001c FFFFFFEF 		.word	-268435457
+  87              		.cfi_endproc
+  88              	.LFE114:
+  90              		.text
+  91              	.Letext0:
+  92              		.file 3 "/usr/local/arm-none-eabi/include/machine/_default_types.h"
+  93              		.file 4 "/usr/local/arm-none-eabi/include/sys/_stdint.h"
+  94              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
+  95              		.file 6 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l051xx.h"
+  96              		.file 7 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h"
+ARM GAS  /tmp/ccUrWfkO.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l0xx_ll_pwr.c
+     /tmp/ccUrWfkO.s:16     .text.LL_PWR_DeInit:0000000000000000 $t
+     /tmp/ccUrWfkO.s:25     .text.LL_PWR_DeInit:0000000000000000 LL_PWR_DeInit
+     /tmp/ccUrWfkO.s:85     .text.LL_PWR_DeInit:0000000000000018 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,4 +1,11 @@
-16921048905847127
+16925813418748793
+BAT54S
+BAT54S_SOT-23
+SOT-23
+SOT-23
+0
+3
+3
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -50266,6 +50273,13 @@ solder jumper open
 0
 5
 3
+L6480
+L6480H
+
+
+0
+39
+39
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
@@ -70055,6 +70069,13 @@ Logo WEEE
 0
 0
 0
+TO220_tab_UP
+TO220_UP
+
+
+0
+4
+3
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf

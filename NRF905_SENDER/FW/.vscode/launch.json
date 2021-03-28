@@ -17,7 +17,7 @@
             "svdFile": "/home/max/svd/STM32L0/STM32L0x1.svd",
                      //"preLaunchTask": "cargo build",
             "runToMain": true,
-            "executable": "build/nrf905.elf",
+            "executable": "build/FW.elf",
             "configFiles": [
                 "/usr/share/openocd/scripts/interface/stlink-v2.cfg",
                 "/usr/share/openocd/scripts/target/stm32l0.cfg"

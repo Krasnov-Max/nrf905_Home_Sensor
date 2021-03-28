@@ -886,13 +886,13 @@ Wire Wire Line
 	4250 2250 4250 2950
 Wire Wire Line
 	4250 2950 3200 2950
+Connection ~ 3200 2950
+Wire Wire Line
+	3200 2950 3200 5150
 Wire Bus Line
 	4250 3250 4250 6150
 Wire Bus Line
 	4250 6150 8100 6150
 Wire Bus Line
 	8100 1750 8100 6150
-Connection ~ 3200 2950
-Wire Wire Line
-	3200 2950 3200 5150
 $EndSCHEMATC

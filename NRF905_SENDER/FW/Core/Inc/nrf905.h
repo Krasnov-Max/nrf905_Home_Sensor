@@ -12,10 +12,10 @@
 //------------------------------------------------------------------------------------
 
 
-#define NRF905_CS_HI	HAL_GPIO_WritePin(CS_NRF_Port, CS_NRF_Pin, GPIO_PIN_SET)
-#define NRF905_CS_LO	HAL_GPIO_WritePin(CS_NRF_Port, CS_NRF_Pin, GPIO_PIN_RESET)
-#define NRF905_CE_HI	HAL_GPIO_WritePin(CE_Port, CE_Pin, GPIO_PIN_SET)
-#define NRF905_CE_LO	HAL_GPIO_WritePin(CE_Port, CE_Pin, GPIO_PIN_RESET)
+#define NRF905_CS_HI	LL_GPIO_SetOutputPin(CS_NRF_GPIO_Port, CS_NRF_Pin)
+#define NRF905_CS_LO	LL_GPIO_ResetOutputPin(CS_NRF_GPIO_Port, CS_NRF_Pin)
+#define NRF905_CE_HI	LL_GPIO_SetOutputPin(TRX_CE_GPIO_Port, TRX_CE_Pin)
+#define NRF905_CE_LO	LL_GPIO_ResetOutputPin(TRX_CE_GPIO_Port, TRX_CE_Pin)
 
 #define W_CONFIG     0x00
 #define R_CONFIG     0x10
